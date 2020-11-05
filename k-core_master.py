@@ -1,14 +1,16 @@
 import networkx as nx
+import matplotlib as mpl
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import gurobipy as grb
 import numpy as np
 import time
 
 fname = "test_graph4.txt"
-n = 100
-erdos_constant = .01
-b = 5
-k = 3
+n = 10
+erdos_constant = .3
+b = 2
+k = 2
 iter_num = 1
 
 
@@ -50,14 +52,18 @@ def radius_bounded_anchored_k_core(graph, b, k, r, start_value):
 
 	model.optimize()
 
-	model.printAttr('x')
-	tracker = []
+	x_tracker = []
+	y_tracker = []
+	s_tracker = []
 	for v in model.getVars():
-		if v.x == 1:
-			tracker.append(int(v.varName[2:-1]))
-	res = []
-	[res.append(x) for x in tracker if x not in res]
-	return(res)
+		if v.x == 1 and v.varName[0] == 'x':
+			x_tracker.append(int(v.varName[2:-1]))
+		if v.x == 1 and v.varName[0] == 'y':
+			y_tracker.append(int(v.varName[2:-1]))
+		if v.x == 1 and v.varName[0] == 's':
+			s_tracker.append(int(v.varName[2:-1]))
+
+	return x_tracker, y_tracker, s_tracker
 
 def read_graph(fname):
 	with open(fname, "r") as f:
@@ -96,16 +102,17 @@ def anc_kcore(graph, b, k, start_value):
 
 	model.optimize()
 
-	model.printAttr('x')
-	tracker = []
+	x_tracker = []
+	y_tracker = []
 	for v in model.getVars():
-		if v.x == 1:
-			tracker.append(int(v.varName[2:-1]))
-	res = []
-	[res.append(x) for x in tracker if x not in res]
-	return(res)
+		if v.x == 1 and v.varName[0] == 'x':
+			x_tracker.append(int(v.varName[2:-1]))
+		if v.x == 1 and v.varName[0] == 'y':
+			y_tracker.append(int(v.varName[2:-1]))
 
-def k_core_iter(G_org, k, anchors):
+	return x_tracker, y_tracker
+
+def k_core_iter(G_org, k, anchors = []):
 	G = G_org.copy()
 	repeat = False
 	for node in G.nodes:
@@ -127,22 +134,22 @@ def remove_core(G, k, anchors = []):
 	G1 = G.copy()
 	G2 = G.copy()
 	G1 = k_core(G1, k, anchors)
-	good_vert = G1.nodes
+	k_core_verts = G1.nodes
 	for edge in G1.edges():
 		G2.remove_edge(edge[0],edge[1])
-	good_vert = list(good_vert)
-	return G2, good_vert
+	k_core_verts = list(k_core_vers)
+	return G2, k_core_verts
 
 def partition_into_R_and_S(G_org, ancored_verticies):
 	G = G_org.copy()
-	test = nx.algorithms.components.connected_components(G)
+	components = nx.algorithms.components.connected_components(G)
 	R = []
 	S = []
-	for comp in test:
-		if bool(comp.intersection(ancored_verticies)) == True:
-			R.append(comp)
+	for component in components:
+		if bool(component.intersection(ancored_verticies)) == True:
+			R.append(component)
 		else:
-			S.append(comp)
+			S.append(component)
 	return [R, S]
 
 def paper_algo(G_org, b):
@@ -177,8 +184,8 @@ def paper_algo(G_org, b):
 	return G.nodes()
 
 def choose_unanchored_node_in_S(S, anchored_list):
-	for grouping in S:
-		for node in grouping:
+	for component in S:
+		for node in component:
 			if node not in anchored_list:
 				return node
 
@@ -187,10 +194,10 @@ def find_vertex_furthest_from_root(G, R, anchores):
 	opt_val = 0
 	anchor = None
 	path = []
-	for set_of_verticies in R:
-		subgraph = G.subgraph(set_of_verticies)
+	for component in R:
+		subgraph = G.subgraph(component)
 		for anc in anchores:
-			if anc in set_of_verticies:
+			if anc in component:
 				d = nx.algorithms.shortest_paths.generic.shortest_path(subgraph, source = anc, weight = -1)
 				for value in d.items():
 					if len(value[1]) > opt_val:
@@ -208,8 +215,8 @@ def find_longest_path_over_trees(G, S):
 	v_3 = None
 	v_4 = None
 
-	for set_of_verticies in S:
-		subgraph = G.subgraph(set_of_verticies)
+	for component in S:
+		subgraph = G.subgraph(component)
 		d = nx.algorithms.shortest_paths.generic.shortest_path(subgraph, None, None, weight = -1)
 		for key, value in d.items():
 			for key_2, value_2 in value.items():
@@ -247,14 +254,15 @@ def hamid_form(graph, b, k, start_value):
 
 	model.optimize()
 
-	model.printAttr('x')
-	tracker = []
+	x_tracker = []
+	y_tracker = []
 	for v in model.getVars():
-		if v.X == 1:
-			tracker.append(int(v.varName[2:-1]))
-	res = []
-	[res.append(x) for x in tracker if x not in res]
-	return res
+		if v.x == 1 and v.varName[0] == 'x':
+			x_tracker.append(int(v.varName[2:-1]))
+		if v.x == 1 and v.varName[0] == 'y':
+			y_tracker.append(int(v.varName[2:-1]))
+
+	return x_tracker, y_tracker
 
 def ab_seperators(graph, radius, a, b):
 	subgraph = nx.generators.ego.ego_graph(graph, a, radius = radius, center = True)
@@ -263,13 +271,32 @@ def ab_seperators(graph, radius, a, b):
 		cuts = nx.algorithms.connectivity.cuts.minimum_node_cut(subgraph, s = a, t = b)
 	return cuts
 
+def pretty_plot(graph, nodes_in_k_core = [], anchored_nodes = [], center = [], plot_now = True, k = k, b = b):
+
+	color_dict = {i : 'indianred' for i in range(len(G.nodes()))}
+	color_dict.update({x_vars[i] : 'royalblue' for i in range(len(x_vars))})
+	color_dict.update({y_vars[i] : 'y' for i in range(len(y_vars))})
+	color_dict.update({center[i] : 'purple' for i in range(len(center))})
 
 
+	color_values = [color_dict.get(node) for node in G.nodes()]
+
+	plt.title('Anchored {}-core with b = {}'.format(k,b))
+	nx.draw(G, with_labels = True,  node_color = color_values, node_size = 1000)
+	first_legend = mpatches.Patch(color='indianred', label='Nodes not in the {}-core'.format(k))
+	second_legend = mpatches.Patch(color='royalblue', label='Nodes in the {}-core'.format(k))
+	third_legend = mpatches.Patch(color='y', label='Anchored Nodes')
+	fourth_legend = mpatches.Patch(color='purple', label='The chosen center')
+	plt.legend(handles=[first_legend, second_legend, third_legend, fourth_legend])
+	if plot_now == True:
+		plt.show()
+
+G = nx.erdos_renyi_graph(n, erdos_constant)
+x_vars, y_vars = anc_kcore(G, b, k, start_value = 'false')
+pretty_plot(G, x_vars, y_vars)
 
 
-
-
-
+'''
 
 MIP_heur_time = 0
 MIP_naive_time = 0
@@ -359,5 +386,5 @@ print('hamid_heur')
 print(hamid_heur_time)
 
 
-
+'''
 
