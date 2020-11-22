@@ -11,6 +11,7 @@ import read
 import flow
 import k_core
 import pretty_plot
+import heuristic
 #import ordering
 
 #################
@@ -25,7 +26,7 @@ instances = {
 # Get parameters from user
 ##########################
 # what is k?
-k = 3
+k = 2
 
 # Is the k-core problem anchored?
 anchored = False
@@ -39,11 +40,14 @@ radius_bounded = True
 # If the k-core problem is radius bounded, then what is the radius bound r?
 r = 5
 
+#Do you want to use the heuristic?
+use_heur = True
+
 # Connectivity formulation?
 connectivity = 'flow'
 
 # What is the instance?
-instance = 'Brightkite_edges'
+instance = 'test_graph2'
 
 ######################
 # Start solving model
@@ -55,16 +59,25 @@ F = read.read_graph(ext + instance + ".txt")
 
 G = nx.convert_node_labels_to_integers(F, first_label=0, ordering='default', label_attribute=None)
 
+G = nx.erdos_renyi_graph(700, .002)
+
 m = gp.Model()
 
 m._X = m.addVars(G.nodes, vtype=GRB.BINARY, name="x")
-print("1")
 m._Y = m.addVars(G.nodes, vtype=GRB.BINARY, name="y")
-print("2")
 k_core.build_k_core(G, m, anchored, k, b)
-print('3')
 if radius_bounded and connectivity == 'flow':
     flow.build_flow(G, m, r)
+
+time1 = time.time()
+if use_heur == True:
+    heur_graph, heur_source = heuristic.heuristic_2(G,k,r)
+    print(heur_source)
+    m._S.start = 1
+    for i in heur_graph.nodes():
+        m.x[i].start = 1
+time2 = time.time()
+print(time2 - time1)
 
 m.optimize()
 
@@ -78,7 +91,7 @@ if m.status == GRB.OPTIMAL or m.status==GRB.TIME_LIMIT:
     for i in G.nodes:
         if m._S[i].x > 0.5:
             print("Root is ", i)
-            root = [i]
+            root = i
 
     for i in G.nodes:
         if m._X[i].x > 0.5:
@@ -98,5 +111,5 @@ if m.status == GRB.OPTIMAL or m.status==GRB.TIME_LIMIT:
     print("Is it connected? ", nx.is_connected(SUB))
     print("Diameter? ", nx.diameter(SUB))
 
-    pretty_plot.pretty_plot(G, tuple(SUB.nodes()), purchased_nodes, root, plot_now = True, k=k, b=b)
-
+    #pretty_plot.pretty_plot(G, tuple(SUB.nodes()), purchased_nodes, root, plot_now = False, k=k, b=b, r = r)
+    #pretty_plot.pretty_plot(SUB, tuple(SUB.nodes()), purchased_nodes, center = root, plot_now = True, k= k, r = r, b= b, fig = 2)

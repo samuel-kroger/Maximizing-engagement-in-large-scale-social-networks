@@ -2,17 +2,18 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import matplotlib.patches as mpatches
 
-def pretty_plot(graph, nodes_in_k_core = [], anchored_nodes = [], center = [], plot_now = True, k = 0, b  = 0):
-
-	color_dict = {i : 'indianred' for i in range(len(graph.nodes()))}
-	color_dict.update({nodes_in_k_core[i] : 'royalblue' for i in range(len(nodes_in_k_core))})
-	color_dict.update({anchored_nodes[i] : 'y' for i in range(len(anchored_nodes))})
-	color_dict.update({center[i] : 'purple' for i in range(len(center))})
+def pretty_plot(graph, nodes_in_k_core = [], anchored_nodes = [], center = -1, plot_now = True, k = 0, b  = 0, r = 0, fig = 1):
+	plt.figure(fig)
+	color_dict = {i : 'indianred' for i in graph.nodes()}
+	color_dict.update({i : 'royalblue' for i in nodes_in_k_core})
+	color_dict.update({anchored_nodes[i] : 'y' for i in anchored_nodes})
+	if center != -1:
+		color_dict.update({center : 'purple'})
 
 
 	color_values = [color_dict.get(node) for node in graph.nodes()]
 
-	plt.title('Anchored {}-core with b = {}'.format(k,b))
+	plt.title('Radius {} Anchored {}-core with b = {}'.format(r,k,b))
 	nx.draw(graph, with_labels = True,  node_color = color_values, node_size = 1000)
 	first_legend = mpatches.Patch(color='indianred', label='Nodes not in the {}-core'.format(k))
 	second_legend = mpatches.Patch(color='royalblue', label='Nodes in the {}-core'.format(k))
