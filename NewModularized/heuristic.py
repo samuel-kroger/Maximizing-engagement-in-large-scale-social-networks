@@ -51,3 +51,15 @@ def heuristic_2(graph, k, r):
 			best = kcore
 			s = v
 	return best, s
+
+def heuristic_3(graph, k, r):
+	best = nx.empty_graph(0)
+	s = 'fail'
+	for v in graph.nodes():
+		subgraph = nx.generators.ego.ego_graph(graph, v, radius = r)
+		kcore = k_core(subgraph, k)
+		if len(kcore.nodes()) >= len(best.nodes()):
+			best = kcore
+			s = v
+			break
+	return best, s
