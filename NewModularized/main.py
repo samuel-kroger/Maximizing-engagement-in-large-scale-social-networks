@@ -96,28 +96,36 @@ def main(G, anchored, radius_bounded, use_heur, k, b, r, connectivity, heuristic
 	if m.status == GRB.OPTIMAL or m.status==GRB.TIME_LIMIT:
 		cluster = [i for i in G.nodes if m._X[i].x > 0.5 or m._Y[i].x > 0.5]
 		SUB = G.subgraph(cluster)
+
 		for i in G.nodes:
 			if m._S[i].x > 0.5:
-				print("Root is ", i)
+				#print("Root is ", i)
 				root = i
 
 		selected_nodes = []
 		for i in G.nodes:
 			if m._X[i].x > 0.5:
-				print("selected node: ", i)
+				#print("selected node: ", i)
 				selected_nodes.append(i)
 
 		purchased_nodes = []
 		for i in G.nodes:
 			if m._Y[i].x > 0.5:
-				print("purchased node: ", i)
+				#print("purchased node: ", i)
 				purchased_nodes.append(i)
-		'''
-		for j in G.nodes:
-			for i in G.neighbors(j):
-				if m._F[j,j,i].x > 0.5:
-					print(j, i, m._F[j,j,i].x)
-		'''
+
+		if connectivity == 'flow':
+			for n in G.nodes:
+				for j in G.nodes:
+					for i in G.neighbors(j):
+						if m._F[n,j,i].x > 0.5:
+							#print(n, j, i, m._F[n,j,i].x)
+							''
+
+
+
+
+
 		print("# of vertices in G: ", len(G.nodes))
 		print("Is it connected? ", nx.is_connected(SUB))
 		print("Diameter? ", nx.diameter(SUB))

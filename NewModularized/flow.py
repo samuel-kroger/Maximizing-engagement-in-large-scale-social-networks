@@ -25,22 +25,27 @@ def build_flow(G, m, r):
     # flow conservation
     for i in G.nodes:
         for j in G.nodes:
-            if i != j and nx.shortest_path_length(G, i,j) <= r:
-                m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= m._X[i] + m._Y[i])
-                m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) >= m._S[i])
-                m.addConstr( gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= (r-1) * (m._X[i] + m._Y[i] - m._S[i]))
-            #m.addConstr( gp.quicksum(F[j,u,i] for u in DG.neighbors(i)) <= r * (1 - m._S[i]))
+            if i != j:
+                m.addConstr(gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= r * (m._X[i] + m._Y[i] - m._S[i]))
+                #m.addConstr(gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) <= (r) * (m._X[i] + m._Y[i] - m._S[i]))
+                if nx.shortest_path_length(G, i,j) <= r:
+                    m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= m._X[i] + m._Y[i])
+                    m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) >= m._S[i])
 
-    for j in G.nodes:
-        m.addConstr( gp.quicksum(m._F[j,j,u] for u in G.neighbors(j)) <= r * (m._X[j] + m._Y[j] - m._S[j]))
+
+                #m.addConstr( gp.quicksum(F[j,u,i] for u in DG.neighbors(i)) <= r * (1 - m._S[i]))
+                #m.addConstr( gp.quicksum(m._F[j,i,u] for u in G.neighbors(j)) <= r * (m._X[i] + m._Y[i] - m._S[i]))
         #m.addConstr( gp.quicksum(m._F[j,j,u] for u in G.neighbors(j)) >= m._X[j] + m._Y[j] - m._S[j])
         #m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) == 0)
 
     # valid inequalities
+
     for i in G.nodes:
         for j in G.nodes:
             if i!=j and (i,j) not in DP.edges:
-                m.addConstr(m._X[i] + m._S[j] <= 1)
+                m.addConstr(m._X[i] + m._Y[i] + m._S[j] <= 1)
+
+
 
 
     #m.addConstrs( m._Gen[i,j] + gp.quicksum(F[i,u,j] for u in DG.neighbors(j)) - gp.quicksum(F[i,j,u] for u in DG.neighbors(j)) == m._X[j] - m._S[j] for (i,j) in DP.edges)
