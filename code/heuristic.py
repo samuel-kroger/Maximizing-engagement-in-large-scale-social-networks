@@ -22,7 +22,7 @@ def k_core(graph, k, anchors = []):
 		G, repeat = k_core_iter(G, k, anchors)
 	return (G)
 
-def heuristic_1(graph, k, r):
+def eccen_heur(graph, k, r):
 	G = k_core(graph, k)
 	connected_components = nx.algorithms.components.connected_components(G)
 	kcore = nx.empty_graph(0)
@@ -41,7 +41,7 @@ def heuristic_1(graph, k, r):
 				s = s_new
 	return kcore, s
 
-def heuristic_2(graph, k, r):
+def brute_force_heur(graph, k, r):
 	best = nx.empty_graph(0)
 	s = 'fail'
 	for v in graph.nodes():
@@ -50,16 +50,4 @@ def heuristic_2(graph, k, r):
 		if len(kcore.nodes()) >= len(best.nodes()):
 			best = kcore
 			s = v
-	return best, s
-
-def heuristic_3(graph, k, r):
-	best = nx.empty_graph(0)
-	s = 'fail'
-	for v in graph.nodes():
-		subgraph = nx.generators.ego.ego_graph(graph, v, radius = r)
-		kcore = k_core(subgraph, k)
-		if len(kcore.nodes()) >= len(best.nodes()):
-			best = kcore
-			s = v
-			break
 	return best, s

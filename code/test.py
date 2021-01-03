@@ -1,0 +1,74 @@
+import gurobipy as gp
+from gurobipy import GRB
+import networkx as nx
+from networkx.algorithms import approximation
+from matplotlib import pylab as pl
+import matplotlib.pyplot as plt
+
+import read
+import time
+import main
+
+
+instances = {
+	'karate', 'chesapeake', 'dolphins', 'lesmis', 'polbooks',
+	'adjnoun', 'football', 'jazz', 'cn', 'cm',
+	'netscience', 'polblogs', 'email', 'data'
+	}
+
+##########################
+# Get parameters from user
+##########################
+k = 2
+anchored = True
+b = 1
+radius_bounded = True
+r = 1
+#eptions 	'no_heur', 'brute_force', 'eccentricity'
+heuristic_status = 'eccentricity'
+connectivity = 'flow'
+
+
+#instance to run
+instance = 'test_graph'
+ext = "../data/"
+
+
+#F = read.read_graph(ext + instance + ".txt")
+
+#G = nx.convert_node_labels_to_integers(F, first_label=0, ordering='default', label_attribute=None)
+
+
+G = nx.readwrite.adjlist.read_adjlist(ext + 'generated_graph2.txt', nodetype = int)
+
+#G = nx.erdos_renyi_graph(350, .025)
+
+
+# Start solving model
+######################
+
+plt.figure(1)
+time1 = time.time()
+first = main.main(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, 0)
+time2 = time.time()
+
+
+plt.figure(2)
+connectivity = 'vermyev'
+time3 = time.time()
+second = main.main(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, 0)
+time4 = time.time()
+
+
+if len(first) == len(second):
+	print("objectives are the same")
+
+if len(first) != len(second):
+	print("not the same")
+	print(i)
+	nx.readwrite.adjlist.write_adjlist(G, ext + 'generated_graph3.txt')
+
+plt.show()
+
+print('flow_based: ', time2 - time1)
+print('vermyev: ', time4 - time3)
