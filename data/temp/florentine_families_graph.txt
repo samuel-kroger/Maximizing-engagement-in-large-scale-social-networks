@@ -1,0 +1,18 @@
+#C:\Users\sakroger\Desktop\k-core\git_code\code\test.py
+# GMT Wed Jan  6 16:03:21 2021
+# 
+Acciaiuoli Medici
+Medici Barbadori Ridolfi Tornabuoni Albizzi Salviati
+Castellani Peruzzi Strozzi Barbadori
+Peruzzi Strozzi Bischeri
+Strozzi Ridolfi Bischeri
+Barbadori
+Ridolfi Tornabuoni
+Tornabuoni Guadagni
+Albizzi Ginori Guadagni
+Salviati Pazzi
+Pazzi
+Bischeri Guadagni
+Guadagni Lamberteschi
+Ginori
+Lamberteschi

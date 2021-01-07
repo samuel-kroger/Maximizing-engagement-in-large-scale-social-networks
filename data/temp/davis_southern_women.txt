@@ -1,0 +1,35 @@
+#C:\Users\sakroger\Desktop\k-core\git_code\code\test.py
+# GMT Wed Jan  6 16:02:56 2021
+# 
+Evelyn Jefferson E1 E2 E3 E4 E5 E6 E8 E9
+Laura Mandeville E1 E2 E3 E5 E6 E7 E8
+Theresa Anderson E2 E3 E4 E5 E6 E7 E8 E9
+Brenda Rogers E1 E3 E4 E5 E6 E7 E8
+Charlotte McDowd E3 E4 E5 E7
+Frances Anderson E3 E5 E6 E8
+Eleanor Nye E5 E6 E7 E8
+Pearl Oglethorpe E6 E8 E9
+Ruth DeSand E5 E7 E8 E9
+Verne Sanderson E7 E8 E9 E12
+Myra Liddel E8 E9 E10 E12
+Katherina Rogers E8 E9 E10 E12 E13 E14
+Sylvia Avondale E7 E8 E9 E10 E12 E13 E14
+Nora Fayette E6 E7 E9 E10 E11 E12 E13 E14
+Helen Lloyd E7 E8 E10 E11 E12
+Dorothy Murchison E8 E9
+Olivia Carleton E9 E11
+Flora Price E9 E11
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9
+E10
+E11
+E12
+E13
+E14

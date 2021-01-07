@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import read
 import time
 import main
+import os
 
 
 instances = {
@@ -30,7 +31,7 @@ connectivity = 'flow'
 
 
 #instance to run
-instance = 'test_graph'
+instance = 'les_miserables'
 ext = "../data/"
 
 
@@ -38,15 +39,23 @@ ext = "../data/"
 
 #G = nx.convert_node_labels_to_integers(F, first_label=0, ordering='default', label_attribute=None)
 
+for i in range(1,6):
+	num_nodes = 150 * i
+	file =  'erdos_renyi_nodes' + str(num_nodes)
+	G = nx.erdos_renyi_graph(num_nodes, 3/num_nodes)
 
-G = nx.readwrite.adjlist.read_adjlist(ext + 'generated_graph2.txt', nodetype = int)
+	nx.readwrite.adjlist.write_adjlist(G, ext + file + '.txt')
+
+#G = nx.les_miserables_graph()
+
+#G = nx.readwrite.adjlist.read_adjlist(ext + instance +'.txt', nodetype = int)
 
 #G = nx.erdos_renyi_graph(350, .025)
 
 
 # Start solving model
 ######################
-
+'''
 plt.figure(1)
 time1 = time.time()
 first = main.main(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, 0)
@@ -66,9 +75,10 @@ if len(first) == len(second):
 if len(first) != len(second):
 	print("not the same")
 	print(i)
-	nx.readwrite.adjlist.write_adjlist(G, ext + 'generated_graph3.txt')
+'''
+#nx.readwrite.adjlist.write_adjlist(G, ext + instance + '.txt')
 
-plt.show()
+#plt.show()
 
-print('flow_based: ', time2 - time1)
-print('vermyev: ', time4 - time3)
+#print('flow_based: ', time2 - time1)
+#print('vermyev: ', time4 - time3)
