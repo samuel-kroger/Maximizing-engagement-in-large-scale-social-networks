@@ -14,7 +14,6 @@ k = 2
 iter_num = 1
 
 
-
 def radius_bounded_anchored_k_core(graph, b, k, r, start_value):
 	n = len(graph.nodes)
 	model = grb.Model()
@@ -47,7 +46,6 @@ def radius_bounded_anchored_k_core(graph, b, k, r, start_value):
 			cuts = ab_seperators(graph, r, j, i)
 			if G.has_edge(i,j) == False:
 				model.addConstr(x[i] + s[j] <= 1 + grb.quicksum(x[c] for c in cuts))
-
 
 
 	model.optimize()

@@ -10,7 +10,6 @@ import time
 import main
 import os
 
-
 instances = {
 	'karate', 'chesapeake', 'dolphins', 'lesmis', 'polbooks',
 	'adjnoun', 'football', 'jazz', 'cn', 'cm',
@@ -39,10 +38,10 @@ ext = "../data/"
 
 #G = nx.convert_node_labels_to_integers(F, first_label=0, ordering='default', label_attribute=None)
 
-for i in range(1,6):
+for i in range(1,3):
 	num_nodes = 150 * i
 	file =  'erdos_renyi_nodes' + str(num_nodes)
-	G = nx.erdos_renyi_graph(num_nodes, 3/num_nodes)
+	G = nx.erdos_renyi_graph(num_nodes, 8/num_nodes)
 
 	nx.readwrite.adjlist.write_adjlist(G, ext + file + '.txt')
 

@@ -9,7 +9,6 @@ def pretty_plot(graph, nodes_in_k_core = [], anchored_nodes = [], center = -1, p
 	if center != -1:
 		color_dict.update({center : 'purple'})
 
-
 	color_values = [color_dict.get(node) for node in graph.nodes()]
 
 	plt.title('Radius {} Anchored {}-core with b = {}'.format(r,k,b))

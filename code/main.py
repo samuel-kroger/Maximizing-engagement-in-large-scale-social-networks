@@ -76,10 +76,6 @@ def original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, conne
 							#print(n, j, i, m._F[n,j,i].x)
 							''
 
-
-
-
-
 		#print("# of vertices in G: ", len(G.nodes))
 		#print("Is it connected? ", nx.is_connected(SUB))
 		#print("Diameter? ", nx.diameter(SUB))
@@ -89,9 +85,7 @@ def original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, conne
 		if plot == 2:
 			pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, False, k, b, r)
 
-
 		#m.write("sam.lp")
-
 		vars = m.getVars()
 		'''
 		plt.figure(1)
@@ -100,59 +94,66 @@ def original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, conne
 		return len(vars), m.objBound, m.objVal
 
 def reduced_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, plot):
-	k_core_nodes = []
-	thing = len(G.nodes())
-	s = 0
+
 	m = gp.Model()
 	weights = {}
+	tracker = []
+	i = 0
 
 	G_temp = heuristic.k_core(G,k)
 
+
 	if G == G_temp:
-		return(original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, plot), 0)
+		return('NA',  len(G.nodes()), len(G.nodes()),'1')
+	if len(G_temp.nodes()) == 0:
+		var_num, LB, UB = original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, plot)
+		return(var_num, LB, UB, 0)
 
 	if not nx.is_empty(G_temp):
 		components = nx.algorithms.components.connected_components(G_temp)
 
 		for comp in components:
-			comp = list(comp)
-			k_core_node = comp[0]
-			k_core_nodes.append(k_core_node)
+			tracker.append((i, comp))
+			i += 1
 
-			for node in comp:
-				for i in G.neighbors(node):
-					if i not in comp:
-						if (k_core_node, i) in weights:
-							weights[(k_core_node, i)] = weights[(k_core_node, i)] + 1
+		R = G.nodes() - G_temp.nodes()
+
+		for node in R:
+
+			for neighbor in G.neighbors(node):
+
+				for comp in tracker:
+
+					if neighbor in comp[1]:
+
+						if (comp[0], node) in weights:
+							weights[(comp[0], node)] = weights[(comp[0], node)] + 1
 						else:
-							weights[(k_core_node, i)] = 1
-			for node in comp:
-				G = nx.contracted_nodes(G, k_core_node, node)
-				s += 1;
+							weights[(comp[0], node)] = 1
 
-			comp.pop(0)
-
-			if len(G.nodes()) == 1:
-				return('none', thing, thing,'1')
-		'''
-		print(k)
-		print(k_core_nodes)
-		print(s)
-		'''
-		for i in k_core_nodes:
-			for j in G.nodes():
-				if (i,j) not in weights:
-					weights[(i,j)] = 0
+		for thing in tracker:
+			for node in R:
+				if (thing[0], node) not in weights:
+					weights[thing[0], node] = 0
 
 	m.setParam('OutputFlag', 0)
 	m.Params.timeLimit=1800
 
-	reduced = G.nodes -k_core_nodes
 
-	m._X = m.addVars(reduced, vtype=GRB.BINARY, name="x")
-	m._Y = m.addVars(reduced, vtype=GRB.BINARY, name="y")
+	m._X = m.addVars(G.nodes(), vtype=GRB.BINARY, name="x")
+	m._Y = m.addVars(G.nodes(), vtype=GRB.BINARY, name="y")
 
-	k_core.build_k_core_reduced(G, m, anchored, k, b, weights, k_core_nodes, s)
+	var_sub = 0
+	for node in G_temp.nodes():
+
+		m._X[node].ub = 0
+		m._Y[node].ub = 0
+		var_sub += 2
+
+
+
+	k_core.build_k_core_reduced(G, m, anchored, k, b, weights, R, tracker)
+
 	if radius_bounded and connectivity == 'flow':
 		flow.build_flow(G, m, r)
 	if radius_bounded and connectivity == 'vermyev':
@@ -167,18 +168,13 @@ def reduced_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connec
 		for i in heur_graph.nodes():
 			m._X[i].start = 1
 
-
 	m.optimize()
 
-	#m.computeIIS()
-
-	m.write("out.lp")
-
+	#m.write("out.lp")
 
 	if m.status == GRB.OPTIMAL or m.status==GRB.TIME_LIMIT:
-		cluster = [i for i in reduced if m._X[i].x > 0.5 or m._Y[i].x > 0.5]
+		cluster = [i for i in R if m._X[i].x > 0.5 or m._Y[i].x > 0.5]
 		SUB = G.subgraph(cluster)
-
 		for i in G.nodes:
 			if radius_bounded == True:
 				if m._S[i].x > 0.5:
@@ -186,13 +182,13 @@ def reduced_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connec
 					root = i
 
 		selected_nodes = []
-		for i in reduced:
+		for i in R:
 			if m._X[i].x > 0.5:
 				#print("selected node: ", i)
 				selected_nodes.append(i)
 
 		purchased_nodes = []
-		for i in reduced:
+		for i in R:
 			if m._Y[i].x > 0.5:
 				#print("purchased node: ", i)
 				purchased_nodes.append(i)
@@ -209,4 +205,4 @@ def reduced_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connec
 		plt.figure(2)
 		pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, center = -1, plot_now = True, k = k, b = b)
 		'''
-		return len(vars), m.objBound, m.objVal, len(k_core_nodes)
+		return len(vars) - var_sub, m.objBound, m.objVal, len(tracker)

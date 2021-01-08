@@ -5,14 +5,15 @@ import matplotlib.pyplot as plt
 import time
 
 def k_core_iter(graph, k, anchors = []):
+	remove = []
 	G = graph.copy()
 	repeat = False
 	for node in G.nodes:
 		degree = G.degree
 		if degree[node] < k and node not in anchors:
-			G.remove_node(node)
+			remove.append(node)
 			repeat = True
-			break
+	G.remove_nodes_from(remove)
 	return G, repeat
 
 def k_core(graph, k, anchors = []):
@@ -20,9 +21,10 @@ def k_core(graph, k, anchors = []):
 	repeat = True
 	while repeat == True:
 		G, repeat = k_core_iter(G, k, anchors)
-	return (G)
+	return G
 
 def eccen_heur(graph, k, r):
+	G = graph.copy()
 	G = k_core(graph, k)
 	connected_components = nx.algorithms.components.connected_components(G)
 	kcore = nx.empty_graph(0)

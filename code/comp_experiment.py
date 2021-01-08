@@ -5,6 +5,7 @@ from networkx.algorithms import approximation
 from matplotlib import pylab as pl
 from datetime import datetime
 import matplotlib.pyplot as plt
+import read
 
 import os
 import read
@@ -15,29 +16,10 @@ import csv
 
 user = 'samuel_kroger'
 dt_string = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
-
 filename = user + '_' + dt_string + '.csv'
 filename = filename.strip()
 
-
-
-
-instance_names = ['karate_club', 'davis_southern_women_graph', 'florentine_families_graph', 'les_miserables_graph', 'connected_caveman_graph']
-
-name = 'test_graph'
 ext = "../data/"
-
-
-#F = read.read_graph(ext + instance + ".txt")
-
-
-
-for i in range(1,6):
-	num_nodes = 150 * i
-	G = nx.erdos_renyi_graph(num_nodes, 8/num_nodes)
-
-
-
 
 anchored = True
 radius_bounded = False
@@ -55,12 +37,14 @@ with open('../results/' + filename, 'w') as doc:
 
 with open('../results/' + filename, 'a') as doc:
 	for file in os.listdir(ext):
-		if file[-4:] == '.txt':
+		#if file[-4:] == '.txt':
+		if file[-6:] == '.graph':
 			print('starting ' + file)
-			for k in range(3,6):
-				for b in range(3,6):
+			for k in range(2,6):
+				for b in range(0,5):
 
-					G = nx.readwrite.adjlist.read_adjlist(ext + file, nodetype = int)
+					#G = nx.readwrite.adjlist.read_adjlist(ext + file, nodetype = int)
+					G = read.imp_dimacs(ext + file)
 
 					time1 = time.time()
 					og_vars, og_LB, og_UB = main.original_model(G, anchored, radius_bounded, heuristic_status, k, b, r, connectivity, 0)
@@ -73,4 +57,3 @@ with open('../results/' + filename, 'a') as doc:
 
 
 					doc.write(file[:-4] + str(k)+ '-' + str(b) + ', ' + str(len(G.nodes)) + ',' + str(len(G.edges)) +',' + str(k_core_num) + ',' + str(og_vars) + ','+ str(og_LB) + ',' + str(og_UB) + ',' + str(og_time) + ',' + str(rm_vars) + ',' + str(rm_LB) + ',' + str(rm_UB) + ',' + str(rm_time) + '\n')
-			print('finished ' + file)
