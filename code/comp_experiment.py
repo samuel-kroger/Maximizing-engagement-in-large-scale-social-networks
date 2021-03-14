@@ -49,14 +49,14 @@ for file in os.listdir(ext):
 
 			G = nx.readwrite.adjlist.read_adjlist(ext + file, nodetype = int)
 
-			for k in range(2,3):
+			for k in range(3,4):
 				for b in range(2, 3):
 					results = []
 
 					start_time = time.time()
-					instance = classes.base_model(filename, G, gp.Model(), k, b, r, radius_bounded, connectivity)
+					instance = classes.reduced_model(filename, G, gp.Model(), k, b, r, radius_bounded, connectivity)
 					instance.set_up_model()
-					#instance.relaxation()
+					instance.relaxation()
 					instance.optimize()
 					instance_results = instance.output_results()
 					end_time = time.time()

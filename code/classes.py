@@ -63,6 +63,9 @@ class base_model( object ):
 		self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
 		self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
 
+		for y_val in self.y_vals:
+			self.model._X[y_val].ub = 0
+
 	def neighbor(self, node):
 		#change to add node attribute wether or not it is y_val or x_val
 		neighbors = list(self.G.neighbors(node))
@@ -290,7 +293,7 @@ class reduced_model(base_model):
 
 		#case if everynode is in the k-core
 		if G == k_core_G:
-			'problem'
+			print('problem')
 			#return('NA',  len(G.nodes()), len(G.nodes()),'1')
 
 		#case if none of the nodes are in a k-core
@@ -333,9 +336,15 @@ class reduced_model(base_model):
 		# k degree constraints
 		#m.addConstrs(gp.quicksum(weights[i,j] for j in R) + gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= k*m._X[i] for i in G.nodes if G.degree[i] >= k)
 
-		print(weights)
-		self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * self.model._X[i] for i in R if i in x_vals)
-		self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= (k) * self.model._X[i] for i in R if i in y_vals)
+		if R:
+			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * self.model._X[i] for i in R if i in x_vals)
+			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= (k) * self.model._X[i] for i in R if i in y_vals)
+		else:
+			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in G.nodes())
+
+
+
+
 
 
 		# conflict constraints
