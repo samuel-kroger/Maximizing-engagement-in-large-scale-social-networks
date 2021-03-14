@@ -1,0 +1,42 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar  7 15:05:50 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_07_15_05_50.csv_2_2.log
+   Prev:   Default: 
+Changed value of parameter lazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 40 rows, 78 columns and 117 nonzeros
+Model fingerprint: 0x5d723d7f
+Variable types: 0 continuous, 78 integer (78 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start did not produce a new incumbent solution
+
+Found heuristic solution: objective 38.0000000
+Presolve removed 1 rows and 1 columns
+Presolve time: 0.00s
+Presolved: 39 rows, 77 columns, 115 nonzeros
+Variable types: 0 continuous, 77 integer (77 binary)
+
+Root relaxation: objective 3.900000e+01, 40 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      39.0000000   39.00000  0.00%     -    0s
+
+Explored 0 nodes (40 simplex iterations) in 0.01 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 39 38 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.900000000000e+01, best bound 3.900000000000e+01, gap 0.0000%
+
+User-callback calls 46, time in user-callback 0.00 sec

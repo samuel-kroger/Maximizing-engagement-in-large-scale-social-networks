@@ -1,0 +1,12 @@
+instances, , , ,Base Model, , , ,Base Model with warm start , , , , Reduced Model , , , , Reduced Model with warm start
+
+	             #name, #nodes, #edges, #k-cores, #vars, LB, UB, time, #vars, LB, UB, time,#vars, LB, UB, time, #vars, LB, UB, time, #vars, LB, UB, time, 
+hamid_test_graph12-1, 16,16,0,0,0.0,0.0,0.02999138832092285,
+hamid_test_graph12-3, 16,16,0,0,0.0,0.0,0.0069980621337890625,
+hamid_test_graph12-5, 16,16,0,0,0.0,0.0,0.00600123405456543,
+hamid_test_graph14-1, 16,16,0,0,0.0,0.0,0.004998445510864258,
+hamid_test_graph14-3, 16,16,0,0,0.0,0.0,0.0059969425201416016,
+hamid_test_graph14-5, 16,16,0,0,0.0,0.0,0.005997180938720703,
+hamid_test_graph16-1, 16,16,0,0,0.0,0.0,0.006998300552368164,
+hamid_test_graph16-3, 16,16,0,0,0.0,0.0,0.007000923156738281,
+hamid_test_graph16-5, 16,16,0,0,0.0,0.0,0.006994962692260742,

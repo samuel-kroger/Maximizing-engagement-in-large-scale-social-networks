@@ -1,0 +1,60 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar 14 11:47:40 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_14_11_47_40.csv_3_4.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 17 rows, 32 columns and 88 nonzeros
+Model fingerprint: 0x658f2fdd
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective 12.0000000
+Found heuristic solution: objective 14.0000000
+Presolve removed 0 rows and 12 columns
+Presolve time: 0.00s
+Presolved: 17 rows, 20 columns, 72 nonzeros
+Variable types: 0 continuous, 20 integer (16 binary)
+
+Root relaxation: objective 2.000000e+01, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      20.0000000   20.00000  0.00%     -    0s
+
+Explored 0 nodes (1 simplex iterations) in 0.01 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 20 14 12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.000000000000e+01, best bound 2.000000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Sun Mar 14 11:47:40 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_14_11_47_40.csv_3_4.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 17 rows, 32 columns and 88 nonzeros
+Model fingerprint: 0x61a9b82d
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Presolve removed 0 rows and 12 columns
+Presolve time: 0.00s
+Presolved: 17 rows, 20 columns, 72 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0000000e+01   2.000000e+00   0.000000e+00      0s
+       1    2.0000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1 iterations and 0.00 seconds
+Optimal objective  2.000000000e+01

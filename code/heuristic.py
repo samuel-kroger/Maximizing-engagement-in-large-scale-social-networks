@@ -1,55 +1,126 @@
-import networkx as nx
-import read
-import pretty_plot
-import matplotlib.pyplot as plt
-import time
+def anchored_k_core(graph, k, anchors):
+	for anchor in anchors:
+		graph.nodes[anchor]['anchor'] = True
+	output = []
+	n = len(graph.nodes())
 
-def k_core_iter(graph, k, anchors = []):
-	remove = []
-	G = graph.copy()
-	repeat = False
-	for node in G.nodes:
-		degree = G.degree
-		if degree[node] < k and node not in anchors:
-			remove.append(node)
-			repeat = True
-	G.remove_nodes_from(remove)
-	return G, repeat
+	deg = [0] * n
+	vert = [0] * n
+	pos = [0] * n
+	md = 0
 
-def k_core(graph, k, anchors = []):
-	G = graph.copy()
-	repeat = True
-	while repeat == True:
-		G, repeat = k_core_iter(G, k, anchors)
-	return G
+	for v in range(0, n):
+		d = graph.degree(v)
+		deg[v] = d
 
-def eccen_heur(graph, k, r):
-	G = graph.copy()
-	G = k_core(graph, k)
-	connected_components = nx.algorithms.components.connected_components(G)
-	kcore = nx.empty_graph(0)
-	s = 'fail'
+		if d > md:
+			md = d
 
-	for connected_component in connected_components:
-		subgraph = G.subgraph(connected_component)
 
-		if len(subgraph.nodes()) > len(kcore):
-			eccentricity_dict = nx.algorithms.distance_measures.eccentricity(subgraph)
-			#if min(testing, key = testing.get) <= r:
-			s_new = (min(eccentricity_dict, key=eccentricity_dict.get))
-			s_new_val = eccentricity_dict[s_new]
-			if s_new_val <= r:
-				kcore = subgraph
-				s = s_new
-	return kcore, s
+	binn = [0] * (md + 1)
 
-def brute_force_heur(graph, k, r):
-	best = nx.empty_graph(0)
-	s = 'fail'
-	for v in graph.nodes():
-		subgraph = nx.generators.ego.ego_graph(graph, v, radius = r)
-		kcore = k_core(subgraph, k)
-		if len(kcore.nodes()) >= len(best.nodes()):
-			best = kcore
-			s = v
-	return best, s
+
+	for v in range(0, n):
+
+		binn[deg[v]] += 1
+
+	start = 0
+
+	for d in range(0, md + 1):
+		num = binn[d]
+		binn[d] = start
+		start += num
+
+
+	for v in range(0, n):
+		pos[v] = binn[deg[v]]
+		vert[pos[v]] = v
+		binn[deg[v]] += 1
+
+	for d in range(md, 0, -1):
+		binn[d] = binn[d-1]
+	binn[0] = 1
+
+	for i in range(0, n):
+		v = vert[i]
+		if not graph.nodes[v]['anchor']:
+
+
+			for u in graph.neighbors(v):
+
+				if not graph.nodes[u]['anchor']:
+
+					if deg[u] > deg[v]:
+						du = deg[u]
+						pu = pos[u]
+						pw = binn[du]
+
+						w = vert[pw]
+						if u != w:
+							pos[u] = pw
+							vert[pu] = w
+							pos[w] = pu
+							vert[pw] = u
+						binn[du] += 1
+						deg[u] -= 1
+
+	for i in range(0, len(deg)):
+		if deg[i] >= k:
+			output.append(i)
+	list_of_nodes = []
+	for v in graph.subgraph(output).nodes():
+		list_of_nodes.append(v)
+	for anchor in anchors:
+		graph.nodes[anchor]['anchor'] = False
+	return(list_of_nodes)
+
+
+def warm_start(G, k, b, time_for_warm_start):
+
+	x_vals = []
+	y_vals = []
+	best = []
+
+
+	for i in G.nodes():
+			if G.degree[i] < k:
+				y_vals.append(i)
+			else:
+				x_vals.append(i)
+
+
+	timer = 0
+	for node in y_vals:
+		#if G.degree(node) <= 5:
+
+		result = anchored_k_core(G, k, [node])
+		current = [node, result]
+
+
+		best.append(current)
+		if timer >= time_for_warm_start:
+			break
+
+	value_of_anchor = []
+	anchor = []
+	nodes_in_k_core = []
+
+	for fixing in best:
+		value_of_anchor.append(len(fixing[1]))
+		anchor.append(fixing[0])
+		nodes_in_k_core.append(fixing[1])
+
+	b_best_fixings = sorted(zip(value_of_anchor, anchor, nodes_in_k_core), reverse = True)[:b]
+
+	dead_y = []
+	anchors_in_b_best = []
+	for fixing in b_best_fixings:
+
+		anchors_in_b_best.append(fixing[1])
+
+
+	for fixing in best:
+		if fixing[0] not in anchors_in_b_best:
+			dead_y.append(fixing[0])
+
+	return [b_best_fixings, dead_y]

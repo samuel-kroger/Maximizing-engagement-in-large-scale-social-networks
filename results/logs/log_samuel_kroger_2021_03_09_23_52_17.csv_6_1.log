@@ -1,0 +1,48 @@
+
+Gurobi 9.1.1 (win64) logging started Tue Mar  9 23:52:17 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_09_23_52_17.csv_6_1.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 0 rows, 342 columns and 0 nonzeros
+Model fingerprint: 0xd9783430
+Variable types: 0 continuous, 342 integer (342 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [0e+00, 0e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+Thread count was 1 (of 12 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Tue Mar  9 23:52:17 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_09_23_52_17.csv_6_1.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 0 rows, 342 columns and 0 nonzeros
+Model fingerprint: 0xd9783430
+Variable types: 0 continuous, 342 integer (342 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [0e+00, 0e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 0.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 12 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%

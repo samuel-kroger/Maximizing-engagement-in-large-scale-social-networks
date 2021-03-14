@@ -1,0 +1,33 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar  7 14:03:10 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_07_14_03_10.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 67 rows, 68 columns and 443 nonzeros
+Model fingerprint: 0x4bcd4693
+Variable types: 0 continuous, 68 integer (68 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start produced solution with objective 34 (0.00s)
+Loaded user MIP start with objective 34
+
+Presolve removed 0 rows and 1 columns
+Presolve time: 0.00s
+Presolved: 67 rows, 67 columns, 442 nonzeros
+Variable types: 0 continuous, 67 integer (67 binary)
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 1: 34 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.400000000000e+01, best bound 3.400000000000e+01, gap 0.0000%

@@ -1,0 +1,53 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar  7 14:41:51 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_07_14_41_51.csv_2_2.log
+   Prev:   Default: 
+Changed value of parameter lazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 20 rows, 32 columns and 65 nonzeros
+Model fingerprint: 0x1ec0b2bb
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start produced solution with objective 7 (0.00s)
+Loaded user MIP start with objective 7
+
+Presolve removed 8 rows and 8 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 24 columns, 41 nonzeros
+Variable types: 0 continuous, 24 integer (24 binary)
+
+Root relaxation: objective 1.000000e+01, 2 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   10.00000    0    6    7.00000   10.00000  42.9%     -    0s
+H    0     0                       9.0000000   10.00000  11.1%     -    0s
+     0     0   10.00000    0    5    9.00000   10.00000  11.1%     -    0s
+     0     0   10.00000    0    5    9.00000   10.00000  11.1%     -    0s
+     0     0   10.00000    0    4    9.00000   10.00000  11.1%     -    0s
+     0     0   10.00000    0    5    9.00000   10.00000  11.1%     -    0s
+     0     0   10.00000    0    6    9.00000   10.00000  11.1%     -    0s
+     0     0 infeasible    0         9.00000    9.00000  0.00%     -    0s
+
+Cutting planes:
+  MIR: 2
+  Lazy constraints: 18
+
+Explored 1 nodes (46 simplex iterations) in 0.03 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 9 7 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.000000000000e+00, best bound 9.000000000000e+00, gap 0.0000%
+
+User-callback calls 114, time in user-callback 0.01 sec

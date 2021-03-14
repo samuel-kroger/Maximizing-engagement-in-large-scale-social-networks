@@ -1,0 +1,155 @@
+
+Gurobi 9.1.1 (win64) logging started Thu Mar 11 15:16:22 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_11_10_53_52.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2778257 rows, 2882590 columns and 11704225 nonzeros
+Model fingerprint: 0xbdd596cb
+Variable types: 0 continuous, 2882590 integer (2882590 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective 52169.000000
+Found heuristic solution: objective 54543.000000
+Found heuristic solution: objective 54844.000000
+Presolve removed 2254 rows and 56699 columns (presolve time = 7s) ...
+Presolve removed 2254 rows and 61207 columns (presolve time = 10s) ...
+Presolve removed 4860 rows and 61541 columns (presolve time = 16s) ...
+Presolve removed 5294 rows and 61893 columns (presolve time = 20s) ...
+Presolve removed 5312 rows and 62344 columns (presolve time = 27s) ...
+Presolve removed 5312 rows and 63610 columns (presolve time = 30s) ...
+Presolve removed 6618 rows and 63744 columns (presolve time = 44s) ...
+Presolve removed 6618 rows and 63744 columns (presolve time = 47s) ...
+Presolve removed 6618 rows and 63744 columns
+Presolve time: 47.09s
+Presolved: 2771639 rows, 2818846 columns, 11614526 nonzeros
+Found heuristic solution: objective 61653.000000
+Variable types: 0 continuous, 2818846 integer (2818846 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4412970e+06   0.000000e+00   0.000000e+00     67s
+Concurrent spin time: 0.80s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.441297e+06, 0 iterations, 13.97 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1441297.0000 1441297.00  0.00%     -   68s
+
+Explored 0 nodes (0 simplex iterations) in 69.08 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 1.4413e+06 61653 54844 ... 52169
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.441297000000e+06, best bound 1.441297000000e+06, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Thu Mar 11 15:20:23 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_11_10_53_52.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2778257 rows, 2882590 columns and 11704225 nonzeros
+Model fingerprint: 0x919af901
+Variable types: 0 continuous, 2882590 integer (2882590 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start produced solution with objective 1.4413e+06 (35.92s)
+Loaded user MIP start with objective 1.4413e+06
+Processed MIP start in 36.29 seconds
+
+Presolve removed 2254 rows and 56699 columns (presolve time = 5s) ...
+Presolve removed 2580 rows and 61207 columns (presolve time = 10s) ...
+Presolve removed 4860 rows and 61541 columns (presolve time = 16s) ...
+Presolve removed 5294 rows and 61893 columns (presolve time = 20s) ...
+Presolve removed 5312 rows and 62344 columns (presolve time = 29s) ...
+Presolve removed 5312 rows and 63610 columns (presolve time = 32s) ...
+Presolve removed 5312 rows and 63610 columns (presolve time = 35s) ...
+Presolve removed 6618 rows and 63744 columns (presolve time = 49s) ...
+Presolve removed 6618 rows and 63744 columns (presolve time = 52s) ...
+Presolve removed 6618 rows and 63744 columns
+Presolve time: 52.10s
+Presolved: 2771639 rows, 2818846 columns, 11614526 nonzeros
+Variable types: 0 continuous, 2818846 integer (2818846 binary)
+
+Explored 0 nodes (0 simplex iterations) in 92.91 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 1: 1.4413e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.441297000000e+06, best bound 1.441297000000e+06, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Thu Mar 11 15:25:24 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_11_10_53_52.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 1539363 rows, 2882590 columns and 4987217 nonzeros
+Model fingerprint: 0xc3a3ee22
+Variable types: 0 continuous, 2882590 integer (2882590 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective 1291591.0000
+Found heuristic solution: objective 1301309.0000
+Found heuristic solution: objective 1301774.0000
+Presolve removed 1260296 rows and 2584869 columns (presolve time = 5s) ...
+Presolve removed 1265829 rows and 2585108 columns
+Presolve time: 8.23s
+Presolved: 273534 rows, 297482 columns, 1061729 nonzeros
+Found heuristic solution: objective 1314377.0000
+Variable types: 0 continuous, 297482 integer (297482 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4412970e+06   0.000000e+00   0.000000e+00     10s
+Concurrent spin time: 0.00s
+
+Solved with primal simplex
+
+Root relaxation: objective 1.441297e+06, 0 iterations, 0.50 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1441297.0000 1441297.00  0.00%     -   10s
+
+Explored 0 nodes (0 simplex iterations) in 10.30 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 1.4413e+06 1.31438e+06 1.30177e+06 ... 1.29159e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.441297000000e+06, best bound 1.441297000000e+06, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Thu Mar 11 17:24:06 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_11_10_53_52.csv_2_2.log
+   Prev:   Default: 

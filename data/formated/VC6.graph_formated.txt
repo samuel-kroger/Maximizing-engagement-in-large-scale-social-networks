@@ -1,0 +1,9 @@
+#C:\Users\sakroger\Desktop\k-core\git_code\code\formater.py
+# GMT Sun Jan 17 05:24:03 2021
+# 
+0 1 2
+1 2 3
+2 4
+3 4 5
+4
+5

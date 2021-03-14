@@ -1,0 +1,72 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar  7 14:08:43 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_07_14_08_43.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 20 rows, 32 columns and 65 nonzeros
+Model fingerprint: 0x1ec0b2bb
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start produced solution with objective 7 (0.00s)
+Loaded user MIP start with objective 7
+
+Presolve removed 20 rows and 32 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 12 available processors)
+
+Solution count 2: 10 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.000000000000e+01, best bound 1.000000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Sun Mar  7 14:16:25 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_07_14_08_43.csv_2_2.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 17 rows, 32 columns and 88 nonzeros
+Model fingerprint: 0x79b429d0
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+
+User MIP start produced solution with objective 7 (0.00s)
+Loaded user MIP start with objective 7
+
+Presolve removed 0 rows and 12 columns
+Presolve time: 0.00s
+Presolved: 17 rows, 20 columns, 72 nonzeros
+Variable types: 0 continuous, 20 integer (16 binary)
+
+Root relaxation: objective 9.000000e+00, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    9.00000    0    2    7.00000    9.00000  28.6%     -    0s
+H    0     0                       8.0000000    9.00000  12.5%     -    0s
+
+Cutting planes:
+  Implied bound: 1
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 8 7 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.000000000000e+00, best bound 8.000000000000e+00, gap 0.0000%

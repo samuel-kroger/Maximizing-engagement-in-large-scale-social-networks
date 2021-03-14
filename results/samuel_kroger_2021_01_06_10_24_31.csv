@@ -1,4 +1,0 @@
-instances, , , ,Original Model, , , ,Reduced Model
-
-	             #name, #nodes, #edges, #k-cores, #vars, LB, UB, time, #vars, LB, UB, time
-1050erdos_renyi_nodes3-3, 1050,4216,1,2100,1040.0,1040.0,0.5298466682434082,24,1038.0,1038.0,69.79891014099121

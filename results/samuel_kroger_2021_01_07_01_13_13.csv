@@ -1,4 +1,0 @@
-instances, , , ,Original Model, , , ,Reduced Model
-
-	             #name, #nodes, #edges, #k-cores, #vars, LB, UB, time, #vars, LB, UB, time
-test_graph42-5, 11,16,1,22,9.0,9.0,0.008996725082397461,4,11.0,11.0,0.0019996166229248047

@@ -1,0 +1,50 @@
+
+Gurobi 9.1.1 (win64) logging started Sun Mar 14 03:30:59 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_13_19_47_17.csv_4_1.log
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 56643 rows, 2882590 columns and 1754820 nonzeros
+Model fingerprint: 0xb45fa883
+Variable types: 0 continuous, 2882590 integer (2882590 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1413017.0000
+Found heuristic solution: objective 1431525.0000
+Found heuristic solution: objective 1431586.0000
+Presolve removed 43930 rows and 2861485 columns (presolve time = 7s) ...
+Presolve removed 43930 rows and 2861485 columns
+Presolve time: 6.61s
+Presolved: 12713 rows, 21105 columns, 58577 nonzeros
+Found heuristic solution: objective 1435802.0000
+Variable types: 0 continuous, 21105 integer (21105 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4412960e+06   1.000000e+00   0.000000e+00      7s
+       1    1.4412960e+06   0.000000e+00   0.000000e+00      7s
+
+Root relaxation: objective 1.441296e+06, 1 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    1441296.0000 1441296.00  0.00%     -    7s
+
+Explored 0 nodes (1 simplex iterations) in 7.58 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 1.4413e+06 1.4358e+06 1.43159e+06 ... 1.41302e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.441296000000e+06, best bound 1.441296000000e+06, gap 0.0000%
+
+Gurobi 9.1.1 (win64) logging started Sun Mar 14 03:31:39 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_03_13_19_47_17.csv_4_1.log
+   Prev:   Default: 
