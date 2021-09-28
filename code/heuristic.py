@@ -1,4 +1,9 @@
+import networkx as nx
+import test
 def anchored_k_core(graph, k, anchors):
+
+	for node in graph.nodes():
+		graph.nodes[node]['anchor'] = False
 	for anchor in anchors:
 		graph.nodes[anchor]['anchor'] = True
 	output = []
@@ -74,7 +79,7 @@ def anchored_k_core(graph, k, anchors):
 		graph.nodes[anchor]['anchor'] = False
 	return(list_of_nodes)
 
-
+'''
 def warm_start(G, k, b, time_for_warm_start):
 
 	x_vals = []
@@ -124,3 +129,11 @@ def warm_start(G, k, b, time_for_warm_start):
 			dead_y.append(fixing[0])
 
 	return [b_best_fixings, dead_y]
+'''
+def new_heur_idea(G, k, b):
+	anchors = test.new_heuristic(G,k,b)
+	nodes_in_k_core = heuristic.anchored_k_core(G, k, anchors)
+	for anchor in anchors:
+		nodes_in_k_core.remove(anchor)
+
+	return anchors, nodes_in_k_core

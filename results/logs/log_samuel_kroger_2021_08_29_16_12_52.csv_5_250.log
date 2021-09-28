@@ -1,0 +1,7 @@
+
+Gurobi 9.1.2 (win64) logging started Sun Aug 29 19:15:53 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_08_29_16_12_52.csv_5_250.log
+   Prev:   Default: 
+Changed value of parameter method to 3
+   Prev: -1  Min: -1  Max: 5  Default: -1

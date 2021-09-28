@@ -37,4 +37,4 @@ def build_vermyev(G, m, r):
                     if l > 1:
                         m.addConstr(m._w[i,j,l] <= gp.quicksum(m._w[i,u, l-1] for u in G.neighbors(j)))
 
-                    #m.addConstr(m._X[i] + m._Y[i] + m._w[i,j, l] <= 1 + m._S[j])
+                    #m.addConstr(m._X[i] + m._Y[i] + m._w[i,j, l] <= 1 + m._S[j])x

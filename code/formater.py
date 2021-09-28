@@ -6,7 +6,7 @@ import os
 
 #instance = 'cnr-2000.graph'
 ext = "../data/"
-
+'''
 for file in os.listdir(ext):
 	#if file[-4:] == '.txt':
 	if file[-6:] == '.graph':
@@ -19,12 +19,24 @@ for file in os.listdir(ext):
 for file in os.listdir(ext):
 	if file[-4:] == '.txt':
 	#if file[-6:] == '.graph':
+'''
+		#G = nx.readwrite.adjlist.read_adjlist(ext + file, nodetype = int)
 
-		G = nx.readwrite.adjlist.read_adjlist(ext + file, nodetype = int)
-
-		nx.readwrite.adjlist.write_adjlist(G, ext + file[:-4] + '_formated.txt')
+		#nx.readwrite.adjlist.write_adjlist(G, ext + file[:-4] + '_formated.txt')
 		#nx.readwrite.adjlist.write_adjlist(G, ext + file[:-6] + '_formated.graph')
+G = nx.Graph()
+G.add_nodes_from([0, 6])
+G.add_edge(0,1)
+G.add_edge(0,2)
+G.add_edge(0,3)
+G.add_edge(1,2)
+G.add_edge(1,3)
+G.add_edge(2,3)
+G.add_edge(2,4)
+G.add_edge(4,5)
+G.add_edge(4,6)
 
+nx.readwrite.adjlist.write_adjlist(G, ext + 'example_three' + '_formated.txt')
 #instance to run
 #instance = 'hamid_test_graph1'
 #ext = "../data/"

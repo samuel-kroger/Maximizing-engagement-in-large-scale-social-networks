@@ -1,0 +1,7 @@
+instances, , , , , , Base Model, , , , , , , , Reduced Model, , , , , , , , Reduced Model with warm start, , , , , , , , Reduced Model with warm start and y_edges, , , , , , , , Reduced Model y_saturated, , , , , , , , Reduced Model Conflict Warm Start
+#name, k, b, #nodes, #edges, #k-cores, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time, #vars, #edges_removed, time_to_remove_edges, #y-sat_nodes, time_to_find_y_sat, UB, LB, time,
+facebook_combined,17,250, 4039,88234,2061,3956,NA,NA,NA,NA,2533.0,2533.0,1.1136565208435059,
+CA-CondMat,4,250, 23133,93497,13467,19332,NA,NA,NA,NA,13943.0,13942.0,3.6279852390289307,
+CA-HepPh,4,250, 12008,118521,6591,10834,NA,NA,NA,NA,6978.0,6978.0,1.6405413150787354,
+Brightkite_edges,2,250, 58228,214078,34706,47044,NA,NA,NA,NA,35267.0,35267.0,15.677058219909668,
+socfb-Northeastern19,33,250, 13882,381934,7008,13748,NA,NA,NA,NA,7618.0,7586.0,3602.635541677475,

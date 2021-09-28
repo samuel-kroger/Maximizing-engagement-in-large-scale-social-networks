@@ -1,4 +1,0 @@
-instances, , , ,Base Model, , , ,Base Model with warm start , , , , Reduced Model , , , , Reduced Model with warm start
-
-	             #name, #nodes, #edges, #k-cores, #vars, LB, UB, time, #vars, LB, UB, time,#vars, LB, UB, time, #vars, LB, UB, time, #vars, LB, UB, time, 
-karate.graph_formated2-2, 34,78,33,2,35.0,35.0,0.1561594009399414,

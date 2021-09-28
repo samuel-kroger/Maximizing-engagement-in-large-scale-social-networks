@@ -1,0 +1,307 @@
+This is a test
+Filename: adjnoun.graph_formated.txtwith k = 2
+|V| = 112
+ nodes in k_core: 102
+ art_points: 9
+ interseciton: 9
+ --------------------------
+Filename: adjnoun.graph_formated.txtwith k = 3
+|V| = 112
+ nodes in k_core: 89
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: as-22july06.graph_formated.txtwith k = 2
+|V| = 22963
+ nodes in k_core: 14966
+ art_points: 1870
+ interseciton: 1713
+ --------------------------
+Filename: as-22july06.graph_formated.txtwith k = 3
+|V| = 22963
+ nodes in k_core: 4383
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: belgium.osm.graph_formated.txtwith k = 2
+|V| = 1441295
+ nodes in k_core: 1238894
+ art_points: 211952
+ interseciton: 61718
+ --------------------------
+Filename: belgium.osm.graph_formated.txtwith k = 3
+|V| = 1441295
+ nodes in k_core: 5
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: Brightkite_edges_formated.txtwith k = 2
+|V| = 58228
+ nodes in k_core: 34706
+ art_points: 12914
+ interseciton: 10549
+ --------------------------
+Filename: Brightkite_edges_formated.txtwith k = 3
+|V| = 58228
+ nodes in k_core: 24422
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: brock200_3.clq_formated.txtwith k = 2
+|V| = 200
+ nodes in k_core: 200
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: brock800_1.clq_formated.txtwith k = 2
+|V| = 800
+ nodes in k_core: 800
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: brock800_2.clq_formated.txtwith k = 2
+|V| = 800
+ nodes in k_core: 800
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: celegans_metabolic.graph_formated.txtwith k = 2
+|V| = 453
+ nodes in k_core: 445
+ art_points: 12
+ interseciton: 10
+ --------------------------
+Filename: celegans_metabolic.graph_formated.txtwith k = 3
+|V| = 453
+ nodes in k_core: 429
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: Cit-HepPh.graph_formated.txtwith k = 2
+|V| = 34546
+ nodes in k_core: 33137
+ art_points: 1187
+ interseciton: 1107
+ --------------------------
+Filename: Cit-HepPh.graph_formated.txtwith k = 3
+|V| = 34546
+ nodes in k_core: 31741
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: delaunay_n10.graph_formated.txtwith k = 2
+|V| = 1024
+ nodes in k_core: 1024
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: delaunay_n11.graph_formated.txtwith k = 2
+|V| = 2048
+ nodes in k_core: 2048
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: email.graph_formated.txtwith k = 2
+|V| = 1133
+ nodes in k_core: 978
+ art_points: 132
+ interseciton: 128
+ --------------------------
+Filename: email.graph_formated.txtwith k = 3
+|V| = 1133
+ nodes in k_core: 848
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: example_one_formated.txtwith k = 2
+|V| = 12
+ nodes in k_core: 6
+ art_points: 4
+ interseciton: 2
+ --------------------------
+Filename: example_three_formated.txtwith k = 2
+|V| = 7
+ nodes in k_core: 4
+ art_points: 2
+ interseciton: 1
+ --------------------------
+Filename: example_three_formated.txtwith k = 3
+|V| = 7
+ nodes in k_core: 4
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: example_two_formated.txtwith k = 2
+|V| = 11
+ nodes in k_core: 11
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: Gowalla_edges_formated.txtwith k = 2
+|V| = 196591
+ nodes in k_core: 142670
+ art_points: 36257
+ interseciton: 31788
+ --------------------------
+Filename: Gowalla_edges_formated.txtwith k = 3
+|V| = 196591
+ nodes in k_core: 106417
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: hamming10-2.clq_formated.txtwith k = 2
+|V| = 1024
+ nodes in k_core: 1024
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: hamming8-2.clq_formated.txtwith k = 2
+|V| = 256
+ nodes in k_core: 256
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: hamming8-4.clq_formated.txtwith k = 2
+|V| = 256
+ nodes in k_core: 256
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: johnson32-2-4.clq_formated.txtwith k = 2
+|V| = 496
+ nodes in k_core: 496
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: karate.graph_formated.txtwith k = 2
+|V| = 34
+ nodes in k_core: 33
+ art_points: 1
+ interseciton: 1
+ --------------------------
+Filename: karate.graph_formated.txtwith k = 3
+|V| = 34
+ nodes in k_core: 22
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: keller4.clq_formated.txtwith k = 2
+|V| = 171
+ nodes in k_core: 171
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: luxembourg.osm.graph_formated.txtwith k = 2
+|V| = 114599
+ nodes in k_core: 93000
+ art_points: 22426
+ interseciton: 4766
+ --------------------------
+Filename: memplus.graph_formated.txtwith k = 2
+|V| = 17758
+ nodes in k_core: 17649
+ art_points: 135
+ interseciton: 78
+ --------------------------
+Filename: memplus.graph_formated.txtwith k = 3
+|V| = 17758
+ nodes in k_core: 7776
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: PA-10-2.graph_formated.txtwith k = 2
+|V| = 16
+ nodes in k_core: 16
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: PGPgiantcompo.graph_formated.txtwith k = 2
+|V| = 10680
+ nodes in k_core: 5434
+ art_points: 2987
+ interseciton: 1970
+ --------------------------
+Filename: PGPgiantcompo.graph_formated.txtwith k = 3
+|V| = 10680
+ nodes in k_core: 2991
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: polbooks.graph_formated.txtwith k = 2
+|V| = 105
+ nodes in k_core: 105
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: power.graph_formated.txtwith k = 2
+|V| = 4941
+ nodes in k_core: 3353
+ art_points: 1229
+ interseciton: 867
+ --------------------------
+Filename: power.graph_formated.txtwith k = 3
+|V| = 4941
+ nodes in k_core: 231
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: p_hat1000-1.clq_formated.txtwith k = 2
+|V| = 1000
+ nodes in k_core: 1000
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: p_hat300-1.clq_formated.txtwith k = 2
+|V| = 300
+ nodes in k_core: 300
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: Slashdot0811.graph_formated.txtwith k = 2
+|V| = 77360
+ nodes in k_core: 47760
+ art_points: 13832
+ interseciton: 12387
+ --------------------------
+Filename: Slashdot0811.graph_formated.txtwith k = 3
+|V| = 77360
+ nodes in k_core: 35705
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: smallworld.graph_formated.txtwith k = 2
+|V| = 100000
+ nodes in k_core: 100000
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: soc-Epinions.graph_formated.txtwith k = 2
+|V| = 75879
+ nodes in k_core: 37300
+ art_points: 15936
+ interseciton: 13112
+ --------------------------
+Filename: soc-Epinions.graph_formated.txtwith k = 3
+|V| = 75879
+ nodes in k_core: 25319
+ art_points: 0
+ interseciton: 0
+ --------------------------
+Filename: VC6.graph_formated.txtwith k = 2
+|V| = 6
+ nodes in k_core: 5
+ art_points: 1
+ interseciton: 1
+ --------------------------
+Filename: Wiki-Vote.graph_formated.txtwith k = 2
+|V| = 7115
+ nodes in k_core: 4786
+ art_points: 1033
+ interseciton: 1019
+ --------------------------
+Filename: Wiki-Vote.graph_formated.txtwith k = 3
+|V| = 7115
+ nodes in k_core: 4152
+ art_points: 0
+ interseciton: 0
+ --------------------------

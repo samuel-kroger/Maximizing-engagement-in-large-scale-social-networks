@@ -1,2 +1,2 @@
-def csv_print(num_var, LB, UB, time):
-	return(str(num_var) + ','+ str(LB) + ',' + str(UB) + ',' + str(time))
+def csv_print(num_var, y_edge_red, y_edge_time, y_sat, y_sat_time, LB, UB, time):
+	return(str(num_var) + ',' + str(y_edge_red) + ',' + str(y_edge_time) + ',' + str(y_sat) + ',' + str(y_sat_time) + ',' + str(LB) + ',' + str(UB) + ',' + str(time))

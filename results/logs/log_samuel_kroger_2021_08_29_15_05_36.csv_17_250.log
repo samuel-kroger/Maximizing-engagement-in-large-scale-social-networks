@@ -1,0 +1,116 @@
+
+Gurobi 9.1.2 (win64) logging started Sun Aug 29 15:05:37 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_08_29_15_05_36.csv_17_250.log
+   Prev:   Default: 
+Changed value of parameter method to 3
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 6417 rows, 8078 columns and 343647 nonzeros
+Model fingerprint: 0x0e7571a1
+Variable types: 0 continuous, 8078 integer (8078 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 1939 columns
+Presolve time: 0.68s
+Presolved: 6416 rows, 6139 columns, 334301 nonzeros
+Variable types: 0 continuous, 6139 integer (6091 binary)
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 0.82 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 2.549430e+03, 764 iterations, 0.11 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2549.43015    0   88   -0.00000 2549.43015      -     -    0s
+H    0     0                    2493.0000000 2549.43015  2.26%     -    0s
+H    0     0                    2498.0000000 2549.43015  2.06%     -    0s
+H    0     0                    2503.0000000 2549.43015  1.85%     -    0s
+H    0     0                    2506.0000000 2549.43015  1.73%     -    2s
+H    0     0                    2510.0000000 2549.43015  1.57%     -    2s
+H    0     0                    2533.0000000 2549.43015  0.65%     -    2s
+     0     0 2537.29604    0  110 2533.00000 2537.29604  0.17%     -    2s
+     0     0 2536.73735    0   81 2533.00000 2536.73735  0.15%     -    2s
+     0     0 2536.26947    0   67 2533.00000 2536.26947  0.13%     -    2s
+     0     0 2536.07802    0   67 2533.00000 2536.07802  0.12%     -    2s
+     0     0 2536.04797    0   74 2533.00000 2536.04797  0.12%     -    2s
+     0     0 2536.04797    0   77 2533.00000 2536.04797  0.12%     -    3s
+     0     0 2535.71236    0   83 2533.00000 2535.71236  0.11%     -    4s
+     0     0 2535.46632    0   78 2533.00000 2535.46632  0.10%     -    4s
+     0     0 2535.46302    0   79 2533.00000 2535.46302  0.10%     -    4s
+     0     0 2535.46172    0   59 2533.00000 2535.46172  0.10%     -    4s
+     0     0 2535.33182    0   78 2533.00000 2535.33182  0.09%     -    6s
+     0     0 2535.22882    0  126 2533.00000 2535.22882  0.09%     -    6s
+     0     0 2535.09246    0  135 2533.00000 2535.09246  0.08%     -    7s
+     0     0 2535.08941    0  140 2533.00000 2535.08941  0.08%     -    7s
+     0     0 2535.08911    0  143 2533.00000 2535.08911  0.08%     -    7s
+     0     0 2534.94046    0   72 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   63 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   53 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   49 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   42 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   47 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.94046    0   45 2533.00000 2534.94046  0.08%     -    7s
+     0     0 2534.58210    0   60 2533.00000 2534.58210  0.06%     -    7s
+     0     0 2534.58026    0   61 2533.00000 2534.58026  0.06%     -    7s
+     0     0 2534.34710    0   38 2533.00000 2534.34710  0.05%     -    7s
+     0     0 2534.17088    0   37 2533.00000 2534.17088  0.05%     -    7s
+     0     0 2534.13341    0   42 2533.00000 2534.13341  0.04%     -    8s
+     0     0 2534.13341    0   37 2533.00000 2534.13341  0.04%     -    8s
+     0     0 2534.06944    0    9 2533.00000 2534.06944  0.04%     -    8s
+     0     0 infeasible    0      2533.00000 2533.00000  0.00%     -    8s
+
+Explored 1 nodes (3014 simplex iterations) in 8.04 seconds
+Thread count was 12 (of 12 available processors)
+
+Solution count 9: 2533 2533 2533 ... -0
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.533000000000e+03, best bound 2.533000000000e+03, gap 0.0000%
+
+Gurobi 9.1.2 (win64) logging started Sun Aug 29 15:17:17 2021
+
+Changed value of parameter LogFile to ../results/logs/log_samuel_kroger_2021_08_29_15_05_36.csv_17_250.log
+   Prev:   Default: 
+Changed value of parameter method to 3
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 614215 rows, 913262 columns and 48492522 nonzeros
+Model fingerprint: 0x81d06eda
+Variable types: 0 continuous, 913262 integer (913262 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 219829 columns (presolve time = 8s) ...
+Presolve removed 0 rows and 219829 columns (presolve time = 11s) ...
+Presolve removed 0 rows and 219829 columns
+Presolve time: 11.01s
+
+Explored 0 nodes (0 simplex iterations) in 16.58 seconds
+Thread count was 1 (of 12 available processors)
+
+Solution count 1: -0 
+No other solutions better than 0
+
+Time limit reached
+Best objective -0.000000000000e+00, best bound -, gap -
