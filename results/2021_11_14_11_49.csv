@@ -1,0 +1,2 @@
+instance_name, model_type, k, b, r, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, total_time
+facebook_combined, base_model, 200, 250, NA, 8078, 0, 21.0, 21.0, NA, NA, 0, 1, 0.006016254425048828, 0.13561224937438965

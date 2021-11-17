@@ -1,0 +1,5 @@
+instance_name, model_type, k, b, r, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, total_time
+facebook_combined, strong, 17, 250, 2, 3956, 2061, 2546.0, 2546.0, NA, NA, 0, 1, 0.17803144454956055, 1.1763262748718262
+CA-CondMat, strong, 4, 250, 2, 19332, 13467, 13946.0, 13947.0, NA, NA, 0, 1, 0.30960726737976074, 4.156002044677734
+facebook_combined, naive, 200, 250, NA, 8078, 0, 21.0, 21.0, NA, NA, 0, 1, 0.006122589111328125, 0.17408251762390137
+facebook_combined, naive, 200, 250, NA, 8078, 0, 21.0, 21.0, NA, NA, 0, 1, 0.00702977180480957, 0.163222074508667

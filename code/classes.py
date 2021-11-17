@@ -9,19 +9,57 @@ import fractional_callback
 import cut_formulation_callback
 import extended_cut_formulation_callback
 import seperation
+import os
 
-class base_model( object ):
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		#Gurobi paramater options
-		model.setParam('OutputFlag', 1)
-		model.Params.timeLimit= 3600
-		model.params.LogToConsole = 1
-		model.params.LogFile='../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
-		model.params.method = 3
+def output_sort(element_of_output):
+	if element_of_output == "instance_name":
+		return 1
+	if element_of_output == "model_type":
+		return 2
+	if element_of_output == "k":
+		return 3
+	if element_of_output == "b":
+		return 4
+	if element_of_output == "r":
+		return 5
+	if element_of_output == "var_num":
+		return 5.5
+	if element_of_output == "var_remaining":
+		return 5.7
+	if element_of_output == "num_k_core_nodes":
+		return 6
+	if element_of_output == "lower_bound":
+		return 6.3
+	if element_of_output == "upper_bound":
+		return 6.6
+	if element_of_output == "remove_y_edges_reduction":
+		return 7
+	if element_of_output == "remove_y_edges_time":
+		return 8
+	if element_of_output == "y_saturated_reduction":
+		return 9
+	if element_of_output == "y_saturated_iterations":
+		return 10
+	if element_of_output == "y_saturated_run_time":
+		return 11
+	if element_of_output == "time_for_warm_start":
+		return 12
 
-		#model options
 
+class base_model(object):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+
+		self.model = gp.Model()
 		self.model_type = model_type
+		self.instance_name = instance_name
+		self.y_saturated = y_saturated
+		#Gurobi paramater options
+		self.model.setParam('OutputFlag', 1)
+		self.model.Params.timeLimit= 3600
+		self.model.params.LogToConsole = 1
+		self.model.params.LogFile='../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
+		#revisit
+		self.model.params.method = 3
 
 		#to add later if not using callbacks do not edit
 
@@ -29,13 +67,16 @@ class base_model( object ):
 		#every member of class
 		self.num_k_core_nodes = 0
 		self.R = []
-		self.weights = {}
-		self.model = model
-		self.var_sub = 0
+		#self.weights = {}
+		self.var_remaining = 0
 		self.var_num = 0
 		#self.relax = False
-		self.y_saturated_reduction = 'NA'
-		self.y_saturated_run_time = 'NA'
+		
+		#y_saturated
+		self.y_saturated_reduction = 0
+		self.y_saturated_run_time = 0
+		self.y_saturated_iterations = 0
+
 		self.remove_y_edges_reduction = 'NA'
 		self.remove_y_edges_time = 'NA'
 
@@ -53,11 +94,14 @@ class base_model( object ):
 
 		self.x_vals = []
 		self.y_vals = []
+
 		for node in self.G.nodes():
 			if self.G.degree(node)>= self.k:
 				self.x_vals.append(node)
 			else:
 				self.y_vals.append(node)
+		
+		self.remove_all_y_saturated_nodes()
 
 		#set up model
 		self.model._G = G
@@ -72,33 +116,57 @@ class base_model( object ):
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
+			self.var_remaining += 1
 
-		#R = self.R
+		
 
-		# objective function
-		#m.setObjective(gp.quicksum(m._X) + gp.quicksum(m._Y) + self.num_k_core_nodes, sense=gp.GRB.MAXIMIZE)
+		# objective function 
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
 
 		# k degree constraints
 		if model_type != 'strong':
 			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in self.G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
-		#m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= self.k * m._X[i] for i in G.nodes())
+
 		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals)
 
 		# budget constraints
 		self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
 		#valid facet defining
-		#problem in strong form
 		valid = False
 		if valid:
 			for i in self.x_vals:
 				if self.G.degree(i) == self.k:
 					self.model.addConstrs(self.model._X[i] <= self.model._Y[u] + self.model._X[u] for u in self.G.neighbors(i))
 
+
+		current_reduction = True
+		if current_reduction:
+			#couter = 0
+			for i in self.y_vals:
+				fix = True
+				for j in self.G.neighbors(i):
+					if j in self.x_vals:
+						fix = False 
+						break
+				if fix:
+					self.model._Y[i].ub = 0
+					var_remaining += 1
+			#		couter += 1
+			#for j in range(50):
+			#	print(couter)
+
+	def remove_all_y_saturated_nodes(self):
+		loop = True
+		while loop:
+			old_tracker = self.y_saturated_reduction
+			self.y_saturated_iter()
+			if old_tracker == self.y_saturated_reduction:
+				loop = False
+
 	def remove_y_edges(self):
 		time1 = time.time()
-		fixed_num = 0
+		num_edges_removed = 0
 		x_vals = self.x_vals
 		y_vals = self.y_vals
 
@@ -110,39 +178,29 @@ class base_model( object ):
 
 		for edge in pair_tracker:
 			self.G.remove_edge(edge[0], edge[1])
-			fixed_num += 1
+			num_edges_removed += 1
 		time2 = time.time()
 
-		'''
-		counter = 0
-		for node in self.y_vals:
-			if set([n for n in self.G.neighbors(node)]) <= set(self.y_vals):
-				self.model._Y[node].ub = 0
-				counter += 1
-		'''
-
-		self.remove_y_edges_reduction = fixed_num
+		self.remove_y_edges_reduction = num_edges_removed
 		self.remove_y_edges_time = time2 - time1
 
-	def y_saturated(self):
+	def y_saturated_iter(self):
 		time1 = time.time()
-		G = self.G
-		x_vals = self.x_vals
-		y_vals = self.y_vals
-		k = self.k
-		b = self.b
-		fixed_num = 0
-		temp_graph = G.subgraph(x_vals)
+		num_y_saturated_nodes = 0
+		temp_graph = self.G.subgraph(self.x_vals)
 		for v in temp_graph:
-			if k - temp_graph.degree(v) > b:
+			if self.k - temp_graph.degree(v) > self.b:
 				self.y_vals.append(v)
 				self.x_vals.remove(v)
-				self.model._X[v].ub = 0
+				#self.model._X[v].ub = 0
 
-				fixed_num += 1
+				num_y_saturated_nodes += 1
 		time2 = time.time()
-		self.y_saturated_reduction = fixed_num
-		self.y_saturated_run_time = time2 - time1
+		#for i in range(100):
+		#	print(num_y_saturated_nodes)
+		self.y_saturated_reduction += num_y_saturated_nodes
+		self.y_saturated_run_time += time2 - time1
+		self.y_saturated_iterations += 1
 
 	def relaxation(self):
 		self.model.update()
@@ -248,7 +306,7 @@ class base_model( object ):
 		b = self.b
 		m = self.model
 
-		on_the_fly = True
+		on_the_fly = False
 		if on_the_fly:
 			m.Params.lazyConstraints = 1
 
@@ -257,12 +315,8 @@ class base_model( object ):
 		else:
 			m.optimize()
 
-		#model.optimize()
-		var = m.getVars()
-		#print(var)
 
 
-		self.var_num = len(var) - self.var_sub
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
@@ -338,99 +392,96 @@ class base_model( object ):
 			for comp in components:
 				for node in comp:
 					self.model._X[node].lb = 1
+					self.model._Y[node].ub = 0
+					self.var_remaining += 2
 
-	def output_results(self):
-		return([self.var_num, self.remove_y_edges_reduction, self.remove_y_edges_time, self.y_saturated_reduction, self.y_saturated_run_time, self.upper_bound, self.lower_bound, self.num_k_core_nodes])
 
-	def free_model(self):
-		self.model.dispose()
+	def save_to_file(self, total_time):
+		self.var_num = len(self.model.getVars())
+		#self.var_remaining = self.var_num - self.var_remaining
+
+		if not os.path.exists("../results/" + self.filename):
+			with open("../results/" + self.filename, "w") as doc:
+				string = ""
+				for thing in self.return_output():
+					string += thing + ", "
+				string += 'total_time'
+				doc.write(string)
+				doc.close()
+
+		with open("../results/" + self.filename, "a") as doc:
+			string = "\n"
+			for thing in self.return_output():
+				string += str(getattr(self, thing)) + ", "
+			string += total_time
+			doc.write(string)
+			doc.close()
+
+	def return_output(self):
+		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename', 'y_saturated']
+		output = [attribute for attribute in dir(self) if not attribute.startswith("__") and not callable(getattr(self, attribute)) and attribute not in exceptions]
+		output.sort(key = output_sort)
+		return output
+
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		base_model.__init__(self, filename, G, model, model_type, k, b, r)
-
-		G = self.G
-		k = self.k
-		b = self.b
-		m = self.model
-		x_vals = self.x_vals
-		y_vals = self.y_vals
-		R = self.R
-		weights = self.weights
-
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
 
 		k_core_G = heuristic.anchored_k_core(self.G, self.k, [])
 		k_core_G = self.G.subgraph(k_core_G)
 
+		self.num_k_core_nodes = len(k_core_G.nodes())
+
 		#case if everynode is in the k-core
-		if self.G == k_core_G:
-			print('problem')
-			#return('NA',  len(G.nodes()), len(G.nodes()),'1')
+		if len(self.G.nodes()) == self.num_k_core_nodes:
 
-		#case if none of the nodes are in a k-core
-		if len(k_core_G.nodes()) != 0:
+			for v in self.x_vals:
+				self.model._X[v].lb = 1
+				self.model._Y[v].ub = 0
+				self.var_remaining += 1
+			for v in self.y_vals:
+				self.model._Y[v].ub = 0
+				self.var_remaining += 1
 
-			#Get each k-core
-			components = nx.algorithms.components.connected_components(k_core_G)
-
-			for comp in components:
-				for node in comp:
-					self.num_k_core_nodes += 1
+		#case if some of the nodes are in the $k$-core
+		if self.num_k_core_nodes != 0 and self.num_k_core_nodes != len(self.G.nodes()):
 
 			#R is the list of nodes not in the k-core
-			R = list(self.G.nodes() - k_core_G.nodes())
-			self.R = R
-			m._R = R
-
-
-			'''
-			#TEMPHERE
-			#building the weights
-			for node in R:
-
-				if node in self.x_vals:
-					self.weights[node] = 0
-					for neighbor in self.G.neighbors(node):
-						if neighbor in k_core_G.nodes():
-								self.weights[node] += 1
-			'''
-
-			#Keeping track of the variable reduction
+			self.R = list(self.G.nodes() - k_core_G.nodes())
 
 			for node in k_core_G.nodes():
-				#TEMP HERE
-				'''
-				self.model._X[node].ub = 0
-				self.model._Y[node].ub = 0
-				'''
+		
 				self.model._X[node].lb = 1
 				self.model._Y[node].ub = 0
-				self.var_sub += 2
+				self.var_remaining += 2
 
-		if R:
+		if self.R:
 			#TEMP HERE
 			'''
 			m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * m._X[i] for i in R if i in x_vals)
 			'''
 
-			deg_constraints = m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= self.k * m._X[i] for i in R if i in x_vals)
+			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in R if i in self.x_vals)
 
 
 		else:
-			deg_constraints = m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= self.k * m._X[i] for i in x_vals)
-			for v in x_vals:
+			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
+			for v in self.x_vals:
 				deg_constraints[v].lazy = 3
 
+
 class radius_bounded_model(base_model):
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		base_model.__init__(self, filename, G, model, model_type, k, b, r)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
 		model._S = model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
 		model.addConstr(gp.quicksum(model._S) == 1)
 
+
 class vermyev_model(radius_bounded_model):
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		radius_bounded_model.__init__(self, filename, G, model, model_type, k, b, r)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
 
 		DG = nx.DiGraph(self.G) # bidirected version of G
 		L = range(1, self.r + 1)
@@ -463,9 +514,10 @@ class vermyev_model(radius_bounded_model):
 
 						#m.addConstr(m._X[i] + m._Y[i] + m._w[i,j, l] <= 1 + m._S[j])
 
+
 class cut_model(radius_bounded_model):
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		radius_bounded_model.__init__(self, filename, G, model, model_type, k, b, r)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
 
 		#allow lazy constraints
 		model.Params.lazyConstraints = 1
@@ -497,14 +549,14 @@ class cut_model(radius_bounded_model):
 		#print(var)
 
 
-		self.var_num = len(var) - self.var_sub
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
 
+
 class extended_cut_model(cut_model):
-	def __init__(self, filename, G, model, model_type, k, b, r):
-		cut_model.__init__(self, filename, G, model, model_type, k, b, r)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
 		self.model._Z = model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
 
 		self.model.addConstrs(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1 + self.model._Z[i,j] for i in G.nodes() for j in G.nodes())
@@ -520,11 +572,9 @@ class extended_cut_model(cut_model):
 		m.optimize(extended_cut_formulation_callback.extended_cut_callback)
 
 		#model.optimize()
-		var = m.getVars()
 		#print(var)
 
 
-		self.var_num = len(var) - self.var_sub
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal

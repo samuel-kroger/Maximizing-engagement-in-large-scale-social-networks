@@ -1,0 +1,11 @@
+instance_name, model_type, k, b, r, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, total_time
+facebook_combined, strong, 17, 250, 2, 3956, 2061, 2546.0, 2546.0, NA, NA, 0, 2, 0.1296529769897461, 0.8506929874420166
+CA-CondMat, strong, 4, 250, 2, 19332, 13467, 13946.0, 13947.0, NA, NA, 0, 2, 0.26531147956848145, 3.0798451900482178
+CA-HepPh, strong, 4, 250, 2, 10834, 6591, 6979.0, 6979.0, NA, NA, 0, 2, 0.21143651008605957, 1.5199029445648193
+Brightkite_edges, strong, 2, 250, 2, 47044, 34706, 35267.0, 35270.0, NA, NA, 0, 2, 0.5435197353363037, 12.571382999420166
+socfb-Northeastern19, strong, 33, 250, 2, 13748, 7008, 7631.0, 7684.0, NA, NA, 0, 2, 0.5125935077667236, 3602.904335975647
+socfb-Syracuse56, strong, 46, 250, 2, 13336, 6985, 7675.0, 7802.0, NA, NA, 0, 2, 0.7091035842895508, 3603.971971511841
+Gowalla_edges, strong, 3, 250, 2, 180348, 106417, 107298.0, 107300.0, NA, NA, 0, 2, 2.1602249145507812, 139.37425088882446
+com-dblp.ungraph, strong, 3, 250, 2, 226098, 204031, 204855.0, 204857.0, NA, NA, 0, 2, 2.9525301456451416, 272.412451505661
+web-Google, strong, 4, 250, 2, 766116, 492655, 494568.0, 494612.0, NA, NA, 0, 2, 10.268187284469604, 2671.1637313365936
+soc-catster.e, strong, 21, 250, 2, 141444, 78978, 79594.0, 79599.0, NA, NA, 0, 2, 7.54557991027832, 93.75779271125793

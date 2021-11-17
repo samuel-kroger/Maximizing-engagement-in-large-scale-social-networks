@@ -1,0 +1,92 @@
+
+Gurobi 9.0.1 (win64) logging started 11/12/21 12:08:26
+
+Changed value of parameter LogFile to ../results/logs/log_2021_11_12_12_08.csv_200_250.log
+   Prev:   Default: 
+Changed value of parameter method to 3
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (win64)
+Optimize a model with 83 rows, 8078 columns and 26912 nonzeros
+Model fingerprint: 0xc1efd5bb
+Variable types: 4039 continuous, 4039 integer (4039 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 33 rows and 8014 columns
+Presolve time: 0.02s
+Presolved: 50 rows, 64 columns, 941 nonzeros
+Variable types: 23 continuous, 41 integer (41 binary)
+
+Root relaxation: objective 2.626984e+01, 68 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.26984    0   21   -0.00000   26.26984      -     -    0s
+H    0     0                      21.0000000   26.26984  25.1%     -    0s
+     0     0   23.51315    0   14   21.00000   23.51315  12.0%     -    0s
+     0     0   23.49280    0   14   21.00000   23.49280  11.9%     -    0s
+
+Cutting planes:
+  Gomory: 61
+  Cover: 6
+  MIR: 47
+  StrongCG: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (100 simplex iterations) in 0.05 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 21 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.100000000000e+01, best bound 2.100000000000e+01, gap 0.0000%
+
+Gurobi 9.0.1 (win64) logging started 11/12/21 12:08:38
+
+Changed value of parameter LogFile to ../results/logs/log_2021_11_12_12_08.csv_200_250.log
+   Prev:   Default: 
+Changed value of parameter method to 3
+   Prev: -1  Min: -1  Max: 5  Default: -1
+Gurobi Optimizer version 9.0.1 build v9.0.1rc0 (win64)
+Optimize a model with 83 rows, 8078 columns and 26912 nonzeros
+Model fingerprint: 0x4242c9a9
+Variable types: 4039 continuous, 4039 integer (4039 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 33 rows and 8014 columns
+Presolve time: 0.01s
+Presolved: 50 rows, 64 columns, 941 nonzeros
+Variable types: 23 continuous, 41 integer (41 binary)
+
+Root relaxation: objective 2.626984e+01, 68 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.26984    0   21   -0.00000   26.26984      -     -    0s
+H    0     0                      21.0000000   26.26984  25.1%     -    0s
+     0     0   23.51315    0   14   21.00000   23.51315  12.0%     -    0s
+     0     0   23.49280    0   14   21.00000   23.49280  11.9%     -    0s
+
+Cutting planes:
+  Gomory: 61
+  Cover: 6
+  MIR: 47
+  StrongCG: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (100 simplex iterations) in 0.04 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 21 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.100000000000e+01, best bound 2.100000000000e+01, gap 0.0000%
