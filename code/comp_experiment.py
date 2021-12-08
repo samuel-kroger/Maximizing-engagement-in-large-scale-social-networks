@@ -29,7 +29,7 @@ f = open('data.json')
 data = json.load(f)
 
 
-for request in data['single']:
+for request in data['ensamble']:
 	print("starting: ",
 	      '\n filename: ', filename,
 	      '\n model_type: ', request['model_type'],
@@ -37,11 +37,12 @@ for request in data['single']:
 	      '\n b: ', request['b'],
 	      '\n r: ', request['r'])
 
-	G = nx.readwrite.adjlist.read_adjlist(ext + request['filename'], nodetype = int)
+	G = nx.read_adjlist(ext + request['filename'], nodetype = int)
 	G = nx.relabel.convert_node_labels_to_integers(G, first_label = 0)
+	#G = nx.read_adjlist(ext + 'power.graph_formated.txt')
+	#print(max(nx.core_number(G)))
 
 	start_time = time.time()
-	#klass = 
 	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'])
 
 	if request['remove_y_edges']:

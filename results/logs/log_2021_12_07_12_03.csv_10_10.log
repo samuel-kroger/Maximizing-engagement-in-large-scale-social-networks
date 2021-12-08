@@ -1,0 +1,47 @@
+
+Gurobi 9.5.0 (win64) logging started Tue Dec  7 12:04:04 2021
+
+Set parameter LogFile to value "../results/logs/log_2021_12_07_12_03.csv_10_10.log"
+Set parameter Method to value 3
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 157 rows, 9882 columns and 7489 nonzeros
+Model fingerprint: 0x98cac5f1
+Variable types: 4941 continuous, 4941 integer (4941 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 116 rows and 9816 columns
+Presolve time: 0.01s
+Presolved: 41 rows, 66 columns, 219 nonzeros
+Extracted 18 lazy constraints
+Variable types: 31 continuous, 35 integer (35 binary)
+
+Root relaxation: objective 3.500000e+01, 11 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   11.64000    0    6   -0.00000   11.64000      -     -    0s
+H    0     0                       2.0000000   11.64000   482%     -    0s
+H    0     0                       4.0000000   11.64000   191%     -    0s
+     0     0    7.95972    0    5    4.00000    7.95972  99.0%     -    0s
+H    0     0                       7.0000000    7.95972  13.7%     -    0s
+     0     0    7.95972    0    5    7.00000    7.95972  13.7%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 2
+  MIR: 6
+  Lazy constraints: 18
+
+Explored 1 nodes (70 simplex iterations) in 0.02 seconds (0.01 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 7 4 2 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.000000000000e+00, best bound 7.000000000000e+00, gap 0.0000%

@@ -1,0 +1,52 @@
+
+Gurobi 9.5.0 (win64) logging started Tue Dec  7 12:26:59 2021
+
+Set parameter LogFile to value "../results/logs/log_2021_12_07_12_26.csv_2_15.log"
+Set parameter Method to value 3
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 7793 rows, 9882 columns and 42118 nonzeros
+Model fingerprint: 0x018d7f1c
+Variable types: 4941 continuous, 4941 integer (4941 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective 3353.0000000
+Presolve removed 7455 rows and 9420 columns
+Presolve time: 0.02s
+Presolved: 338 rows, 462 columns, 1285 nonzeros
+Variable types: 153 continuous, 309 integer (255 binary)
+Found heuristic solution: objective 3368.0000000
+
+Root relaxation: objective 3.465000e+03, 449 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3465.00000    0  104 3368.00000 3465.00000  2.88%     -    0s
+H    0     0                    3393.0000000 3465.00000  2.12%     -    0s
+     0     0 3417.90000    0   44 3393.00000 3417.90000  0.73%     -    0s
+H    0     0                    3397.0000000 3417.90000  0.62%     -    0s
+     0     0 3416.00000    0   42 3397.00000 3416.00000  0.56%     -    0s
+H    0     0                    3399.0000000 3416.00000  0.50%     -    0s
+     0     0 3412.53333    0    9 3399.00000 3412.53333  0.40%     -    0s
+H    0     0                    3408.0000000 3412.53333  0.13%     -    0s
+H    0     0                    3409.0000000 3412.53333  0.10%     -    0s
+*    0     0               0    3412.0000000 3412.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 39
+  Implied bound: 23
+  MIR: 109
+  RLT: 16
+  Relax-and-lift: 2
+
+Explored 1 nodes (681 simplex iterations) in 0.07 seconds (0.03 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 8: 3412 3409 3408 ... 3353
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.412000000000e+03, best bound 3.412000000000e+03, gap 0.0000%

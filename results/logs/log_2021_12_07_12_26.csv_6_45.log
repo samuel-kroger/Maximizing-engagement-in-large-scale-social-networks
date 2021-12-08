@@ -1,0 +1,79 @@
+
+Gurobi 9.5.0 (win64) logging started Tue Dec  7 12:39:22 2021
+
+Set parameter LogFile to value "../results/logs/log_2021_12_07_12_26.csv_6_45.log"
+Set parameter Method to value 3
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 1039 rows, 9882 columns and 16749 nonzeros
+Model fingerprint: 0x38e4d820
+Variable types: 4941 continuous, 4941 integer (4941 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 585 rows and 9150 columns
+Presolve time: 0.03s
+Presolved: 454 rows, 732 columns, 2692 nonzeros
+Extracted 154 lazy constraints
+Variable types: 413 continuous, 319 integer (317 binary)
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 5.250e+02
+ Factor NZ  : 1.997e+03
+ Factor Ops : 2.133e+04 (less than 1 second per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 0.04 seconds (0.02 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 3.320000e+02, 137 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  115.39087    0  152   -0.00000  115.39087      -     -    0s
+     0     0   60.81690    0   71   -0.00000   60.81690      -     -    0s
+     0     0   60.36555    0   56   -0.00000   60.36555      -     -    0s
+     0     0   60.27122    0   62   -0.00000   60.27122      -     -    0s
+     0     0   58.58851    0   45   -0.00000   58.58851      -     -    0s
+     0     0   58.15090    0   50   -0.00000   58.15090      -     -    0s
+     0     0   58.12874    0   39   -0.00000   58.12874      -     -    0s
+     0     0   57.64733    0   20   -0.00000   57.64733      -     -    0s
+     0     0   57.48001    0   31   -0.00000   57.48001      -     -    0s
+     0     0   57.43901    0   31   -0.00000   57.43901      -     -    0s
+     0     0   56.92144    0   36   -0.00000   56.92144      -     -    0s
+     0     0   56.92144    0   36   -0.00000   56.92144      -     -    0s
+     0     2   56.92144    0   36   -0.00000   56.92144      -     -    0s
+H  150   156                      53.0000000   56.26189  6.15%  12.8    0s
+*  163   156              19      54.0000000   56.26189  4.19%  13.1    0s
+*  371   180              15      55.0000000   55.95535  1.74%  11.2    0s
+
+Cutting planes:
+  Gomory: 54
+  Lift-and-project: 12
+  Implied bound: 24
+  MIR: 126
+  RLT: 20
+  Relax-and-lift: 15
+  Lazy constraints: 146
+
+Explored 409 nodes (5743 simplex iterations) in 0.32 seconds (0.21 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 55 54 53 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.500000000000e+01, best bound 5.500000000000e+01, gap 0.0000%

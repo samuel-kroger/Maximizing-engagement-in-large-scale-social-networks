@@ -11,6 +11,7 @@ import extended_cut_formulation_callback
 import seperation
 import os
 
+
 def output_sort(element_of_output):
 	if element_of_output == "instance_name":
 		return 1
@@ -52,7 +53,6 @@ class base_model(object):
 		self.model = gp.Model()
 		self.model_type = model_type
 		self.instance_name = instance_name
-		self.y_saturated = y_saturated
 		#Gurobi paramater options
 		self.model.setParam('OutputFlag', 1)
 		self.model.Params.timeLimit= 3600
@@ -100,8 +100,10 @@ class base_model(object):
 				self.x_vals.append(node)
 			else:
 				self.y_vals.append(node)
-		
-		self.remove_all_y_saturated_nodes()
+
+		if y_saturated:
+			if b > k:
+				self.remove_all_y_saturated_nodes()
 
 		#set up model
 		self.model._G = G
@@ -151,7 +153,7 @@ class base_model(object):
 						break
 				if fix:
 					self.model._Y[i].ub = 0
-					var_remaining += 1
+					self.var_remaining += 1
 			#		couter += 1
 			#for j in range(50):
 			#	print(couter)
@@ -463,7 +465,7 @@ class reduced_model(base_model):
 			m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * m._X[i] for i in R if i in x_vals)
 			'''
 
-			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in R if i in self.x_vals)
+			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 
 
 		else:

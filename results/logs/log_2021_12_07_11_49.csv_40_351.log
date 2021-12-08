@@ -1,0 +1,36 @@
+
+Gurobi 9.5.0 (win64) logging started Tue Dec  7 11:49:49 2021
+
+Set parameter LogFile to value "../results/logs/log_2021_12_07_11_49.csv_40_351.log"
+Set parameter Method to value 3
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 16 rows, 230 columns and 1071 nonzeros
+Model fingerprint: 0xb7a0ae6d
+Variable types: 115 continuous, 115 integer (115 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 10 rows and 221 columns
+Presolve time: 0.00s
+Presolved: 6 rows, 9 columns, 29 nonzeros
+Extracted 3 lazy constraints
+Variable types: 4 continuous, 5 integer (5 binary)
+
+Root relaxation: objective 5.000000e+00, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       5.0000000    5.00000  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 5 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
