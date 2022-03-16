@@ -24,7 +24,7 @@ def fractional_callback(m, where):
 	b = m._b
 	R = m._R
 
-	b_best_anchors = list(dict(sorted(y_sol.iteritems(), key=operator.itemgetter(1), reverse=True)[:10 * b]).keys())
+	b_best_anchors = list(dict(sorted(y_sol.iteritems(), key=operator.itemgetter(1), reverse=True)[:10*b]).keys())
 
 	resulting_k_core = heuristic.anchored_k_core(G, k, b_best_anchors)
 	'''
@@ -39,6 +39,7 @@ def fractional_callback(m, where):
 			best_vertex = i
 	'''
 	threshold = b - sum(y_sol[i] for i in b_best_anchors)
+
 	for vertex in R:
 		if vertex not in resulting_k_core:
 			if x_sol[vertex] + y_sol[vertex] > threshold:

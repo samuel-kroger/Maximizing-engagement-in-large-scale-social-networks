@@ -12,6 +12,7 @@ import csv
 import classes
 import misc
 import test
+import heuristic
 
 
 
@@ -22,20 +23,20 @@ filename = dt_string + '.csv'
 filename = filename.strip()
 
 
-spacing = 8*', '
+spacing = 8 * ', '
 
 
 f = open('data.json')
 data = json.load(f)
 
 
-for request in data['ensamble']:
+for request in data['big_run']:
 	print("starting: ",
-	      '\n filename: ', filename,
-	      '\n model_type: ', request['model_type'],
-	      '\n k: ', request['k'],
-	      '\n b: ', request['b'],
-	      '\n r: ', request['r'])
+		'\n filename: ', request['filename'],
+		'\n model_type: ', request['model_type'],
+		'\n k: ', request['k'],
+		'\n b: ', request['b'],
+		'\n r: ', request['r'])
 
 	G = nx.read_adjlist(ext + request['filename'], nodetype = int)
 	G = nx.relabel.convert_node_labels_to_integers(G, first_label = 0)
@@ -43,16 +44,17 @@ for request in data['ensamble']:
 	#print(max(nx.core_number(G)))
 
 	start_time = time.time()
-	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'])
-
+	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['y_continuous'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'])
 	if request['remove_y_edges']:
 		instance.remove_y_edges()
 	if request['warm_start']:
-		instance.warm_start()
-	if request['core_fix']:
-		instance.fix_k_core() 
+		instance.RCM_warm_start()
 
 	instance.optimize()
+	#instance.print_model()
+	#print(len(G.nodes()))
+	#print(len(G.edges()))
+	#print(len(heuristic.anchored_k_core(G, request['k'], [])))
 	end_time = time.time()
 
 	instance.save_to_file(str(end_time - start_time))

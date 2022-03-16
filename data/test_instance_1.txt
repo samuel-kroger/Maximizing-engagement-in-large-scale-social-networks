@@ -1,0 +1,7 @@
+#C:\Users\sakroger\Desktop\k-core\git_code\code\graph_generator.py
+# GMT Fri Mar  4 19:03:26 2022
+# 
+0 1
+1 2
+2 3
+3

@@ -163,7 +163,7 @@ class RCM(object):
 
 	def _findResidualCore(self, sg, delta, followers=None):
 		if followers is not None:
-			print(followers)
+
 			queue = set([v for u in followers for v in self._cf.intersection(self._graph[u])])
 			seen = set(queue)
 
@@ -266,10 +266,12 @@ class RCM(object):
 
 		if upper_bound < self._budget:
 			solutions = self._residualAnchors(c, c1, a0, tdelta)
-			return (solutions, None, None)
+			#return (solutions, None, None)
+			return (solutions, None)
 		elif lower_bound > self._budget :
 			solutions = self._anchorScoreAnchors(c)
-			return (None, solutions, None)
+			#return (None, solutions, None)
+			return (None, solutions)
 		else:
 			s0, s1 = {}, {}
 			s0 = self._residualAnchors(c, c1, a0, tdelta)

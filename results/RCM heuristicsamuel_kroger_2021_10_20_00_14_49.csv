@@ -1,7 +1,0 @@
-dataset, k, b, number of anchors, number of followers, run time
-facebook_combined.txt,17,250,250,411,0.15895533561706543
-CA-CondMat.txt,4,250,250,447,0.26192808151245117
-CA-HepPh.txt,4,250,250,375,0.23093557357788086
-Brightkite_edges.txt,2,250,250,560,0.6877992153167725
-socfb-Northeastern19.mtx,33,250,113,44,0.7747836112976074
-socfb-Syracuse56.mtx,46,250,51,21,1.0427117347717285

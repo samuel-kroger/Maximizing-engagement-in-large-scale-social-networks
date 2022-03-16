@@ -1,7 +1,0 @@
-
-Gurobi 9.0.1 (win64) logging started 11/11/21 14:57:53
-
-Changed value of parameter LogFile to ../results/logs/log_2021_11_11_14_57.csv_17_250.log
-   Prev:   Default: 
-Changed value of parameter method to 3
-   Prev: -1  Min: -1  Max: 5  Default: -1

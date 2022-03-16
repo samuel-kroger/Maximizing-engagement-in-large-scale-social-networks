@@ -6,11 +6,10 @@ import matplotlib.pyplot as plt
 import time
 import random
 import fractional_callback
-import cut_formulation_callback
-import extended_cut_formulation_callback
 import seperation
 import os
-
+import math
+import rcm
 
 def output_sort(element_of_output):
 	if element_of_output == "instance_name":
@@ -45,24 +44,35 @@ def output_sort(element_of_output):
 		return 11
 	if element_of_output == "time_for_warm_start":
 		return 12
+	if element_of_output == "y_continuous":
+		return 13
+	if element_of_output == "additonal_facet_defining":
+		return 14
+	if element_of_output == "y_val_fix":
+		return 15
+	if element_of_output == "fractional_callback":
+		return 16
 
 
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback):
 
 		self.model = gp.Model()
 		self.model_type = model_type
 		self.instance_name = instance_name
 		#Gurobi paramater options
 		self.model.setParam('OutputFlag', 1)
-		self.model.Params.timeLimit= 3600
+		self.model.Params.timeLimit = 3600
 		self.model.params.LogToConsole = 1
-		self.model.params.LogFile='../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
-		#revisit
-		self.model.params.method = 3
+		self.model.params.LogFile = '../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
 
-		#to add later if not using callbacks do not edit
-
+		self.y_continuous = y_continuous
+		self.additonal_facet_defining = additonal_facet_defining
+		self.y_val_fix = y_val_fix
+		self.fractional_callback = fractional_callback
+		#REVISIT
+		#self.model.params.method = 3
+		#self.relax = False
 
 		#every member of class
 		self.num_k_core_nodes = 0
@@ -70,8 +80,7 @@ class base_model(object):
 		#self.weights = {}
 		self.var_remaining = 0
 		self.var_num = 0
-		#self.relax = False
-		
+
 		#y_saturated
 		self.y_saturated_reduction = 0
 		self.y_saturated_run_time = 0
@@ -87,7 +96,7 @@ class base_model(object):
 		self.r = r
 
 		#warm_start
-		self.time_for_warm_start = 60
+		#self.time_for_warm_start = 60
 
 		#Set up G
 		self.G = G
@@ -112,39 +121,75 @@ class base_model(object):
 		self.model._R = G.nodes()
 		self.model._r = r
 
+		#self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
 		self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
-		self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y")
+
+		if y_continuous:
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y")
+		else:
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
 
 
-		for y_val in self.y_vals:
-			self.model._X[y_val].ub = 0
-			self.var_remaining += 1
 
-		
+		#for y_val in self.y_vals:
+		#	self.model._X[y_val].ub = 0
+		#	self.var_remaining += 1
+
+
 
 		# objective function 
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
 
 		# k degree constraints
-		if model_type != 'strong':
-			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in self.G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
+		'''
+		if self.k == 2:
+
+			for v in self.G.nodes():
+				if self.G.degree(v) == 1:
+					for u in G.neighbors(v):
+						self.model.addConstr(self.model._Y[v] <= self.model._X[u])
+
+				else:
+					self.model._Y[v].ub = 0
+						#self.model.addConstr(self.model._X[v] == self.model._Y[u])
+						#self.model._X[u].lb = 1
+				#if self.G.degree(v) == 1:
+				#	for u in G.neighbors(v):
+				#		self.model._X[u].lb = 1
+			leaf_nodes = [x for x in self.G.nodes() if self.G.degree(x) == 1]
+			#print(leaf_nodes)
+			for i in leaf_nodes:
+				for j in leaf_nodes:
+					if i != j:
+						paths = nx.all_simple_paths(self.G, i, j)
+						for path in paths:
+							print(path)
+							#print(path[0])
+							#print(path[1:-1])
+							#print(path[-1])
+							#self.model.addConstr(self.model._Y[path[0]] + self.model._Y[path[-1]] <= gp.quicksum(self.model._X[j] for j in path[1:-1]))
+
+
+			#self.model._Z = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="z")
+			#self.model.addConstrs(self.model._Z[i] >= self.model._X[i] for i in self.G.nodes())
+			#self.model.addConstrs(self.model._Z[i] <= self.model._X[i] + .999999 for i in self.G.nodes())
+		'''
 
 		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals)
+
 
 		# budget constraints
 		self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
-		#valid facet defining
-		valid = False
-		if valid:
+		if additonal_facet_defining:
 			for i in self.x_vals:
 				if self.G.degree(i) == self.k:
-					self.model.addConstrs(self.model._X[i] <= self.model._Y[u] + self.model._X[u] for u in self.G.neighbors(i))
+					for u in self.G.neighbors(i):
+						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
+						facet_defining_constraint.lazy = 3
 
 
-		current_reduction = True
-		if current_reduction:
-			#couter = 0
+		if y_val_fix:
 			for i in self.y_vals:
 				fix = True
 				for j in self.G.neighbors(i):
@@ -280,27 +325,15 @@ class base_model(object):
 		for v in x_nodes:
 			self.model._X[v].start = 1
 
-	#def set_up_model(self):
-		G = self.G
-		m = self.model
-		#R = self.R
+	def RCM_warm_start(self):
 
-		# objective function
-		#m.setObjective(gp.quicksum(m._X) + gp.quicksum(m._Y) + self.num_k_core_nodes, sense=gp.GRB.MAXIMIZE)
-		m.setObjective(gp.quicksum(m._X) + self.num_k_core_nodes, sense=gp.GRB.MAXIMIZE)
+		r = rcm.RCM(self.G, self.k, self.b)
+		a, f = r.findAnchors(False)
 
-		# k degree constraints
-		m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= self.k * m._X[i] for i in G.nodes())
-		#m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= self.k * m._X[i] for i in G.nodes())
-		m.addConstrs(m._X[i] + m._Y[i] <= 1 for i in G.nodes())
+		a_list = list(a)
+		their_sol = heuristic.anchored_k_core(self.G, self.k, a_list)
 
-		# budget constraints
-		m.addConstr(gp.quicksum(m._Y) <= self.b)
-
-		#valid facet defining
-		for i in G.nodes:
-			if G.degree(i) == self.k:
-				m.addConstrs(m._X[i] <= m._Y[u] + m._X[u] for u in G.neighbors(i))
+		k_core = heuristic.anchored_k_core(self.G, self.k, their_sol)
 
 	def optimize(self):
 		G = self.G
@@ -308,8 +341,8 @@ class base_model(object):
 		b = self.b
 		m = self.model
 
-		on_the_fly = False
-		if on_the_fly:
+
+		if fractional_callback:
 			m.Params.lazyConstraints = 1
 
 			#m.optimize(seperation.conflict_callback)
@@ -330,7 +363,7 @@ class base_model(object):
 		m = self.model
 
 
-		display = False
+		display = True
 		if display:
 			if m.status == gp.GRB.OPTIMAL or m.status == gp.GRB.TIME_LIMIT:
 
@@ -343,11 +376,11 @@ class base_model(object):
 
 				root = -1
 
-				for i in G.nodes:
-					if self.model_type != 'naive' and self.model_type != 'strong':
-						if m._S[i].x > 0.5:
-							print("Root is ", i)
-							root = i
+				#for i in G.nodes:
+					#if self.model_type != 'naive' and self.model_type != 'strong':
+					#	if m._S[i].x > 0.5:
+					#		print("Root is ", i)
+					#		root = i
 
 
 				selected_nodes = []
@@ -356,11 +389,18 @@ class base_model(object):
 						print("selected node: ", i)
 						selected_nodes.append(i)
 
+				for i in G.nodes:
+					print("selected node: ", i, " x_value: ", m._X[i].x)
+
+
 				purchased_nodes = []
 				for i in G.nodes:
 					if m._Y[i].x > 0.5:
 						print("purchased node: ", i)
 						purchased_nodes.append(i)
+
+				for i in G.nodes:
+					print("purchased node: ", i, " y_value: ", m._Y[i].x)
 
 				print("# of vertices in G: ", len(G.nodes))
 				#print("Is it connected? ", nx.is_connected(SUB))
@@ -372,31 +412,6 @@ class base_model(object):
 					pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, False, k, b, self.r)
 
 			#m.write("Lobster.lp")
-
-	def fix_k_core(self):
-		G = self.G
-		k = self.k
-
-		k_core_G = heuristic.anchored_k_core(G, k, [])
-		k_core_G = G.subgraph(k_core_G)
-
-		#case if everynode is in the k-core
-		if G == k_core_G:
-			print('problem')
-			#return('NA',  len(G.nodes()), len(G.nodes()),'1')
-
-		#case if none of the nodes are in a k-core
-		if len(k_core_G.nodes()) != 0:
-
-			#Get each k-core
-			components = nx.algorithms.components.connected_components(k_core_G)
-
-			for comp in components:
-				for node in comp:
-					self.model._X[node].lb = 1
-					self.model._Y[node].ub = 0
-					self.var_remaining += 2
-
 
 	def save_to_file(self, total_time):
 		self.var_num = len(self.model.getVars())
@@ -428,8 +443,8 @@ class base_model(object):
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback)
 
 		k_core_G = heuristic.anchored_k_core(self.G, self.k, [])
 		k_core_G = self.G.subgraph(k_core_G)
@@ -464,14 +479,35 @@ class reduced_model(base_model):
 			'''
 			m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * m._X[i] for i in R if i in x_vals)
 			'''
-
+			#if self.k == 2:
+			#	print('her')
+			#	print('her')
+			#	print('her')
+			#	print('her')
+			#	for v in self.G.nodes():
+			#		if self.G.degree(v) == 1:
+			#			for u in self.G.neighbors(v):
+			#				self.model.addConstr(self.model._Y[v] >= self.k *self.model._X[u])
+			#	self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
+			#else:
 			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 
-
 		else:
+			#if self.k == 2:
+			#	print('her')
+			#	print('her')
+			#	print('her')
+			#	print('her')
+			#	for v in self.G.nodes():
+			#		if self.G.degree(v) == 1:
+			#			for u in self.G.neighbors(v):
+			#				self.model.addConstr(self.model._Y[v] >= self.k *self.model._X[u])
+			#	self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
-			for v in self.x_vals:
-				deg_constraints[v].lazy = 3
+
+			if lazyconstraints:
+				for v in self.x_vals:
+					deg_constraints[v].lazy = 3
 
 
 class radius_bounded_model(base_model):
