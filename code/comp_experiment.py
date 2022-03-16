@@ -40,6 +40,7 @@ for request in data['big_run']:
 
 	G = nx.read_adjlist(ext + request['filename'], nodetype = int)
 	G = nx.relabel.convert_node_labels_to_integers(G, first_label = 0)
+	G.remove_edges_from(nx.selfloop_edges(G))
 	#G = nx.read_adjlist(ext + 'power.graph_formated.txt')
 	#print(max(nx.core_number(G)))
 
