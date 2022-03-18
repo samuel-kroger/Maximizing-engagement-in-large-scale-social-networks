@@ -664,7 +664,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -678,7 +678,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -692,7 +692,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -706,7 +706,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -720,7 +720,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -734,7 +734,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -748,7 +748,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -762,7 +762,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -777,7 +777,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -792,7 +792,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -806,7 +806,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -820,7 +820,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -834,7 +834,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -848,7 +848,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -862,7 +862,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -876,7 +876,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -890,7 +890,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 
@@ -905,7 +905,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -920,7 +920,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -934,7 +934,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -948,7 +948,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -962,7 +962,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -976,7 +976,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -990,7 +990,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -1004,7 +1004,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -1018,7 +1018,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 
 		{
@@ -1033,7 +1033,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -1807,7 +1807,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1821,7 +1821,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1835,7 +1835,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1849,7 +1849,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1863,7 +1863,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1877,7 +1877,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1891,7 +1891,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1905,7 +1905,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1920,7 +1920,7 @@
 			"remove_y_edges":false,
 			"warm_start":false,
 			"y_continuous":false,
-			"y_continuous":true,
+			"additonal_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false
 		},
@@ -1935,7 +1935,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -1949,7 +1949,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -1963,7 +1963,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -1977,7 +1977,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -1991,7 +1991,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -2005,7 +2005,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -2019,7 +2019,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -2033,7 +2033,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 
@@ -2048,7 +2048,7 @@
 			"warm_start":false,
 			"y_continuous":false,
 			"additonal_facet_defining":false,
-			"y_continuous":true,
+			"y_val_fix":true,
 			"fractional_callback":false
 		},
 		{
@@ -2063,7 +2063,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -2077,7 +2077,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -2091,7 +2091,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -2105,7 +2105,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -2119,7 +2119,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -2133,7 +2133,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -2147,7 +2147,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -2161,7 +2161,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 
 		{
@@ -2176,7 +2176,7 @@
 			"y_continuous":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"y_continuous":true
+			"fractional_callback":true
 		},
 		{
 			"filename":"facebook_combined.txt",
