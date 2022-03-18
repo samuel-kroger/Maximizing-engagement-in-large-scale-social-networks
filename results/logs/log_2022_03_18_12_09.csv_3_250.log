@@ -1,0 +1,1279 @@
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:10:09 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xd70efcb1
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:10:19 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x72a645a9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:11:11 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xd70efcb1
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:11:22 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x72a645a9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:12:17 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xd70efcb1
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:12:28 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x72a645a9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.11 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:13:56 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xd70efcb1
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:16:00 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x72a645a9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:24:40 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0x8d54efb0
+Variable types: 196591 continuous, 196591 integer (196591 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.07 seconds (0.04 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:24:50 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0xbea34439
+Variable types: 317080 continuous, 317080 integer (317080 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.12 seconds (0.07 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:25:41 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 178517 rows, 393182 columns and 615459 nonzeros
+Model fingerprint: 0xbecf769a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 183797.00000
+Found heuristic solution: objective 187686.00000
+Found heuristic solution: objective 192674.00000
+Presolve time: 0.70s
+Presolved: 178517 rows, 393182 columns, 615459 nonzeros
+Extracted 61836 lazy constraints
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.94 seconds (0.66 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 196591 192674 187686 183797 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 140, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:25:53 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 364013 rows, 634160 columns and 1194075 nonzeros
+Model fingerprint: 0x14c7e5f9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 282257.00000
+Found heuristic solution: objective 286132.00000
+Found heuristic solution: objective 290922.00000
+Presolve time: 1.50s
+Presolved: 364013 rows, 634160 columns, 1194075 nonzeros
+Extracted 148971 lazy constraints
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 1.93 seconds (1.22 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 317080 290922 286132 282257 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 175, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:26:51 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xceb95bcc
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:27:23 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x80617457
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:29:02 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 116681 rows, 393182 columns and 429951 nonzeros
+Model fingerprint: 0xd70efcb1
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 196591 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:29:13 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 215042 rows, 634160 columns and 747162 nonzeros
+Model fingerprint: 0x72a645a9
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 1: 317080 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 21, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:30:40 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 178517 rows, 393182 columns and 615459 nonzeros
+Model fingerprint: 0x57c7f23b
+Variable types: 196591 continuous, 196591 integer (196591 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 183797.00000
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.10 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 196591 183797 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:33:06 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 364013 rows, 634160 columns and 1194075 nonzeros
+Model fingerprint: 0xe5e29437
+Variable types: 317080 continuous, 317080 integer (317080 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 282257.00000
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.18 seconds (0.09 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 317080 282257 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:42:46 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0x47ad214a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 212834 columns
+Presolve time: 0.25s
+Presolved: 20527 rows, 180348 columns, 161293 nonzeros
+Variable types: 0 continuous, 180348 integer (180348 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.56 seconds (0.35 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 168, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:44:02 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x901dcdbe
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 408062 columns
+Presolve time: 0.38s
+Presolved: 22021 rows, 226098 columns, 197991 nonzeros
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.78 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 181, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:48:13 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0x47ad214a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 212834 columns
+Presolve time: 0.25s
+Presolved: 20527 rows, 180348 columns, 161293 nonzeros
+Variable types: 0 continuous, 180348 integer (180348 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.56 seconds (0.35 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 168, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:49:30 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x901dcdbe
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 408062 columns
+Presolve time: 0.38s
+Presolved: 22021 rows, 226098 columns, 197991 nonzeros
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.78 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 180, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:53:46 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0x47ad214a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 212834 columns
+Presolve time: 0.25s
+Presolved: 20527 rows, 180348 columns, 161293 nonzeros
+Variable types: 0 continuous, 180348 integer (180348 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.56 seconds (0.35 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 167, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:55:02 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x901dcdbe
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 408062 columns
+Presolve time: 0.38s
+Presolved: 22021 rows, 226098 columns, 197991 nonzeros
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.78 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 180, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 12:59:50 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0x47ad214a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 212834 columns
+Presolve time: 0.25s
+Presolved: 20527 rows, 180348 columns, 161293 nonzeros
+Variable types: 0 continuous, 180348 integer (180348 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.55 seconds (0.35 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 167, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:02:58 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x901dcdbe
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 408062 columns
+Presolve time: 0.37s
+Presolved: 22021 rows, 226098 columns, 197991 nonzeros
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.78 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 180, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:14:53 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0xa6603315
+Variable types: 196591 continuous, 196591 integer (196591 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.08 seconds (0.04 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 196591 187126 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:16:06 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x426322e9
+Variable types: 317080 continuous, 317080 integer (317080 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.12 seconds (0.07 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 317080 306862 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:20:11 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 188780 rows, 393182 columns and 696186 nonzeros
+Model fingerprint: 0x55a1b3c8
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 161136 rows and 212834 columns
+Presolve time: 0.41s
+Presolved: 27644 rows, 180348 columns, 182434 nonzeros
+Extracted 9235 lazy constraints
+Variable types: 0 continuous, 180348 integer (180348 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.74 seconds (0.51 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 196591 194425 194050 187126 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 250, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:21:26 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 375023 rows, 634160 columns and 1286197 nonzeros
+Model fingerprint: 0xf5bd1184
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 344619 rows and 408062 columns
+Presolve time: 0.66s
+Presolved: 30404 rows, 226098 columns, 222870 nonzeros
+Extracted 9889 lazy constraints
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317007.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    1s
+
+Explored 1 nodes (4 simplex iterations) in 1.13 seconds (0.77 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317007 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 277, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:25:36 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0xa9aaa879
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 216738 columns
+Presolve time: 0.25s
+Presolved: 20527 rows, 176444 columns, 157389 nonzeros
+Variable types: 0 continuous, 176444 integer (176444 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.55 seconds (0.34 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 167, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:27:11 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x66fb1ad2
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 409907 columns
+Presolve time: 0.37s
+Presolved: 22021 rows, 224253 columns, 196146 nonzeros
+Variable types: 0 continuous, 224253 integer (224253 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.19 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.76 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 181, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:32:07 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 126944 rows, 393182 columns and 510678 nonzeros
+Model fingerprint: 0x47ad214a
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 194050.00000
+Found heuristic solution: objective 194425.00000
+Presolve removed 106417 rows and 212834 columns
+Presolve time: 0.26s
+Presolved: 20527 rows, 180348 columns, 161293 nonzeros
+Variable types: 0 continuous, 180348 integer (180348 binary)
+Found heuristic solution: objective 196466.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.965910e+05, 4 iterations, 0.16 seconds (0.09 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    196591.00000 196591.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.56 seconds (0.35 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 196591 196466 194425 ... 187126
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 167, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:33:21 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 226052 rows, 634160 columns and 839284 nonzeros
+Model fingerprint: 0x901dcdbe
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 315141.00000
+Found heuristic solution: objective 315544.00000
+Presolve removed 204031 rows and 408062 columns
+Presolve time: 0.37s
+Presolved: 22021 rows, 226098 columns, 197991 nonzeros
+Variable types: 0 continuous, 226098 integer (226098 binary)
+Found heuristic solution: objective 317006.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.04s
+
+Solved with dual simplex
+
+Root relaxation: objective 3.170800e+05, 4 iterations, 0.20 seconds (0.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    317080.00000 317080.000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.77 seconds (0.52 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 317080 317006 315544 ... 306862
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 180, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:38:03 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 188780 rows, 393182 columns and 696186 nonzeros
+Model fingerprint: 0x83191d14
+Variable types: 196591 continuous, 196591 integer (196591 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 187126.00000
+Found heuristic solution: objective 196591.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.11 seconds (0.05 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 196591 187126 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.965910000000e+05, best bound 1.965910000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
+
+Gurobi 9.5.1 (linux64) logging started Fri Mar 18 13:41:32 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_18_12_09.csv_3_250.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 375023 rows, 634160 columns and 1286197 nonzeros
+Model fingerprint: 0xc146aa70
+Variable types: 317080 continuous, 317080 integer (317080 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 306862.00000
+Found heuristic solution: objective 317080.00000
+
+Explored 0 nodes (0 simplex iterations) in 0.19 seconds (0.09 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 317080 306862 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.170800000000e+05, best bound 3.170800000000e+05, gap 0.0000%
+
+User-callback calls 23, time in user-callback 0.00 sec
