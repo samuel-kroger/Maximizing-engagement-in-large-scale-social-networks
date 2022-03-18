@@ -111,7 +111,7 @@ class base_model(object):
 				self.y_vals.append(node)
 
 		if y_saturated:
-			if b > k:
+			if b < k:
 				self.remove_all_y_saturated_nodes()
 
 		#set up model
@@ -121,20 +121,12 @@ class base_model(object):
 		self.model._R = G.nodes()
 		self.model._r = r
 
-		#self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
 		self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
 
 		if y_continuous:
 			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y")
 		else:
 			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
-
-
-
-		#for y_val in self.y_vals:
-		#	self.model._X[y_val].ub = 0
-		#	self.var_remaining += 1
-
 
 
 		# objective function 
@@ -175,11 +167,16 @@ class base_model(object):
 			#self.model.addConstrs(self.model._Z[i] <= self.model._X[i] + .999999 for i in self.G.nodes())
 		'''
 
-		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals)
+		if self.model_type == "base_model":
+			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.G.nodes())
+
+		if self.model_type == "base_model":
+			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in G.nodes())
 
 
 		# budget constraints
-		self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
+		if self.model_type == "base_model":
+			self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
 		if additonal_facet_defining:
 			for i in self.x_vals:
@@ -342,7 +339,7 @@ class base_model(object):
 		m = self.model
 
 
-		if fractional_callback:
+		if self.fractional_callback:
 			m.Params.lazyConstraints = 1
 
 			#m.optimize(seperation.conflict_callback)
@@ -446,6 +443,10 @@ class reduced_model(base_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback):
 		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback)
 
+		for y_val in self.y_vals:
+			self.model._X[y_val].ub = 0
+			self.var_remaining += 1
+
 		k_core_G = heuristic.anchored_k_core(self.G, self.k, [])
 		k_core_G = self.G.subgraph(k_core_G)
 
@@ -466,46 +467,30 @@ class reduced_model(base_model):
 		if self.num_k_core_nodes != 0 and self.num_k_core_nodes != len(self.G.nodes()):
 
 			#R is the list of nodes not in the k-core
+
 			self.R = list(self.G.nodes() - k_core_G.nodes())
 
 			for node in k_core_G.nodes():
-		
+
 				self.model._X[node].lb = 1
 				self.model._Y[node].ub = 0
 				self.var_remaining += 2
 
+
+
 		if self.R:
-			#TEMP HERE
-			'''
-			m.addConstrs(gp.quicksum(m._X[j] + m._Y[j] for j in G.neighbors(i)) >= (k - weights[i]) * m._X[i] for i in R if i in x_vals)
-			'''
-			#if self.k == 2:
-			#	print('her')
-			#	print('her')
-			#	print('her')
-			#	print('her')
-			#	for v in self.G.nodes():
-			#		if self.G.degree(v) == 1:
-			#			for u in self.G.neighbors(v):
-			#				self.model.addConstr(self.model._Y[v] >= self.k *self.model._X[u])
-			#	self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
-			#else:
 			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
+			#self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
+			#self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
+
+			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.R if i in self.x_vals)
+
+			self.model.addConstr(gp.quicksum(self.model._Y[i]) <= self.b for i in self.R if i in self.y_vals)
 
 		else:
-			#if self.k == 2:
-			#	print('her')
-			#	print('her')
-			#	print('her')
-			#	print('her')
-			#	for v in self.G.nodes():
-			#		if self.G.degree(v) == 1:
-			#			for u in self.G.neighbors(v):
-			#				self.model.addConstr(self.model._Y[v] >= self.k *self.model._X[u])
-			#	self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
 
-			if lazyconstraints:
+			if self.lazyconstraints:
 				for v in self.x_vals:
 					deg_constraints[v].lazy = 3
 

@@ -1,7 +1,0 @@
-instance_name, model_type, k, b, r, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback, total_time
-facebook_combined, base_model, 17, 25, NA, 8078, 0, 0, 4039.0, 4039.0, NA, NA, 0, 0, 0, False, False, False, False, 0.1349630355834961
-CA-CondMat, base_model, 4, 250, NA, 46266, 0, 0, 23133.0, 23133.0, NA, NA, 0, 0, 0, False, False, False, False, 0.6828083992004395
-CA-HepPh, base_model, 4, 250, NA, 24016, 0, 0, 12008.0, 12008.0, NA, NA, 0, 0, 0, False, False, False, False, 0.39488840103149414
-Brightkite_edges, base_model, 2, 250, NA, 116456, 0, 0, 58228.0, 58228.0, NA, NA, 0, 0, 0, False, False, False, False, 1.5985558032989502
-socfb-Northeastern19, base_model, 33, 250, NA, 27764, 0, 0, 13882.0, 13882.0, NA, NA, 0, 0, 0, False, False, False, False, 0.4456448554992676
-socfb-Syracuse56, base_model, 46, 250, NA, 27306, 0, 0, 13653.0, 13653.0, NA, NA, 0, 0, 0, False, False, False, False, 0.5068626403808594
