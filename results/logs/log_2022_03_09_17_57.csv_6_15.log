@@ -1,0 +1,93 @@
+
+Gurobi 9.5.1 (linux64) logging started Wed Mar  9 18:05:14 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_09_17_57.csv_6_15.log"
+Set parameter Method to value 3
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 1039 rows, 9882 columns and 16749 nonzeros
+Model fingerprint: 0x8dd6e1f8
+Variable types: 4941 continuous, 4941 integer (4941 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective -0.0000000
+Presolve removed 585 rows and 9151 columns
+Presolve time: 0.02s
+Presolved: 454 rows, 731 columns, 2691 nonzeros
+Extracted 154 lazy constraints
+Variable types: 413 continuous, 318 integer (317 binary)
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 5.250e+02
+ Factor NZ  : 1.997e+03
+ Factor Ops : 2.132e+04 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.37487314e+02  5.92148219e+03  1.29e+00 2.61e+00  9.13e+00     0s
+   1   1.73247196e+02  2.53556793e+03  6.09e-02 1.16e+00  1.61e+00     0s
+   2   1.97962784e+02  4.50626780e+02  0.00e+00 9.20e-02  1.56e-01     0s
+   3   3.12501678e+02  3.33574940e+02  0.00e+00 2.23e-03  1.22e-02     0s
+   4   3.20929662e+02  3.21107217e+02  0.00e+00 3.55e-15  1.02e-04     0s
+   5   3.20999999e+02  3.21000001e+02  0.00e+00 3.55e-15  5.90e-10     0s
+
+Barrier solved model in 5 iterations and 0.02 seconds (0.02 work units)
+Optimal objective 3.20999999e+02
+
+
+Solved with dual simplex
+
+Root relaxation: objective 3.210000e+02, 139 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   93.20843    0  148   -0.00000   93.20843      -     -    0s
+     0     0   36.19066    0   47   -0.00000   36.19066      -     -    0s
+     0     0   35.53530    0   59   -0.00000   35.53530      -     -    0s
+     0     0   35.50894    0   45   -0.00000   35.50894      -     -    0s
+     0     0   33.81734    0   23   -0.00000   33.81734      -     -    0s
+H    0     0                      30.0000000   33.81734  12.7%     -    0s
+     0     0   33.67217    0   33   30.00000   33.67217  12.2%     -    0s
+     0     0   33.65998    0   28   30.00000   33.65998  12.2%     -    0s
+     0     0   33.19889    0   23   30.00000   33.19889  10.7%     -    0s
+     0     0   33.19294    0   18   30.00000   33.19294  10.6%     -    0s
+     0     0   33.19294    0   18   30.00000   33.19294  10.6%     -    0s
+     0     0   33.19294    0   86   30.00000   33.19294  10.6%     -    0s
+     0     0   33.19294    0   32   30.00000   33.19294  10.6%     -    0s
+     0     0   32.78184    0   24   30.00000   32.78184  9.27%     -    0s
+     0     0   32.76601    0   12   30.00000   32.76601  9.22%     -    0s
+     0     0   32.76545    0   13   30.00000   32.76545  9.22%     -    0s
+     0     0   32.66667    0    5   30.00000   32.66667  8.89%     -    0s
+H    0     0                      31.0000000   32.66667  5.38%     -    0s
+     0     0   32.42758    0   39   31.00000   32.42758  4.61%     -    0s
+     0     0   32.29167    0    5   31.00000   32.29167  4.17%     -    0s
+     0     0   32.11111    0    6   31.00000   32.11111  3.58%     -    0s
+     0     0     cutoff    0        31.00000   31.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 34
+  Lift-and-project: 4
+  Implied bound: 5
+  MIR: 65
+  RLT: 15
+  Relax-and-lift: 3
+
+Explored 1 nodes (1543 simplex iterations) in 0.17 seconds (0.09 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 31 30 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.100000000000e+01, best bound 3.100000000000e+01, gap 0.0000%
