@@ -485,7 +485,7 @@ class reduced_model(base_model):
 
 			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.R if i in self.x_vals)
 
-			self.model.addConstr(gp.quicksum(self.model._Y[i]) <= self.b for i in self.R if i in self.y_vals)
+			self.model.addConstrs(gp.quicksum(self.model._Y[i]) <= self.b for i in self.R if i in self.y_vals)
 
 		else:
 			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)

@@ -17,7 +17,7 @@
 			"fractional_callback":false
 		}
 	],
-	"big_run":
+	"big_run_base_model":
 	[
 		{
 			"filename":"facebook_combined.txt",
@@ -1161,7 +1161,10 @@
 			"additonal_facet_defining":true,
 			"y_val_fix":true,
 			"fractional_callback":true
-		},
+		}
+	],
+	"big_run_reduced_model":
+	[
 		{
 			"filename":"facebook_combined.txt",
 			"k":17,
