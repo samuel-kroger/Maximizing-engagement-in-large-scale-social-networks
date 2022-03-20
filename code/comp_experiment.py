@@ -30,7 +30,7 @@ f = open('data.json')
 data = json.load(f)
 
 
-for request in data['big_run_reduced_model']:
+for request in data['small_batch']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
