@@ -45,7 +45,7 @@ for request in data['big_run']:
 	#print(max(nx.core_number(G)))
 
 	start_time = time.time()
-	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['y_continuous'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'])
+	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'])
 	if request['remove_y_edges']:
 		instance.remove_y_edges()
 	if request['warm_start']:

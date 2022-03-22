@@ -44,7 +44,7 @@ def output_sort(element_of_output):
 		return 11
 	if element_of_output == "time_for_warm_start":
 		return 12
-	if element_of_output == "y_continuous":
+	if element_of_output == "warm_start":
 		return 13
 	if element_of_output == "additonal_facet_defining":
 		return 14
@@ -54,8 +54,9 @@ def output_sort(element_of_output):
 		return 16
 
 
+
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback):
 
 		self.model = gp.Model()
 		self.model_type = model_type
@@ -66,7 +67,6 @@ class base_model(object):
 		self.model.params.LogToConsole = 1
 		self.model.params.LogFile = '../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
 
-		self.y_continuous = y_continuous
 		self.additonal_facet_defining = additonal_facet_defining
 		self.y_val_fix = y_val_fix
 		self.fractional_callback = fractional_callback
@@ -85,6 +85,7 @@ class base_model(object):
 		self.y_saturated_reduction = 0
 		self.y_saturated_run_time = 0
 		self.y_saturated_iterations = 0
+		self.warm_start = False
 
 		self.remove_y_edges_reduction = 'NA'
 		self.remove_y_edges_time = 'NA'
@@ -122,11 +123,7 @@ class base_model(object):
 		self.model._r = r
 
 		self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
-
-		if y_continuous:
-			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y")
-		else:
-			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
+		self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
 
 
 		# objective function 
@@ -324,13 +321,21 @@ class base_model(object):
 
 	def RCM_warm_start(self):
 
+		self.warm_start = True
 		r = rcm.RCM(self.G, self.k, self.b)
 		a, f = r.findAnchors(False)
 
+		r.findAnchors(False)
 		a_list = list(a)
 		their_sol = heuristic.anchored_k_core(self.G, self.k, a_list)
 
 		k_core = heuristic.anchored_k_core(self.G, self.k, their_sol)
+
+		for v in a_list:
+			self.model._Y[v].start = 1
+		for v in k_core:
+			self.model._X[v].start = 1
+
 
 	def optimize(self):
 		G = self.G
@@ -440,8 +445,8 @@ class base_model(object):
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, y_continuous, additonal_facet_defining, y_val_fix, fractional_callback)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback)
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0

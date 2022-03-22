@@ -48,7 +48,7 @@ if __name__ == '__main__':
 		data = json.load(f)
 
 
-	for request in data['strong']:
+	for request in data['single']:
 		print("starting: ",
 			'\n filename: ', request['filename'],
 			'\n model_type: ', request['model_type'],

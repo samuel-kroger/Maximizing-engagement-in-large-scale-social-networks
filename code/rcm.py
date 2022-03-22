@@ -353,11 +353,13 @@ class RCM(object):
 
 
 
-	def findAnchors(self, parallel=True):
+	def findAnchors(self, parallel=False):
 		if parallel:
 			return self._rcmParallel()
+
 		else:
 			return self._rcmSequential()
+
 
 
 if __name__ == '__main__':
