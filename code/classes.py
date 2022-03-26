@@ -10,6 +10,7 @@ import seperation
 import os
 import math
 import rcm
+import olak
 
 def output_sort(element_of_output):
 	if element_of_output == "instance_name":
@@ -53,7 +54,13 @@ def output_sort(element_of_output):
 	if element_of_output == "fractional_callback":
 		return 16
 
-
+def anchored_k_core (G, k, purchased_nodes):
+				anchored_core_nodes = []
+				anchored_k_core_decomp = olak.anchoredKCore(G, purchased_nodes)
+				for key in anchored_k_core_decomp:
+					if anchored_k_core_decomp[key] >= k:
+						anchored_core_nodes.append(key)
+				return (anchored_core_nodes)
 
 class base_model(object):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback):
@@ -76,7 +83,6 @@ class base_model(object):
 
 		#every member of class
 		self.num_k_core_nodes = 0
-		self.R = []
 		#self.weights = {}
 		self.var_remaining = 0
 		self.var_num = 0
@@ -327,13 +333,13 @@ class base_model(object):
 
 		r.findAnchors(False)
 		a_list = list(a)
-		their_sol = heuristic.anchored_k_core(self.G, self.k, a_list)
 
-		k_core = heuristic.anchored_k_core(self.G, self.k, their_sol)
+		anc_k_core = anchored_k_core(self.G, self.k, a_list)
+
 
 		for v in a_list:
 			self.model._Y[v].start = 1
-		for v in k_core:
+		for v in anc_k_core:
 			self.model._X[v].start = 1
 
 
@@ -388,26 +394,30 @@ class base_model(object):
 				selected_nodes = []
 				for i in G.nodes:
 					if m._X[i].x > 0.5:
-						print("selected node: ", i)
+						#print("selected node: ", i)
 						selected_nodes.append(i)
 
 				for i in G.nodes:
-					print("selected node: ", i, " x_value: ", m._X[i].x)
-
+					#print("selected node: ", i, " x_value: ", m._X[i].x)
+					''
 
 				purchased_nodes = []
 				for i in G.nodes:
 					if m._Y[i].x > 0.5:
-						print("purchased node: ", i)
 						purchased_nodes.append(i)
 
 				for i in G.nodes:
-					print("purchased node: ", i, " y_value: ", m._Y[i].x)
+					''
+					#print("purchased node: ", i, " y_value: ", m._Y[i].x)
 
 				print("# of vertices in G: ", len(G.nodes))
+				print("OTSHEUTSNOHEUS")
+				print(len(anchored_k_core(self.G, self.k, purchased_nodes)))
+
+				print("OTSHEUTSNOHEUS")
 				#print("Is it connected? ", nx.is_connected(SUB))
 				#print("Diameter? ", nx.diameter(SUB))
-				plot = 1
+				plot = 0
 				if plot == 1:
 					pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, True, k, b, self.r)
 				if plot == 2:
@@ -452,52 +462,29 @@ class reduced_model(base_model):
 			self.model._X[y_val].ub = 0
 			self.var_remaining += 1
 
-		k_core_G = heuristic.anchored_k_core(self.G, self.k, [])
-		k_core_G = self.G.subgraph(k_core_G)
+		k_core_G = nx.k_core(self.G, self.k)
 
 		self.num_k_core_nodes = len(k_core_G.nodes())
 
-		#case if everynode is in the k-core
-		if len(self.G.nodes()) == self.num_k_core_nodes:
+		self.R = list(self.G.nodes() - k_core_G.nodes())
 
-			for v in self.x_vals:
-				self.model._X[v].lb = 1
-				self.model._Y[v].ub = 0
-				self.var_remaining += 1
-			for v in self.y_vals:
-				self.model._Y[v].ub = 0
-				self.var_remaining += 1
+		for node in k_core_G.nodes():
 
-		#case if some of the nodes are in the $k$-core
-		if self.num_k_core_nodes != 0 and self.num_k_core_nodes != len(self.G.nodes()):
+			self.model._X[node].lb = 1
+			self.model._Y[node].ub = 0
+			self.var_remaining += 2
 
-			#R is the list of nodes not in the k-core
+		deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 
-			self.R = list(self.G.nodes() - k_core_G.nodes())
+		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.R if i in self.x_vals)
+		#self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.G.nodes())
 
-			for node in k_core_G.nodes():
+		self.model.addConstr(gp.quicksum(self.model._Y[i] for i in self.R) <= self.b )
 
-				self.model._X[node].lb = 1
-				self.model._Y[node].ub = 0
-				self.var_remaining += 2
-
-
-
-		if self.R:
-			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
-			#self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
-			#self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
-
-			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.R if i in self.x_vals)
-
-			self.model.addConstr(gp.quicksum(self.model._Y[i] for i in self.R if i in self.y_vals) <= self.b )
-
-		else:
-			deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.x_vals)
-
-			if self.lazyconstraints:
-				for v in self.x_vals:
-					deg_constraints[v].lazy = 3
+		#TEMP
+		#if self.lazyconstraints:
+		#	for v in self.x_vals:
+		#		deg_constraints[v].lazy = 3
 
 
 class radius_bounded_model(base_model):

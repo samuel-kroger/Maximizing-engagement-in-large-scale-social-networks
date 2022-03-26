@@ -1,13 +1,12 @@
 {
 	"single":
 	[
-
 		{
 			"filename":"facebook_combined.txt",
-			"k":27,
+			"k":17,
 			"b":250,
 			"r":"NA",
-			"model_type":"reduced_model",
+			"model_type":"base_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":true,
@@ -17,13 +16,13 @@
 		},
 		{
 			"filename":"facebook_combined.txt",
-			"k":27,
+			"k":17,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
-			"warm_start":false,
+			"warm_start":true,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false

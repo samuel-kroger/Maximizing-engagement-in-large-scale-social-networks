@@ -1,0 +1,5 @@
+instance_name, model_type, k, b, r, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, fractional_callback, total_time
+facebook_combined, base_model, 17, 250, NA, 8078, 0, 0, 2533.0, 2533.0, NA, NA, 0, 0, 0, True, False, False, False, 13.737193822860718
+facebook_combined, reduced_model, 17, 250, NA, 8078, 5599, 2061, 2533.0, 2533.0, NA, NA, 0, 0, 0, True, False, False, False, 3.5839929580688477
+facebook_combined, base_model, 17, 250, NA, 8078, 0, 0, 2533.0, 2533.0, NA, NA, 0, 0, 0, True, False, False, False, 12.373513221740723
+facebook_combined, reduced_model, 17, 250, NA, 8078, 5599, 2061, 2533.0, 2533.0, NA, NA, 0, 0, 0, True, False, False, False, 3.550999641418457

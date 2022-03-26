@@ -1,0 +1,11 @@
+instance_name, model_type, k, b, r, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, fractional_callback, total_time
+continuous_counter_example, base_model, 3, 6, NA, 32, 0, 0, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.016995668411254883
+continuous_counter_example, reduced_model, 3, 6, NA, 32, 14, 4, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.002998828887939453
+continuous_counter_example, base_model, 3, 2, NA, 32, 0, 0, 8.0, 8.0, NA, NA, 0, 0, 0, False, False, False, False, 0.011992931365966797
+continuous_counter_example, reduced_model, 3, 2, NA, 32, 14, 4, 8.0, 8.0, NA, NA, 0, 0, 0, False, False, False, False, 0.005997657775878906
+continuous_counter_example, base_model, 3, 3, NA, 32, 0, 0, 9.0, 9.0, NA, NA, 0, 0, 0, False, False, False, False, 0.011995077133178711
+continuous_counter_example, reduced_model, 3, 3, NA, 32, 14, 4, 9.0, 9.0, NA, NA, 0, 0, 0, False, False, False, False, 0.00599980354309082
+continuous_counter_example, base_model, 3, 4, NA, 32, 0, 0, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.009998321533203125
+continuous_counter_example, reduced_model, 3, 4, NA, 32, 14, 4, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.004998683929443359
+continuous_counter_example, base_model, 3, 4, NA, 32, 0, 0, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.009994029998779297
+continuous_counter_example, reduced_model, 3, 4, NA, 32, 14, 4, 10.0, 10.0, NA, NA, 0, 0, 0, False, False, False, False, 0.003998279571533203
