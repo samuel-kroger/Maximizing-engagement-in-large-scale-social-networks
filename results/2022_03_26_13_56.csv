@@ -1,3 +1,0 @@
-instance_name, model_type, k, b, r, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, fractional_callback, total_time
-test_instance_1, base_model, 2, 2, NA, 8, 0, 0, 2.0, 2.0, NA, NA, 0, 0, 0, False, False, False, False, 0.008998870849609375
-test_instance_1, base_model, 4, 2, NA, 8, 0, 0, -0.0, -0.0, NA, NA, 0, 0, 0, False, False, False, False, 0.011996030807495117
