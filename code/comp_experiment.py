@@ -30,7 +30,7 @@ f = open('data.json')
 data = json.load(f)
 
 
-for request in data['single']:
+for request in data['big_run']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -52,7 +52,7 @@ for request in data['single']:
 		instance.RCM_warm_start()
 
 	instance.optimize()
-	instance.print_model()
+	#instance.print_model()
 	#print(len(G.nodes()))
 	#print(len(G.edges()))
 	#print(len(heuristic.anchored_k_core(G, request['k'], [])))
