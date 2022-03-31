@@ -165,8 +165,12 @@ class base_model(object):
 		self.model._R = G.nodes()
 		self.model._r = r
 
-		self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
-		self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
+		if relax:
+			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="x", ub = 1, lb = 0)
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y", ub = 1, lb = 0)
+		else:
+			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
 
 
 		# objective function 
@@ -414,8 +418,6 @@ class base_model(object):
 		b = self.b
 		m = self.model
 
-		if self.relax:
-			m.relax()
 		if self.fractional_callback:
 			m.Params.lazyConstraints = 1
 
@@ -428,6 +430,7 @@ class base_model(object):
 		self.BBnodes = m.NodeCount
 
 		#if not self.relax:
+		#if self.relax != True:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
 
