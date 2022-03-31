@@ -1,6 +1,5 @@
 import networkx as nx
 import gurobipy as gp
-import heuristic
 import pretty_plot
 import matplotlib.pyplot as plt
 import time
@@ -11,18 +10,48 @@ import os
 import math
 import rcm
 import olak
+import csv
+
+def read_graph(fname):
+	if fname.endswith('mtx'):
+		edges = []
+		with open(fname, 'r') as f:
+			reader = csv.reader(f, delimiter=' ')
+			edges = [row for row in reader if len(row) == 2]
+			f.close()
+		graph = nx.Graph()
+		graph.add_edges_from(edges, nodetype=int)
+	else:
+		graph = nx.read_edgelist(fname, nodetype=int, data=(("Type", str),))
+
+	graph.remove_edges_from(nx.selfloop_edges(graph))
+	graph.remove_nodes_from(list(nx.isolates(graph)))
+
+	print(nx.info(graph))
+
+	return graph
 
 def output_sort(element_of_output):
 	if element_of_output == "instance_name":
 		return 1
 	if element_of_output == "model_type":
 		return 2
+	if element_of_output == "n":
+		return 2.5
+	if element_of_output == "m":
+		return 2.7
 	if element_of_output == "k":
 		return 3
 	if element_of_output == "b":
 		return 4
 	if element_of_output == "r":
 		return 5
+	if element_of_output == "branch_and_bound_nodes":
+		return 5.1
+	if element_of_output == "LP":
+		return 5.2
+	if element_of_output == "BBnodes":
+		return 5.3
 	if element_of_output == "var_num":
 		return 5.5
 	if element_of_output == "var_remaining":
@@ -51,6 +80,8 @@ def output_sort(element_of_output):
 		return 14
 	if element_of_output == "y_val_fix":
 		return 15
+	if element_of_output == "relax":
+		return 15.5
 	if element_of_output == "fractional_callback":
 		return 16
 
@@ -63,13 +94,14 @@ def anchored_k_core (G, k, purchased_nodes):
 				return (anchored_core_nodes)
 
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
 
 		self.model = gp.Model()
 		self.model_type = model_type
 		self.instance_name = instance_name
 		#Gurobi paramater options
 		self.model.setParam('OutputFlag', 1)
+		self.model.setParam('MIPGap', 0)
 		self.model.Params.timeLimit = 3600
 		self.model.params.LogToConsole = 1
 		self.model.params.LogFile = '../results/logs/log_' + filename +'_' + str(k) + '_' +  str(b) + '.log'
@@ -79,7 +111,7 @@ class base_model(object):
 		self.fractional_callback = fractional_callback
 		#REVISIT
 		#self.model.params.method = 3
-		#self.relax = False
+		self.relax = relax
 
 		#every member of class
 		self.num_k_core_nodes = 0
@@ -102,11 +134,16 @@ class base_model(object):
 		self.b = b
 		self.r = r
 
+		self.LP = "NA"
+		self.BBnodes = "NA"
+
 		#warm_start
 		#self.time_for_warm_start = 60
 
 		#Set up G
 		self.G = G
+		self.n = len(G.nodes())
+		self.m = len(G.edges())
 
 		self.x_vals = []
 		self.y_vals = []
@@ -202,6 +239,35 @@ class base_model(object):
 			#		couter += 1
 			#for j in range(50):
 			#	print(couter)
+
+	def warm_start_test (self):
+
+		r = rcm.RCM(self.G, self.k, self.b)
+		a, f = r.findAnchors(False)
+
+		r.findAnchors(False)
+		a_list = list(a)
+
+		anc_k_core = anchored_k_core(self.G, self.k, a_list)
+
+		print(len(anc_k_core))
+		#print(anc_k_core)
+		#print(olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b))
+
+		zero = olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b)
+		one = anchored_k_core(self.G, self.k, zero)
+		two = anchored_k_core(self.G, self.k, [])
+		#print(zero)
+		#print(one + two)
+		print(len(one) + len(two))
+
+
+		#obj = olak.Olak()
+		#print(obj.olak(self.G, self.k))
+
+
+		#olak.olakAnchors(self.G, olak.Olak..anchoredKCore(self.G), self.k, self.b)
+
 
 	def remove_all_y_saturated_nodes(self):
 		loop = True
@@ -342,14 +408,14 @@ class base_model(object):
 		for v in anc_k_core:
 			self.model._X[v].start = 1
 
-
 	def optimize(self):
 		G = self.G
 		k = self.k
 		b = self.b
 		m = self.model
 
-
+		if self.relax:
+			m.relax()
 		if self.fractional_callback:
 			m.Params.lazyConstraints = 1
 
@@ -359,6 +425,7 @@ class base_model(object):
 			m.optimize()
 
 
+		self.BBnodes = m.NodeCount
 
 		#if not self.relax:
 		self.upper_bound = m.objBound
@@ -441,7 +508,10 @@ class base_model(object):
 		with open("../results/" + self.filename, "a") as doc:
 			string = "\n"
 			for thing in self.return_output():
-				string += str(getattr(self, thing)) + ", "
+				if type(getattr(self, thing)) == float:
+					string += str(round(getattr(self, thing), 2)) + ", "
+				else:
+					string += str(getattr(self, thing)) + ", "
 			string += total_time
 			doc.write(string)
 			doc.close()
@@ -450,13 +520,14 @@ class base_model(object):
 		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename', 'y_saturated']
 		output = [attribute for attribute in dir(self) if not attribute.startswith("__") and not callable(getattr(self, attribute)) and attribute not in exceptions]
 		output.sort(key = output_sort)
+
 		return output
 
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
@@ -486,7 +557,7 @@ class reduced_model(base_model):
 		#	for v in self.x_vals:
 		#		deg_constraints[v].lazy = 3
 
-
+'''
 class radius_bounded_model(base_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
 		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
@@ -593,3 +664,5 @@ class extended_cut_model(cut_model):
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
+
+'''

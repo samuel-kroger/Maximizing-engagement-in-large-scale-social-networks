@@ -172,11 +172,11 @@ def getAnchorsFollowersSG(graph, kcore, theta):
 
 	sg = nx.Graph(graph.subgraph(cf.union(ca).union(tanchors)))
 
-	return sg
+	return sg, tanchors
 
 
 def olakAnchors(graph, kcore, theta, budget):
-	sg = getAnchorsFollowersSG(graph, kcore, theta)
+	sg, tanchors = getAnchorsFollowersSG(graph, kcore, theta)
 
 	olak_anchors = set(tanchors)
 	olak_kcore = anchoredKCore(sg, anchors=olak_anchors, start=theta-1, stop=theta, aval=theta)
@@ -187,6 +187,3 @@ def olakAnchors(graph, kcore, theta, budget):
 		olak_kcore = anchoredKCore(sg, anchors=olak_anchors, start=theta-1, stop=theta, aval=theta)
 	
 	return olak_anchors
-
-
-
