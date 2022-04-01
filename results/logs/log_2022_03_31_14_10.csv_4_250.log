@@ -1,0 +1,76 @@
+
+Gurobi 9.5.1 (linux64) logging started Thu Mar 31 14:10:39 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_31_14_10.csv_4_250.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 2359 rows, 46266 columns and 24914 nonzeros
+Model fingerprint: 0x0bc9ecf7
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 784 rows and 43855 columns
+Presolve time: 0.02s
+Presolved: 1575 rows, 2411 columns, 7261 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4561313e+04   1.515057e+02   0.000000e+00      0s
+    1073    1.4343836e+04   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+     194 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 1.0137724e-14      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1344    1.4343836e+04   0.000000e+00   0.000000e+00      0s
+
+Solved in 1344 iterations and 0.04 seconds (0.03 work units)
+Optimal objective  1.434383639e+04
+
+Gurobi 9.5.1 (linux64) logging started Thu Mar 31 14:10:43 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_31_14_10.csv_4_250.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 1269 rows, 24012 columns and 13543 nonzeros
+Model fingerprint: 0x3c1f32bd
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 395 rows and 22686 columns
+Presolve time: 0.01s
+Presolved: 874 rows, 1326 columns, 4012 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.2240628e+03   8.502906e+01   0.000000e+00      0s
+     386    7.1145000e+03   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+      55 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     464    7.1145000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 464 iterations and 0.02 seconds (0.01 work units)
+Optimal objective  7.114500000e+03
+
+Gurobi 9.5.1 (linux64) logging started Thu Mar 31 14:46:28 2022
+
+Set parameter LogFile to value "../results/logs/log_2022_03_31_14_10.csv_4_250.log"
