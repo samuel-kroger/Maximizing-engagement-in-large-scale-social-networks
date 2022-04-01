@@ -134,7 +134,6 @@ class base_model(object):
 		self.b = b
 		self.r = r
 
-		self.LP = "NA"
 		self.BBnodes = "NA"
 
 		#warm_start
