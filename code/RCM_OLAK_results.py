@@ -26,10 +26,15 @@ for request in data['single']:
 	start_time = time.time()
 	r = rcm.RCM(G, k, b)
 	a, f = r.findAnchors()
-	rcm_anchors = a
-	rcm_followers = f
+
 	k_core = classes.anchored_k_core(G, k, [])
 
-	print(len(rcm_followers) + len(k_core))
+	rcm_core = classes.anchored_k_core(G, k, a)
+
+	print(len(a))
+	print(len(f))
+
+	print(len(f) + len(k_core))
+	print(len(rcm_core))
 
 	end_time = time.time()
