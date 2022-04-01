@@ -4,6 +4,7 @@ import olak
 import time
 import json
 from datetime import datetime
+import networkx as nx
 
 ext = "../data/"
 dt_string = datetime.now().strftime("%Y_%m_%d_%H_%M")
@@ -28,13 +29,20 @@ for request in data['single']:
 	a, f = r.findAnchors()
 
 	k_core = classes.anchored_k_core(G, k, [])
+	k_core2 = nx.k_core(G, k)
+	print('test1')
+	print(len(k_core))
+	print(len(k_core2))
 
 	rcm_core = classes.anchored_k_core(G, k, a)
-
+	print('test2')
 	print(len(a))
 	print(len(f))
 
+	print('test3')
 	print(len(f) + len(k_core))
-	print(len(rcm_core))
+	print(len(rcm_core) - len(k_core))
+
+
 
 	end_time = time.time()
