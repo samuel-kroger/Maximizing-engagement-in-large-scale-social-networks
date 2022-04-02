@@ -1,0 +1,12 @@
+instance, k, b, olak, olak time, rcm, rcmtime, total_time
+facebook_combined.txt, 17, 250, 2474, 0.72, 2225, 116.84, 
+CA-CondMat.txt, 4, 250, 13911, 2.72, 13802, 187.3, 
+CA-HepPh.txt, 4, 250, 6967, 1.4, 6875, 186.81, 
+Brightkite_edges.txt, 2, 250, 35266, 7.55, 35140, 477.51, 
+socfb-Northeastern19.mtx, 33, 250, 7090, 15.13, 7175, 682.08, 
+socfb-Syracuse56.mtx, 46, 250, 7014, 22.32, 7149, 970.01, 
+ca-citeseer.mtx, 3, 250, 153677, 101.54, 153477, 2600.63, 
+Gowalla_edges.txt, 3, 250, 107260, 116.38, 107082, 2261.27, 
+com-dblp.ungraph.txt, 3, 250, 204775, 172.42, 204529, 3165.22, 
+web-Google.txt, 4, 250, 494047, 5322.86, 493229, 14084.85, 
+soc-catster.edges, 21, 250, 79400, 1140.32, 79201, 9337.42, 
