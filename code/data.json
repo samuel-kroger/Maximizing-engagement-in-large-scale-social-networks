@@ -1,6 +1,5 @@
 {
 	"heuristic":
-
 	[
 		{
 			"filename":"facebook_combined.txt",
@@ -732,7 +731,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -745,7 +744,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -758,7 +757,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -771,7 +770,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -784,7 +783,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -797,7 +796,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -810,7 +809,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -823,7 +822,7 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 
 		{
@@ -837,125 +836,59 @@
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
-			"fractional_callback":true
+			"fractional_callback":false
 		},
 		{
-			"filename":"facebook_combined.txt",
-			"k":17,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"CA-CondMat.txt",
-			"k":4,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"CA-HepPh.txt",
-			"k":4,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"Brightkite_edges.txt",
-			"k":2,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"socfb-Northeastern19.mtx",
-			"k":33,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"socfb-Syracuse56.mtx",
-			"k":46,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"Gowalla_edges.txt",
-			"k":3,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-		{
-			"filename":"com-dblp.ungraph.txt",
-			"k":3,
-			"b":250,
-			"r":"NA",
-			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
-		},
-
-		{
-			"filename":"soc-catster.edges",
+			"filename":"soc-dogster.edges",
 			"k":21,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
-			"y_saturated":true,
-			"remove_y_edges":true,
-			"warm_start":true,
-			"additonal_facet_defining":true,
-			"y_val_fix":true,
-			"fractional_callback":true
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false
+		},
+		{
+			"filename":"soc-twitter-higgs.edges",
+			"k":21,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false
+		},
+		{
+			"filename":"web-hudong.edges",
+			"k":21,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false
+		},
+		{
+			"filename":"web-baidu-baike.edges",
+			"k":21,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false
 		}
 	],
 	"big_run":
