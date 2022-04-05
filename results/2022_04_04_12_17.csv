@@ -1,0 +1,12 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+facebook_combined, reduced_model, 4039, 88234, 17, 250, NA, 1.0, 8078, 5599, 2061, 2533.0, 2533.0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.96
+CA-CondMat, reduced_model, 23133, 93439, 4, 250, NA, 1.0, 46266, 35418, 13464, 13939.0, 13939.0, NA, NA, 0, 0, 0, False, False, False, False, False, 4.23
+CA-HepPh, reduced_model, 12006, 118489, 4, 250, NA, 1.0, 24012, 17963, 6591, 6978.0, 6978.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1.56
+Brightkite_edges, reduced_model, 58228, 214078, 2, 250, NA, 29.0, 116456, 90569, 34706, 35267.0, 35267.0, NA, NA, 0, 0, 0, False, False, False, False, False, 21.24
+socfb-Northeastern19, reduced_model, 13882, 381934, 33, 250, NA, 36045.0, 27764, 19644, 7008, 7589.0, 7620.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3604.58
+socfb-Syracuse56, reduced_model, 13653, 543982, 46, 250, NA, 10190.0, 27306, 19221, 6985, 7645.0, 7734.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3605.99
+Gowalla_edges, reduced_model, 196591, 950327, 3, 250, NA, 1.0, 393182, 292745, 106417, 107299.0, 107299.0, NA, NA, 0, 0, 0, False, False, False, False, False, 315.27
+com-dblp.ungraph, reduced_model, 317080, 1049866, 3, 250, NA, 1764.0, 634160, 510101, 204031, 204857.0, 204857.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1146.6
+soc-catster.e, reduced_model, 149684, 5448197, 21, 250, NA, 1.0, 299368, 226626, 78945, 79561.0, 79561.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1243.85
+soc-dogster.e, reduced_model, 426816, 8543549, 12, 250, NA, 1.0, 853632, 632556, 214490, 215343.0, 215343.0, NA, NA, 0, 0, 0, False, False, False, False, False, 4087.16
+soc-twitter-higgs.e, reduced_model, 456631, 12508442, 17, 250, NA, 3169.0, 913262, 678816, 231419, 232329.0, 232329.0, NA, NA, 0, 0, 0, False, False, False, False, False, 5609.64
