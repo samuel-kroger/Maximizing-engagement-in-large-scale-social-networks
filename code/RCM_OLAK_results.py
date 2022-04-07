@@ -27,7 +27,7 @@ for request in data['heuristic']:
 
 	k_core = list(nx.k_core(G, k))
 	print(len(k_core))
-
+	'''
 	rcm_time_start = time.time()
 	r = rcm.RCM(G, k, b)
 	a, f = r.findAnchors()
@@ -60,3 +60,4 @@ for request in data['heuristic']:
 			string += thing + ", "
 		doc.write(string)
 		doc.close()
+	'''
