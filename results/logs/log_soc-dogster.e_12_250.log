@@ -1,0 +1,246 @@
+
+Gurobi 9.5.1 (linux64) logging started Thu Apr  7 14:16:53 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dogster.e_12_250.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 853633 rows, 853632 columns and 35881460 nonzeros
+Model fingerprint: 0xc0384b7e
+Variable types: 0 continuous, 853632 integer (853632 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 7s) ...
+Presolve removed 225934 rows and 117457 columns (presolve time = 11s) ...
+Presolve removed 227792 rows and 117872 columns (presolve time = 16s) ...
+Presolve removed 227858 rows and 117878 columns (presolve time = 21s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 28s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 30s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 35s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 40s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 45s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 50s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 55s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 60s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 65s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 71s) ...
+Presolve removed 227858 rows and 163298 columns (presolve time = 75s) ...
+Presolve removed 227858 rows and 252945 columns (presolve time = 80s) ...
+Presolve removed 227858 rows and 252945 columns (presolve time = 85s) ...
+Presolve removed 227858 rows and 252945 columns (presolve time = 90s) ...
+Presolve removed 227858 rows and 252945 columns (presolve time = 95s) ...
+Presolve removed 227858 rows and 252945 columns (presolve time = 101s) ...
+Presolve removed 407152 rows and 252945 columns (presolve time = 107s) ...
+Presolve removed 407152 rows and 274881 columns (presolve time = 113s) ...
+Presolve removed 407152 rows and 274881 columns (presolve time = 115s) ...
+Presolve removed 407152 rows and 274881 columns (presolve time = 121s) ...
+Presolve removed 407152 rows and 274881 columns (presolve time = 125s) ...
+Presolve removed 407152 rows and 274881 columns (presolve time = 130s) ...
+Presolve removed 407152 rows and 274883 columns (presolve time = 136s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 144s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 146s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 150s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 156s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 160s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 166s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 170s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 175s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 180s) ...
+Presolve removed 407153 rows and 274883 columns (presolve time = 188s) ...
+Presolve removed 408793 rows and 276523 columns (presolve time = 191s) ...
+Presolve removed 407151 rows and 274881 columns
+Presolve time: 191.47s
+Presolved: 446482 rows, 578751 columns, 31655384 nonzeros
+Variable types: 0 continuous, 578751 integer (560713 binary)
+Found heuristic solution: objective 213293.00000
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 10s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 98s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 125s
+Elapsed ordering time = 130s
+Elapsed ordering time = 135s
+Elapsed ordering time = 140s
+Elapsed ordering time = 145s
+Elapsed ordering time = 150s
+Elapsed ordering time = 155s
+Elapsed ordering time = 160s
+Elapsed ordering time = 165s
+Elapsed ordering time = 170s
+Elapsed ordering time = 175s
+Elapsed ordering time = 180s
+Elapsed ordering time = 185s
+Elapsed ordering time = 190s
+Elapsed ordering time = 195s
+Elapsed ordering time = 200s
+Elapsed ordering time = 205s
+Elapsed ordering time = 210s
+Elapsed ordering time = 215s
+Elapsed ordering time = 220s
+Elapsed ordering time = 225s
+Elapsed ordering time = 230s
+Elapsed ordering time = 235s
+Elapsed ordering time = 240s
+Elapsed ordering time = 245s
+Elapsed ordering time = 250s
+Elapsed ordering time = 255s
+Elapsed ordering time = 260s
+Elapsed ordering time = 265s
+Elapsed ordering time = 270s
+Elapsed ordering time = 275s
+Elapsed ordering time = 280s
+Elapsed ordering time = 285s
+Elapsed ordering time = 290s
+Elapsed ordering time = 295s
+Elapsed ordering time = 300s
+Elapsed ordering time = 305s
+Elapsed ordering time = 310s
+Elapsed ordering time = 315s
+Elapsed ordering time = 320s
+Elapsed ordering time = 325s
+Elapsed ordering time = 330s
+Elapsed ordering time = 335s
+Elapsed ordering time = 340s
+Elapsed ordering time = 345s
+Elapsed ordering time = 350s
+Elapsed ordering time = 355s
+Elapsed ordering time = 360s
+Elapsed ordering time = 365s
+Elapsed ordering time = 370s
+Elapsed ordering time = 375s
+Elapsed ordering time = 380s
+Elapsed ordering time = 385s
+Elapsed ordering time = 390s
+Elapsed ordering time = 395s
+Elapsed ordering time = 400s
+Elapsed ordering time = 405s
+Elapsed ordering time = 410s
+Elapsed ordering time = 415s
+Elapsed ordering time = 420s
+Elapsed ordering time = 425s
+Elapsed ordering time = 430s
+Elapsed ordering time = 435s
+Elapsed ordering time = 440s
+Elapsed ordering time = 445s
+Elapsed ordering time = 450s
+Elapsed ordering time = 455s
+Elapsed ordering time = 460s
+Elapsed ordering time = 470s
+Elapsed ordering time = 482s
+Elapsed ordering time = 510s
+Elapsed ordering time = 520s
+Ordering time: 521.56s
+
+Barrier performed 0 iterations in 782.14 seconds (421.96 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 477.87s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 2.221449e+05, 33684 iterations, 582.12 seconds (209.81 work units)
+Total elapsed time = 786.13s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 222144.928    0 8226 213293.000 222144.928  4.15%     -  856s
+H    0     0                    213754.00000 222144.928  3.93%     -  865s
+H    0     0                    213804.00000 222144.928  3.90%     -  867s
+     0     0 216466.653    0 2572 213804.000 216466.653  1.25%     -  980s
+H    0     0                    214931.00000 216466.653  0.71%     -  990s
+H    0     0                    215219.00000 216466.653  0.58%     -  996s
+     0     0 216411.246    0 2489 215219.000 216411.246  0.55%     - 1001s
+     0     0 216406.385    0 2493 215219.000 216406.385  0.55%     - 1006s
+     0     0 216406.126    0 2488 215219.000 216406.126  0.55%     - 1012s
+     0     0 215868.468    0 1732 215219.000 215868.468  0.30%     - 1073s
+     0     0 215822.464    0 1865 215219.000 215822.464  0.28%     - 1088s
+     0     0 215811.045    0 1901 215219.000 215811.045  0.28%     - 1094s
+     0     0 215806.126    0 1892 215219.000 215806.126  0.27%     - 1100s
+     0     0 215804.836    0 1894 215219.000 215804.836  0.27%     - 1106s
+     0     0 215804.254    0 1896 215219.000 215804.254  0.27%     - 1111s
+     0     0 215685.609    0 1486 215219.000 215685.609  0.22%     - 1179s
+H    0     0                    215311.00000 215685.609  0.17%     - 1190s
+     0     0 215646.868    0 1548 215311.000 215646.868  0.16%     - 1196s
+     0     0 215635.667    0 1550 215311.000 215635.667  0.15%     - 1204s
+     0     0 215631.881    0 1642 215311.000 215631.881  0.15%     - 1210s
+     0     0 215629.713    0 1679 215311.000 215629.713  0.15%     - 1217s
+     0     0 215629.304    0 1674 215311.000 215629.304  0.15%     - 1223s
+     0     0 215584.225    0 1621 215311.000 215584.225  0.13%     - 1294s
+     0     0 215574.465    0 1658 215311.000 215574.465  0.12%     - 1310s
+     0     0 215570.884    0 1731 215311.000 215570.884  0.12%     - 1318s
+     0     0 215569.455    0 1783 215311.000 215569.455  0.12%     - 1324s
+     0     0 215568.927    0 1771 215311.000 215568.927  0.12%     - 1331s
+     0     0 215548.977    0 1730 215311.000 215548.977  0.11%     - 1366s
+H    0     0                    215318.00000 215548.977  0.11%     - 1377s
+     0     0 215545.213    0 1822 215318.000 215545.213  0.11%     - 1385s
+     0     0 215543.783    0 1809 215318.000 215543.783  0.10%     - 1392s
+     0     0 215543.209    0 1831 215318.000 215543.209  0.10%     - 1398s
+     0     0 215530.129    0 1708 215318.000 215530.129  0.10%     - 1432s
+     0     0 215527.213    0 1829 215318.000 215527.213  0.10%     - 1449s
+     0     0 215525.976    0 1800 215318.000 215525.976  0.10%     - 1458s
+     0     0 215525.338    0 1894 215318.000 215525.338  0.10%     - 1464s
+     0     0 215509.934    0 1889 215318.000 215509.934  0.09%     - 1531s
+H    0     0                    215328.00000 215509.934  0.08%     - 1542s
+     0     0 215507.388    0 1928 215328.000 215507.388  0.08%     - 1550s
+     0     0 215506.666    0 1986 215328.000 215506.666  0.08%     - 1557s
+     0     0 215497.679    0 2006 215328.000 215497.679  0.08%     - 1592s
+     0     0 215495.862    0 2082 215328.000 215495.862  0.08%     - 1610s
+     0     0 215495.421    0 2010 215328.000 215495.421  0.08%     - 1619s
+     0     0 215486.045    0 2057 215328.000 215486.045  0.07%     - 1660s
+     0     0 215484.176    0 2182 215328.000 215484.176  0.07%     - 1680s
+     0     0 215483.658    0 2270 215328.000 215483.658  0.07%     - 1689s
+     0     0 215474.074    0 1898 215328.000 215474.074  0.07%     - 1765s
+H    0     0                    215329.00000 215474.074  0.07%     - 1773s
+     0     0 215471.738    0 2171 215329.000 215471.738  0.07%     - 1786s
+     0     0 215471.013    0 2074 215329.000 215471.013  0.07%     - 1797s
+     0     0 215465.026    0 2107 215329.000 215465.026  0.06%     - 1839s
+     0     0 215462.925    0 2265 215329.000 215462.925  0.06%     - 1863s
+     0     0 215462.429    0 2168 215329.000 215462.429  0.06%     - 1874s
+     0     0 215456.041    0 2032 215329.000 215456.041  0.06%     - 1915s
+     0     0 215454.416    0 2269 215329.000 215454.416  0.06%     - 1936s
+     0     0 215453.756    0 2356 215329.000 215453.756  0.06%     - 1947s
+     0     0 215449.590    0 1962 215329.000 215449.590  0.06%     - 2020s
+     0     0 215447.980    0 2385 215329.000 215447.980  0.06%     - 2043s
+     0     0 215447.685    0 2254 215329.000 215447.685  0.06%     - 2053s
+     0     0 215444.466    0 2512 215329.000 215444.466  0.05%     - 2097s
+     0     0 215443.860    0 2264 215329.000 215443.860  0.05%     - 2113s
+     0     0 215440.994    0 2342 215329.000 215440.994  0.05%     - 2154s
+     0     0 215440.994    0 2278 215329.000 215440.994  0.05%     - 2174s
+     0     2 215439.994    0 2271 215329.000 215439.994  0.05%     - 2279s
+     1     4 215439.994    1 2268 215329.000 215439.994  0.05%   786 2287s
+     3     8 215438.633    2 2375 215329.000 215439.677  0.05%   614 2317s
+     7    16 215438.150    3 2658 215329.000 215439.132  0.05%   982 2385s
+    15    24 215437.552    4 2638 215329.000 215438.483  0.05%  1318 2436s
+    23    32 215436.753    5 2639 215329.000 215438.358  0.05%  1333 2441s
+    31    40 215435.920    6 2624 215329.000 215438.358  0.05%  1012 2455s
+    39    48 215435.503    7 2602 215329.000 215438.358  0.05%   825 2477s
