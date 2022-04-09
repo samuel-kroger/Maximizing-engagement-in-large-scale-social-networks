@@ -102,7 +102,7 @@ class base_model(object):
 		#Gurobi paramater options
 		self.model.setParam('OutputFlag', 1)
 		self.model.setParam('MIPGap', 0)
-		self.model.Params.timeLimit = 3600
+		#self.model.Params.timeLimit = 3600
 		self.model.params.LogToConsole = 1
 		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + '.log'
 
