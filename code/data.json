@@ -383,11 +383,11 @@
 	"single":
 	[
 		{
-			"filename":"web-hudong.edges",
-			"k":5,
+			"filename":"socfb-Northeastern19.mtx",
+			"k":33,
 			"b":250,
 			"r":"NA",
-			"model_type":"base_model",
+			"model_type":"reduced_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
@@ -397,18 +397,18 @@
 			"relax":false
 		},
 		{
-			"filename":"web-baidu-baike.edges",
-			"k":3,
+			"filename":"socfb-Syracuse56.mtx",
+			"k":46,
 			"b":250,
 			"r":"NA",
-			"model_type":"base_model",
+			"model_type":"reduced_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
 			"additonal_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":true
+			"relax":false
 		}
 	],
 	"small_batch":
