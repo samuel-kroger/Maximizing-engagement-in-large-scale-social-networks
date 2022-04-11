@@ -1,3 +1,6 @@
 data/web-hudong.edges
 data/web-baidu-baike.edges
 data/soc-twitter-higgs.edges
+data/com-orkut.ungraph.txt
+data/soc-LiveJournal1.txt
+data/soc-pokec-relationships.txt

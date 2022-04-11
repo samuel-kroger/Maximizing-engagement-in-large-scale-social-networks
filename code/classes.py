@@ -54,8 +54,6 @@ def output_sort(element_of_output):
 		return 5.3
 	if element_of_output == "var_num":
 		return 5.5
-	if element_of_output == "var_remaining":
-		return 5.7
 	if element_of_output == "num_k_core_nodes":
 		return 6
 	if element_of_output == "lower_bound":
@@ -116,8 +114,6 @@ class base_model(object):
 		#every member of class
 		self.num_k_core_nodes = 0
 		#self.weights = {}
-		self.var_remaining = 0
-		self.var_num = 0
 
 		#y_saturated
 		self.y_saturated_reduction = 0
@@ -144,6 +140,7 @@ class base_model(object):
 		self.n = len(G.nodes())
 		self.m = len(G.edges())
 
+		self.var_num = 2 * self.n
 		self.x_vals = []
 		self.y_vals = []
 
@@ -221,6 +218,8 @@ class base_model(object):
 		if self.model_type == "base_model":
 			self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
+
+
 		if additonal_facet_defining:
 			for i in self.x_vals:
 				if self.G.degree(i) == self.k:
@@ -238,7 +237,7 @@ class base_model(object):
 						break
 				if fix:
 					self.model._Y[i].ub = 0
-					self.var_remaining += 1
+					var_num -= 1
 			#		couter += 1
 			#for j in range(50):
 			#	print(couter)
@@ -270,7 +269,6 @@ class base_model(object):
 
 
 		#olak.olakAnchors(self.G, olak.Olak..anchoredKCore(self.G), self.k, self.b)
-
 
 	def remove_all_y_saturated_nodes(self):
 		loop = True
@@ -495,8 +493,6 @@ class base_model(object):
 			#m.write("Lobster.lp")
 
 	def save_to_file(self, total_time):
-		self.var_num = len(self.model.getVars())
-		#self.var_remaining = self.var_num - self.var_remaining
 
 		if not os.path.exists("../results/" + self.filename):
 			with open("../results/" + self.filename, "w") as doc:
@@ -533,7 +529,7 @@ class reduced_model(base_model):
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
-			self.var_remaining += 1
+			self.var_num -= 1
 
 		k_core_G = nx.k_core(self.G, self.k)
 
@@ -545,7 +541,7 @@ class reduced_model(base_model):
 
 			self.model._X[node].lb = 1
 			self.model._Y[node].ub = 0
-			self.var_remaining += 2
+			self.var_num -= 2
 
 		deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
 

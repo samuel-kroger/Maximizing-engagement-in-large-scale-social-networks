@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 import networkx as nx
 import os
+from statistics import median
 
 ext = "../data/"
 dt_string = datetime.now().strftime("%Y_%m_%d_%H_%M")
@@ -15,7 +16,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['heuristic']:
+for request in data['single']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n k: ', request['k'],
@@ -25,8 +26,23 @@ for request in data['heuristic']:
 	k = request['k']
 	b = request['b']
 
-	k_core = list(nx.k_core(G, k))
-	print(len(k_core))
+	#k_core = nx.k_core(G, k)
+
+	k_core_decomposition = olak.anchoredKCore(G)
+	tracker = []
+	for node in k_core_decomposition:
+		tracker.append(k_core_decomposition[node])
+
+	print("median k: " + str(median(tracker)))
+	#print("cardinality of med k_core: " + str((len(k_core))))
+
+	#k_core = list(nx.k_core(G, k))
+	#print(len(G.nodes()))
+	#print(len(G.edges()))
+	#print(len(k_core))
+
+
+
 	'''
 	rcm_time_start = time.time()
 	r = rcm.RCM(G, k, b)
