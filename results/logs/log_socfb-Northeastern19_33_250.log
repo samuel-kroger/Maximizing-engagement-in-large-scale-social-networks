@@ -408,6 +408,7 @@ Time limit reached
 Best objective 7.583000000000e+03, best bound 7.615000000000e+03, gap 0.4220%
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Gurobi 9.5.1 (linux64) logging started Sat Apr  9 10:23:02 2022
 
 Set parameter LogFile to value "../results/logs/log_socfb-Northeastern19_33_250.log"
@@ -416,6 +417,8 @@ Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
 Optimize a model with 2493 rows, 27764 columns and 107718 nonzeros
 Model fingerprint: 0xebf5434d
 =======
+=======
+>>>>>>> Stashed changes
 Gurobi 9.5.0 (win64) logging started Wed Apr 13 10:24:30 2022
 
 Set parameter LogFile to value "../results/logs/log_socfb-Northeastern19_33_250.log"
@@ -427,6 +430,9 @@ Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
 Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
 Optimize a model with 2493 rows, 27764 columns and 107718 nonzeros
 Model fingerprint: 0x4b0a605d
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Variable types: 0 continuous, 27764 integer (27764 binary)
 Coefficient statistics:
@@ -434,22 +440,32 @@ Coefficient statistics:
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+00]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   RHS range        [1e+00, 2e+02]
 Found heuristic solution: objective 7008.0000000
 Presolve removed 50 rows and 22259 columns
 Presolve time: 0.06s
 =======
+=======
+>>>>>>> Stashed changes
   RHS range        [1e+00, 3e+02]
 Found heuristic solution: objective 7008.0000000
 Presolve removed 50 rows and 22259 columns
 Presolve time: 0.10s
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Presolved: 2443 rows, 5505 columns, 28996 nonzeros
 Variable types: 0 continuous, 5505 integer (5094 binary)
 Found heuristic solution: objective 7199.0000000
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Root relaxation: objective 7.946686e+03, 3359 iterations, 0.13 seconds (0.18 work units)
+=======
+Root relaxation: objective 7.946686e+03, 3561 iterations, 0.19 seconds (0.18 work units)
+>>>>>>> Stashed changes
 =======
 Root relaxation: objective 7.946686e+03, 3561 iterations, 0.19 seconds (0.18 work units)
 >>>>>>> Stashed changes
@@ -458,6 +474,7 @@ Root relaxation: objective 7.946686e+03, 3561 iterations, 0.19 seconds (0.18 wor
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
      0     0 7946.68645    0  916 7199.00000 7946.68645  10.4%     -    0s
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 H    0     0                    7424.0000000 7946.68645  7.04%     -    0s
 H    0     0                    7425.0000000 7946.68645  7.03%     -    0s
@@ -1334,6 +1351,8 @@ H88762 43742                    7591.0000000 7609.80329  0.25%  2375 19877s
  488839 354130 7595.58021   68 2235 7591.00000 7605.59863  0.19%  4171 315839s
  489838 354972 7597.39542   69 2099 7591.00000 7605.59551  0.19%  4170 316717s
 =======
+=======
+>>>>>>> Stashed changes
 H    0     0                    7411.0000000 7946.68645  7.23%     -    0s
 H    0     0                    7414.0000000 7946.68645  7.18%     -    0s
 H    0     0                    7416.0000000 7946.68645  7.16%     -    0s
@@ -1861,4 +1880,7 @@ H31020 18395                    7589.0000000 7614.38461  0.33%   913 5496s
  47578 28027 7597.56722  112 1329 7589.00000 7612.38017  0.31%  1120 10546s
  48344 28304 7600.36877   89 1616 7589.00000 7612.34717  0.31%  1127 10783s
  48941 28786 7603.18460   75 1962 7589.00000 7612.28152  0.31%  1136 11016s
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
