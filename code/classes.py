@@ -102,7 +102,7 @@ class base_model(object):
 		self.model.setParam('MIPGap', 0)
 		#self.model.Params.timeLimit = 3600
 		self.model.params.LogToConsole = 1
-		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + '.log'
+		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + "_"+ filename[:-4] + '.log'
 
 		self.additonal_facet_defining = additonal_facet_defining
 		self.y_val_fix = y_val_fix
@@ -172,40 +172,6 @@ class base_model(object):
 		# objective function 
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
 
-		# k degree constraints
-		'''
-		if self.k == 2:
-
-			for v in self.G.nodes():
-				if self.G.degree(v) == 1:
-					for u in G.neighbors(v):
-						self.model.addConstr(self.model._Y[v] <= self.model._X[u])
-
-				else:
-					self.model._Y[v].ub = 0
-						#self.model.addConstr(self.model._X[v] == self.model._Y[u])
-						#self.model._X[u].lb = 1
-				#if self.G.degree(v) == 1:
-				#	for u in G.neighbors(v):
-				#		self.model._X[u].lb = 1
-			leaf_nodes = [x for x in self.G.nodes() if self.G.degree(x) == 1]
-			#print(leaf_nodes)
-			for i in leaf_nodes:
-				for j in leaf_nodes:
-					if i != j:
-						paths = nx.all_simple_paths(self.G, i, j)
-						for path in paths:
-							print(path)
-							#print(path[0])
-							#print(path[1:-1])
-							#print(path[-1])
-							#self.model.addConstr(self.model._Y[path[0]] + self.model._Y[path[-1]] <= gp.quicksum(self.model._X[j] for j in path[1:-1]))
-
-
-			#self.model._Z = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="z")
-			#self.model.addConstrs(self.model._Z[i] >= self.model._X[i] for i in self.G.nodes())
-			#self.model.addConstrs(self.model._Z[i] <= self.model._X[i] + .999999 for i in self.G.nodes())
-		'''
 
 		if self.model_type == "base_model":
 			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.G.nodes())
@@ -530,6 +496,10 @@ class reduced_model(base_model):
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
+			neighbor_with_x = [node for node in G.neighbors(y_val) if node in self.x_vals]
+			if len(neighbor_with_x) == 0:
+				self.model._Y[y_val].ub = 0
+				self.var_num -=1
 
 		k_core_G = nx.k_core(self.G, self.k)
 
