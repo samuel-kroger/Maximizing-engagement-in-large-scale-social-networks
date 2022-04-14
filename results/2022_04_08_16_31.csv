@@ -1,2 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, var_remaining, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-web-hudong.e, base_model, 1974655, 14428382, 5, 250, NA, 0.0, 3949310, 0, 0, 1452929.96, 1452929.96, NA, NA, 0, 0, 0, False, False, False, True, False, 2075.93

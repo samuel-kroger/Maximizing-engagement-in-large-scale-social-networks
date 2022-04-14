@@ -481,12 +481,12 @@
 			"relax":false
 		}
 	],
-	"small_batch":
+	"below_the_line":
 	[
 		{
-			"filename":"soc-dogster.edges",
-			"k":12,
-			"b":250,
+			"filename":"facebook_combined.txt",
+			"k":20,
+			"b":20,
 			"r":"NA",
 			"model_type":"base_model",
 			"y_saturated":false,
@@ -498,9 +498,9 @@
 			"relax":false
 		},
 		{
-			"filename":"soc-twitter-higgs.edges",
-			"k":17,
-			"b":250,
+			"filename":"Brightkite_edges.txt",
+			"k":20,
+			"b":20,
 			"r":"NA",
 			"model_type":"base_model",
 			"y_saturated":false,
@@ -512,9 +512,9 @@
 			"relax":false
 		},
 		{
-			"filename":"web-hudong.edges",
-			"k":5,
-			"b":250,
+			"filename":"flickrEdges.txt",
+			"k":20,
+			"b":20,
 			"r":"NA",
 			"model_type":"base_model",
 			"y_saturated":false,
@@ -526,9 +526,79 @@
 			"relax":false
 		},
 		{
-			"filename":"web-baidu-baike.edges",
-			"k":3,
-			"b":250,
+			"filename":"Gowalla_edges.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
+			"filename":"com-youtube.ungraph.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
+			"filename":"com-dblp.ungraph.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
+			"filename":"soc-pokec-relationships.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
+			"filename":"soc-LiveJournal1.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
+			"filename":"com-orkut.ungraph.txt",
+			"k":20,
+			"b":20,
 			"r":"NA",
 			"model_type":"base_model",
 			"y_saturated":false,
