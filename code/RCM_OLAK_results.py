@@ -16,7 +16,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['single']:
+for request in data['below_the_line']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n k: ', request['k'],
@@ -28,12 +28,12 @@ for request in data['single']:
 
 	#k_core = nx.k_core(G, k)
 
-	k_core_decomposition = olak.anchoredKCore(G)
-	tracker = []
-	for node in k_core_decomposition:
-		tracker.append(k_core_decomposition[node])
+	#k_core_decomposition = olak.anchoredKCore(G)
+	#tracker = []
+	#for node in k_core_decomposition:
+	#	tracker.append(k_core_decomposition[node])
 
-	print("median k: " + str(median(tracker)))
+	#print("median k: " + str(median(tracker)))
 	#print("cardinality of med k_core: " + str((len(k_core))))
 
 	#k_core = list(nx.k_core(G, k))
@@ -43,7 +43,7 @@ for request in data['single']:
 
 
 
-	'''
+
 	rcm_time_start = time.time()
 	r = rcm.RCM(G, k, b)
 	a, f = r.findAnchors()
@@ -76,4 +76,3 @@ for request in data['single']:
 			string += thing + ", "
 		doc.write(string)
 		doc.close()
-	'''
