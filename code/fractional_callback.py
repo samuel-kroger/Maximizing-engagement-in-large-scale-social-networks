@@ -1,6 +1,6 @@
 import gurobipy as grb
 import operator
-import heuristic
+#import heuristic
 import classes
 import time
 
@@ -26,6 +26,7 @@ def fractional_callback(m, where):
 
 	b_best_anchors = list(dict(sorted(y_sol.iteritems(), key=operator.itemgetter(1), reverse=True)[:10*b]).keys())
 
+	#THESE NEEDS TO BE UPDATED
 	resulting_k_core = heuristic.anchored_k_core(G, k, b_best_anchors)
 	'''
 	outside_k_core = [vertex for vertex in R if vertex not in resulting_k_core]
