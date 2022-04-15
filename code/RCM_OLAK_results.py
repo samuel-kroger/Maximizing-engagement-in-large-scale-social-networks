@@ -50,17 +50,21 @@ for request in data['below_the_line']:
 	rcm_k_core = classes.anchored_k_core(G, k, a)
 	print(len(rcm_k_core))
 	rcm_time_end = time.time()
-
+	'''
 	olak_time_start = time.time()
 	olak_output = list(olak.olakAnchors(G, olak.anchoredKCore(G), k, b))
 	olak_anchors = [element for element in olak_output if element not in k_core]
 	olak_k_core = classes.anchored_k_core(G, k, olak_anchors)
 	olak_time_end = time.time()
-
+	'''
 	print(len(olak_k_core))
 
-	title = ['instance', 'k', 'b', 'olak', 'olak time', 'rcm', 'rcmtime']
-	results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2)), str(len(olak_k_core)), str(round(olak_time_end - olak_time_start, 2))]
+	#title = ['instance', 'k', 'b', 'olak', 'olak time', 'rcm', 'rcmtime']
+	#results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2)), str(len(olak_k_core)), str(round(olak_time_end - olak_time_start, 2))]
+
+	title = ['instance', 'k', 'b', 'rcm', 'rcmtime']
+	results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2))]
+
 	if not os.path.exists("../results/" + filename):
 			with open("../results/" + filename, "w") as doc:
 				string = ""
