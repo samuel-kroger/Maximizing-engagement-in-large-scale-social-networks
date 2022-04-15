@@ -1,6 +1,6 @@
 import gurobipy as gp
 import networkx as nx
-import heuristic
+#import heuristic
 import time
 
 def conflict_callback(m, where):
@@ -21,7 +21,8 @@ def conflict_callback(m, where):
 			if xvals[x] > 0.5:
 				core_nodes.append(x)
 
-		induced_k_core = heuristic.anchored_k_core(G, k, anchors)
+		#NEED TO FIX HERE
+		#induced_k_core = heuristic.anchored_k_core(G, k, anchors)
 
 
 
