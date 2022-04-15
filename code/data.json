@@ -512,6 +512,20 @@
 			"relax":false
 		},
 		{
+			"filename":"flickrEdges.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"base_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additonal_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"relax":false
+		},
+		{
 			"filename":"Gowalla_edges.txt",
 			"k":20,
 			"b":20,
