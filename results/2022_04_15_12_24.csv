@@ -1,0 +1,8 @@
+instance, k, b, olak, olak time, total_time
+facebook_combined.txt, 20, 20, 1854, 10.09, 
+Brightkite_edges.txt, 20, 20, 947, 21.64, 
+flickrEdges.txt, 20, 20, 15808, 442.4, 
+Gowalla_edges.txt, 20, 20, 8161, 106.66, 
+com-youtube.ungraph.txt, 20, 20, 18890, 328.59, 
+com-dblp.ungraph.txt, 20, 20, 3066, 120.89, 
+soc-pokec-relationships.txt, 20, 20, 510227, 5179.81, 
