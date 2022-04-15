@@ -50,7 +50,7 @@ for request in data['below_the_line']:
 
 
 	title = ['instance', 'k', 'b', 'olak', 'olak time']
-	results = [request['filename'], str(k), str(b), str(len(olak_output) - b), str(round(olak_time_end - olak_time_start, 2))]
+	results = [request['filename'], str(k), str(b), str(olak_k_core), str(round(olak_time_end - olak_time_start, 2))]
 
 	if not os.path.exists("../results/" + filename):
 			with open("../results/" + filename, "w") as doc:

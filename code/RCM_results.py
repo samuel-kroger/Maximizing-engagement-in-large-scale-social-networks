@@ -35,6 +35,7 @@ for request in data['below_the_line']:
 	rcm_k_core = f
 	rcm_time_end = time.time()
 
+	print(len(rcm_k_core))
 	title = ['instance', 'k', 'b', 'rcm', 'rcmtime']
 	results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2))]
 
