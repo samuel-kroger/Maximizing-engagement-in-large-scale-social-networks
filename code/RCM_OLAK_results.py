@@ -36,7 +36,7 @@ for request in data['below_the_line']:
 	#print("median k: " + str(median(tracker)))
 	#print("cardinality of med k_core: " + str((len(k_core))))
 
-	#k_core = list(nx.k_core(G, k))
+	k_core = list(nx.k_core(G, k))
 	#print(len(G.nodes()))
 	#print(len(G.edges()))
 	#print(len(k_core))
