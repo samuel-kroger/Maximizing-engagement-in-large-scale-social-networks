@@ -19,51 +19,40 @@ data = json.load(f)
 for request in data['below_the_line']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
-		'\n k: ', request['k'],
-		'\n b: ', request['b'])
+		'\n k: ', request['k'])
 
 	G = classes.read_graph(ext + request['filename'])
 	k = request['k']
-	b = request['b']
 
-	#k_core = nx.k_core(G, k)
+	degree_list = []
+	for node in G.nodes():
+		degree_list.append(G.degree(node))
 
-	#k_core_decomposition = olak.anchoredKCore(G)
-	#tracker = []
-	#for node in k_core_decomposition:
-	#	tracker.append(k_core_decomposition[node])
+	max_degree = max(degree_list)
+	median_degree = median(degree_list)
 
-	#print("median k: " + str(median(tracker)))
-	#print("cardinality of med k_core: " + str((len(k_core))))
+	k_core_decomposition = olak.anchoredKCore(G)
+	tracker = []
+	for node in k_core_decomposition:
+		tracker.append(k_core_decomposition[node])
+
+	median_k_core = median(tracker)
+	max_k_core = max(tracker)
+
 
 	k_core = list(nx.k_core(G, k))
-	#print(len(G.nodes()))
-	#print(len(G.edges()))
-	#print(len(k_core))
+	n = len(G.nodes())
+	m = len(G.edges())
+	print(len(k_core))
 
 
 
-
-	rcm_time_start = time.time()
-	r = rcm.RCM(G, k, b)
-	a, f = r.findAnchors()
-	rcm_k_core = classes.anchored_k_core(G, k, a)
-	print(len(rcm_k_core))
-	rcm_time_end = time.time()
-	'''
-	olak_time_start = time.time()
-	olak_output = list(olak.olakAnchors(G, olak.anchoredKCore(G), k, b))
-	olak_anchors = [element for element in olak_output if element not in k_core]
-	olak_k_core = classes.anchored_k_core(G, k, olak_anchors)
-	olak_time_end = time.time()
-	'''
-	print(len(olak_k_core))
 
 	#title = ['instance', 'k', 'b', 'olak', 'olak time', 'rcm', 'rcmtime']
 	#results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2)), str(len(olak_k_core)), str(round(olak_time_end - olak_time_start, 2))]
 
-	title = ['instance', 'k', 'b', 'rcm', 'rcmtime']
-	results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2))]
+	title = ['instance', 'n', 'm', 'average_degree', 'max_degree', 'max_k_core', 'median_k_core', 'k', 'k_core']
+	results = [request['filename'], str(n), str(m), str(median_degree), str(max_degree), str(max_k_core), str(median_k_core), str(k), str(len(k_core))]
 
 	if not os.path.exists("../results/" + filename):
 			with open("../results/" + filename, "w") as doc:
