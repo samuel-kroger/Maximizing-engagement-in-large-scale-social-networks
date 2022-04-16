@@ -1,0 +1,9 @@
+instance, n, m, average_degree, max_degree, max_k_core, median_k_core, k, k_core, total_time
+facebook_combined.txt, 4039, 88234, 25, 1045, 115, 17, 20, 1854, 
+Brightkite_edges.txt, 58228, 214078, 2.0, 1134, 52, 2.0, 20, 947, 
+flickrEdges.txt, 105938, 2316948, 7.0, 5425, 573, 5.0, 20, 15808, 
+Gowalla_edges.txt, 196591, 950327, 3, 14730, 51, 3, 20, 8161, 
+com-youtube.ungraph.txt, 1134890, 2987624, 1.0, 28754, 51, 1.0, 20, 18890, 
+com-dblp.ungraph.txt, 317080, 1049866, 4.0, 343, 113, 3.0, 20, 3066, 
+soc-pokec-relationships.txt, 1632803, 22301964, 13, 14854, 47, 11, 20, 510227, 
+soc-LiveJournal1.txt, 4846609, 42851237, 5, 20333, 372, 4, 20, 584841, 
