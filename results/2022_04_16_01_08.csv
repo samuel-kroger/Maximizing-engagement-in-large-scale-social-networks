@@ -1,0 +1,4 @@
+instance, n, m, average_degree, max_degree, max_k_core, median_k_core, k, k_core, total_time
+facebook_combined.txt, 4039, 88234, 25, 1045, 115, 17, 20, 1854, 
+Brightkite_edges.txt, 58228, 214078, 2.0, 1134, 52, 2.0, 20, 947, 
+flickrEdges.txt, 105938, 2316948, 7.0, 5425, 573, 5.0, 20, 15808, 

@@ -23,7 +23,7 @@ for request in data['below_the_line']:
 
 	G = classes.read_graph(ext + request['filename'])
 	k = request['k']
-	'''
+
 	degree_list = []
 	for node in G.nodes():
 		degree_list.append(G.degree(node))
@@ -38,7 +38,7 @@ for request in data['below_the_line']:
 
 	median_k_core = median(tracker)
 	max_k_core = max(tracker)
-	'''
+
 
 	k_core = list(nx.k_core(G, k))
 	n = len(G.nodes())
@@ -52,9 +52,9 @@ for request in data['below_the_line']:
 	#results = [request['filename'], str(k), str(b), str(len(rcm_k_core)), str(round(rcm_time_end - rcm_time_start, 2)), str(len(olak_k_core)), str(round(olak_time_end - olak_time_start, 2))]
 
 	title = ['instance', 'n', 'm', 'average_degree', 'max_degree', 'max_k_core', 'median_k_core', 'k', 'k_core']
-	#results = [request['filename'], str(n), str(m), str(median_degree), str(max_degree), str(max_k_core), str(median_k_core), str(k), str(len(k_core))]
+	results = [request['filename'], str(n), str(m), str(median_degree), str(max_degree), str(max_k_core), str(median_k_core), str(k), str(len(k_core))]
 
-	'''
+
 	if not os.path.exists("../results/" + filename):
 			with open("../results/" + filename, "w") as doc:
 				string = ""
@@ -70,4 +70,3 @@ for request in data['below_the_line']:
 			string += thing + ", "
 		doc.write(string)
 		doc.close()
-	'''
