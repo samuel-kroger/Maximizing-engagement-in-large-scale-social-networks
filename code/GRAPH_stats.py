@@ -16,7 +16,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['below_the_line']:
+for request in data['graph_info']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n k: ', request['k'])
@@ -40,7 +40,7 @@ for request in data['below_the_line']:
 	max_k_core = max(tracker)
 
 
-	k_core = list(nx.k_core(G, k))
+	k_core = list(nx.k_core(G, median_k_core))
 	n = len(G.nodes())
 	m = len(G.edges())
 	print(len(k_core))
