@@ -2,20 +2,6 @@
 	"single":
 	[
 		{
-			"filename":"com-dblp.ungraph.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"y_saturated":false,
-			"remove_y_edges":false,
-			"warm_start":false,
-			"additonal_facet_defining":false,
-			"y_val_fix":false,
-			"fractional_callback":false,
-			"relax":false
-		},
-		{
 			"filename":"com-youtube.ungraph.txt",
 			"k":20,
 			"b":20,
