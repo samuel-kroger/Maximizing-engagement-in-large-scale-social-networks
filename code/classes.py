@@ -496,10 +496,10 @@ class reduced_model(base_model):
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
-			neighbor_with_x = [node for node in G.neighbors(y_val) if node in self.x_vals]
-			if len(neighbor_with_x) == 0:
-				self.model._Y[y_val].ub = 0
-				self.var_num -=1
+			#neighbor_with_x = [node for node in G.neighbors(y_val) if node in self.x_vals]
+			#if len(neighbor_with_x) == 0:
+			#	self.model._Y[y_val].ub = 0
+			#	self.var_num -=1
 
 		k_core_G = nx.k_core(self.G, self.k)
 
