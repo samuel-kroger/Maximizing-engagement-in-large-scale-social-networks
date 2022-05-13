@@ -1,0 +1,26 @@
+
+Gurobi 9.5.0 (win64) logging started Thu May 12 18:20:13 2022
+
+Set parameter LogFile to value "../results/logs/log_facebook_combined_17_250_2022_05_12_18_20.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 3577508 rows, 12117 columns and 10736560 nonzeros
+Model fingerprint: 0x184c26ec
+Variable types: 0 continuous, 12117 integer (12117 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 4039.0000000
+
+Explored 0 nodes (0 simplex iterations) in 1.23 seconds (0.19 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 1: 4039 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.039000000000e+03, best bound 4.039000000000e+03, gap 0.0000%
+
+User-callback calls 22, time in user-callback 0.17 sec

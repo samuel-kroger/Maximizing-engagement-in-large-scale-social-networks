@@ -11,6 +11,8 @@ import math
 import rcm
 import olak
 import csv
+import cut_formulation_callback
+import extended_cut_formulation_callback
 
 def read_graph(fname):
 	if fname.endswith('mtx'):
@@ -173,15 +175,15 @@ class base_model(object):
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
 
 
-		if self.model_type == "base_model":
+		if self.model_type != "reduced_model":
 			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.G.nodes())
 
-		if self.model_type == "base_model":
+		if self.model_type != "reduced_model":
 			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in G.nodes())
 
 
 		# budget constraints
-		if self.model_type == "base_model":
+		if self.model_type != "reduced_model":
 			self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
 
@@ -417,40 +419,38 @@ class base_model(object):
 
 				root = -1
 
-				#for i in G.nodes:
-					#if self.model_type != 'naive' and self.model_type != 'strong':
-					#	if m._S[i].x > 0.5:
-					#		print("Root is ", i)
-					#		root = i
+				for i in G.nodes:
+					if self.model_type != 'base_model' and self.model_type != 'reduced_model':
+						if m._S[i].x > 0.5:
+							print("Root is ", i)
+							root = i
 
 
 				selected_nodes = []
 				for i in G.nodes:
 					if m._X[i].x > 0.5:
-						#print("selected node: ", i)
+						print("selected node: ", i)
 						selected_nodes.append(i)
-
-				for i in G.nodes:
-					#print("selected node: ", i, " x_value: ", m._X[i].x)
-					''
 
 				purchased_nodes = []
 				for i in G.nodes:
 					if m._Y[i].x > 0.5:
 						purchased_nodes.append(i)
 
-				for i in G.nodes:
-					''
-					#print("purchased node: ", i, " y_value: ", m._Y[i].x)
 
-				print("# of vertices in G: ", len(G.nodes))
-				print("OTSHEUTSNOHEUS")
-				print(len(anchored_k_core(self.G, self.k, purchased_nodes)))
 
-				print("OTSHEUTSNOHEUS")
+
 				#print("Is it connected? ", nx.is_connected(SUB))
 				#print("Diameter? ", nx.diameter(SUB))
-				plot = 0
+
+				print("Dijkstra list of shortest paths: ")
+				path_lengths = nx.single_source_dijkstra_path_length(SUB, root)
+
+				for node in SUB.nodes():
+					print(f"node {node}: {path_lengths[node]}")
+
+
+				plot = 1
 				if plot == 1:
 					pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, True, k, b, self.r)
 				if plot == 2:
@@ -525,17 +525,17 @@ class reduced_model(base_model):
 		#	for v in self.x_vals:
 		#		deg_constraints[v].lazy = 3
 
-'''
+
 class radius_bounded_model(base_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
-		model._S = model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
-		model.addConstr(gp.quicksum(model._S) == 1)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
+		self.model.addConstr(gp.quicksum(self.model._S) == 1)
 
 
 class vermyev_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
 
 		DG = nx.DiGraph(self.G) # bidirected version of G
 		L = range(1, self.r + 1)
@@ -570,48 +570,54 @@ class vermyev_model(radius_bounded_model):
 
 
 class cut_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
+		self.model.addConstr(gp.quicksum(self.model._S) == 1)
 
 		#allow lazy constraints
-		model.Params.lazyConstraints = 1
+		self.model.Params.lazyConstraints = 1
 
 		#Add center variable
 
 		#Center must be active constraint
-		model.addConstrs(model._S[i] <= model._Y[i] + model._X[i] for i in self.G.nodes())
+		self.model.addConstrs(self.model._S[i] <= self.model._Y[i] + self.model._X[i] for i in self.G.nodes())
 
+
+		#temp_idea
+		#self.model.addConstr(gp.quicksum(self.model._X[i] for i in self.G.nodes())<= 2533 )
 
 		#initial constraint
 		for i in self.G.nodes():
 			shortest_paths = nx.shortest_path_length(self.G, i)
 			for key, value in shortest_paths.items():
 				if value > r:
-					model.addConstr(model._X[i] + model._Y[i] + model._S[key] <= 1)
+					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[key] <= 1)
 
 
 	def optimize(self):
 		G = self.G
 		k = self.k
 		b = self.b
-		m = self.model
 
-		m.optimize(cut_formulation_callback.cut_callback)
+
+		self.model.optimize(cut_formulation_callback.cut_callback)
 
 		#model.optimize()
-		var = m.getVars()
+		var = self.model.getVars()
 		#print(var)
 
 
 		#if not self.relax:
-		self.upper_bound = m.objBound
-		self.lower_bound = m.objVal
+		self.upper_bound = self.model.objBound
+		self.lower_bound = self.model.objVal
 
 
 class extended_cut_model(cut_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated):
-		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated)
-		self.model._Z = model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+
+		self.model._Z = self.model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
 
 		self.model.addConstrs(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1 + self.model._Z[i,j] for i in G.nodes() for j in G.nodes())
 
@@ -633,4 +639,48 @@ class extended_cut_model(cut_model):
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
 
-'''
+
+class flow_model(radius_bounded_model):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+		m = self.model
+		DG = nx.DiGraph(G) # bidirected version of G
+
+		m._F = m.addVars(DG.nodes,DG.edges,vtype=gp.GRB.CONTINUOUS, name = "f")
+
+		#m._Gen = m.addVars(DG.nodes,DG.nodes,vtype=GRB.CONTINUOUS, name = "g")
+		P = nx.power(G,r)
+
+		DP = nx.DiGraph(P)
+
+		# coupling constarints
+		m.addConstrs(m._S[i] <= m._X[i] + m._Y[i] for i in G.nodes)
+
+		# flow conservation
+		for i in G.nodes:
+			for j in G.nodes:
+				if i != j:
+					m.addConstr(gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= r * (m._X[i] + m._Y[i] - m._S[i]))
+					#m.addConstr(gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) <= (r) * (m._X[i] + m._Y[i] - m._S[i]))
+					if nx.shortest_path_length(G, i,j) <= r:
+						m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) <= m._X[i] + m._Y[i])
+						m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) - gp.quicksum(m._F[j,i,u] for u in G.neighbors(i)) >= m._S[i])
+
+
+					#m.addConstr( gp.quicksum(F[j,u,i] for u in DG.neighbors(i)) <= r * (1 - m._S[i]))
+					#m.addConstr( gp.quicksum(m._F[j,i,u] for u in G.neighbors(j)) <= r * (m._X[i] + m._Y[i] - m._S[i]))
+			#m.addConstr( gp.quicksum(m._F[j,j,u] for u in G.neighbors(j)) >= m._X[j] + m._Y[j] - m._S[j])
+			#m.addConstr( gp.quicksum(m._F[j,u,i] for u in G.neighbors(i)) == 0)
+
+		# valid inequalities
+
+		for i in G.nodes:
+			for j in G.nodes:
+				if i!=j and (i,j) not in DP.edges:
+					m.addConstr(m._X[i] + m._Y[i] + m._S[j] <= 1)
+
+
+
+
+	    #m.addConstrs( m._Gen[i,j] + gp.quicksum(F[i,u,j] for u in DG.neighbors(j)) - gp.quicksum(F[i,j,u] for u in DG.neighbors(j)) == m._X[j] - m._S[j] for (i,j) in DP.edges)
+

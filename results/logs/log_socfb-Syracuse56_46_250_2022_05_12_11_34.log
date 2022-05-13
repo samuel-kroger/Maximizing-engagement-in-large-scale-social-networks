@@ -1,0 +1,42 @@
+
+Gurobi 9.5.0 (win64) logging started Thu May 12 11:34:33 2022
+
+Set parameter LogFile to value "../results/logs/log_socfb-Syracuse56_46_250_2022_05_12_11_34.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2835 rows, 27306 columns and 173405 nonzeros
+Model fingerprint: 0x346bdc3c
+Variable types: 0 continuous, 27306 integer (27306 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective 6985.0000000
+Presolve removed 25 rows and 20770 columns
+Presolve time: 0.14s
+Presolved: 2810 rows, 6536 columns, 58025 nonzeros
+Variable types: 0 continuous, 6536 integer (6289 binary)
+Found heuristic solution: objective 7089.0000000
+
+Root relaxation: objective 8.106675e+03, 3542 iterations, 0.48 seconds (0.50 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 8106.67496    0 1044 7089.00000 8106.67496  14.4%     -    0s
+H    0     0                    7135.0000000 8106.67496  13.6%     -    0s
+H    0     0                    7194.0000000 8106.67496  12.7%     -    0s
+H    0     0                    7304.0000000 8106.67496  11.0%     -    1s
+H    0     0                    7305.0000000 7972.77245  9.14%     -    3s
+H    0     0                    7363.0000000 7972.77245  8.28%     -    3s
+H    0     0                    7374.0000000 7972.77245  8.12%     -    3s
+     0     0 7972.77245    0 1317 7374.00000 7972.77245  8.12%     -    3s
+H    0     0                    7375.0000000 7972.77245  8.11%     -    3s
+H    0     0                    7417.0000000 7972.77245  7.49%     -    3s
+     0     0 7904.19608    0 1417 7417.00000 7904.19608  6.57%     -    5s
+     0     0 7895.53752    0 1478 7417.00000 7895.53752  6.45%     -    6s
+     0     0 7894.36818    0 1493 7417.00000 7894.36818  6.44%     -    7s
+     0     0 7894.21259    0 1524 7417.00000 7894.21259  6.43%     -    7s
+     0     0 7894.14317    0 1545 7417.00000 7894.14317  6.43%     -    7s
+     0     0 7894.14017    0 1549 7417.00000 7894.14017  6.43%     -    7s
