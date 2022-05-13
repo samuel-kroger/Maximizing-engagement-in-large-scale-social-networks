@@ -532,6 +532,30 @@ class radius_bounded_model(base_model):
 		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
 		self.model.addConstr(gp.quicksum(self.model._S) == 1)
 
+	def warm_start_one(self):
+
+		SUB = nx.k_core(self.G, self.k)
+
+		list_of_connected_nodes = []
+		for connected_nodes in nx.connected_components(SUB):
+			list_of_connected_nodes.append(connected_nodes)
+
+		list_of_connected_nodes.sort(key=len, reverse=True)
+
+		for connected_nodes in list_of_connected_nodes:
+			connected_component = SUB.subgraph(connected_nodes)
+			#for node in connected_component:
+			for node in connected_component:
+
+				if nx.eccentricity(connected_component, node) <= self.r:
+					for v in connected_component:
+						self.model._X[v].start = 1
+					self.model._S[node].start = 1
+					return
+
+
+
+
 
 class vermyev_model(radius_bounded_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
@@ -571,9 +595,8 @@ class vermyev_model(radius_bounded_model):
 
 class cut_model(radius_bounded_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
-		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
-		self.model.addConstr(gp.quicksum(self.model._S) == 1)
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+
 
 		#allow lazy constraints
 		self.model.Params.lazyConstraints = 1

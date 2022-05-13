@@ -16,7 +16,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['single']:
+for request in data['radius_bounded_test']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -33,6 +33,7 @@ for request in data['single']:
 	if request['warm_start']:
 		instance.RCM_warm_start()
 
+	instance.warm_start_one()
 	instance.optimize()
 	#instance.print_model()
 
