@@ -1,0 +1,38 @@
+
+Gurobi 9.5.0 (win64) logging started Sat May 14 17:45:58 2022
+
+Set parameter LogFile to value "../results/logs/log_email-enron-only_2_1_2022_05_14_17_45.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 775 rows, 429 columns and 4668 nonzeros
+Model fingerprint: 0x3ca197f8
+Variable types: 0 continuous, 429 integer (429 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 381 rows and 34 columns
+Presolve time: 0.02s
+Presolved: 394 rows, 395 columns, 3600 nonzeros
+Variable types: 0 continuous, 395 integer (395 binary)
+Found heuristic solution: objective 118.0000000
+
+Root relaxation: objective 1.370000e+02, 2 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     137.0000000  137.00000  0.00%     -    0s
+
+Explored 1 nodes (2 simplex iterations) in 0.03 seconds (0.01 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 137 118 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.370000000000e+02, best bound 1.370000000000e+02, gap 0.0000%
+
+User-callback calls 163, time in user-callback 0.01 sec

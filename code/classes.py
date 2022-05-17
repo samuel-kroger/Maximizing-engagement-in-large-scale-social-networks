@@ -13,6 +13,7 @@ import olak
 import csv
 import cut_formulation_callback
 import extended_cut_formulation_callback
+import itertools
 
 def read_graph(fname):
 	if fname.endswith('mtx'):
@@ -548,10 +549,120 @@ class radius_bounded_model(base_model):
 			for node in connected_component:
 
 				if nx.eccentricity(connected_component, node) <= self.r:
+
 					for v in connected_component:
 						self.model._X[v].start = 1
 					self.model._S[node].start = 1
 					return
+
+	def center_fixing_idea(self):
+		simplicials = []
+
+		for vertex in self.G.nodes():
+			neighbor_set = list(self.G.neighbors(vertex))
+			induced_subgraph = self.G.subgraph(neighbor_set)
+			n = induced_subgraph.number_of_nodes()
+			m = induced_subgraph.number_of_edges()
+			if m == n*(n-1)/2: simplicials.append(vertex)
+
+		subgraph_of_simplicials = self.G.subgraph(simplicials)
+		print("Number of independent simplicials: ", nx.number_connected_components(subgraph_of_simplicials))
+
+	def center_fixing_idea_recursive(self):
+
+		#self.G = nx.cycle_graph(4)
+		for n in self.G.nodes():
+			self.G.nodes[n]['can_be_center'] = 1
+		#simplicials = []
+
+		for i in range(self.r):
+			fix = []
+			print("iteration: ", i)
+
+			sub_graph_nodes = [node for node in self.G.nodes() if self.G.nodes[node]['can_be_center'] == 1]
+			SUB = self.G.subgraph(sub_graph_nodes)
+
+			for vertex in SUB:
+				#simplicial fix
+				neighbor_set = list(SUB.neighbors(vertex))
+				induced_subgraph = SUB.subgraph(neighbor_set)
+				n = induced_subgraph.number_of_nodes()
+				m = induced_subgraph.number_of_edges()
+				if m == n*(n-1)/2:
+					fix.append(vertex)
+				'''
+				#degree 2 fix
+				if SUB.degree(vertex) == 2:
+					neighbors = [vertex for vertex in SUB[vertex]]
+					common_neigbors = [n for n in nx.common_neighbors(SUB, neighbors[0], neighbors[1])]
+					if len(common_neigbors) > 1:
+						fix.append(vertex)
+
+				#degree 3 fix
+				if SUB.degree(vertex) == 3:
+					TINY_SUB = SUB.subgraph([vertex for vertex in SUB[vertex]])
+					tiny_m = TINY_SUB.number_of_edges()
+					#common_neigbors = [n for n in nx.common_neighbors(SUB, neighbors[0], neighbors[1])]
+					if tiny_m == 2:
+						fix.append(vertex)
+				'''
+			print(len(fix))
+
+			for n in fix:
+				self.G.nodes[n]['can_be_center'] = 0
+
+			if len(fix) == 0:
+				for n in [node for node in self.G.nodes if self.G.nodes[node]['can_be_center'] == 0]:
+					self.model._S[n].ub = 0
+				return
+
+		for vertex in [node for node in self.G.nodes if self.G.nodes[node]['can_be_center'] == 0]:
+			self.model._S[vertex].ub = 0
+		return
+		#subgraph_of_simplicials = G.subgraph(simplicials)
+		#print("Number of independent simplicials: ", nx.number_connected_components(subgraph_of_simplicials))
+
+	def dominated_fixing_idea(self):
+		#DO FOR POWER GRAPH G_R
+		power_graph = nx.power(self.G, 4)
+		counter = 0
+		for node in power_graph.nodes():
+			power_graph.nodes[node]["root_fixed"] = False
+		for u,v in itertools.combinations(power_graph.nodes(), 2):
+			common_neighbors = set(nx.common_neighbors(power_graph, u, v))
+			if common_neighbors == [] or power_graph.nodes[u]["root_fixed"] == True or power_graph.nodes[v]["root_fixed"] == True:
+				continue
+
+			u_neigbors = set(power_graph.neighbors(u)) - {v}
+			v_neighbors = set(power_graph.neighbors(v)) - {u}
+
+			if u_neigbors == common_neighbors:
+				power_graph.nodes[u]["root_fixed"] = True
+				self.model._S[u].ub = 0
+				print("u is fixed")
+				print("vertex u: ",u)
+				print("vertex v: ",v)
+				print("u_neighbors: ",u_neigbors)
+				print("v_neighbors: ",v_neighbors)
+				print("common_neighbors: ",common_neighbors)
+				counter+=1
+			if v_neighbors == common_neighbors:
+				power_graph.nodes[u]["root_fixed"] = True
+				self.model._S[v].ub = 0
+				print("v is fixed")
+				print("vertex u: ",u)
+				print("vertex v: ",v)
+				print("u_neighbors: ",u_neigbors)
+				print("v_neighbors: ",v_neighbors)
+				print("common_neighbors: ",common_neighbors)
+				counter+=1
+		print(counter)
+
+
+
+
+
+
 
 
 

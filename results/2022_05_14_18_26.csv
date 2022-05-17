@@ -1,0 +1,9 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+soc-dolphins, cut_model, 62, 159, 3, 1, 10, NA, 124, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.04
+email-enron-only, cut_model, 143, 623, 2, 1, 10, NA, 286, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.28
+soc-dolphins, cut_model, 62, 159, 3, 1, 10, NA, 124, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.05
+email-enron-only, cut_model, 143, 623, 2, 1, 10, NA, 286, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.34
+soc-dolphins, cut_model, 62, 159, 3, 1, 10, NA, 124, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.09
+email-enron-only, cut_model, 143, 623, 2, 1, 10, NA, 286, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.55
+soc-dolphins, cut_model, 62, 159, 3, 1, 10, NA, 124, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.05
+email-enron-only, cut_model, 143, 623, 2, 1, 10, NA, 286, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.35
