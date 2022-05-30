@@ -1,5 +1,0 @@
-
-Gurobi 9.5.0 (win64) logging started Fri May 13 00:53:47 2022
-
-Set parameter LogFile to value "../results/logs/log_socfb-Syracuse56_46_250_2022_05_13_00_53.log"
-Set parameter LazyConstraints to value 1

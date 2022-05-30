@@ -1,5 +1,0 @@
-
-Gurobi 9.5.0 (win64) logging started Thu May 12 18:15:47 2022
-
-Set parameter LogFile to value "../results/logs/log_facebook_combined_17_250_2022_05_12_18_15.log"
-Set parameter LazyConstraints to value 1

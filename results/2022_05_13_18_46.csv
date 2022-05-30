@@ -1,8 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-soc-dolphins, cut_model, 62, 159, 3, 1, 2, NA, 124, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 0.07
-facebook_combined, cut_model, 4039, 88234, 17, 250, 8, NA, 8078, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 65.96
-CA-HepPh, cut_model, 12006, 118489, 4, 250, 8, NA, 24012, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 420.35
-socfb-Syracuse56, cut_model, 13653, 543982, 46, 250, 8, NA, 27306, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 2365.59
-socfb-Northeastern19, cut_model, 13882, 381934, 33, 250, 8, NA, 27764, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 1910.33
-CA-CondMat, cut_model, 23133, 93439, 4, 250, 8, NA, 46266, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 1206.52
-Brightkite_edges, cut_model, 58228, 214078, 2, 250, 8, NA, 116456, 0, NA, NA, 0, 0, 0, False, False, False, False, False, 8425.95
