@@ -1,0 +1,87 @@
+
+Gurobi 9.5.1 (linux64) logging started Tue May 31 22:01:59 2022
+
+Set parameter LogFile to value "../results/logs/log_Gowalla_edges_3_250_2022_05_31_19_00.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 393183 rows, 393182 columns and 4587672 nonzeros
+Model fingerprint: 0xa76f1379
+Variable types: 0 continuous, 393182 integer (393182 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective -0.0000000
+Presolve removed 98904 rows and 66333 columns (presolve time = 5s) ...
+Presolve removed 159869 rows and 96925 columns (presolve time = 10s) ...
+Presolve removed 159956 rows and 106378 columns (presolve time = 15s) ...
+Presolve removed 159956 rows and 106378 columns (presolve time = 20s) ...
+Presolve removed 159956 rows and 106378 columns
+Presolve time: 20.62s
+Presolved: 233227 rows, 286804 columns, 3978074 nonzeros
+Variable types: 0 continuous, 286804 integer (276216 binary)
+Found heuristic solution: objective 1.0000000
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 10s
+Elapsed ordering time = 17s
+Elapsed ordering time = 19s
+Elapsed ordering time = 21s
+Elapsed ordering time = 22s
+Ordering time: 22.25s
+
+Barrier performed 0 iterations in 49.72 seconds (39.56 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 18.62s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 1.130173e+05, 20278 iterations, 28.25 seconds (16.48 work units)
+Total elapsed time = 50.29s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 113017.293    0 9621    1.00000 113017.293      -     -   53s
+H    0     0                    106951.00000 113017.293  5.67%     -   54s
+H    0     0                    106958.00000 113017.293  5.67%     -   55s
+     0     0 107768.855    0 1334 106958.000 107768.855  0.76%     -   67s
+H    0     0                    107227.00000 107768.855  0.51%     -   69s
+H    0     0                    107295.00000 107768.855  0.44%     -   71s
+     0     0 107740.474    0 1251 107295.000 107740.474  0.42%     -   71s
+     0     0 107739.650    0 1243 107295.000 107739.650  0.41%     -   72s
+     0     0 107432.257    0  502 107295.000 107432.257  0.13%     -   77s
+     0     0 107424.434    0  435 107295.000 107424.434  0.12%     -   79s
+     0     0 107424.355    0  430 107295.000 107424.355  0.12%     -   80s
+     0     0 107309.946    0   75 107295.000 107309.946  0.01%     -   85s
+     0     0 107302.887    0   55 107295.000 107302.887  0.01%     -   87s
+     0     0 107302.720    0   62 107295.000 107302.720  0.01%     -   88s
+     0     0 107300.500    0   29 107295.000 107300.500  0.01%     -   92s
+H    0     0                    107299.00000 107300.500  0.00%     -   93s
+     0     0 107300.500    0   19 107299.000 107300.500  0.00%     -   94s
+
+Cutting planes:
+  Gomory: 183
+  Cover: 59
+  Implied bound: 142
+  MIR: 3391
+  StrongCG: 33
+  GUB cover: 7762
+  Zero half: 211
+  RLT: 147
+  Relax-and-lift: 5
+
+Explored 1 nodes (37904 simplex iterations) in 94.88 seconds (98.50 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 7: 107299 107295 107227 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.072990000000e+05, best bound 1.072990000000e+05, gap 0.0000%
