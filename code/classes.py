@@ -117,7 +117,7 @@ class base_model(object):
 		#every member of class
 		self.num_k_core_nodes = 0
 		#self.weights = {}
-
+		print("here1")
 		#y_saturated
 		self.y_saturated_reduction = 0
 		self.y_saturated_run_time = 0
@@ -134,7 +134,7 @@ class base_model(object):
 		self.r = r
 
 		self.BBnodes = "NA"
-
+		print("here2")
 		#warm_start
 		#self.time_for_warm_start = 60
 
@@ -210,7 +210,7 @@ class base_model(object):
 			#		couter += 1
 			#for j in range(50):
 			#	print(couter)
-
+		print('here3')
 	def warm_start_test (self):
 
 		r = rcm.RCM(self.G, self.k, self.b)
@@ -502,11 +502,22 @@ class reduced_model(base_model):
 			#	self.model._Y[y_val].ub = 0
 			#	self.var_num -=1
 
+		temp_time = time.time()
 		k_core_G = nx.k_core(self.G, self.k)
+		temp_time2 = time.time()
+
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
 
 		self.num_k_core_nodes = len(k_core_G.nodes())
 
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
+
 		self.R = list(self.G.nodes() - k_core_G.nodes())
+		constraint_index = list(self.x_vals - k_core_G.nodes())
+
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
 
 		for node in k_core_G.nodes():
 
@@ -514,13 +525,28 @@ class reduced_model(base_model):
 			self.model._Y[node].ub = 0
 			self.var_num -= 2
 
-		deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
-
-		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.R if i in self.x_vals)
+		print('test')
+		a = time.time()
+		#constraint_index = [i for i in self.R if i in self.x_vals]
+		print(len(self.R))
+		print(len(self.x_vals))
+		#print(len(constraint_index))
+		#print(len(tester))
+		b = time.time()
+		print(b - a)
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
+		#deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.R if i in self.x_vals)
+		self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in constraint_index)
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
+		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in constraint_index)
 		#self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.G.nodes())
-
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
 		self.model.addConstr(gp.quicksum(self.model._Y[i] for i in self.R) <= self.b )
-
+		temp_time2 = time.time()
+		print("TIMMEMTEMEM: ", temp_time2 - temp_time)
 		#TEMP
 		#if self.lazyconstraints:
 		#	for v in self.x_vals:
