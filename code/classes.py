@@ -629,7 +629,44 @@ class radius_bounded_model(base_model):
 
 	def dominated_fixing_idea(self):
 		#DO FOR POWER GRAPH G_R
-		power_graph = nx.power(self.G, self.r)
+
+		counter = 0
+		for node in power_graph.nodes():
+			power_graph.nodes[node]["root_fixed"] = False
+		for u,v in itertools.combinations(power_graph.nodes(), 2):
+			common_neighbors = set(nx.common_neighbors(power_graph, u, v))
+			if common_neighbors == [] or power_graph.nodes[u]["root_fixed"] == True or power_graph.nodes[v]["root_fixed"] == True:
+				continue
+
+			u_neigbors = set(power_graph.neighbors(u)) - {v}
+			v_neighbors = set(power_graph.neighbors(v)) - {u}
+
+			if u_neigbors == common_neighbors:
+				power_graph.nodes[u]["root_fixed"] = True
+				self.model._S[u].ub = 0
+				#print("u is fixed")
+				#print("vertex u: ",u)
+				#print("vertex v: ",v)
+				#print("u_neighbors: ",u_neigbors)
+				#print("v_neighbors: ",v_neighbors)
+				#print("common_neighbors: ",common_neighbors)
+				counter+=1
+			if v_neighbors == common_neighbors:
+				power_graph.nodes[v]["root_fixed"] = True
+				self.model._S[v].ub = 0
+				#print("v is fixed")
+				#print("vertex u: ",u)
+				#print("vertex v: ",v)
+				#print("u_neighbors: ",u_neigbors)
+				#print("v_neighbors: ",v_neighbors)
+				#print("common_neighbors: ",common_neighbors)
+				counter+=1
+
+		print("Number of centers fixed ", counter, " out of ", len(power_graph.nodes()), " nodes.")
+	def dominated_fixing_idea_power_graph(self):
+		#DO FOR POWER GRAPH G_R
+		#power_graph = nx.power(self.G, self.r)
+		power_graph = self.G
 		counter = 0
 		for node in power_graph.nodes():
 			power_graph.nodes[node]["root_fixed"] = False

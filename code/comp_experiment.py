@@ -34,8 +34,8 @@ for request in data['radius_bounded_test']:
 
 	#instance.warm_start_one()
 	#instance.center_fixing_idea_recursive()
-	#instance.dominated_fixing_idea()
-	print("here4")
+	instance.dominated_fixing_idea_power_graph()
+
 	instance.optimize()
 	#instance.print_model()
 
