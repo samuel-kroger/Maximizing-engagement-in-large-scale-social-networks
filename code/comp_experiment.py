@@ -36,7 +36,7 @@ for request in data['radius_bounded_test']:
 	#instance.center_fixing_idea_recursive()
 	#instance.dominated_fixing_idea()
 	instance.dominated_fixing_idea_power_graph()
-	
+
 	instance.optimize()
 	#instance.print_model()
 

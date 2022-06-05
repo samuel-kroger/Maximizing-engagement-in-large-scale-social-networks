@@ -1,0 +1,5 @@
+
+Gurobi 9.5.0 (win64) logging started Sat Jun  4 15:05:11 2022
+
+Set parameter LogFile to value "../results/logs/log_CA-HepPh_4_250_2022_06_04_14_49.log"
+Set parameter LazyConstraints to value 1
