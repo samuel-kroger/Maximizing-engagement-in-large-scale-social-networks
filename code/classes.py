@@ -681,13 +681,18 @@ class radius_bounded_model(base_model):
 	def dominated_fixing_idea_power_graph(self):
 		#DO FOR POWER GRAPH G_R
 		power_graph = nx.power(self.G, self.r)
+		common_neighbor_possiblity_power_graph = nx.power(power_graph, 2)
 		counter = 0
 		time1 = time.time()
 		for node in power_graph.nodes():
 			power_graph.nodes[node]["root_fixed"] = False
 		for u,v in itertools.combinations(power_graph.nodes(), 2):
+			if power_graph.nodes[u]["root_fixed"] == True or power_graph.nodes[v]["root_fixed"] == True:
+				continue
+			if (u,v) not in self.common_neighbor_possiblity_power_graph.edges():
+				continue
 			common_neighbors = set(nx.common_neighbors(power_graph, u, v))
-			if common_neighbors == [] or power_graph.nodes[u]["root_fixed"] == True or power_graph.nodes[v]["root_fixed"] == True:
+			if common_neighbors == []:
 				continue
 
 			u_neigbors = set(power_graph.neighbors(u)) - {v}
