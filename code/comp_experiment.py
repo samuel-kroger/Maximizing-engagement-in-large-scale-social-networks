@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['radius_bounded_test']:
+for request in data['single']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -31,11 +31,11 @@ for request in data['radius_bounded_test']:
 	if request['remove_y_edges']:
 		instance.remove_y_edges()
 		instance.RCM_warm_start()
-
-	#instance.warm_start_one()
-	#instance.center_fixing_idea_recursive()
-	#instance.dominated_fixing_idea()
-	instance.dominated_fixing_idea_power_graph()
+	if instance.model_type == "cut_model":
+		#instance.warm_start_one()
+		#instance.center_fixing_idea_recursive()
+		instance.dominated_fixing_idea()
+		#instance.dominated_fixing_idea_power_graph()
 
 	instance.optimize()
 	#instance.print_model()
