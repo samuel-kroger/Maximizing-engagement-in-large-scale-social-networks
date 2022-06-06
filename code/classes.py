@@ -536,7 +536,7 @@ class radius_bounded_model(base_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
 		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
 		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
-		radius_bounded_model.dominated_fixing_idea_power_graph_sam(self)
+		#radius_bounded_model.dominated_fixing_idea_power_graph_sam(self)
 		self.model.addConstr(gp.quicksum(self.model._S) == 1)
 		for i in self.G.nodes():
 			self.model._S[i].BranchPriority = 1
@@ -792,14 +792,6 @@ class radius_bounded_model(base_model):
 		'''
 
 
-
-
-
-
-
-
-
-
 class vermyev_model(radius_bounded_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
 		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
@@ -859,12 +851,12 @@ class cut_model(radius_bounded_model):
 			for j in self.G.nodes():
 				if j not in shortest_paths.keys():
 					self.model.addConstr(self.model._X[j] + self.model._Y[j] + self.model._S[i] <= 1)
-					#self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1)
+					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1)
 
 			for key, value in shortest_paths.items():
 				if value > r:
 					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[key] <= 1)
-					#self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
+					self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
 
 
 
