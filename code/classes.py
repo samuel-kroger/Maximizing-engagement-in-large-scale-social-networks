@@ -689,7 +689,7 @@ class radius_bounded_model(base_model):
 		for u,v in itertools.combinations(power_graph.nodes(), 2):
 			if power_graph.nodes[u]["root_fixed"] == True or power_graph.nodes[v]["root_fixed"] == True:
 				continue
-			if (u,v) not in self.common_neighbor_possiblity_power_graph.edges():
+			if (u,v) not in common_neighbor_possiblity_power_graph.edges():
 				continue
 			common_neighbors = set(nx.common_neighbors(power_graph, u, v))
 			if common_neighbors == []:
@@ -798,9 +798,14 @@ class cut_model(radius_bounded_model):
 		#initial constraint
 		for i in self.G.nodes():
 			shortest_paths = nx.shortest_path_length(self.G, i)
+			for j in self.G.nodes():
+				if j not in shortest_paths.keys():
+					self.model.addConstr(self.model._X[j] + self.model._Y[j] + self.model._S[i] <= 1)
+
 			for key, value in shortest_paths.items():
 				if value > r:
 					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[key] <= 1)
+
 
 
 	def optimize(self):

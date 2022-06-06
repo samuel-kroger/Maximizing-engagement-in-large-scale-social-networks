@@ -28,6 +28,7 @@ def cut_callback(m, where):
 				vbar_complement.append(v)
 
 		feasable = True
+
 		shortest_paths = nx.shortest_path_length(G.subgraph(vbar), j)
 		#print(shortest_paths)
 		#print(shortest_paths.values())
