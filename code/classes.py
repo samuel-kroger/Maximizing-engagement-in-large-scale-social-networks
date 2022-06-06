@@ -754,18 +754,25 @@ class radius_bounded_model(base_model):
 				neighbor_neighbors = set(power_graph.neighbors(neighbor)) - {node}
 
 				if neighbor_neighbors.issubset(node_neighbors - {neighbor}):
-					power_graph.nodes[neighbor]["root_fixed"] = True
-					self.model._S[neighbor].ub = 0
-					counter += 1
+					if power_graph.nodes[neighbor]["root_fixed"] == False:
+						power_graph.nodes[neighbor]["root_fixed"] = True
+						self.model._S[neighbor].ub = 0
+						counter += 1
+					else:
+						print("AHHHHHHHHHHHHHHHH")
+
 				if (node_neighbors - {neighbor}).issubset(neighbor_neighbors):
-					power_graph.nodes[node]["root_fixed"] = True
-					self.model._S[node].ub = 0
-					counter += 1
-					continue
+					if power_graph.nodes[node]["root_fixed"] == False:
+						power_graph.nodes[node]["root_fixed"] = True
+						self.model._S[node].ub = 0
+						counter += 1
+						continue
+					else:
+						print("BBBBBBBBBBBBBBBBBBBBBBBBB")
 			#print(counter)
 		time2 = time.time()
 		print("Number of centers fixed ", counter, " out of ", len(power_graph.nodes()), " nodes in ", time2  - time1, "seconds.")
-
+		'''
 		if not os.path.exists("../results/radius_bounded/" + self.filename):
 			with open("../results/radius_bounded/" + self.filename, "w") as doc:
 				string = "Instance, k, r, n, number fixed, fixing time"
@@ -776,6 +783,7 @@ class radius_bounded_model(base_model):
 			string = "\n" + self.instance_name + ", " + str(self.k) + ", " + str(self.r) + ", " + str(self.n) + ", " + str(counter) + ", " + str(time2 - time1)
 			doc.write(string)
 			doc.close()
+		'''
 
 
 

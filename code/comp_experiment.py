@@ -38,7 +38,7 @@ for request in data['radius_bounded_test']:
 		#instance.dominated_fixing_idea_power_graph()
 		instance.dominated_fixing_idea_power_graph_sam()
 
-	instance.optimize()
+	#instance.optimize()
 	#instance.print_model()
 
 	end_time = time.time()
