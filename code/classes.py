@@ -760,7 +760,8 @@ class radius_bounded_model(base_model):
 						self.model._S[neighbor].ub = 0
 						counter += 1
 					else:
-						print("AHHHHHHHHHHHHHHHH")
+						#print("AHHHHHHHHHHHHHHHH")
+						''
 
 				if (node_neighbors - {neighbor}).issubset(neighbor_neighbors):
 					if power_graph.nodes[node]["root_fixed"] == False:
@@ -768,11 +769,12 @@ class radius_bounded_model(base_model):
 						self.model._S[node].ub = 0
 						counter += 1
 					else:
-						print("BBBBBBBBBBBBBBBBBBBBBBBBB")
-						print("node", node)
-						print("neighbor", neighbor)
-						print("node_neighbors", node_neighbors - {neighbor})
-						print("neighbor_neighbors", neighbor_neighbors)
+						#print("BBBBBBBBBBBBBBBBBBBBBBBBB")
+						#print("node", node)
+						#print("neighbor", neighbor)
+						#print("node_neighbors", node_neighbors - {neighbor})
+						#print("neighbor_neighbors", neighbor_neighbors)
+						''
 			#print(counter)
 		time2 = time.time()
 		print("Number of centers fixed ", counter, " out of ", len(power_graph.nodes()), " nodes in ", time2  - time1, "seconds.")
@@ -857,12 +859,12 @@ class cut_model(radius_bounded_model):
 			for j in self.G.nodes():
 				if j not in shortest_paths.keys():
 					self.model.addConstr(self.model._X[j] + self.model._Y[j] + self.model._S[i] <= 1)
-					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1)
+					#self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[j] <= 1)
 
 			for key, value in shortest_paths.items():
 				if value > r:
 					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[key] <= 1)
-					self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
+					#self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
 
 
 
