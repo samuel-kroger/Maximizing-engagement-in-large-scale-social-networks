@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['reduced_model']:
+for request in data['radius_bounded_test']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -35,7 +35,8 @@ for request in data['reduced_model']:
 		#instance.warm_start_one()
 		#instance.center_fixing_idea_recursive()
 		#instance.dominated_fixing_idea()
-		instance.dominated_fixing_idea_power_graph()
+		#instance.dominated_fixing_idea_power_graph()
+		instance.dominated_fixing_idea_power_graph_sam()
 
 	instance.optimize()
 	#instance.print_model()

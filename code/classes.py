@@ -732,6 +732,50 @@ class radius_bounded_model(base_model):
 			doc.write(string)
 			doc.close()
 
+	def dominated_fixing_idea_power_graph_sam(self):
+		#DO FOR POWER GRAPH G_R
+		power_graph = nx.power(self.G, self.r)
+
+		counter = 0
+		time1 = time.time()
+		for node in power_graph.nodes():
+			power_graph.nodes[node]["root_fixed"] = False
+
+
+		for node in power_graph:
+			print("node", node)
+			if power_graph.nodes[node]["root_fixed"] == True:
+				continue
+			node_neighbors = set(power_graph.neighbors(node))
+			for neighbor in self.G.neighbors(node):
+				print("neighbor_node", neighbor)
+				if power_graph.nodes[neighbor]["root_fixed"] == True:
+					continue
+				neighbor_neighbors = set(power_graph.neighbors(neighbor)) - {node}
+
+				if neighbor_neighbors.issubset(node_neighbors - {neighbor}):
+					power_graph.nodes[neighbor]["root_fixed"] = True
+					self.model._S[neighbor].ub = 0
+					counter += 1
+				if (node_neighbors - {neighbor}).issubset(neighbor_neighbors):
+					power_graph.nodes[node]["root_fixed"] = True
+					self.model._S[node].ub = 0
+					counter += 1
+					continue
+			print(counter)
+		time2 = time.time()
+		print("Number of centers fixed ", counter, " out of ", len(power_graph.nodes()), " nodes in ", time2  - time1, "seconds.")
+
+		if not os.path.exists("../results/radius_bounded/" + self.filename):
+			with open("../results/radius_bounded/" + self.filename, "w") as doc:
+				string = "Instance, k, r, n, number fixed, fixing time"
+				doc.write(string)
+				doc.close()
+
+		with open("../results/radius_bounded/" + self.filename, "a") as doc:
+			string = "\n" + self.instance_name + ", " + str(self.k) + ", " + str(self.r) + ", " + str(self.n) + ", " + str(counter) + ", " + str(time2 - time1)
+			doc.write(string)
+			doc.close()
 
 
 
