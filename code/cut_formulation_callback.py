@@ -58,6 +58,7 @@ def cut_callback(m, where):
 				min_C = [c for c in vbar_complement if c not in not_in_min_cut]
 				if i != j:
 					m.cbLazy(m._S[j] + m._X[i] + m._Y[i] <= 1 + gp.quicksum(m._X[c] for c in min_C))
+					m.cbLazy(m._S[i] + m._X[j] + m._Y[j] <= 1 + gp.quicksum(m._X[c] for c in min_C))
 					#print('center: ', j)
 					#print('vbar: ', vbar)
 					#print('node: ', i)
