@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['single']:
+for request in data['reduced_model']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -34,8 +34,8 @@ for request in data['single']:
 	if instance.model_type == "cut_model":
 		#instance.warm_start_one()
 		#instance.center_fixing_idea_recursive()
-		instance.dominated_fixing_idea()
-		#instance.dominated_fixing_idea_power_graph()
+		#instance.dominated_fixing_idea()
+		instance.dominated_fixing_idea_power_graph()
 
 	instance.optimize()
 	#instance.print_model()
