@@ -762,7 +762,7 @@ class radius_bounded_model(base_model):
 					self.model._S[node].ub = 0
 					counter += 1
 					continue
-			print(counter)
+			#print(counter)
 		time2 = time.time()
 		print("Number of centers fixed ", counter, " out of ", len(power_graph.nodes()), " nodes in ", time2  - time1, "seconds.")
 
