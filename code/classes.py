@@ -743,12 +743,12 @@ class radius_bounded_model(base_model):
 
 
 		for node in power_graph:
-			print("node", node)
+			#print("node", node)
 			if power_graph.nodes[node]["root_fixed"] == True:
 				continue
 			node_neighbors = set(power_graph.neighbors(node))
 			for neighbor in self.G.neighbors(node):
-				print("neighbor_node", neighbor)
+				#print("neighbor_node", neighbor)
 				if power_graph.nodes[neighbor]["root_fixed"] == True:
 					continue
 				neighbor_neighbors = set(power_graph.neighbors(neighbor)) - {node}
