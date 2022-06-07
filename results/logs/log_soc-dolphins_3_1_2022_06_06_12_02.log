@@ -1,0 +1,5 @@
+
+Gurobi 9.5.1 (linux64) logging started Mon Jun  6 12:02:15 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_12_02.log"
+Set parameter LazyConstraints to value 1
