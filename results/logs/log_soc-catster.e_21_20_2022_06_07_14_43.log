@@ -1,0 +1,50 @@
+
+Gurobi 9.5.1 (linux64) logging started Tue Jun  7 16:48:31 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-catster.e_21_20_2022_06_07_14_43.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 4007 rows, 299368 columns and 167530 nonzeros
+Model fingerprint: 0x6a4f7edf
+Variable types: 0 continuous, 299368 integer (299368 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective 78945.000000
+Presolve removed 2753 rows and 297429 columns
+Presolve time: 0.15s
+Presolved: 1254 rows, 1939 columns, 6241 nonzeros
+Found heuristic solution: objective 79028.000000
+Variable types: 0 continuous, 1939 integer (1574 binary)
+
+Root relaxation: objective 7.917888e+04, 772 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 79178.8836    0  243 79028.0000 79178.8836  0.19%     -    0s
+H    0     0                    79035.000000 79178.8836  0.18%     -    0s
+H    0     0                    79037.000000 79178.8836  0.18%     -    0s
+H    0     0                    79069.000000 79163.4334  0.12%     -    0s
+H    0     0                    79076.000000 79163.4334  0.11%     -    0s
+
+Cutting planes:
+  Gomory: 79
+  Cover: 9
+  Implied bound: 16
+  MIR: 87
+  StrongCG: 10
+  GUB cover: 53
+  Zero half: 14
+  RLT: 28
+  Relax-and-lift: 4
+
+Explored 1 nodes (784 simplex iterations) in 0.46 seconds (0.29 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 6: 79076 79069 79037 ... 78945
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 7.907600000000e+04, best bound 7.907600000000e+04, gap 0.0000%
