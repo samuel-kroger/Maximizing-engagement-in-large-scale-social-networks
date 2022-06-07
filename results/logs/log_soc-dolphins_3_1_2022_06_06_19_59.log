@@ -1,0 +1,201 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:59:16 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_59.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2745 rows, 135 columns and 8580 nonzeros
+Model fingerprint: 0x14ae83e8
+Variable types: 0 continuous, 135 integer (135 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 2618 rows and 11 columns
+Presolve time: 0.02s
+Presolved: 127 rows, 124 columns, 2013 nonzeros
+Variable types: 0 continuous, 124 integer (124 binary)
+
+Root relaxation: objective 2.550000e+01, 39 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.50000    0    5   -0.00000   25.50000      -     -    0s
+H    0     0                      20.0000000   25.50000  27.5%     -    0s
+H    0     0                      21.0000000   25.50000  21.4%     -    0s
+     0     0   23.71429    0   14   21.00000   23.71429  12.9%     -    0s
+H    0     0                      23.0000000   23.71429  3.11%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 2
+  MIR: 1
+  GUB cover: 1
+
+Explored 1 nodes (64 simplex iterations) in 0.03 seconds (0.02 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 23 21 20 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.300000000000e+01, best bound 2.300000000000e+01, gap 0.0000%
+
+User-callback calls 248, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:59:16 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_59.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 6795 rows, 2160 columns and 22755 nonzeros
+Model fingerprint: 0x0ff95e1f
+Variable types: 0 continuous, 2160 integer (2160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 3921 rows and 10 columns
+Presolve time: 0.06s
+Presolved: 2874 rows, 2150 columns, 10174 nonzeros
+Variable types: 0 continuous, 2150 integer (2150 binary)
+
+Root relaxation: objective 2.550000e+01, 142 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.50000    0   10   -0.00000   25.50000      -     -    0s
+H    0     0                      20.0000000   25.50000  27.5%     -    0s
+H    0     0                      21.0000000   25.50000  21.4%     -    0s
+     0     0   24.00000    0   11   21.00000   24.00000  14.3%     -    0s
+     0     0   23.33333    0   12   21.00000   23.33333  11.1%     -    0s
+     0     0   23.00000    0   25   21.00000   23.00000  9.52%     -    0s
+*    0     0               0      23.0000000   23.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 5
+  Implied bound: 21
+  Clique: 9
+  MIR: 11
+  GUB cover: 3
+  Zero half: 4
+  Lazy constraints: 22
+
+Explored 1 nodes (346 simplex iterations) in 0.23 seconds (0.12 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 23 21 20 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.300000000000e+01, best bound 2.300000000000e+01, gap 0.0000%
+
+User-callback calls 320, time in user-callback 0.04 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:59:23 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_59.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2745 rows, 135 columns and 8580 nonzeros
+Model fingerprint: 0x6151287e
+Variable types: 0 continuous, 135 integer (135 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 2617 rows and 10 columns
+Presolve time: 0.02s
+Presolved: 128 rows, 125 columns, 1824 nonzeros
+Variable types: 0 continuous, 125 integer (125 binary)
+
+Root relaxation: objective 2.550000e+01, 36 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.50000    0    5   -0.00000   25.50000      -     -    0s
+H    0     0                      21.0000000   25.50000  21.4%     -    0s
+     0     0   24.00000    0   10   21.00000   24.00000  14.3%     -    0s
+     0     0   23.33333    0    7   21.00000   23.33333  11.1%     -    0s
+     0     0   22.52381    0   28   21.00000   22.52381  7.26%     -    0s
+     0     0   22.52381    0    4   21.00000   22.52381  7.26%     -    0s
+     0     0 infeasible    0        21.00000   21.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 4
+  MIR: 3
+  GUB cover: 2
+  Zero half: 1
+
+Explored 1 nodes (130 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 21 7 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.100000000000e+01, best bound 2.100000000000e+01, gap 0.0000%
+
+User-callback calls 269, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:59:33 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_59.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 6795 rows, 2160 columns and 22755 nonzeros
+Model fingerprint: 0x38279245
+Variable types: 0 continuous, 2160 integer (2160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 3921 rows and 10 columns
+Presolve time: 0.06s
+Presolved: 2874 rows, 2150 columns, 10174 nonzeros
+Variable types: 0 continuous, 2150 integer (2150 binary)
+
+Root relaxation: objective 2.550000e+01, 151 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.50000    0   10   -0.00000   25.50000      -     -    0s
+H    0     0                      20.0000000   25.50000  27.5%     -    0s
+     0     0   24.00000    0   10   20.00000   24.00000  20.0%     -    0s
+H    0     0                      21.0000000   24.00000  14.3%     -    0s
+     0     0   23.87500    0   20   21.00000   23.87500  13.7%     -    0s
+H    0     0                      23.0000000   23.87500  3.80%     -    0s
+
+Cutting planes:
+  Gomory: 5
+  Cover: 4
+  Implied bound: 90
+  Clique: 1
+  GUB cover: 1
+  Zero half: 2
+  RLT: 3
+  BQP: 1
+
+Explored 1 nodes (519 simplex iterations) in 0.20 seconds (0.13 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 23 21 20 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.300000000000e+01, best bound 2.300000000000e+01, gap 0.0000%
+
+User-callback calls 308, time in user-callback 0.00 sec

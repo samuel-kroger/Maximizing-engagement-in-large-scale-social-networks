@@ -1,0 +1,62 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:17:01 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-firm-hi-tech_2_1_2022_06_06_19_17.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 349 rows, 99 columns and 1372 nonzeros
+Model fingerprint: 0xb8d36ea2
+Variable types: 0 continuous, 99 integer (99 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 253 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 96 rows, 95 columns, 717 nonzeros
+Variable types: 0 continuous, 95 integer (95 binary)
+Found heuristic solution: objective 29.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 29 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.900000000000e+01, best bound 2.900000000000e+01, gap 0.0000%
+
+User-callback calls 139, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:17:24 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-firm-hi-tech_2_1_2022_06_06_19_17.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 349 rows, 99 columns and 1372 nonzeros
+Model fingerprint: 0xb8d36ea2
+Variable types: 0 continuous, 99 integer (99 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 253 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 96 rows, 95 columns, 717 nonzeros
+Variable types: 0 continuous, 95 integer (95 binary)
+Found heuristic solution: objective 29.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 29 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.900000000000e+01, best bound 2.900000000000e+01, gap 0.0000%
+
+User-callback calls 140, time in user-callback 0.00 sec

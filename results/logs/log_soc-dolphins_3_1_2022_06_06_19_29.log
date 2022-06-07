@@ -1,0 +1,146 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:29:19 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_29.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 4621 rows, 171 columns and 14348 nonzeros
+Model fingerprint: 0xfa180980
+Variable types: 0 continuous, 171 integer (171 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 4458 rows and 16 columns
+Presolve time: 0.05s
+Presolved: 163 rows, 155 columns, 3333 nonzeros
+Variable types: 0 continuous, 155 integer (155 binary)
+
+Root relaxation: objective 2.800000e+01, 39 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      28.0000000   28.00000  0.00%     -    0s
+
+Explored 1 nodes (39 simplex iterations) in 0.05 seconds (0.03 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 28 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.800000000000e+01, best bound 2.800000000000e+01, gap 0.0000%
+
+User-callback calls 232, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:29:19 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_29.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 7525 rows, 15789 columns and 58240 nonzeros
+Model fingerprint: 0xe9200860
+Variable types: 15618 continuous, 171 integer (171 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3873 rows and 9305 columns
+Presolve time: 0.37s
+Presolved: 3652 rows, 6484 columns, 37009 nonzeros
+Variable types: 6331 continuous, 153 integer (153 binary)
+Found heuristic solution: objective 9.0000000
+Found heuristic solution: objective 13.0000000
+Found heuristic solution: objective 28.0000000
+
+Root relaxation: cutoff, 214 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0        28.00000   28.00000  0.00%     -    0s
+
+Explored 1 nodes (214 simplex iterations) in 0.43 seconds (0.30 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 28 13 9 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.800000000000e+01, best bound 2.800000000000e+01, gap 0.0000%
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:29:51 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_29.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 4621 rows, 171 columns and 14348 nonzeros
+Model fingerprint: 0x77dbcd13
+Variable types: 0 continuous, 171 integer (171 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 4460 rows and 16 columns
+Presolve time: 0.04s
+Presolved: 161 rows, 155 columns, 3245 nonzeros
+Variable types: 0 continuous, 155 integer (155 binary)
+
+Root relaxation: objective 2.800000e+01, 38 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      28.0000000   28.00000  0.00%     -    0s
+
+Explored 1 nodes (38 simplex iterations) in 0.05 seconds (0.03 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 28 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.800000000000e+01, best bound 2.800000000000e+01, gap 0.0000%
+
+User-callback calls 232, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:29:51 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_19_29.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 7525 rows, 15789 columns and 58240 nonzeros
+Model fingerprint: 0xe9200860
+Variable types: 15618 continuous, 171 integer (171 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3873 rows and 9305 columns
+Presolve time: 0.41s
+Presolved: 3652 rows, 6484 columns, 37009 nonzeros
+Variable types: 6331 continuous, 153 integer (153 binary)
+Found heuristic solution: objective 9.0000000
+Found heuristic solution: objective 13.0000000
+Found heuristic solution: objective 28.0000000
+
+Root relaxation: cutoff, 214 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0        28.00000   28.00000  0.00%     -    0s
+
+Explored 1 nodes (214 simplex iterations) in 0.48 seconds (0.30 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 3: 28 13 9 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.800000000000e+01, best bound 2.800000000000e+01, gap 0.0000%

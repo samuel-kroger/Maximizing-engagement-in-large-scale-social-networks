@@ -1,0 +1,106 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:12:44 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-firm-hi-tech_2_1_2022_06_06_19_12.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 26 rows, 24 columns and 96 nonzeros
+Model fingerprint: 0xeb77c9a0
+Variable types: 0 continuous, 24 integer (24 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 26 rows, 24 columns, 96 nonzeros
+Variable types: 0 continuous, 24 integer (24 binary)
+
+Root relaxation: objective 8.000000e+00, 1 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       8.0000000    8.00000  0.00%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 2: 8 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 8.000000000000e+00, best bound 8.000000000000e+00, gap 0.0000%
+
+User-callback calls 97, time in user-callback 0.00 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 19:12:57 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-firm-hi-tech_2_1_2022_06_06_19_12.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 74 rows, 24 columns and 240 nonzeros
+Model fingerprint: 0x289929d9
+Variable types: 0 continuous, 24 integer (24 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 48 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 26 rows, 24 columns, 120 nonzeros
+Variable types: 0 continuous, 24 integer (24 binary)
+
+Root relaxation: objective 5.000000e+00, 32 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.00000    0   16   -0.00000    5.00000      -     -    0s
+     0     0    4.00000    0   12   -0.00000    4.00000      -     -    0s
+     0     0    4.00000    0   12   -0.00000    4.00000      -     -    0s
+     0     0    3.89286    0   15   -0.00000    3.89286      -     -    0s
+     0     0    3.86364    0   15   -0.00000    3.86364      -     -    0s
+     0     0    3.85938    0   15   -0.00000    3.85938      -     -    0s
+     0     0    3.71875    0   16   -0.00000    3.71875      -     -    0s
+     0     0    3.50000    0   11   -0.00000    3.50000      -     -    0s
+     0     0    3.50000    0   14   -0.00000    3.50000      -     -    0s
+     0     0    3.00000    0   16   -0.00000    3.00000      -     -    0s
+     0     0    3.00000    0   12   -0.00000    3.00000      -     -    0s
+     0     0    3.00000    0   14   -0.00000    3.00000      -     -    0s
+     0     0    3.00000    0   17   -0.00000    3.00000      -     -    0s
+     0     0    2.99632    0   21   -0.00000    2.99632      -     -    0s
+     0     0    2.84848    0   18   -0.00000    2.84848      -     -    0s
+     0     0    2.78571    0   19   -0.00000    2.78571      -     -    0s
+     0     0    2.78378    0   16   -0.00000    2.78378      -     -    0s
+     0     0    2.78378    0   15   -0.00000    2.78378      -     -    0s
+     0     0    2.50000    0   16   -0.00000    2.50000      -     -    0s
+     0     0    2.46875    0   21   -0.00000    2.46875      -     -    0s
+     0     0    2.45455    0   17   -0.00000    2.45455      -     -    0s
+     0     0    2.45000    0   21   -0.00000    2.45000      -     -    0s
+     0     0    2.42857    0   19   -0.00000    2.42857      -     -    0s
+     0     0    2.38462    0   20   -0.00000    2.38462      -     -    0s
+     0     0    2.33333    0   20   -0.00000    2.33333      -     -    0s
+     0     0    2.33333    0   20   -0.00000    2.33333      -     -    0s
+     0     2    2.33333    0   20   -0.00000    2.33333      -     -    0s
+
+Cutting planes:
+  Clique: 1
+  MIR: 4
+  GUB cover: 2
+  Zero half: 10
+
+Explored 15 nodes (284 simplex iterations) in 0.05 seconds (0.01 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 1: -0 
+No other solutions better than -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective -0.000000000000e+00, best bound -0.000000000000e+00, gap 0.0000%
+
+User-callback calls 288, time in user-callback 0.00 sec

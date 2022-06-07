@@ -35,9 +35,27 @@ def cut_callback(m, where):
 		for value in shortest_paths.values():
 			if value > r:
 				feasable = False
+				continue
 
 
 		if feasable == False:
+
+			for i in vbar:
+				C = [v for v in G.nodes() if v not in vbar]
+				for c in C:
+					vbar_with_c = vbar
+					vbar_with_c.append(c)
+
+					G_minus_C_plus_c = G.subgraph(vbar_with_c)
+					try:
+						if nx.shortest_path_length(G_minus_C_plus_c, j, i) > r:
+							C.remove(c)
+					except nx.NetworkXNopath:
+						C.remove(c)
+
+				m.cbLazy(m._S[j] + m._X[i] + m._Y[i] <= 1 + gp.quicksum(m._X[c] for c in C))
+				m.cbLazy(m._S[i] + m._X[j] + m._Y[j] <= 1 + gp.quicksum(m._X[c] for c in C))
+			'''
 			for i in vbar:
 				selected = vbar.copy()
 				for c in vbar_complement:
@@ -52,15 +70,16 @@ def cut_callback(m, where):
 
 					except nx.NetworkXNoPath:
 						not_in_min_cut.append(c)
-					selected.remove(c)
-
+					#selected.remove(c)
+					vbar_complement.remove(c)
 
 				min_C = [c for c in vbar_complement if c not in not_in_min_cut]
 				if i != j:
 					m.cbLazy(m._S[j] + m._X[i] + m._Y[i] <= 1 + gp.quicksum(m._X[c] for c in min_C))
-					m.cbLazy(m._S[i] + m._X[j] + m._Y[j] <= 1 + gp.quicksum(m._X[c] for c in min_C))
+					#m.cbLazy(m._S[i] + m._X[j] + m._Y[j] <= 1 + gp.quicksum(m._X[c] for c in min_C))
 
 					#print('center: ', j)
 					#print('vbar: ', vbar)
 					#print('node: ', i)
 					#print('RHS: ', min_C)
+				'''

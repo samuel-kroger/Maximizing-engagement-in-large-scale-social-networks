@@ -436,6 +436,7 @@ class base_model(object):
 				for i in G.nodes:
 					if m._Y[i].x > 0.5:
 						purchased_nodes.append(i)
+						print("purchased node: ", i)
 
 
 

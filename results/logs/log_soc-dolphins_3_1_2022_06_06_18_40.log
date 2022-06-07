@@ -1,0 +1,101 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 18:40:08 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_18_40.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 2756 rows, 186 columns and 8836 nonzeros
+Model fingerprint: 0xbb66c411
+Variable types: 0 continuous, 186 integer (186 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 2583 rows and 15 columns
+Presolve time: 0.03s
+Presolved: 173 rows, 171 columns, 3594 nonzeros
+Variable types: 0 continuous, 171 integer (171 binary)
+
+Root relaxation: objective 3.400000e+01, 53 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   34.00000    0    2   -0.00000   34.00000      -     -    0s
+H    0     0                       4.0000000   34.00000   750%     -    0s
+     0     0   31.83333    0   11    4.00000   31.83333   696%     -    0s
+H    0     0                      13.0000000   31.83333   145%     -    0s
+H    0     0                      27.0000000   31.83333  17.9%     -    0s
+H    0     0                      31.0000000   31.83333  2.69%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 1
+  GUB cover: 1
+  Lazy constraints: 32
+
+Explored 1 nodes (68 simplex iterations) in 0.10 seconds (0.03 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 31 27 13 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.100000000000e+01, best bound 3.100000000000e+01, gap 0.0000%
+
+User-callback calls 215, time in user-callback 0.05 sec
+
+Gurobi 9.5.0 (win64) logging started Mon Jun  6 18:40:43 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-dolphins_3_1_2022_06_06_18_40.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 5324 rows, 186 columns and 16540 nonzeros
+Model fingerprint: 0x335f42bf
+Variable types: 0 continuous, 186 integer (186 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 5140 rows and 15 columns
+Presolve time: 0.05s
+Presolved: 184 rows, 171 columns, 3964 nonzeros
+Variable types: 0 continuous, 171 integer (171 binary)
+
+Root relaxation: objective 3.400000e+01, 52 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   34.00000    0    2   -0.00000   34.00000      -     -    0s
+H    0     0                       4.0000000   34.00000   750%     -    0s
+     0     0   31.44444    0   15    4.00000   31.44444   686%     -    0s
+H    0     0                       5.0000000   31.44444   529%     -    0s
+H    0     0                      25.0000000   31.44444  25.8%     -    0s
+     0     0   30.50000    0    1   25.00000   30.50000  22.0%     -    0s
+H    0     0                      30.0000000   30.50000  1.67%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 2
+  Clique: 4
+  MIR: 1
+  GUB cover: 1
+  Zero half: 12
+  RLT: 1
+  Lazy constraints: 120
+
+Explored 1 nodes (82 simplex iterations) in 0.19 seconds (0.05 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 30 25 5 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.000000000000e+01, best bound 3.000000000000e+01, gap 0.0000%
+
+User-callback calls 263, time in user-callback 0.11 sec

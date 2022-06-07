@@ -29,8 +29,8 @@ def extended_cut_callback(m, where):
 
 		feasable = True
 		shortest_paths = nx.shortest_path_length(G.subgraph(vbar), j)
-		print(shortest_paths)
-		print(shortest_paths.values())
+		#print(shortest_paths)
+		#print(shortest_paths.values())
 		for value in shortest_paths.values():
 			if value > r:
 				feasable = False
@@ -57,8 +57,8 @@ def extended_cut_callback(m, where):
 				min_C = [c for c in vbar_complement if c not in not_in_min_cut]
 				if i != j:
 					m.cbLazy(m._Z[i,j] <= gp.quicksum(m._Z[c,j] for c in min_C))
-					print('center: ', j)
-					print('vbar: ', vbar)
-					print('node: ', i)
-					print('RHS: ', min_C)
+					#print('center: ', j)
+					#print('vbar: ', vbar)
+					#print('node: ', i)
+					#print('RHS: ', min_C)
 
