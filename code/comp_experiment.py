@@ -27,8 +27,8 @@ for request in data['reduced_model']:
 
 	start_time = time.time()
 	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'], request['relax'])
-	if request['remove_y_edges']:
-		instance.remove_y_edges()
+	if request['warm_start']:
+		#instance.remove_y_edges()
 		instance.RCM_warm_start()
 	'''
 	if instance.model_type == "cut_model":

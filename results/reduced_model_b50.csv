@@ -1,12 +1,13 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-facebook_combined, reduced_model, 4039, 88234, 17, 50, NA, 12161.0, 2479, 2061, 2359.0, 2359.0, NA, NA, 0, 0, 0, False, False, False, False, False, 17.71
-CA-HepPh, reduced_model, 12006, 118489, 4, 50, NA, 1.0, 6049, 6591, 6734.0, 6734.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1.0
-socfb-Syracuse56, reduced_model, 13653, 543982, 46, 50, NA, 9407.0, 8085, 6985, 7210.0, 7345.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3604.18
-socfb-Northeastern19, reduced_model, 13882, 381934, 33, 50, NA, 29129.0, 8120, 7008, 7213.0, 7258.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3602.72
-CA-CondMat, reduced_model, 23133, 93439, 4, 50, NA, 1.0, 10848, 13464, 13639.0, 13639.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1.47
-Brightkite_edges, reduced_model, 58228, 214078, 2, 50, NA, 1.0, 25887, 34706, 34867.0, 34867.0, NA, NA, 0, 0, 0, False, False, False, False, False, 2.57
-soc-catster.e, reduced_model, 149684, 5448197, 21, 50, NA, 1.0, 72742, 78945, 79175.0, 79175.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1072.16
-Gowalla_edges, reduced_model, 196591, 950327, 3, 50, NA, 1.0, 100437, 106417, 106656.0, 106656.0, NA, NA, 0, 0, 0, False, False, False, False, False, 16.74
-ca-citeseer, reduced_model, 227320, 814134, 3, 50, NA, 1.0, 82847, 152966, 153186.0, 153186.0, NA, NA, 0, 0, 0, False, False, False, False, False, 11.92
-com-dblp.ungraph, reduced_model, 317080, 1049866, 3, 50, NA, 1.0, 124059, 204031, 204251.0, 204251.0, NA, NA, 0, 0, 0, False, False, False, False, False, 15.61
-soc-dogster.e, reduced_model, 426816, 8543549, 12, 50, NA, 1.0, 221076, 214490, 214735.0, 214735.0, NA, NA, 0, 0, 0, False, False, False, False, False, 472.38
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time,
+facebook_combined, reduced_model,4039,88234,17,50, NA,12161,2479,2061,2359,2359, NA, NA,0,0,0, False, False, False, False, False,17.71,0.00%
+CA-HepPh, reduced_model,12006,118489,4,50, NA,1,6049,6591,6734,6734, NA, NA,0,0,0, False, False, False, False, False,1,0.00%
+socfb-Syracuse56, reduced_model,13653,543982,46,50, NA,9407,8085,6985,7210,7345, NA, NA,0,0,0, False, False, False, False, False,3604.18,1.87%
+socfb-Northeastern19, reduced_model,13882,381934,33,50, NA,29129,8120,7008,7213,7258, NA, NA,0,0,0, False, False, False, False, False,3602.72,0.62%
+CA-CondMat, reduced_model,23133,93439,4,50, NA,1,10848,13464,13639,13639, NA, NA,0,0,0, False, False, False, False, False,1.47,0.00%
+Flickr,,,,,,,,,,,,,,,,,,,,,,,
+Brightkite_edges, reduced_model,58228,214078,2,50, NA,1,25887,34706,34867,34867, NA, NA,0,0,0, False, False, False, False, False,2.57,0.00%
+soc-catster.e, reduced_model,149684,5448197,21,50, NA,1,72742,78945,79175,79175, NA, NA,0,0,0, False, False, False, False, False,1072.16,0.00%
+Gowalla_edges, reduced_model,196591,950327,3,50, NA,1,100437,106417,106656,106656, NA, NA,0,0,0, False, False, False, False, False,16.74,0.00%
+ca-citeseer, reduced_model,227320,814134,3,50, NA,1,82847,152966,153186,153186, NA, NA,0,0,0, False, False, False, False, False,11.92,0.00%
+com-dblp.ungraph, reduced_model,317080,1049866,3,50, NA,1,124059,204031,204251,204251, NA, NA,0,0,0, False, False, False, False, False,15.61,0.00%
+soc-dogster.e, reduced_model,426816,8543549,12,50, NA,1,221076,214490,214735,214735, NA, NA,0,0,0, False, False, False, False, False,472.38,0.00%
