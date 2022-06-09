@@ -1,0 +1,13 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+facebook_combined, reduced_model, 4039, 88234, 17, 16, NA, 161284.0, 2479, 2061, 2241.0, 2241.0, NA, NA, 0, 0, 0, True, False, False, False, False, 384.69
+CA-HepPh, reduced_model, 12006, 118489, 4, 3, NA, 1.0, 6049, 6591, 6606.0, 6606.0, NA, NA, 0, 0, 0, True, False, False, False, False, 5.27
+socfb-Syracuse56, reduced_model, 13653, 543982, 46, 45, NA, 7587.0, 8085, 6985, 7195.0, 7326.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3640.18
+socfb-Northeastern19, reduced_model, 13882, 381934, 33, 32, NA, 27781.0, 8120, 7008, 7162.0, 7190.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3626.87
+CA-CondMat, reduced_model, 23133, 93439, 4, 3, NA, 1.0, 10848, 13464, 13482.0, 13482.0, NA, NA, 0, 0, 0, True, False, False, False, False, 20.92
+Brightkite_edges, reduced_model, 58228, 214078, 2, 1, NA, 1.0, 25887, 34706, 34711.0, 34711.0, NA, NA, 0, 0, 0, True, False, False, False, False, 14.73
+soc-catster.e, reduced_model, 149684, 5448197, 21, 20, NA, 1.0, 72742, 78945, 79076.0, 79076.0, NA, NA, 0, 0, 0, True, False, False, False, False, 2134.24
+Gowalla_edges, reduced_model, 196591, 950327, 3, 2, NA, 1.0, 100437, 106417, 106430.0, 106430.0, NA, NA, 0, 0, 0, True, False, False, False, False, 2533.91
+ca-citeseer, reduced_model, 227320, 814134, 3, 2, NA, 1.0, 82847, 152966, 152980.0, 152980.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3321.78
+com-dblp.ungraph, reduced_model, 317080, 1049866, 3, 2, NA, 1.0, 124059, 204031, 204045.0, 204045.0, NA, NA, 0, 0, 0, True, False, False, False, False, 5561.06
+soc-dogster.e, reduced_model, 426816, 8543549, 12, 11, NA, 1.0, 221076, 214490, 214559.0, 214559.0, NA, NA, 0, 0, 0, True, False, False, False, False, 1280.45
+soc-twitter-higgs.e, reduced_model, 456631, 12508442, 17, 16, NA, 2551.0, 234446, 231419, 231572.0, 231572.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3139.36
