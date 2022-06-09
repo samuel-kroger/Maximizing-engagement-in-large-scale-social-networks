@@ -855,7 +855,7 @@
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
-		}
+		},
 		{
 			"filename":"web-hudong.edges",
 			"k":5,
