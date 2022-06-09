@@ -1,5 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-soc-twitter-higgs.e, reduced_model, 456631, 12508442, 17, 50, NA, 4383.0, 234446, 231419, 231733.0, 231733.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1270.44
-web-Google, reduced_model, 875713, 4322051, 4, 50, NA, 1667.0, 429949, 492655, 493235.0, 493235.0, NA, NA, 0, 0, 0, False, False, False, False, False, 271.59
-web-hudong.e, reduced_model, 1974655, 14428382, 5, 50, NA, 172.0, 959493, 1055322, 1055659.0, 1055659.0, NA, NA, 0, 0, 0, False, False, False, False, False, 795.08
-web-baidu-baike.e, reduced_model, 2140198, 17014946, 3, 50, NA, 1.0, 895053, 1277646, 1277893.0, 1277893.0, NA, NA, 0, 0, 0, False, False, False, False, False, 1035.85

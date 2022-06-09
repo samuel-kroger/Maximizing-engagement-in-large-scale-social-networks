@@ -11,3 +11,7 @@ Gowalla_edges, reduced_model,196591,950327,3,50, NA,1,100437,106417,106656,10665
 ca-citeseer, reduced_model,227320,814134,3,50, NA,1,82847,152966,153186,153186, NA, NA,0,0,0, False, False, False, False, False,11.92,0.00%
 com-dblp.ungraph, reduced_model,317080,1049866,3,50, NA,1,124059,204031,204251,204251, NA, NA,0,0,0, False, False, False, False, False,15.61,0.00%
 soc-dogster.e, reduced_model,426816,8543549,12,50, NA,1,221076,214490,214735,214735, NA, NA,0,0,0, False, False, False, False, False,472.38,0.00%
+soc-twitter-higgs.e, reduced_model,456631,12508442,17,50, NA,4383,234446,231419,231733,231733, NA, NA,0,0,0, False, False, False, False, False,1270.44,0.00%
+web-Google, reduced_model,875713,4322051,4,50, NA,1667,429949,492655,493235,493235, NA, NA,0,0,0, False, False, False, False, False,271.59,0.00%
+web-hudong.e, reduced_model,1974655,14428382,5,50, NA,172,959493,1055322,1055659,1055659, NA, NA,0,0,0, False, False, False, False, False,795.08,0.00%
+web-baidu-baike.e, reduced_model,2140198,17014946,3,50, NA,1,895053,1277646,1277893,1277893, NA, NA,0,0,0, False, False, False, False, False,1035.85,0.00%

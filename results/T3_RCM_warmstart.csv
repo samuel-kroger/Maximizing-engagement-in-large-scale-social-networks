@@ -1,0 +1,19 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time,
+facebook_combined, reduced_model,4039,88234,17,250, NA,1,2479,2061,2533,2533, NA, NA,0,0,0, True, False, False, False, False,1.69,0.00%
+CA-HepPh, reduced_model,12006,118489,4,250, NA,1,6049,6591,6978,6978, NA, NA,0,0,0, True, False, False, False, False,2.78,0.00%
+socfb-Syracuse56, reduced_model,13653,543982,46,250, NA,9776,8085,6985,7650,7732, NA, NA,0,0,0, True, False, False, False, False,3640.69,1.06%
+socfb-Northeastern19, reduced_model,13882,381934,33,250, NA,36423,8120,7008,7589,7620, NA, NA,0,0,0, True, False, False, False, False,3627.23,0.41%
+CA-CondMat, reduced_model,23133,93439,4,250, NA,1,10848,13464,13939,13939, NA, NA,0,0,0, True, False, False, False, False,5.49,0.00%
+Brightkite_edges, reduced_model,58228,214078,2,250, NA,39,25887,34706,35267,35267, NA, NA,0,0,0, True, False, False, False, False,14.91,0.00%
+,,,,,,,,,,,,,,,,,,,,,,,#DIV/0!
+soc-catster.e, reduced_model,149684,5448197,21,250, NA,1,72742,78945,79561,79561, NA, NA,0,0,0, True, False, False, False, False,2156.6,0.00%
+Gowalla_edges, reduced_model,196591,950327,3,250, NA,1,100437,106417,107299,107299, NA, NA,0,0,0, True, False, False, False, False,250.06,0.00%
+ca-citeseer, reduced_model,227320,814134,3,250, NA,2756,82847,152966,153765,153765, NA, NA,0,0,0, True, False, False, False, False,222.47,0.00%
+com-dblp.ungraph, reduced_model,317080,1049866,3,250, NA,2754,124059,204031,204857,204857, NA, NA,0,0,0, True, False, False, False, False,368.3,0.00%
+soc-dogster.e, reduced_model,426816,8543549,12,250, NA,44,221076,214490,215343,215343, NA, NA,0,0,0, True, False, False, False, False,1202.01,0.00%
+soc-twitter-higgs.e, reduced_model,456631,12508442,17,250, NA,3683,234446,231419,232329,232329, NA, NA,0,0,0, True, False, False, False, False,2812.97,0.00%
+web-Google, reduced_model,875713,4322051,4,250, NA,2567,429949,492655,494579,494579, NA, NA,0,0,0, True, False, False, False, False,10629.94,0.00%
+web-hudong.e, reduced_model,1974655,14428382,5,250, NA,2405,959493,1055322,1056519,1056519, NA, NA,0,0,0, True, False, False, False, False,7711.1,0.00%
+web-baidu-baike.e, reduced_model,2140198,17014946,3,250, NA,1,895053,1277646,1278551,1278551, NA, NA,0,0,0, True, False, False, False, False,4914.98,0.00%
+facebook_combined, reduced_model,4039,88234,20,20, NA,82129,2672,1854,1967,1967, NA, NA,0,0,0, True, False, False, False, False,333.78,0.00%
+Brightkite_edges, reduced_model,58228,214078,20,20, NA,3643,60920,947,1178,1455, NA, NA,0,0,0, True, False, False, False, False,6779.79,19.04%
