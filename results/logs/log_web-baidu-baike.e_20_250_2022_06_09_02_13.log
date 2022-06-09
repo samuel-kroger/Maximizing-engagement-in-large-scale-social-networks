@@ -1,0 +1,76 @@
+
+Gurobi 9.5.1 (linux64) logging started Thu Jun  9 12:16:55 2022
+
+Set parameter LogFile to value "../results/logs/log_web-baidu-baike.e_20_250_2022_06_09_02_13.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 137091 rows, 4280396 columns and 5652010 nonzeros
+Model fingerprint: 0x8ea87749
+Variable types: 0 continuous, 4280396 integer (4280396 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 237131.00000
+Presolve removed 23913 rows and 4024754 columns (presolve time = 5s) ...
+Presolve removed 23912 rows and 4024753 columns
+Presolve time: 8.98s
+Presolved: 113179 rows, 255643 columns, 901764 nonzeros
+Found heuristic solution: objective 237428.00000
+Variable types: 0 continuous, 255643 integer (197678 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.3738100e+05   0.000000e+00   6.250560e+04     13s
+   59418    2.4273877e+05   0.000000e+00   8.664329e+04     15s
+Warning: Markowitz tolerance tightened to 0.03125
+   61495    2.4385121e+05   0.000000e+00   7.107484e+09     20s
+   63181    2.4473145e+05   0.000000e+00   8.153035e+05     26s
+   64308    2.4534772e+05   0.000000e+00   1.686691e+05     30s
+   64843    2.4600062e+05   0.000000e+00   1.397873e+08     35s
+   65430    2.4654140e+05   0.000000e+00   1.830754e+09     41s
+   65897    2.4687869e+05   0.000000e+00   9.800072e+05     45s
+   66419    2.4710039e+05   0.000000e+00   1.703283e+04     50s
+   66972    2.4753363e+05   0.000000e+00   1.808851e+04     55s
+   67575    2.4785360e+05   0.000000e+00   3.543329e+03     61s
+   68086    2.4828188e+05   0.000000e+00   4.449016e+04     65s
+   68736    2.4858379e+05   0.000000e+00   1.307499e+04     70s
+   69075    2.4859790e+05   0.000000e+00   0.000000e+00     74s
+   71030    2.4859790e+05   0.000000e+00   0.000000e+00     74s
+Extra simplex iterations after uncrush: 1955
+Concurrent spin time: 0.41s
+
+Solved with primal simplex
+
+Root relaxation: objective 2.485979e+05, 71030 iterations, 62.88 seconds (81.43 work units)
+Total elapsed time = 75.45s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 248597.897    0 42251 237428.000 248597.897  4.70%     -   78s
+H    0     0                    237452.00000 248597.897  4.69%     -   80s
+     0     0 245340.106    0 40009 237452.000 245340.106  3.32%     -  186s
+H    0     0                    238489.00000 245340.106  2.87%     -  198s
+     0     0 242894.790    0 37109 238489.000 242894.790  1.85%     -  306s
+     0     0 241373.458    0 33576 238489.000 241373.458  1.21%     -  403s
+     0     0 240659.128    0 30039 238489.000 240659.128  0.91%     -  488s
+     0     0 240381.814    0 27081 238489.000 240381.814  0.79%     -  570s
+     0     0 240268.225    0 23037 238489.000 240268.225  0.75%     -  657s
+     0     0 240190.337    0 19353 238489.000 240190.337  0.71%     -  776s
+     0     0 240146.271    0 17532 238489.000 240146.271  0.69%     -  814s
+     0     0 240141.024    0 17239 238489.000 240141.024  0.69%     -  828s
+     0     0 240139.717    0 17102 238489.000 240139.717  0.69%     -  837s
+     0     0 240139.405    0 16865 238489.000 240139.405  0.69%     -  841s
+     0     0 239732.229    0 18326 238489.000 239732.229  0.52%     - 1087s
+     0     0 239562.227    0 18481 238489.000 239562.227  0.45%     - 1426s
+     0     0 239502.772    0 16722 238489.000 239502.772  0.43%     - 1518s
+     0     0 239457.175    0 16011 238489.000 239457.175  0.41%     - 1642s
+     0     0 239446.746    0 15403 238489.000 239446.746  0.40%     - 1690s
+     0     0 239443.874    0 14762 238489.000 239443.874  0.40%     - 1712s
