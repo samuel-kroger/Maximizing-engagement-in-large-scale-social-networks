@@ -1,0 +1,7 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+facebook_combined, base_model, 4039, 88234, 20, 20, NA, 33101.0, 8078, 0, 1967.0, 1967.0, NA, NA, 0, 0, 0, False, False, False, False, False, 396.51
+Brightkite_edges, base_model, 58228, 214078, 20, 20, NA, 1835.0, 116456, 0, 1153.0, 1514.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3602.38
+flickrEdges, base_model, 105938, 2316948, 20, 20, NA, 1.0, 211876, 0, 15833.0, 15833.0, NA, NA, 0, 0, 0, False, False, False, False, False, 2913.83
+facebook_combined, base_model, 4039, 88234, 20, 20, NA, 33101.0, 8078, 0, 1967.0, 1967.0, NA, NA, 0, 0, 0, False, False, False, False, False, 394.06
+Gowalla_edges, base_model, 196591, 950327, 20, 20, NA, 30.0, 393182, 0, 8385.0, 8866.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3609.54
+com-dblp.ungraph, base_model, 317080, 1049866, 20, 20, NA, 0.0, 634160, 0, -0.0, inf, NA, NA, 0, 0, 0, False, False, False, False, False, 21.8
