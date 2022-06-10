@@ -376,7 +376,7 @@
 	[
 		{
 			"filename":"facebook_combined.txt",
-			"k":20,
+			"k":17,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -390,7 +390,7 @@
 		},
 		{
 			"filename":"CA-HepPh.txt",
-			"k":20,
+			"k":4,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -404,7 +404,7 @@
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
-			"k":20,
+			"k":46,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -418,7 +418,7 @@
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
-			"k":20,
+			"k":33,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -432,7 +432,7 @@
 		},
 		{
 			"filename":"CA-CondMat.txt",
-			"k":20,
+			"k":4,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -446,7 +446,7 @@
 		},
 		{
 			"filename":"Brightkite_edges.txt",
-			"k":20,
+			"k":2,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -474,7 +474,7 @@
 		},
 		{
 			"filename":"soc-catster.edges",
-			"k":20,
+			"k":21,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -488,7 +488,7 @@
 		},
 		{
 			"filename":"Gowalla_edges.txt",
-			"k":20,
+			"k":3,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -502,7 +502,7 @@
 		},
 		{
 			"filename":"ca-citeseer.mtx",
-			"k":20,
+			"k":3,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -516,7 +516,7 @@
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
-			"k":20,
+			"k":3,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -530,7 +530,7 @@
 		},
 		{
 			"filename":"soc-dogster.edges",
-			"k":20,
+			"k":12,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -544,7 +544,7 @@
 		},
 		{
 			"filename":"soc-twitter-higgs.edges",
-			"k":20,
+			"k":17,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -558,7 +558,7 @@
 		},
 		{
 			"filename":"web-Google.txt",
-			"k":20,
+			"k":4,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -572,7 +572,7 @@
 		},
 		{
 			"filename":"web-hudong.edges",
-			"k":20,
+			"k":5,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -586,7 +586,7 @@
 		},
 		{
 			"filename":"web-baidu-baike.edges",
-			"k":20,
+			"k":3,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",

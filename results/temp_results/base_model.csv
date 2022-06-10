@@ -5,6 +5,7 @@ socfb-Syracuse56, base_model,13653,543982,46,250, NA,1333,27306,0,7642,7773, NA,
 socfb-Northeastern19, base_model,13882,381934,33,250, NA,7852,27764,0,7583,7619, NA, NA,0,0,0, False, False, False, False, False,3602.1,0.47%
 CA-CondMat, base_model,23133,93439,4,250, NA,1,46266,0,13939,13939, NA, NA,0,0,0, False, False, False, False, False,8.21,0.00%
 Brightkite_edges, base_model,58228,214078,2,250, NA,1,116456,0,35267,35267, NA, NA,0,0,0, False, False, False, False, False,16.4,0.00%
+flickrEdges, base_model,105938,2316948,4,250, NA,1,211876,0,105388,105388, NA, NA,0,0,0, False, False, False, False, False,50.94,
 soc-catster.e, base_model,149684,5448197,21,250, NA,2255,299368,0,79561,79616, NA, NA,0,0,0, False, False, False, False, False,3627.49,0.07%
 Gowalla_edges, base_model,196591,950327,3,250, NA,1,393182,0,107299,107299, NA, NA,0,0,0, False, False, False, False, False,108.17,0.00%
 ca-citeseer, base_model,227320,814134,3,250, NA,1,454640,0,153765,153765, NA, NA,0,0,0, False, False, False, False, False,137.67,0.00%

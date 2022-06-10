@@ -1,5 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-facebook_combined, reduced_model, 4039, 88234, 20, 250, NA, 9792.0, 2672, 1854, 2275.0, 2275.0, NA, NA, 0, 0, 0, False, False, False, False, False, 11.68
-CA-HepPh, reduced_model, 12006, 118489, 20, 250, NA, 30586.0, 10632, 1967, 2167.0, 2178.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3600.79
-socfb-Syracuse56, reduced_model, 13653, 543982, 20, 250, NA, 1.0, 3038, 10858, 11081.0, 11081.0, NA, NA, 0, 0, 0, False, False, False, False, False, 4.8
-socfb-Northeastern19, reduced_model, 13882, 381934, 20, 250, NA, 1.0, 4514, 9771, 10072.0, 10072.0, NA, NA, 0, 0, 0, False, False, False, False, False, 3.75

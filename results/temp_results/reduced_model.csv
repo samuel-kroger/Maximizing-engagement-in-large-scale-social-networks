@@ -5,7 +5,7 @@ socfb-Syracuse56, reduced_model,13653,543982,46,250, NA,11269,8085,6985,7641,773
 socfb-Northeastern19, reduced_model,13882,381934,33,250, NA,35586,8120,7008,7586,7620, NA, NA,0,0,0, False, False, False, False, False,3602.79,0.45%
 CA-CondMat, reduced_model,23133,93439,4,250, NA,1,10848,13464,13939,13939, NA, NA,0,0,0, False, False, False, False, False,1.25,0.00%
 Brightkite_edges, reduced_model,58228,214078,2,250, NA,29,25887,34706,35267,35267, NA, NA,0,0,0, False, False, False, False, False,2.53,0.00%
-FLICKR?,,,,,,,,,,,,,,,,,,,,,,,#DIV/0!
+flickrEdges, reduced_model,105938,2316948,4,250, NA,0,554,105386,105388,105388, NA, NA,0,0,0, False, False, False, False, False,33.77,
 soc-catster.e, reduced_model,149684,5448197,21,250, NA,1,72742,78945,79561,79561, NA, NA,0,0,0, False, False, False, False, False,1083.53,0.00%
 Gowalla_edges, reduced_model,196591,950327,3,250, NA,1,100437,106417,107299,107299, NA, NA,0,0,0, False, False, False, False, False,17.74,0.00%
 ca-citeseer, reduced_model,227320,814134,3,250, NA,1260,82847,152966,153765,153765, NA, NA,0,0,0, False, False, False, False, False,18.42,0.00%
