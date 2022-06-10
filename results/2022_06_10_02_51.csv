@@ -1,0 +1,9 @@
+instance, k, b, rcm, rcmtime, total_time
+facebook_combined.txt, 20, 250, 293, 0.24, 
+CA-HepPh.txt, 20, 250, 7, 16.5, 
+socfb-Syracuse56.mtx, 20, 250, 215, 2.23, 
+socfb-Northeastern19.mtx, 20, 250, 258, 1.61, 
+CA-CondMat.txt, 20, 250, 12, 85.05, 
+Brightkite_edges.txt, 20, 250, 30, 1567.4, 
+flickrEdges.txt, 5, 250, 5, 19.65, 
+soc-catster.edges, 20, 250, 371, 1040.87, 
