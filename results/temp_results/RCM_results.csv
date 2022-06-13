@@ -1,0 +1,19 @@
+instance, k, b, rcm, rcmtime, total_time,rcm + kcore
+facebook_combined.txt,17,250,411,0.21,2061,2472
+CA-HepPh.txt,4,250,375,0.66,6591,6966
+socfb-Syracuse56.mtx,46,250,21,16.92,6985,7006
+socfb-Northeastern19.mtx,33,250,44,12.28,7008,7052
+CA-CondMat.txt,4,250,447,1.96,13464,13911
+Brightkite_edges.txt,2,250,560,5.82,34706,35266
+flickrEdges.txt,5,250,5,20.53,105386,105391
+soc-catster.edges,21,250,450,1071.3,78945,79395
+Gowalla_edges.txt,3,250,843,114.44,106417,107260
+ca-citeseer.mtx,3,250,711,97.49,152966,153677
+com-dblp.ungraph.txt,3,250,744,169.02,204031,204775
+soc-dogster.edges,12,250,707,551.24,214490,215197
+soc-twitter-higgs.edges,17,250,606,1249.98,231419,232025
+web-Google.txt,4,250,1389,5015.32,492655,494044
+web-hudong.edges,5,250,1008,3827.08,1055322,1056330
+web-baidu-baike.edges,3,250,880,2327.67,1277646,1278526
+facebook_combined.txt,20,20,48,1.81,1854,1902
+Brightkite_edges.txt,20,20,10,1601.9,947,957
