@@ -27,7 +27,8 @@ def fractional_callback(m, where):
 	b_best_anchors = list(dict(sorted(y_sol.iteritems(), key=operator.itemgetter(1), reverse=True)[:10*b]).keys())
 
 	#THESE NEEDS TO BE UPDATED
-	resulting_k_core = heuristic.anchored_k_core(G, k, b_best_anchors)
+	#resulting_k_core = heuristic.anchored_k_core(G, k, b_best_anchors)
+	resulting_k_core = classes.anchored_k_core(G, k, b_best_anchors)
 	'''
 	outside_k_core = [vertex for vertex in R if vertex not in resulting_k_core]
 
@@ -44,7 +45,7 @@ def fractional_callback(m, where):
 	for vertex in R:
 		if vertex not in resulting_k_core:
 			if x_sol[vertex] + y_sol[vertex] > threshold:
-				print('VIOLATION: ', sum(y_sol[i] for i in b_best_anchors) + x_sol[vertex] + y_sol[vertex] - b)
+				#print('VIOLATION: ', sum(y_sol[i] for i in b_best_anchors) + x_sol[vertex] + y_sol[vertex] - b)
 
 				m.cbLazy(grb.quicksum(m._Y[i] for i in b_best_anchors) + m._X[vertex] +m._Y[vertex] <= b)
 				break

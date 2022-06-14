@@ -377,7 +377,7 @@
 		{
 			"filename":"facebook_combined.txt",
 			"k":17,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -391,7 +391,7 @@
 		{
 			"filename":"CA-HepPh.txt",
 			"k":4,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -405,7 +405,7 @@
 		{
 			"filename":"socfb-Syracuse56.mtx",
 			"k":46,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -419,7 +419,7 @@
 		{
 			"filename":"socfb-Northeastern19.mtx",
 			"k":33,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -433,7 +433,7 @@
 		{
 			"filename":"CA-CondMat.txt",
 			"k":4,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -447,7 +447,7 @@
 		{
 			"filename":"Brightkite_edges.txt",
 			"k":2,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -461,7 +461,7 @@
 		{
 			"filename":"flickrEdges.txt",
 			"k":5,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -475,7 +475,7 @@
 		{
 			"filename":"soc-catster.edges",
 			"k":21,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -489,7 +489,7 @@
 		{
 			"filename":"Gowalla_edges.txt",
 			"k":3,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -503,7 +503,7 @@
 		{
 			"filename":"ca-citeseer.mtx",
 			"k":3,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -517,7 +517,7 @@
 		{
 			"filename":"com-dblp.ungraph.txt",
 			"k":3,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -531,7 +531,7 @@
 		{
 			"filename":"soc-dogster.edges",
 			"k":12,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -545,7 +545,7 @@
 		{
 			"filename":"soc-twitter-higgs.edges",
 			"k":17,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -559,7 +559,7 @@
 		{
 			"filename":"web-Google.txt",
 			"k":4,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -573,7 +573,7 @@
 		{
 			"filename":"web-hudong.edges",
 			"k":5,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
@@ -587,7 +587,7 @@
 		{
 			"filename":"web-baidu-baike.edges",
 			"k":3,
-			"b":10,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
