@@ -1,0 +1,84 @@
+
+Gurobi 9.5.1 (linux64) logging started Wed Jun 15 06:25:47 2022
+
+Set parameter LogFile to value "../results/logs/log_com-youtube.ungraph_20_20_2022_06_14_14_44.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 44667 rows, 2269780 columns and 2762253 nonzeros
+Model fingerprint: 0x1c2d54a8
+Variable types: 0 continuous, 2269780 integer (2269780 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective 18890.000000
+Presolve added 1 rows and 0 columns
+Presolve removed 0 rows and 1131446 columns
+Presolve time: 3.74s
+Presolved: 44668 rows, 1138334 columns, 1892454 nonzeros
+Variable types: 0 continuous, 1138334 integer (1138333 binary)
+Found heuristic solution: objective 18914.000000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.8890000e+04   0.000000e+00   1.806750e+04      6s
+   11772    2.0089937e+04   0.000000e+00   5.764584e+05     10s
+   16010    2.1457086e+04   0.000000e+00   1.172356e+04     26s
+   18503    2.2200038e+04   0.000000e+00   5.800621e+03     44s
+   21358    2.3135489e+04   0.000000e+00   5.117555e+03     77s
+   24168    2.3598993e+04   0.000000e+00   3.525782e+03    113s
+   26980    2.4099123e+04   0.000000e+00   1.263954e+03    176s
+   29134    2.4702061e+04   0.000000e+00   5.153509e+01    237s
+   29174    2.4721937e+04   0.000000e+00   0.000000e+00    239s
+Concurrent spin time: 42.03s
+
+Solved with primal simplex
+
+Root relaxation: objective 2.472194e+04, 29174 iterations, 276.57 seconds (438.40 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 24721.9366    0 18905 18914.0000 24721.9366  30.7%     -  289s
+H    0     0                    18950.000000 24721.9366  30.5%     -  289s
+H    0     0                    18966.000000 24721.9366  30.3%     -  292s
+     0     0 22573.7682    0 17983 18966.0000 22573.7682  19.0%     -  772s
+H    0     0                    19087.000000 22573.7682  18.3%     - 1443s
+     0     0 20988.0834    0 17320 19087.0000 20988.0834  10.0%     - 1897s
+     0     0 20324.1685    0 16389 19087.0000 20324.1685  6.48%     - 2056s
+     0     0 20088.9862    0 14906 19087.0000 20088.9862  5.25%     - 2177s
+     0     0 20024.2014    0 12978 19087.0000 20024.2014  4.91%     - 2299s
+     0     0 19974.9075    0 9871 19087.0000 19974.9075  4.65%     - 2419s
+     0     0 19956.0641    0 7514 19087.0000 19956.0641  4.55%     - 2573s
+     0     0 19949.4083    0 7626 19087.0000 19949.4083  4.52%     - 2656s
+     0     0 19946.2041    0 6135 19087.0000 19946.2041  4.50%     - 2725s
+     0     0 19944.6429    0 6260 19087.0000 19944.6429  4.49%     - 2786s
+     0     0 19944.0701    0 5287 19087.0000 19944.0701  4.49%     - 2841s
+     0     0 19943.6796    0 5114 19087.0000 19943.6796  4.49%     - 2891s
+     0     0          -    0      19087.0000 19943.6796  4.49%     - 3600s
+
+Cutting planes:
+  Cover: 2499
+  MIR: 6895
+  StrongCG: 847
+  GUB cover: 5085
+  Zero half: 92
+  RLT: 4998
+  Lazy constraints: 12
+
+Explored 1 nodes (102764 simplex iterations) in 3600.16 seconds (6092.22 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 19087 18966 18950 ... 18890
+
+Time limit reached
+Best objective 1.908700000000e+04, best bound 1.994300000000e+04, gap 4.4847%
+
+User-callback calls 140073, time in user-callback 485.15 sec

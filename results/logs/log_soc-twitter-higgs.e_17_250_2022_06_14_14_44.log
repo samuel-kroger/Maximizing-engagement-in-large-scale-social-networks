@@ -1,0 +1,85 @@
+
+Gurobi 9.5.1 (linux64) logging started Tue Jun 14 20:24:17 2022
+
+Set parameter LogFile to value "../results/logs/log_soc-twitter-higgs.e_17_250_2022_06_14_14_44.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 18469 rows, 913262 columns and 596114 nonzeros
+Model fingerprint: 0x52f72aab
+Variable types: 0 continuous, 913262 integer (913262 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 231419.00000
+Presolve removed 0 rows and 678816 columns
+Presolve time: 0.51s
+Presolved: 18469 rows, 234446 columns, 302350 nonzeros
+Variable types: 0 continuous, 234446 integer (234446 binary)
+Found heuristic solution: objective 231686.00000
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.00s
+
+Solved with primal simplex
+
+Root relaxation: objective 2.332940e+05, 7511 iterations, 0.32 seconds (0.28 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 233294.020    0 2737 231686.000 233294.020  0.69%     -    2s
+H    0     0                    231939.00000 233294.020  0.58%     -    2s
+H    0     0                    231941.00000 233294.020  0.58%     -    2s
+     0     0 232525.541    0 1459 231941.000 232525.541  0.25%     -  157s
+H    0     0                    232106.00000 232525.541  0.18%     -  158s
+H    0     0                    232319.00000 232525.541  0.09%     -  164s
+     0     0 232475.531    0 1245 232319.000 232475.531  0.07%     -  319s
+     0     0 232472.332    0 1238 232319.000 232472.332  0.07%     -  476s
+     0     0 232471.708    0 1230 232319.000 232471.708  0.07%     -  630s
+     0     0 232471.700    0 1252 232319.000 232471.700  0.07%     -  780s
+     0     0 232406.845    0 1174 232319.000 232406.845  0.04%     -  936s
+     0     0 232400.843    0 1116 232319.000 232400.843  0.04%     - 1089s
+     0     0 232399.609    0 1129 232319.000 232399.609  0.03%     - 1242s
+     0     0 232399.235    0 1120 232319.000 232399.235  0.03%     - 1394s
+     0     0 232379.341    0 1113 232319.000 232379.341  0.03%     - 1545s
+     0     0 232375.732    0 1100 232319.000 232375.732  0.02%     - 1694s
+     0     0 232374.675    0 1160 232319.000 232374.675  0.02%     - 1844s
+     0     0 232374.431    0 1130 232319.000 232374.431  0.02%     - 1990s
+     0     0 232364.033    0  941 232319.000 232364.033  0.02%     - 2137s
+     0     0 232362.430    0  951 232319.000 232362.430  0.02%     - 2287s
+     0     0 232361.833    0  996 232319.000 232361.833  0.02%     - 2435s
+     0     0 232361.754    0 1004 232319.000 232361.754  0.02%     - 2582s
+     0     0 232358.021    0  962 232319.000 232358.021  0.02%     - 2730s
+H    0     0                    232321.00000 232358.021  0.02%     - 2730s
+     0     0 232357.187    0  981 232321.000 232357.187  0.02%     - 2881s
+     0     0 232356.956    0  979 232321.000 232356.956  0.02%     - 3029s
+     0     0 232353.502    0  994 232321.000 232353.502  0.01%     - 3177s
+     0     0 232352.874    0  922 232321.000 232352.874  0.01%     - 3327s
+     0     2 232351.201    0  935 232321.000 232351.201  0.01%     - 3630s
+
+Cutting planes:
+  Cover: 1593
+  Clique: 34
+  MIR: 1293
+  StrongCG: 143
+  GUB cover: 1927
+  Zero half: 159
+  RLT: 727
+  Lazy constraints: 24
+
+Explored 1 nodes (26706 simplex iterations) in 3630.47 seconds (28.95 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 7: 232321 232319 232106 ... 231419
+
+Time limit reached
+Best objective 2.323210000000e+05, best bound 2.323510000000e+05, gap 0.0129%
+
+User-callback calls 6345, time in user-callback 3604.75 sec
