@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['reduced_model']:
+for request in data['single']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
