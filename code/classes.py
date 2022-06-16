@@ -444,11 +444,11 @@ class base_model(object):
 				#print("Is it connected? ", nx.is_connected(SUB))
 				#print("Diameter? ", nx.diameter(SUB))
 
-				print("Dijkstra list of shortest paths: ")
-				path_lengths = nx.single_source_dijkstra_path_length(SUB, root)
+				#print("Dijkstra list of shortest paths: ")
+				#path_lengths = nx.single_source_dijkstra_path_length(SUB, root)
 
-				for node in SUB.nodes():
-					print(f"node {node}: {path_lengths[node]}")
+				#for node in SUB.nodes():
+					#print(f"node {node}: {path_lengths[node]}")
 
 
 				plot = 1

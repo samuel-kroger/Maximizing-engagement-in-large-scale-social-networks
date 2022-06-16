@@ -11,12 +11,14 @@ def pretty_plot(graph, nodes_in_k_core = [], anchored_nodes = [], center = -1, p
 
 	color_values = [color_dict.get(node) for node in graph.nodes()]
 
-	plt.title('Radius {} Anchored {}-core with b = {}'.format(r,k,b))
+	plt.title('Anchored {}-core with b = {}'.format(k,b))
+	#plt.title('Radius {} Anchored {}-core with b = {}'.format(r,k,b))
 	nx.draw(graph, with_labels = True,  node_color = color_values, node_size = 500)
 	first_legend = mpatches.Patch(color='indianred', label='Nodes not in the {}-core'.format(k))
 	second_legend = mpatches.Patch(color='royalblue', label='Nodes in the {}-core'.format(k))
 	third_legend = mpatches.Patch(color='y', label='Anchored Nodes')
-	fourth_legend = mpatches.Patch(color='purple', label='The chosen center')
-	plt.legend(handles=[first_legend, second_legend, third_legend, fourth_legend])
+	#fourth_legend = mpatches.Patch(color='purple', label='The chosen center')
+	#plt.legend(handles=[first_legend, second_legend, third_legend, fourth_legend])
+	plt.legend(handles=[first_legend, second_legend, third_legend])
 	if plot_now == True:
 		plt.show()

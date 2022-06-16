@@ -2,11 +2,11 @@
 	"single":
 	[
 		{
-			"filename":"soc-dogster.edges",
-			"k":20,
-			"b":20,
+			"filename":"soc-karate.mtx",
+			"k":4,
+			"b":0,
 			"r":"NA",
-			"model_type":"base_model",
+			"model_type":"reduced_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,

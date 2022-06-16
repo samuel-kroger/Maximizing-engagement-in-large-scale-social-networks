@@ -40,7 +40,7 @@ for request in data['single']:
 	'''
 
 	instance.optimize()
-	#instance.print_model()
+	instance.print_model()
 
 	end_time = time.time()
 
