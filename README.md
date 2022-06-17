@@ -12,3 +12,13 @@ In this variant we spend a budget $b$ to expand the size of the $k$-core.
 Anchored nodes can be part of the anchored $k$-core even if the degree of the node is less than $k$.
 
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
+
+In the code directory you will find all of the code used in the paper. RCM-master comes from LASHRIM,
+The PORTA contains the PORTA software used in the paper.
+To run our models, run comp_experiment.py which will run based off of the data.json file.
+
+IN the code data you will find all the data used in the paper they are publically avialble from SNAP and NETWORK REPOSITIORY
+
+git_images contains the images in the README
+
+The results directory has csv data and log files of the runs.
