@@ -2,7 +2,7 @@
 
 Codes, data, and results for "Integer programming formulations for maximizing resilience in large-scale social networks" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
 
-The $k$-core of a graph is the maximal subgraph in which every node has degree $k$.
+The $k$-core of a graph is the maximal subgraph in which every node has degree at least $k$.
 Below we computed the $4$-core of the karate graph, here there are 10 members of the $4$-core.
 
 ![Figure 1](git_images/karate_k4b0.png?raw=true "The 4-core of the karate graph")
