@@ -1,0 +1,9 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+socfb-Syracuse56, reduced_model, 13653, 543982, 46, 250, NA, 11339.0, 8085, 6985, 7649.0, 7736.0, NA, NA, 0, 0, 0, True, False, False, False, False, 4625.26
+socfb-Northeastern19, reduced_model, 13882, 381934, 33, 250, NA, 29438.0, 8120, 7008, 7587.0, 7615.0, NA, NA, 0, 0, 0, True, False, False, False, False, 4278.44
+facebook_combined, reduced_model, 4039, 88234, 20, 20, NA, 67307.0, 2672, 1854, 1967.0, 1967.0, NA, NA, 0, 0, 0, True, False, False, False, False, 312.29
+Brightkite_edges, reduced_model, 58228, 214078, 20, 20, NA, 1946.0, 60920, 947, 1196.0, 1426.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3622.56
+flickrEdges, reduced_model, 105938, 2316948, 20, 20, NA, 87.0, 95668, 15808, 15833.0, 15837.0, NA, NA, 0, 0, 0, True, False, False, False, False, 4086.77
+Gowalla_edges, reduced_model, 196591, 950327, 20, 20, NA, 1769.0, 200539, 8161, 8436.0, 8783.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3718.56
+com-dblp.ungraph, reduced_model, 317080, 1049866, 20, 20, NA, 1.0, 329837, 3066, 3122.0, 3368.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3726.22
+com-youtube.ungraph, reduced_model, 1134890, 2987624, 20, 20, NA, 14.0, 1138333, 18890, 19089.0, 19344.0, NA, NA, 0, 0, 0, True, False, False, False, False, 3999.11
