@@ -10,7 +10,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":true,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -383,9 +383,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -397,9 +397,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -411,9 +411,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -425,9 +425,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -439,9 +439,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -453,23 +453,23 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
 			"filename":"flickrEdges.txt",
-			"k":5,
+			"k":4,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -481,9 +481,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -495,9 +495,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -509,9 +509,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -523,9 +523,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -537,9 +537,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -551,9 +551,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -565,9 +565,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -579,9 +579,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -593,9 +593,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -607,9 +607,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -621,9 +621,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -635,9 +635,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -649,9 +649,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -663,9 +663,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		},
 		{
@@ -677,9 +677,9 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
-			"fractional_callback":true,
+			"fractional_callback":false,
 			"relax":false
 		}
 	],
@@ -695,7 +695,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -709,7 +709,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additonal_facet_defining":false,
+			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
