@@ -26,7 +26,7 @@ for request in data['reduced_model']:
 	G = classes.read_graph(ext + request['filename'])
 
 	start_time = time.time()
-	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'], request['relax'])
+	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additional_facet_defining'], request['y_val_fix'], request['fractional_callback'], request['relax'])
 	if request['warm_start']:
 		#instance.remove_y_edges()
 		instance.RCM_warm_start()
