@@ -16,7 +16,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['reduced_model']:
+for request in data['single']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n k: ', request['k'],
@@ -50,7 +50,7 @@ for request in data['reduced_model']:
 
 
 	title = ['instance', 'k', 'b', 'olak', 'olak time']
-	results = [request['filename'], str(k), str(b), str(len(olak_k_core)), str(round(olak_time_end - olak_time_start, 2))]
+	results = [request['filename'], str(k), str(b), str(olak_k_core), str(round(olak_time_end - olak_time_start, 2))]
 
 	if not os.path.exists("../results/" + filename):
 			with open("../results/" + filename, "w") as doc:

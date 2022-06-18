@@ -377,6 +377,25 @@ class base_model(object):
 		for v in anc_k_core:
 			self.model._X[v].start = 1
 
+	def OLAK_warm_start(self):
+
+		self.warm_start = True
+		k_core = list(nx.k_core(self.G, self.k))
+
+		olak_time_start = time.time()
+		olak_output = list(olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b))
+
+		olak_anchors = [element for element in olak_output if element not in k_core]
+
+		anc_k_core = anchored_k_core(self.G, self.k, olak_anchors)
+
+		olak_time_end = time.time()
+
+		for v in olak_anchors:
+			self.model._Y[v].start = 1
+		for v in anc_k_core:
+			self.model._X[v].start = 1
+
 	def optimize(self):
 		G = self.G
 		k = self.k
