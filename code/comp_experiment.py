@@ -29,8 +29,8 @@ for request in data['single']:
 	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additonal_facet_defining'], request['y_val_fix'], request['fractional_callback'], request['relax'])
 	if request['warm_start']:
 		#instance.remove_y_edges()
-		#instance.RCM_warm_start()
-		instance.OLAK_warm_start()
+		instance.RCM_warm_start()
+		#instance.OLAK_warm_start()
 	'''
 	if instance.model_type == "cut_model":
 		#instance.warm_start_one()
