@@ -17,6 +17,8 @@ In the code directory you will find all of the code used in the paper. RCM-maste
 The PORTA contains the PORTA software used in the paper.
 To run our models, run comp_experiment.py which will run based off of the data.json file.
 
+## How to run the code?
+
 IN the code data you will find all the data used in the paper they are publically avialble from SNAP and NETWORK REPOSITIORY
 
 git_images contains the images in the README
