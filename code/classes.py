@@ -2,7 +2,6 @@ import networkx as nx
 import gurobipy as gp
 import pretty_plot
 import matplotlib.pyplot as plt
-import time
 import random
 import fractional_callback
 import seperation
@@ -79,6 +78,8 @@ def output_sort(element_of_output):
 		return 13
 	if element_of_output == "additonal_facet_defining":
 		return 14
+	if element_of_output == "num_additonal_constraints":
+		return 15.5
 	if element_of_output == "y_val_fix":
 		return 15
 	if element_of_output == "relax":
@@ -189,9 +190,11 @@ class base_model(object):
 
 
 		if additonal_facet_defining:
+			self.num_additonal_constraints = 0
 			for i in self.x_vals:
 				if self.G.degree(i) == self.k:
 					for u in self.G.neighbors(i):
+						self.num_additonal_constraints +=1
 						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
 						facet_defining_constraint.lazy = 3
 
