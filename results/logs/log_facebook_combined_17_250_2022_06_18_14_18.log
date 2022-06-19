@@ -80,3 +80,79 @@ Solution count 9: 2533 2532 2531 ... 2061
 
 Optimal solution found (tolerance 0.00e+00)
 Best objective 2.533000000000e+03, best bound 2.533000000000e+03, gap 0.0000%
+
+Gurobi 9.5.1 (linux64) logging started Sat Jun 18 14:18:49 2022
+
+Set parameter LogFile to value "../results/logs/log_facebook_combined_17_250_2022_06_18_14_18.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 2295 rows, 8078 columns and 31223 nonzeros
+Model fingerprint: 0x4af2e927
+Variable types: 0 continuous, 8078 integer (8078 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 2061.0000000
+Presolve removed 692 rows and 6536 columns
+Presolve time: 0.06s
+Presolved: 1603 rows, 1542 columns, 18869 nonzeros
+Extracted 638 lazy constraints
+Variable types: 0 continuous, 1542 integer (1479 binary)
+
+Root relaxation: objective 2.553824e+03, 653 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2553.82447    0   70 2061.00000 2553.82447  23.9%     -    0s
+H    0     0                    2080.0000000 2553.64705  22.8%     -    0s
+     0     0 2543.37710    0  140 2080.00000 2543.37710  22.3%     -    0s
+     0     0 2543.12134    0  150 2080.00000 2543.12134  22.3%     -    0s
+     0     0 2543.09941    0  151 2080.00000 2543.09941  22.3%     -    0s
+     0     0 2543.08049    0  152 2080.00000 2543.08049  22.3%     -    0s
+     0     0 2538.42111    0  143 2080.00000 2538.42111  22.0%     -    0s
+     0     0 2537.52894    0  122 2080.00000 2537.52894  22.0%     -    0s
+     0     0 2537.47025    0  112 2080.00000 2537.47025  22.0%     -    0s
+     0     0 2537.43302    0  113 2080.00000 2537.43302  22.0%     -    0s
+     0     0 2537.43139    0  114 2080.00000 2537.43139  22.0%     -    0s
+H    0     0                    2310.0000000 2535.80582  9.78%     -    0s
+     0     0 2535.80582    0   72 2310.00000 2535.80582  9.78%     -    0s
+H    0     0                    2517.0000000 2535.80582  0.75%     -    0s
+     0     0 2535.48898    0   65 2517.00000 2535.48898  0.73%     -    0s
+H    0     0                    2530.0000000 2535.23597  0.21%     -    0s
+     0     0 2535.23597    0   67 2530.00000 2535.23597  0.21%     -    0s
+     0     0 2535.15057    0   57 2530.00000 2535.15057  0.20%     -    0s
+     0     0 2535.12755    0   58 2530.00000 2535.12755  0.20%     -    0s
+     0     0 2535.11434    0   64 2530.00000 2535.11434  0.20%     -    0s
+     0     0 2535.11434    0   72 2530.00000 2535.11434  0.20%     -    0s
+     0     0 2534.77632    0   90 2530.00000 2534.77632  0.19%     -    0s
+H    0     0                    2531.0000000 2534.77632  0.15%     -    0s
+     0     0 2534.53041    0   80 2531.00000 2534.53041  0.14%     -    0s
+     0     0 2534.48545    0   98 2531.00000 2534.48545  0.14%     -    0s
+     0     0 2534.44213    0  108 2531.00000 2534.44213  0.14%     -    0s
+     0     0 2534.43653    0  107 2531.00000 2534.43653  0.14%     -    0s
+     0     0 2534.36103    0   80 2531.00000 2534.36103  0.13%     -    0s
+H    0     0                    2533.0000000 2534.36103  0.05%     -    0s
+     0     0 2534.26393    0   57 2533.00000 2534.26393  0.05%     -    0s
+     0     0 2534.26278    0   59 2533.00000 2534.26278  0.05%     -    0s
+     0     0 2534.00833    0   21 2533.00000 2534.00833  0.04%     -    0s
+     0     0 2534.00833    0    5 2533.00000 2534.00833  0.04%     -    0s
+     0     0 2534.00000    0    4 2533.00000 2534.00000  0.04%     -    0s
+     0     0 2533.00000    0    4 2533.00000 2533.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 1
+  MIR: 3
+  RLT: 1
+  Relax-and-lift: 1
+
+Explored 1 nodes (2483 simplex iterations) in 0.42 seconds (0.38 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 9: 2533 2533 2533 ... 2061
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.533000000000e+03, best bound 2.533000000000e+03, gap 0.0000%
