@@ -10,7 +10,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -24,7 +24,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -38,7 +38,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -52,7 +52,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -66,7 +66,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -80,7 +80,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -453,7 +453,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -467,7 +467,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -481,7 +481,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -495,7 +495,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -509,7 +509,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -523,7 +523,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -537,7 +537,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -551,7 +551,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -565,7 +565,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -579,7 +579,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -593,7 +593,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -607,7 +607,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -621,7 +621,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -635,7 +635,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -649,7 +649,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -663,7 +663,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -677,7 +677,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -691,7 +691,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -705,7 +705,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -719,7 +719,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -733,7 +733,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -747,7 +747,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -765,7 +765,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
@@ -779,7 +779,7 @@
 			"y_saturated":false,
 			"remove_y_edges":false,
 			"warm_start":false,
-			"additional_facet_defining":true,
+			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false
