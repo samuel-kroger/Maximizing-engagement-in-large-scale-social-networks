@@ -13,8 +13,11 @@ Anchored nodes can be part of the anchored $k$-core even if the degree of the no
 
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
 
-In the code directory you will find all of the code used in the paper. RCM-master comes from LASHRIM,
-The PORTA contains the PORTA software used in the paper.
+In the code directory you will find all of the code used in the paper.
+The heuristic RCM comes from the [paper](https://www.osti.gov/servlets/purl/1766701)
+The heuristic OLAK comes from the [paper](http://www.vldb.org/pvldb/vol10/p649-zhang.pdf)
+The code for the implementations of OLAK and RCM come from this [github repo](https://github.com/rlaishra/RCM/).
+The PORTA directory contains the [PORTA](http://porta.zib.de/) software used in the paper.
 To run our models, run comp_experiment.py which will run based off of the data.json file.
 
 ## How to run the code?
@@ -24,3 +27,7 @@ IN the code data you will find all the data used in the paper they are publicall
 git_images contains the images in the README
 
 The results directory has csv data and log files of the runs.
+
+```
+C:\src\comp_expermient.py
+```
