@@ -13,6 +13,7 @@ import csv
 import cut_formulation_callback
 import extended_cut_formulation_callback
 import itertools
+import time
 
 def read_graph(fname):
 	if fname.endswith('mtx'):
@@ -882,7 +883,6 @@ class cut_model(radius_bounded_model):
 					self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
 
 
-
 	def optimize(self):
 		G = self.G
 		k = self.k
@@ -899,7 +899,6 @@ class cut_model(radius_bounded_model):
 		#if not self.relax:
 		self.upper_bound = self.model.objBound
 		self.lower_bound = self.model.objVal
-
 
 class extended_cut_model(cut_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
@@ -926,7 +925,6 @@ class extended_cut_model(cut_model):
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
-
 
 class flow_model(radius_bounded_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
