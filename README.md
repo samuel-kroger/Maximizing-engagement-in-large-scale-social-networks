@@ -19,7 +19,7 @@ To run our models, run comp_experiment.py which will run based off of the data.j
 
 ## How to run the code?
 
-IN the code data you will find all the data used in the paper they are publically avialble from SNAP and NETWORK REPOSITIORY
+IN the code data you will find all the data used in the paper they are publically avialble from [SNAP](https://snap.stanford.edu/data/) and the [Network Repository](https://networkrepository.com/index.php)
 
 git_images contains the images in the README
 
