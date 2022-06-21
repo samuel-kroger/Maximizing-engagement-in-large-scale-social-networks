@@ -195,7 +195,7 @@ class base_model(object):
 			for i in self.x_vals:
 				if self.G.degree(i) == self.k:
 					for u in self.G.neighbors(i):
-						#self.num_additonal_constraints +=1
+						self.num_additonal_constraints +=1
 						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
 

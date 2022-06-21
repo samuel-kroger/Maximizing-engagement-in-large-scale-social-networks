@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['additional_facet_defining']:
+for request in data['saturated']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -40,7 +40,7 @@ for request in data['additional_facet_defining']:
 		#instance.dominated_fixing_idea_power_graph_sam()
 	'''
 
-	instance.optimize()
+	#instance.optimize()
 	#instance.print_model()
 
 	end_time = time.time()
