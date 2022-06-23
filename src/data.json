@@ -13,7 +13,342 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"relax":false,
+			"prop_9":true,
+			"prop_10":false
+		}
+	],
+	"prop_9":
+	[
+		{
+			"filename":"facebook_combined.txt",
+			"k":17,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"CA-HepPh.txt",
+			"k":4,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"socfb-Syracuse56.mtx",
+			"k":46,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"socfb-Northeastern19.mtx",
+			"k":33,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"CA-CondMat.txt",
+			"k":4,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"Brightkite_edges.txt",
+			"k":2,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"flickrEdges.txt",
+			"k":4,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"soc-catster.edges",
+			"k":21,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"Gowalla_edges.txt",
+			"k":3,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"ca-citeseer.mtx",
+			"k":3,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"com-dblp.ungraph.txt",
+			"k":3,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"soc-dogster.edges",
+			"k":12,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"soc-twitter-higgs.edges",
+			"k":17,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"web-Google.txt",
+			"k":4,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"web-hudong.edges",
+			"k":5,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"web-baidu-baike.edges",
+			"k":3,
+			"b":250,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"facebook_combined.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"Brightkite_edges.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"flickrEdges.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"Gowalla_edges.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"com-dblp.ungraph.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
+		},
+		{
+			"filename":"com-youtube.ungraph.txt",
+			"k":20,
+			"b":20,
+			"r":"NA",
+			"model_type":"reduced_model",
+			"y_saturated":false,
+			"remove_y_edges":false,
+			"warm_start":false,
+			"additional_facet_defining":false,
+			"y_val_fix":false,
+			"fractional_callback":false,
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"additional_facet_defining":
@@ -30,7 +365,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -44,7 +380,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -58,7 +395,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -72,7 +410,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -86,7 +425,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -100,7 +440,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -114,7 +455,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-catster.edges",
@@ -128,7 +470,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -142,7 +485,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"ca-citeseer.mtx",
@@ -156,7 +500,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -170,7 +515,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-dogster.edges",
@@ -184,7 +530,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-twitter-higgs.edges",
@@ -198,7 +545,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-Google.txt",
@@ -212,7 +560,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-hudong.edges",
@@ -226,7 +575,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-baidu-baike.edges",
@@ -240,7 +590,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -254,7 +605,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -268,7 +620,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -282,7 +635,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -296,7 +650,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -310,7 +665,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -324,7 +680,8 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"saturated":
@@ -341,7 +698,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -355,7 +713,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -369,7 +728,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -383,7 +743,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -397,7 +758,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -411,7 +773,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -425,7 +788,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -439,7 +803,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -453,7 +818,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -467,7 +833,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -481,7 +848,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -495,7 +863,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -509,7 +878,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -523,7 +893,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -537,7 +908,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -551,7 +923,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -565,7 +938,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -579,7 +953,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -593,7 +968,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -607,7 +983,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -621,7 +998,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -635,7 +1013,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -649,7 +1028,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -663,7 +1043,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -677,7 +1058,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -691,7 +1073,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -705,7 +1088,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -719,7 +1103,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -733,7 +1118,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -747,7 +1133,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -761,7 +1148,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -775,7 +1163,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -789,7 +1178,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -803,7 +1193,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -817,7 +1208,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -831,7 +1223,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -845,7 +1238,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -859,7 +1253,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -873,7 +1268,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -887,7 +1283,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"radius_bounded_test":
@@ -904,7 +1301,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -918,7 +1316,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -932,7 +1331,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -946,7 +1346,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -960,7 +1361,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -974,7 +1376,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -988,7 +1391,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -1002,7 +1406,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"graph_info":
@@ -1019,7 +1424,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -1033,7 +1439,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -1047,7 +1454,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -1061,7 +1469,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -1075,7 +1484,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -1089,7 +1499,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -1103,7 +1514,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-catster.edges",
@@ -1117,7 +1529,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -1131,7 +1544,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"ca-citeseer.mtx",
@@ -1145,7 +1559,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -1159,7 +1574,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-dogster.edges",
@@ -1173,7 +1589,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-twitter-higgs.edges",
@@ -1187,7 +1604,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-Google.txt",
@@ -1201,7 +1619,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -1215,7 +1634,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-hudong.edges",
@@ -1229,7 +1649,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-baidu-baike.edges",
@@ -1243,7 +1664,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"reduced_model":
@@ -1260,7 +1682,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-HepPh.txt",
@@ -1274,7 +1697,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Syracuse56.mtx",
@@ -1288,7 +1712,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"socfb-Northeastern19.mtx",
@@ -1302,7 +1727,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"CA-CondMat.txt",
@@ -1316,7 +1742,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -1330,7 +1757,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -1344,7 +1772,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-catster.edges",
@@ -1358,7 +1787,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -1372,7 +1802,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"ca-citeseer.mtx",
@@ -1386,7 +1817,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -1400,7 +1832,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-dogster.edges",
@@ -1414,7 +1847,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"soc-twitter-higgs.edges",
@@ -1428,7 +1862,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-Google.txt",
@@ -1442,7 +1877,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-hudong.edges",
@@ -1456,7 +1892,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"web-baidu-baike.edges",
@@ -1470,7 +1907,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"facebook_combined.txt",
@@ -1484,7 +1922,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Brightkite_edges.txt",
@@ -1498,7 +1937,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"flickrEdges.txt",
@@ -1512,7 +1952,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"Gowalla_edges.txt",
@@ -1526,7 +1967,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-dblp.ungraph.txt",
@@ -1540,7 +1982,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -1554,7 +1997,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	],
 	"table3_remaining":
@@ -1572,7 +2016,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		},
 		{
 			"filename":"com-youtube.ungraph.txt",
@@ -1586,7 +2031,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false
+			"prop_9":false,
+			"prop_10":false
 		}
 	]
 }

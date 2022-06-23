@@ -73,6 +73,18 @@ def output_sort(element_of_output):
 		return 10
 	if element_of_output == "y_saturated_run_time":
 		return 11
+	if element_of_output == "prop_9":
+		return 11.1
+	if element_of_output == "num_prop_9_inequalties_added":
+		return 11.2
+	if element_of_output == "prop_9_comp_time":
+		return 11.5
+	if element_of_output == "num_prop_10_inequalties_added":
+		return 11.7
+	if element_of_output == "prop_10":
+		return 11.75
+	if element_of_output == "prop_10_comp_time":
+		return 11.8
 	if element_of_output == "time_for_warm_start":
 		return 12
 	if element_of_output == "warm_start":
@@ -97,7 +109,7 @@ def anchored_k_core (G, k, purchased_nodes):
 				return (anchored_core_nodes)
 
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop_9, prop_10):
 
 		self.model = gp.Model()
 		self.model_type = model_type
@@ -115,6 +127,8 @@ class base_model(object):
 		#REVISIT
 		#self.model.params.method = 3
 		self.relax = relax
+		self.prop_9 = prop_9
+		self.prop_10 = prop_10
 
 		#every member of class
 		self.num_k_core_nodes = 0
@@ -199,6 +213,30 @@ class base_model(object):
 						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
 
+
+		if self.prop_9:
+			counter = 0
+			for v in self.G:
+				#power_graph = nx.power(self.G, self.r)
+
+
+				time1 = time.time()
+
+				v_neighbors = set(self.G.neighbors(v))
+				for u in self.G.neighbors(node):
+					if u in self.x_vals:
+						continue
+					u_neigbors = set(self.G.neighbors(u)) - {v}
+
+					if u_neigbors.issubset(v_neighbors - {u}):
+
+							self.model.addConstr(self.model._X[v] + self.model._X[v] >= self.model._Y[u])
+
+							counter += 1
+			time2 = time.time()
+			print("AAAAAAAAAAAAAA")
+			self.num_prop_9_inequalties_added = counter
+			self.prop_9_comp_time = time2 - time1
 
 		if y_val_fix:
 			for i in self.y_vals:
@@ -514,8 +552,8 @@ class base_model(object):
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
@@ -557,8 +595,8 @@ class reduced_model(base_model):
 
 
 class radius_bounded_model(base_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
 		#radius_bounded_model.dominated_fixing_idea_power_graph_sam(self)
 		self.model.addConstr(gp.quicksum(self.model._S) == 1)
@@ -817,8 +855,8 @@ class radius_bounded_model(base_model):
 
 
 class vermyev_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		DG = nx.DiGraph(self.G) # bidirected version of G
 		L = range(1, self.r + 1)
@@ -853,8 +891,8 @@ class vermyev_model(radius_bounded_model):
 
 
 class cut_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 
 		#allow lazy constraints
@@ -901,8 +939,8 @@ class cut_model(radius_bounded_model):
 		self.lower_bound = self.model.objVal
 
 class extended_cut_model(cut_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		self.model._Z = self.model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
 
@@ -927,8 +965,8 @@ class extended_cut_model(cut_model):
 		self.lower_bound = m.objVal
 
 class flow_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
 		m = self.model
 		DG = nx.DiGraph(G) # bidirected version of G
 
