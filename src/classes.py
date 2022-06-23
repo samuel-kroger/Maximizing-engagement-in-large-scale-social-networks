@@ -215,12 +215,12 @@ class base_model(object):
 
 
 		if self.prop_9:
+			time1 = time.time()
 			counter = 0
 			for v in self.G:
 				#power_graph = nx.power(self.G, self.r)
 
 
-				time1 = time.time()
 
 				v_neighbors = set(self.G.neighbors(v))
 				for u in self.G.neighbors(node):
@@ -237,6 +237,26 @@ class base_model(object):
 
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
+
+		if self.prop_10:
+			time1 = time.time()
+			counter = 0
+			for v in self.G:
+				#power_graph = nx.power(self.G, self.r)
+
+
+				for u in self.G.neighbors(node):
+					if u in self.x_vals:
+						continue
+
+
+					self.model.addConstr(self.model._X[v] + self.model._X[v] >= self.model._Y[u])
+					counter += 1
+			time2 = time.time()
+
+			self.num_prop_10_inequalties_added = counter
+			self.prop_10_comp_time = time2 - time1
+
 
 		if y_val_fix:
 			for i in self.y_vals:
