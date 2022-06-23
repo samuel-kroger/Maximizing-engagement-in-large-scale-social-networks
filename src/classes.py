@@ -234,7 +234,7 @@ class base_model(object):
 
 							counter += 1
 			time2 = time.time()
-			print("AAAAAAAAAAAAAA")
+
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
 
