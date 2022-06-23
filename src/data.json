@@ -32,7 +32,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -47,7 +48,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -62,7 +64,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -77,7 +80,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -92,7 +96,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -107,7 +112,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -122,7 +128,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -137,7 +144,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -152,7 +160,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -167,7 +176,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -182,7 +192,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -197,7 +208,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -212,7 +224,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -227,7 +240,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -242,7 +256,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -257,7 +272,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -272,7 +288,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -287,7 +304,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -302,7 +320,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -317,7 +336,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -332,7 +352,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		},
 		{
@@ -347,7 +368,8 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"prop_9":false,
+			"relax":false,
+			"prop_9":true,
 			"prop_10":false
 		}
 	],
@@ -365,6 +387,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -380,6 +403,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -395,6 +419,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -410,6 +435,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -425,6 +451,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -440,6 +467,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -455,6 +483,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -470,6 +499,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -485,6 +515,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -500,6 +531,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -515,6 +547,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -530,6 +563,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -545,6 +579,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -560,6 +595,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -575,6 +611,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -590,6 +627,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -605,6 +643,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -620,6 +659,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -635,6 +675,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -650,6 +691,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -665,6 +707,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -680,6 +723,7 @@
 			"additional_facet_defining":true,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
@@ -698,6 +742,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -713,6 +758,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -728,6 +774,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -743,6 +790,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -758,6 +806,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -773,6 +822,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -788,6 +838,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -803,6 +854,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -818,6 +870,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -833,6 +886,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -848,6 +902,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -863,6 +918,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -878,6 +934,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -893,6 +950,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -908,6 +966,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -923,6 +982,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -938,6 +998,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -953,6 +1014,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -968,6 +1030,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -983,6 +1046,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -998,6 +1062,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1013,6 +1078,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1028,6 +1094,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1043,6 +1110,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1058,6 +1126,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1073,6 +1142,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1088,6 +1158,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1103,6 +1174,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1118,6 +1190,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1133,6 +1206,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1148,6 +1222,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1163,6 +1238,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1178,6 +1254,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1193,6 +1270,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1208,6 +1286,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1223,6 +1302,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1238,6 +1318,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1253,6 +1334,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1268,6 +1350,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1283,6 +1366,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
@@ -1301,6 +1385,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1316,6 +1401,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1331,6 +1417,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1346,6 +1433,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1361,6 +1449,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1376,6 +1465,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1391,6 +1481,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1406,6 +1497,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
@@ -1424,6 +1516,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1439,6 +1532,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1454,6 +1548,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1469,6 +1564,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1484,6 +1580,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1499,6 +1596,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1514,6 +1612,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1529,6 +1628,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1544,6 +1644,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1559,6 +1660,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1574,6 +1676,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1589,6 +1692,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1604,6 +1708,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1619,6 +1724,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1634,6 +1740,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1649,6 +1756,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1664,6 +1772,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
@@ -1682,6 +1791,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1697,6 +1807,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1712,6 +1823,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1727,6 +1839,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1742,6 +1855,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1757,6 +1871,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1772,6 +1887,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1787,6 +1903,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1802,6 +1919,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1817,6 +1935,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1832,6 +1951,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1847,6 +1967,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1862,6 +1983,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1877,6 +1999,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1892,6 +2015,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1907,6 +2031,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1922,6 +2047,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1937,6 +2063,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1952,6 +2079,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1967,6 +2095,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1982,6 +2111,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -1997,6 +2127,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
@@ -2016,6 +2147,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		},
@@ -2031,6 +2163,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
+			"relax":false,
 			"prop_9":false,
 			"prop_10":false
 		}
