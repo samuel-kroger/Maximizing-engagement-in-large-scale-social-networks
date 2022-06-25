@@ -222,7 +222,7 @@ class base_model(object):
 
 
 				v_neighbors = set(self.G.neighbors(v))
-				for u in self.G.neighbors(node):
+				for u in v_neighbors:
 					if u in self.x_vals:
 						continue
 					u_neigbors = set(self.G.neighbors(u)) - {v}
@@ -249,7 +249,7 @@ class base_model(object):
 
 
 				if fix == True:
-					self.model._Y[fix].ub = 0
+					self.model._Y[v].ub = 0
 					counter += 1
 			time2 = time.time()
 
