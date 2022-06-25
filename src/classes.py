@@ -79,7 +79,7 @@ def output_sort(element_of_output):
 		return 11.2
 	if element_of_output == "prop_9_comp_time":
 		return 11.5
-	if element_of_output == "num_prop_10_inequalties_added":
+	if element_of_output == "num_prop_10_fixings":
 		return 11.7
 	if element_of_output == "prop_10":
 		return 11.75
@@ -187,7 +187,7 @@ class base_model(object):
 			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
 
 
-		# objective function 
+		# objective function
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
 
 
@@ -221,7 +221,6 @@ class base_model(object):
 				#power_graph = nx.power(self.G, self.r)
 
 
-
 				v_neighbors = set(self.G.neighbors(v))
 				for u in self.G.neighbors(node):
 					if u in self.x_vals:
@@ -242,19 +241,19 @@ class base_model(object):
 			time1 = time.time()
 			counter = 0
 			for v in self.G:
-				#power_graph = nx.power(self.G, self.r)
-
-
+				fix = True
 				for u in self.G.neighbors(node):
 					if u in self.x_vals:
-						continue
+						fix = False
+						break
 
 
-					self.model.addConstr(self.model._X[v] + self.model._X[v] >= self.model._Y[u])
+				if fix == True:
+					self.model._Y[fix].ub = 0
 					counter += 1
 			time2 = time.time()
 
-			self.num_prop_10_inequalties_added = counter
+			self.num_prop_10_fixings = counter
 			self.prop_10_comp_time = time2 - time1
 
 
