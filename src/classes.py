@@ -265,7 +265,7 @@ class base_model(object):
 			counter = 0
 			for v in self.G:
 				fix = True
-				for u in self.G.neighbors(node):
+				for u in self.G.neighbors(v):
 					if u in self.x_vals:
 						fix = False
 						break
