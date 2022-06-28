@@ -213,7 +213,7 @@ class base_model(object):
 						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
 
-
+		'''
 		if self.prop_9:
 			time1 = time.time()
 			counter = 0
@@ -234,6 +234,29 @@ class base_model(object):
 							counter += 1
 			time2 = time.time()
 
+			self.num_prop_9_inequalties_added = counter
+			self.prop_9_comp_time = time2 - time1
+		'''
+		if self.prop_9:
+			time1 = time.time()
+			counter = 0
+			path_length_dict = dict(nx.all_pairs_shortest_path_length(self.G))
+			for u,v in itertools.combinations(self.G.nodes(), 2):
+				#if u in self.x_vals:
+				#	continue
+				if path_length_dict[u][v] > 2:
+					continue
+
+				v_neighbors = set(self.G.neighbors(v)) - {u}
+				u_neighbors = set(self.G.neighbors(u)) - {v}
+				if u_neighbors < v_neighbors and u not in self.x_vals:
+					self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
+					counter+=1
+
+				if v_neighbors < u_neighbors and v not in self.x_vals:
+					self.model.addConstr(self.model._X[u] + self.model._Y[u] >= self.model._Y[v])
+					counter+=1
+			time2 = time.time()
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
 
