@@ -1,0 +1,2 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_10_fixings, prop_10, prop_10_comp_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+com-dblp.ungraph, reduced_model, 317080, 1049866, 3, 250, NA, 1950.0, 124059, 204031, 204857.0, 204857.0, NA, NA, 0, 0, 0, False, 1920, True, 1.67, False, False, False, False, False, 22.8
