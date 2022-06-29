@@ -288,7 +288,7 @@ class base_model(object):
 				self.G.nodes[v]["y_fixable"] = True
 
 			for v in self.x_vals:
-				for u in nx.neighbors(v):
+				for u in self.G.neighbors(v):
 					self.G.nodes[u]["y_fixable"] = False
 
 			for v in self.G:
