@@ -2,8 +2,8 @@
 	"single":
 	[
 		{
-			"filename":"com-dblp.ungraph.txt",
-			"k":3,
+			"filename":"CA-HepPh.txt",
+			"k":4,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
@@ -14,8 +14,8 @@
 			"y_val_fix":false,
 			"fractional_callback":false,
 			"relax":false,
-			"prop_9":false,
-			"prop_10":true
+			"prop_9":true,
+			"prop_10":false
 		}
 	],
 	"prop_9":

@@ -244,7 +244,11 @@ class base_model(object):
 			for u,v in itertools.combinations(self.G.nodes(), 2):
 				#if u in self.x_vals:
 				#	continue
-				if path_length_dict[u][v] > 2:
+
+				try:
+					if path_length_dict[u][v] > 2:
+						continue
+				except KeyError as e:
 					continue
 
 				v_neighbors = set(self.G.neighbors(v)) - {u}
