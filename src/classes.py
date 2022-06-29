@@ -260,6 +260,7 @@ class base_model(object):
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
 
+		'''
 		if self.prop_10:
 			time1 = time.time()
 			counter = 0
@@ -278,7 +279,26 @@ class base_model(object):
 
 			self.num_prop_10_fixings = counter
 			self.prop_10_comp_time = time2 - time1
+		'''
+		if self.prop_10:
+			time1 = time.time()
+			counter = 0
 
+			for v in self.G.nodes():
+				self.G[v]['y_fixable'] = True
+
+			for v in x_vals:
+				for u in nx.neighbors(v):
+					self.G[u]['y_fixable'] = False
+
+			for v in self.G:
+				if self.G[v]["y_fixable"]:
+					self.model._Y[v].ub = 0
+					counter += 1
+			time2 = time.time()
+
+			self.num_prop_10_fixings = counter
+			self.prop_10_comp_time = time2 - time1
 
 		if y_val_fix:
 			for i in self.y_vals:
