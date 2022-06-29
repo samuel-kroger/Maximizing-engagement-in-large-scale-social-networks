@@ -285,14 +285,14 @@ class base_model(object):
 			counter = 0
 
 			for v in self.G.nodes():
-				self.G[v]['y_fixable'] = True
+				self.G.nodes[v]["y_fixable"] = True
 
-			for v in x_vals:
+			for v in self.x_vals:
 				for u in nx.neighbors(v):
-					self.G[u]['y_fixable'] = False
+					self.G.nodes[u]["y_fixable"] = False
 
 			for v in self.G:
-				if self.G[v]["y_fixable"]:
+				if self.G.nodes[v]["y_fixable"]:
 					self.model._Y[v].ub = 0
 					counter += 1
 			time2 = time.time()
