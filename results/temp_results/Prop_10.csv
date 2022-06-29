@@ -1,0 +1,23 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_10_fixings, prop_10, prop_10_comp_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time,
+facebook_combined, reduced_model,4039,88234,17,250, NA,1,2479,2061,2533,2533, NA, NA,0,0,0, False,0, True,0.01, False, False, False, False, False,0.9,0.00%
+CA-HepPh, reduced_model,12006,118489,4,250, NA,1,6049,6591,6978,6978, NA, NA,0,0,0, False,748, True,0.3, False, False, False, False, False,1.14,0.00%
+socfb-Syracuse56, reduced_model,13653,543982,46,250, NA,8699,8085,6985,7642,7731, NA, NA,0,0,0, False,205, True,0.8, False, False, False, False, False,3605.07,1.15%
+socfb-Northeastern19, reduced_model,13882,381934,33,250, NA,37310,8120,7008,7585,7621, NA, NA,0,0,0, False,239, True,0.67, False, False, False, False, False,3603.53,0.47%
+CA-CondMat, reduced_model,23133,93439,4,250, NA,1,10848,13464,13939,13939, NA, NA,0,0,0, False,1605, True,1.25, False, False, False, False, False,2.51,0.00%
+Brightkite_edges, reduced_model,58228,214078,2,250, NA,29,25887,34706,35267,35267, NA, NA,0,0,0, False,830, True,4.12, False, False, False, False, False,6.68,0.00%
+flickrEdges, reduced_model,105938,2316948,4,250, NA,0,554,105386,105388,105388, NA, NA,0,0,0, False,178, True,38.62, False, False, False, False, False,73.64,0.00%
+soc-catster.e, reduced_model,149684,5448197,21,250, NA,1,72742,78945,79561,79561, NA, NA,0,0,0, False,3282, True,70.39, False, False, False, False, False,1157.2,0.00%
+Gowalla_edges, reduced_model,196591,950327,3,250, NA,1,100437,106417,107299,107299, NA, NA,0,0,0, False,3991, True,49.14, False, False, False, False, False,66.83,0.00%
+ca-citeseer, reduced_model,227320,814134,3,250, NA,1716,82847,152966,153765,153765, NA, NA,0,0,0, False,1570, True,372.75, False, False, False, False, False,394.92,0.00%
+com-dblp.ungraph, reduced_model,317080,1049866,3,250, NA,1950,124059,204031,204857,204857, NA, NA,0,0,0, False,1920, True,276.76, False, False, False, False, False,297.13,0.00%
+soc-dogster.e, reduced_model,426816,8543549,12,250, NA,107,221076,214490,215343,215343, NA, NA,0,0,0, False,7245, True,1515.76, False, False, False, False, False,2001.23,0.00%
+soc-twitter-higgs.e, reduced_model,456631,12508442,17,250, NA,3879,234446,231419,232329,232329, NA, NA,0,0,0, False,3852, True,875.62, False, False, False, False, False,2132.67,0.00%
+web-Google, reduced_model,875713,4322051,4,250, NA,2747,429949,492655,494579,494579, NA, NA,0,0,0, False,19600, True,5141.65, False, False, False, False, False,5435.24,0.00%
+web-hudong.e, reduced_model,1974655,14428382,5,250, NA,1515,959493,1055322,1056519,1056519, NA, NA,0,0,0, False,32875, True,13981.48, False, False, False, False, False,14753.49,0.00%
+web-baidu-baike.e, reduced_model,2140198,17014946,3,250, NA,1,895053,1277646,1278551,1278551, NA, NA,0,0,0, False,47591, True,19380.94, False, False, False, False, False,20401.72,0.00%
+facebook_combined, reduced_model,4039,88234,20,20, NA,62619,2672,1854,1967,1967, NA, NA,0,0,0, False,1, True,0.01, False, False, False, False, False,301.5,0.00%
+Brightkite_edges, reduced_model,58228,214078,20,20, NA,3352,60920,947,1174,1452, NA, NA,0,0,0, False,20376, True,1.46, False, False, False, False, False,3602.82,19.15%
+flickrEdges, reduced_model,105938,2316948,20,20, NA,69,95668,15808,15833,15838, NA, NA,0,0,0, False,6674, True,63.1, False, False, False, False, False,3693.18,0.03%
+Gowalla_edges, reduced_model,196591,950327,20,20, NA,2161,200539,8161,8433,8779, NA, NA,0,0,0, False,61051, True,37.35, False, False, False, False, False,3648.41,3.94%
+com-dblp.ungraph, reduced_model,317080,1049866,20,20, NA,1,329837,3066,3123,3368, NA, NA,0,0,0, False,114050, True,127.27, False, False, False, False, False,3738.1,7.27%
+com-youtube.ungraph, reduced_model,1134890,2987624,20,20, NA,14,1138333,18890,19088,19346, NA, NA,0,0,0, False,395007, True,448.84, False, False, False, False, False,4092.55,1.33%
