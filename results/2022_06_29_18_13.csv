@@ -1,3 +1,4 @@
 instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_10_fixings, prop_10, prop_10_comp_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
 facebook_combined, reduced_model, 4039, 88234, 17, 250, NA, 1.0, 2479, 2061, 2533.0, 2533.0, NA, NA, 0, 0, 0, False, 0, True, 0.13, False, False, False, False, False, 1.53
 CA-HepPh, reduced_model, 12006, 118489, 4, 250, NA, 1.0, 6049, 6591, 6978.0, 6978.0, NA, NA, 0, 0, 0, False, 748, True, 0.22, False, False, False, False, False, 1.63
+CA-HepPh, reduced_model, 12006, 118489, 4, 250, NA, 1.0, 6049, 6591, 6978.0, 6978.0, NA, NA, 0, 0, 0, True, 51854, 374.76, False, False, False, False, False, False, 377.61
