@@ -172,6 +172,27 @@ class base_model(object):
 			if b < k:
 				self.remove_all_y_saturated_nodes()
 
+		if self.prop_10:
+			time1 = time.time()
+			counter = 0
+
+			for v in self.G.nodes():
+				self.G.nodes[v]["y_fixable"] = True
+
+			for v in self.x_vals:
+				for u in self.G.neighbors(v):
+					self.G.nodes[u]["y_fixable"] = False
+
+			for v in self.G:
+				if self.G.nodes[v]["y_fixable"]:
+					self.model._Y[v].ub = 0
+					counter += 1
+			time2 = time.time()
+
+			self.num_prop_10_fixings = counter
+			self.prop_10_comp_time = time2 - time1
+
+
 		#set up model
 		self.model._G = G
 		self.model._b = b
@@ -284,39 +305,8 @@ class base_model(object):
 			self.num_prop_10_fixings = counter
 			self.prop_10_comp_time = time2 - time1
 		'''
-		if self.prop_10:
-			time1 = time.time()
-			counter = 0
 
-			for v in self.G.nodes():
-				self.G.nodes[v]["y_fixable"] = True
 
-			for v in self.x_vals:
-				for u in self.G.neighbors(v):
-					self.G.nodes[u]["y_fixable"] = False
-
-			for v in self.G:
-				if self.G.nodes[v]["y_fixable"]:
-					self.model._Y[v].ub = 0
-					counter += 1
-			time2 = time.time()
-
-			self.num_prop_10_fixings = counter
-			self.prop_10_comp_time = time2 - time1
-
-		if y_val_fix:
-			for i in self.y_vals:
-				fix = True
-				for j in self.G.neighbors(i):
-					if j in self.x_vals:
-						fix = False 
-						break
-				if fix:
-					self.model._Y[i].ub = 0
-					var_num -= 1
-			#		couter += 1
-			#for j in range(50):
-			#	print(couter)
 
 	def warm_start_test (self):
 
