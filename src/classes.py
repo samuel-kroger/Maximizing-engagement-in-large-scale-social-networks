@@ -267,9 +267,17 @@ class base_model(object):
 
 			for u in self.y_vals:
 				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
-				print("BREAK")
-				for key in u_path_length_dict:
-					print(key)
+				u_neigbors = self.G.neighbors(u)
+				for v in u_path_length_dict:
+					v_neighbors = set(self.G.neighbors(v)) - {u}
+
+					if u_neigbors - {v} < v_neighbors:
+
+						self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
+						counter+=1
+			time2 = time.time()
+			self.num_prop_9_inequalties_added = counter
+			self.prop_9_comp_time = time2 - time1
 		'''
 		if self.prop_9:
 			time1 = time.time()
