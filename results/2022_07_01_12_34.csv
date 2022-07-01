@@ -1,0 +1,2 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_9_inequalties_added, prop_9_comp_time, prop_10, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+CA-HepPh, reduced_model, 12006, 118489, 4, 250, NA, 1.0, 6049, 6591, 6978.0, 6978.0, NA, NA, 0, 0, 0, True, 51854, 7.28, False, False, False, False, False, False, 8.36
