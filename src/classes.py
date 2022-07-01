@@ -168,6 +168,8 @@ class base_model(object):
 			else:
 				self.y_vals.append(node)
 
+
+
 		if y_saturated:
 			if b < k:
 				self.remove_all_y_saturated_nodes()
@@ -258,13 +260,22 @@ class base_model(object):
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
 		'''
+
+		if self.prop_9:
+			time1 = time.time()
+			counter = 0
+
+			for u in self.y_vals:
+				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
+				print("BREAK")
+				for key in u_path_length_dict:
+					print(key)
+		'''
 		if self.prop_9:
 			time1 = time.time()
 			counter = 0
 			path_length_dict = dict(nx.all_pairs_shortest_path_length(self.G))
 			for u,v in itertools.combinations(self.G.nodes(), 2):
-				#if u in self.x_vals:
-				#	continue
 
 				try:
 					if path_length_dict[u][v] > 2:
@@ -274,6 +285,7 @@ class base_model(object):
 
 				v_neighbors = set(self.G.neighbors(v)) - {u}
 				u_neighbors = set(self.G.neighbors(u)) - {v}
+
 				if u_neighbors < v_neighbors and u not in self.x_vals:
 					self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
 					counter+=1
@@ -284,7 +296,7 @@ class base_model(object):
 			time2 = time.time()
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
-
+		'''
 		'''
 		if self.prop_10:
 			time1 = time.time()

@@ -11,3 +11,13 @@ Gowalla_edges, reduced_model,196591,950327,3,250, NA,1,100437,106417,107299,1072
 ca-citeseer, reduced_model,227320,814134,3,250, NA,1782,82847,152966,153765,153765, NA, NA,0,0,0, False,1570, True,1.23, False, False, False, False, False,20.78,0.00%
 com-dblp.ungraph, reduced_model,317080,1049866,3,250, NA,1950,124059,204031,204857,204857, NA, NA,0,0,0, False,1920, True,1.63, False, False, False, False, False,22.49,0.00%
 soc-dogster.e, reduced_model,426816,8543549,12,250, NA,107,221076,214490,215343,215343, NA, NA,0,0,0, False,7245, True,10.49, False, False, False, False, False,486.92,0.00%
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+web-hudong.e, reduced_model,1974655,14428382,5,250, NA,1515,959493,1055322,1056519,1056519, NA, NA,0,0,0, False,32875, True,24.8, False, False, False, False, False,793.55,
+web-baidu-baike.e, reduced_model,2140198,17014946,3,250, NA,1,895053,1277646,1278551,1278551, NA, NA,0,0,0, False,47591, True,30.57, False, False, False, False, False,1026.45,
+facebook_combined, reduced_model,4039,88234,20,20, NA,62619,2672,1854,1967,1967, NA, NA,0,0,0, False,1, True,0.07, False, False, False, False, False,310.37,
+Brightkite_edges, reduced_model,58228,214078,20,20, NA,3351,60920,947,1174,1452, NA, NA,0,0,0, False,20376, True,0.21, False, False, False, False, False,3601.6,
+flickrEdges, reduced_model,105938,2316948,20,20, NA,69,95668,15808,15833,15838, NA, NA,0,0,0, False,6674, True,2.88, False, False, False, False, False,3631.95,
+Gowalla_edges, reduced_model,196591,950327,20,20, NA,2174,200539,8161,8433,8779, NA, NA,0,0,0, False,61051, True,0.92, False, False, False, False, False,3609.7,
+com-dblp.ungraph, reduced_model,317080,1049866,20,20, NA,1,329837,3066,3123,3368, NA, NA,0,0,0, False,114050, True,0.98, False, False, False, False, False,3612.48,
+com-youtube.ungraph, reduced_model,1134890,2987624,20,20, NA,14,1138333,18890,19088,19346, NA, NA,0,0,0, False,395007, True,3.75, False, False, False, False, False,3649.15,
