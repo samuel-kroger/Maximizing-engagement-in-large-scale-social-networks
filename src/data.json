@@ -387,7 +387,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -403,7 +403,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -419,7 +419,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -435,7 +435,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -451,7 +451,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -467,7 +467,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -483,7 +483,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -499,7 +499,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -515,7 +515,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -531,7 +531,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -547,7 +547,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -563,7 +563,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -579,7 +579,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -595,7 +595,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -611,7 +611,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -627,7 +627,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -643,7 +643,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -659,7 +659,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -675,7 +675,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -691,7 +691,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -707,7 +707,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		},
@@ -723,7 +723,7 @@
 			"additional_facet_defining":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":false,
+			"relax":true,
 			"prop_9":false,
 			"prop_10":true
 		}
