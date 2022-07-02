@@ -15,7 +15,6 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['prop_10']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],

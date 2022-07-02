@@ -268,9 +268,12 @@ class base_model(object):
 			counter = 0
 
 			for u in self.y_vals:
+				print("Starting vertex ", u, " out of ", len(self.y_vals))
 				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
 				u_neigbors = set(self.G.neighbors(u))
-				for v in u_path_length_dict:
+				print('POINT A')
+				for v in u_path_length_dict:-
+					print("POINT B")
 					v_neighbors = set(self.G.neighbors(v)) - {u}
 
 					if u_neigbors - {v} < v_neighbors:
