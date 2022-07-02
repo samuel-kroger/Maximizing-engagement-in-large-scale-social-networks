@@ -1,0 +1,8 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_9_inequalties_added, prop_9_comp_time, prop_10, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+facebook_combined, reduced_model, 4039, 88234, 17, 250, NA, 1.0, 2479, 2061, 2533.0, 2533.0, NA, NA, 0, 0, 0, True, 40975, 9.44, False, False, False, False, False, False, 10.52
+CA-HepPh, reduced_model, 12006, 118489, 4, 250, NA, 1.0, 6049, 6591, 6978.0, 6978.0, NA, NA, 0, 0, 0, True, 51854, 7.31, False, False, False, False, False, False, 8.24
+socfb-Syracuse56, reduced_model, 13653, 543982, 46, 250, NA, 8603.0, 8085, 6985, 7641.0, 7731.0, NA, NA, 0, 0, 0, True, 28936, 363.95, False, False, False, False, False, False, 3968.19
+socfb-Northeastern19, reduced_model, 13882, 381934, 33, 250, NA, 30807.0, 8120, 7008, 7587.0, 7618.0, NA, NA, 0, 0, 0, True, 27167, 187.32, False, False, False, False, False, False, 3790.51
+CA-CondMat, reduced_model, 23133, 93439, 4, 250, NA, 1.0, 10848, 13464, 13939.0, 13939.0, NA, NA, 0, 0, 0, True, 40341, 1.59, False, False, False, False, False, False, 3.32
+Brightkite_edges, reduced_model, 58228, 214078, 2, 250, NA, 71.0, 25887, 34706, 35267.0, 35267.0, NA, NA, 0, 0, 0, True, 895666, 20.69, False, False, False, False, False, False, 24.41
+flickrEdges, reduced_model, 105938, 2316948, 4, 250, NA, 0.0, 554, 105386, 105388.0, 105388.0, NA, NA, 0, 0, 0, True, 51899, 34.84, False, False, False, False, False, False, 67.82
