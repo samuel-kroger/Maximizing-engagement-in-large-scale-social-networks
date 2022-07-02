@@ -174,6 +174,24 @@ class base_model(object):
 			if b < k:
 				self.remove_all_y_saturated_nodes()
 
+
+
+
+		#set up model
+		self.model._G = G
+		self.model._b = b
+		self.model._k = k
+		self.model._R = G.nodes()
+		self.model._r = r
+
+		if relax:
+			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="x", ub = 1, lb = 0)
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y", ub = 1, lb = 0)
+		else:
+			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
+			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
+
+
 		if self.prop_10:
 			time1 = time.time()
 			counter = 0
@@ -193,22 +211,6 @@ class base_model(object):
 
 			self.num_prop_10_fixings = counter
 			self.prop_10_comp_time = time2 - time1
-
-
-		#set up model
-		self.model._G = G
-		self.model._b = b
-		self.model._k = k
-		self.model._R = G.nodes()
-		self.model._r = r
-
-		if relax:
-			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="x", ub = 1, lb = 0)
-			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.CONTINUOUS, name="y", ub = 1, lb = 0)
-		else:
-			self.model._X = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="x")
-			self.model._Y = self.model.addVars(self.G.nodes(), vtype=gp.GRB.BINARY, name="y")
-
 
 		# objective function
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
