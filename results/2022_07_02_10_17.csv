@@ -1,0 +1,2 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_10_fixings, prop_10, prop_10_comp_time, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
+facebook_combined, reduced_model, 4039, 88234, 17, 250, NA, 0.0, 2479, 2061, 2551.96, 2551.96, NA, NA, 0, 0, 0, False, 0, True, 0.09, False, False, False, True, False, 0.54
