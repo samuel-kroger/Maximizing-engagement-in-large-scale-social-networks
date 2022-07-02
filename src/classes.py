@@ -272,7 +272,7 @@ class base_model(object):
 				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
 				u_neigbors = set(self.G.neighbors(u))
 				print('POINT A')
-				for v in u_path_length_dict:-
+				for v in u_path_length_dict:
 					print("POINT B")
 					v_neighbors = set(self.G.neighbors(v)) - {u}
 
