@@ -528,7 +528,6 @@ class base_model(object):
 	def return_output(self):
 		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename', 'y_saturated']
 		output = [attribute for attribute in dir(self) if not attribute.startswith("__") and not callable(getattr(self, attribute)) and attribute not in exceptions]
-		print(output)
 		output.sort(key = output_sort)
 
 		return output
