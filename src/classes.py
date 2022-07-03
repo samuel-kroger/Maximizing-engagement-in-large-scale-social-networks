@@ -89,7 +89,7 @@ def output_sort(element_of_output):
 		return 12
 	if element_of_output == "warm_start":
 		return 13
-	if element_of_output == "additonal_facet_defining":
+	if element_of_output == "prop_8":
 		return 14
 	if element_of_output == "num_additonal_constraints":
 		return 15.5
@@ -109,7 +109,7 @@ def anchored_k_core (G, k, purchased_nodes):
 				return (anchored_core_nodes)
 
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop_9, prop_10):
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop_9, prop_10):
 
 		self.model = gp.Model()
 		self.model_type = model_type
@@ -121,7 +121,7 @@ class base_model(object):
 		self.model.params.LogToConsole = 1
 		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + "_"+ filename[:-4] + '.log'
 
-		self.additonal_facet_defining = additonal_facet_defining
+		self.prop_8 = prop_8
 		self.y_val_fix = y_val_fix
 		self.fractional_callback = fractional_callback
 		#REVISIT
@@ -228,110 +228,6 @@ class base_model(object):
 			self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
 
-
-		if additonal_facet_defining:
-			self.num_additonal_constraints = 0
-			for v in self.x_vals:
-				if self.G.degree(v) == self.k:
-					for u in self.G.neighbors(v):
-						self.num_additonal_constraints +=1
-						facet_defining_constraint = self.model.addConstr(self.model._X[v] <= self.model._Y[u] + self.model._X[u])
-						#facet_defining_constraint.lazy = 3
-
-		'''
-		if self.prop_9:
-			time1 = time.time()
-			counter = 0
-			for v in self.G:
-				#power_graph = nx.power(self.G, self.r)
-
-
-				v_neighbors = set(self.G.neighbors(v))
-				for u in v_neighbors:
-					if u in self.x_vals:
-						continue
-					u_neigbors = set(self.G.neighbors(u)) - {v}
-
-					if u_neigbors.issubset(v_neighbors - {u}):
-
-							self.model.addConstr(self.model._X[v] + self.model._X[v] >= self.model._Y[u])
-
-							counter += 1
-			time2 = time.time()
-
-			self.num_prop_9_inequalties_added = counter
-			self.prop_9_comp_time = time2 - time1
-		'''
-		'''
-		if self.prop_9:
-			time1 = time.time()
-			counter = 0
-
-			y_val_subgraph =
-			for u in self.y_vals:
-				print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
-				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
-				u_neigbors = set(self.G.neighbors(u))
-				print(len(u_path_length_dict))
-				for v in u_path_length_dict:
-
-					v_neighbors = set(self.G.neighbors(v)) - {u}
-
-					if u_neigbors - {v} < v_neighbors:
-
-						self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
-						counter+=1
-			time2 = time.time()
-			self.num_prop_9_inequalties_added = counter
-			self.prop_9_comp_time = time2 - time1
-		'''
-		'''
-		if self.prop_9:
-			time1 = time.time()
-			counter = 0
-			path_length_dict = dict(nx.all_pairs_shortest_path_length(self.G))
-			for u,v in itertools.combinations(self.G.nodes(), 2):
-
-				try:
-					if path_length_dict[u][v] > 2:
-						continue
-				except KeyError as e:
-					continue
-
-				v_neighbors = set(self.G.neighbors(v)) - {u}
-				u_neighbors = set(self.G.neighbors(u)) - {v}
-
-				if u_neighbors < v_neighbors and u not in self.x_vals:
-					self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
-					counter+=1
-
-				if v_neighbors < u_neighbors and v not in self.x_vals:
-					self.model.addConstr(self.model._X[u] + self.model._Y[u] >= self.model._Y[v])
-					counter+=1
-			time2 = time.time()
-			self.num_prop_9_inequalties_added = counter
-			self.prop_9_comp_time = time2 - time1
-		'''
-		'''
-		if self.prop_10:
-			time1 = time.time()
-			counter = 0
-			for v in self.G:
-				fix = True
-				for u in self.G.neighbors(v):
-					if u in self.x_vals:
-						fix = False
-						break
-
-
-				if fix == True:
-					self.model._Y[v].ub = 0
-					counter += 1
-			time2 = time.time()
-
-			self.num_prop_10_fixings = counter
-			self.prop_10_comp_time = time2 - time1
-		'''
 
 
 
@@ -635,8 +531,8 @@ class base_model(object):
 
 class reduced_model(base_model):
 
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
@@ -653,17 +549,27 @@ class reduced_model(base_model):
 
 
 		self.R = list(self.G.nodes() - k_core_G.nodes())
+		non_k_core_subgraph = self.G.subgraph(self.R)
 
+		if self.prop_8:
+			self.num_additonal_constraints = 0
+			for v in self.x_vals:
+				if self.G.degree(v) == self.k:
+					for u in self.G.neighbors(v):
+						if u in k_core_G.nodes():
+							continue
+						self.num_additonal_constraints +=1
+						facet_defining_constraint = self.model.addConstr(self.model._X[v] <= self.model._Y[u] + self.model._X[u])
+						#facet_defining_constraint.lazy = 3
 		if self.prop_9:
 			time1 = time.time()
 			counter = 0
 
-			non_k_core_subgraph = self.G.subgraph(self.R)
 			for u in self.y_vals:
-				print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
+				#print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
 				u_path_length_dict = nx.single_source_dijkstra_path_length(non_k_core_subgraph, u, 2)
 				u_neigbors = set(non_k_core_subgraph.neighbors(u))
-				print(len(u_path_length_dict))
+				#print(len(u_path_length_dict))
 				for v in u_path_length_dict:
 
 					v_neighbors = set(non_k_core_subgraph.neighbors(v)) - {u}
@@ -701,8 +607,8 @@ class reduced_model(base_model):
 
 
 class radius_bounded_model(base_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
 		#radius_bounded_model.dominated_fixing_idea_power_graph_sam(self)
 		self.model.addConstr(gp.quicksum(self.model._S) == 1)
@@ -961,8 +867,8 @@ class radius_bounded_model(base_model):
 
 
 class vermyev_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		DG = nx.DiGraph(self.G) # bidirected version of G
 		L = range(1, self.r + 1)
@@ -997,8 +903,8 @@ class vermyev_model(radius_bounded_model):
 
 
 class cut_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 
 		#allow lazy constraints
@@ -1045,8 +951,8 @@ class cut_model(radius_bounded_model):
 		self.lower_bound = self.model.objVal
 
 class extended_cut_model(cut_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 
 		self.model._Z = self.model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
 
@@ -1071,8 +977,8 @@ class extended_cut_model(cut_model):
 		self.lower_bound = m.objVal
 
 class flow_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, additonal_facet_defining, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
 		m = self.model
 		DG = nx.DiGraph(G) # bidirected version of G
 
