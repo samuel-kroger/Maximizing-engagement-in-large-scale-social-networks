@@ -1,0 +1,72 @@
+
+Gurobi 9.5.0 (win64) logging started Sun Jul  3 17:12:25 2022
+
+Set parameter LogFile to value "../results/logs/log_com-youtube.ungraph_20_20_2022_07_03_15_54.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 12181165 rows, 2269780 columns and 39171747 nonzeros
+Model fingerprint: 0xbf443a78
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 292990 columns (presolve time = 19s) ...
+Presolve removed 1287871 rows and 1731364 columns (presolve time = 21s) ...
+Presolve removed 1332606 rows and 1888932 columns (presolve time = 28s) ...
+Presolve removed 1332606 rows and 1891518 columns (presolve time = 31s) ...
+Presolve removed 1332606 rows and 1891518 columns (presolve time = 42s) ...
+Presolve removed 1332693 rows and 1891605 columns (presolve time = 62s) ...
+Presolve removed 1332693 rows and 1891605 columns (presolve time = 65s) ...
+Presolve removed 1332693 rows and 1891662 columns (presolve time = 70s) ...
+Presolve removed 1332693 rows and 1891662 columns (presolve time = 76s) ...
+Presolve removed 1332693 rows and 1891662 columns (presolve time = 82s) ...
+Presolve removed 1332693 rows and 1891662 columns
+Presolve time: 89.31s
+Presolved: 10848472 rows, 378118 columns, 24106407 nonzeros
+
+Elapsed ordering time = 6s
+Ordering time: 18.61s
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 39s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 53s
+Elapsed ordering time = 56s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 68s
+Elapsed ordering time = 71s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 84s
+Elapsed ordering time = 86s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Ordering time: 96.50s
+
+Barrier statistics:
+ Dense cols : 4118
+ AA' NZ     : 8.154e+06
+ Factor NZ  : 2.609e+09 (roughly 20.0 GB of memory)
+ Factor Ops : 8.226e+13 (roughly 1600 seconds per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   4.77753675e+04  3.63469732e+05  7.81e+04 1.70e+00  2.18e+01  1044s
+   1   4.72882765e+04  3.49137856e+05  5.27e+04 1.99e+00  1.41e+01  1862s
+   2   4.66759039e+04  3.57072291e+05  3.63e+04 9.44e-01  9.17e+00  2714s
+
+Barrier performed 2 iterations in 3617.49 seconds (4040.62 work units)
+Time limit reached
+
