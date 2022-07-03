@@ -91,6 +91,10 @@ def output_sort(element_of_output):
 		return 13
 	if element_of_output == "prop_8":
 		return 14
+	if element_of_output == "num_prop_9_inequalties_added":
+		return 14.1
+	if element_of_output == "prop_9_comp_time":
+		return 14.2
 	if element_of_output == "num_additonal_constraints":
 		return 15.5
 	if element_of_output == "y_val_fix":
@@ -552,7 +556,8 @@ class reduced_model(base_model):
 		non_k_core_subgraph = self.G.subgraph(self.R)
 
 		if self.prop_8:
-			self.num_additonal_constraints = 0
+			time1 = time.time()
+			counter = 0
 			for v in self.x_vals:
 				if self.G.degree(v) == self.k:
 					for u in self.G.neighbors(v):
@@ -561,6 +566,10 @@ class reduced_model(base_model):
 						self.num_additonal_constraints +=1
 						facet_defining_constraint = self.model.addConstr(self.model._X[v] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
+			time2 = time.time()
+
+			self.num_prop_8_inequalties_added = counter
+			self.prop_8_comp_time = time2 - time1
 		if self.prop_9:
 			time1 = time.time()
 			counter = 0

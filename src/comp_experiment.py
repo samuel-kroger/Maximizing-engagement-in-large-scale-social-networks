@@ -15,7 +15,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['prop_9']:
+for request in data['single']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -26,7 +26,7 @@ for request in data['prop_9']:
 	G = classes.read_graph(ext + request['filename'])
 
 	start_time = time.time()
-	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['additional_facet_defining'], request['y_val_fix'], request['fractional_callback'], request['relax'], request['prop_9'], request['prop_10'])
+	instance = globals()[request['model_type']](filename, request['filename'][:-4], G, request['model_type'], request['k'], request['b'], request['r'], request['y_saturated'], request['prop_8'], request['y_val_fix'], request['fractional_callback'], request['relax'], request['prop_9'], request['prop_10'])
 	if request['warm_start']:
 		#instance.remove_y_edges()
 		instance.RCM_warm_start()
