@@ -91,9 +91,9 @@ def output_sort(element_of_output):
 		return 13
 	if element_of_output == "prop_8":
 		return 14
-	if element_of_output == "num_prop_9_inequalties_added":
+	if element_of_output == "num_prop_8_inequalties_added":
 		return 14.1
-	if element_of_output == "prop_9_comp_time":
+	if element_of_output == "prop_8_comp_time":
 		return 14.2
 	if element_of_output == "num_additonal_constraints":
 		return 15.5
@@ -528,6 +528,7 @@ class base_model(object):
 	def return_output(self):
 		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename', 'y_saturated']
 		output = [attribute for attribute in dir(self) if not attribute.startswith("__") and not callable(getattr(self, attribute)) and attribute not in exceptions]
+		print(output)
 		output.sort(key = output_sort)
 
 		return output
