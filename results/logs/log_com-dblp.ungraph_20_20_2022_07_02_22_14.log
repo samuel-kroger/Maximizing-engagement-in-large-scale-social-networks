@@ -1,0 +1,97 @@
+
+Gurobi 9.5.1 (linux64) logging started Sun Jul  3 03:12:02 2022
+
+Set parameter LogFile to value "../results/logs/log_com-dblp.ungraph_20_20_2022_07_02_22_14.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 1364177 rows, 634160 columns and 5447511 nonzeros
+Model fingerprint: 0x847180e0
+Variable types: 0 continuous, 634160 integer (634160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+Found heuristic solution: objective 3066.0000000
+Presolve removed 550399 rows and 424696 columns (presolve time = 5s) ...
+Presolve removed 550462 rows and 424700 columns (presolve time = 10s) ...
+Presolve removed 550465 rows and 424700 columns (presolve time = 21s) ...
+Presolve removed 612772 rows and 426449 columns (presolve time = 25s) ...
+Presolve removed 612772 rows and 426449 columns (presolve time = 35s) ...
+Presolve removed 655497 rows and 427625 columns (presolve time = 35s) ...
+Presolve removed 655497 rows and 427806 columns (presolve time = 45s) ...
+Presolve removed 693010 rows and 428983 columns (presolve time = 50s) ...
+Presolve removed 693010 rows and 429900 columns (presolve time = 55s) ...
+Presolve removed 726703 rows and 430094 columns (presolve time = 63s) ...
+Presolve removed 747965 rows and 430722 columns
+Presolve time: 64.02s
+Presolved: 616212 rows, 203438 columns, 2405721 nonzeros
+Variable types: 0 continuous, 203438 integer (202322 binary)
+Found heuristic solution: objective 3070.0000000
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Ordering time: 15.40s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 32s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 44s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 57s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Ordering time: 82.17s
+
+Barrier statistics:
+ Dense cols : 5764
+ AA' NZ     : 1.411e+07
+ Factor NZ  : 2.542e+09 (roughly 20.0 GB of memory)
+ Factor Ops : 8.301e+13 (roughly 260 seconds per iteration)
+ Threads    : 6
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.78821383e+04  3.56896776e+05  2.08e+05 6.91e-01  1.55e+01   316s
+   1   2.57347018e+04  9.25970716e+05  7.22e+04 2.68e-04  8.47e+00   482s
+   2   1.42517015e+04  5.90004577e+05  1.44e+04 7.19e-04  1.87e+00   660s
+   3   1.14792324e+04  2.60470960e+05  5.56e+03 3.33e-04  7.19e-01   854s
+   4   9.06606620e+03  5.28908162e+04  1.51e+03 1.51e-04  1.85e-01  1076s
+   5   8.34864457e+03  2.72203462e+04  9.89e+02 7.58e-05  1.10e-01  1317s
+   6   7.80377987e+03  2.02537885e+04  6.33e+02 6.82e-05  6.98e-02  1569s
+   7   7.44861428e+03  1.54554376e+04  4.23e+02 7.77e-05  4.49e-02  1835s
+   8   7.22629398e+03  1.31506799e+04  3.02e+02 4.48e-05  3.18e-02  2118s
+   9   7.01260046e+03  1.05828054e+04  2.02e+02 2.31e-05  2.02e-02  2427s
+  10   6.84509733e+03  8.93372210e+03  1.28e+02 1.13e-05  1.23e-02  2744s
+  11   6.74750461e+03  8.21268216e+03  8.81e+01 7.10e-06  8.31e-03  3052s
+  12   6.66065971e+03  7.68974658e+03  5.48e+01 4.37e-06  5.23e-03  3363s
+
+Barrier performed 12 iterations in 3604.57 seconds (6265.18 work units)
+Time limit reached
+
+
+
+Root relaxation: time limit, 158917 iterations, 3540.56 seconds (5093.47 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0          -    0      3070.00000 18889.0000   515%     - 3605s
+
+Explored 1 nodes (158917 simplex iterations) in 3606.14 seconds (5131.95 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 3070 3066 
+
+Time limit reached
+Best objective 3.070000000000e+03, best bound 1.888900000000e+04, gap 515.2769%
