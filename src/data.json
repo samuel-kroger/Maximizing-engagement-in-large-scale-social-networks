@@ -2,8 +2,8 @@
 	"single":
 	[
 		{
-			"filename":"soc-catster.edges",
-			"k":21,
+			"filename":"Brightkite_edges.txt",
+			"k":2,
 			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",

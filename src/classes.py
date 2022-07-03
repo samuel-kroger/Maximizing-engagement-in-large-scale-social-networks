@@ -231,11 +231,11 @@ class base_model(object):
 
 		if additonal_facet_defining:
 			self.num_additonal_constraints = 0
-			for i in self.x_vals:
-				if self.G.degree(i) == self.k:
-					for u in self.G.neighbors(i):
+			for v in self.x_vals:
+				if self.G.degree(v) == self.k:
+					for u in self.G.neighbors(v):
 						self.num_additonal_constraints +=1
-						facet_defining_constraint = self.model.addConstr(self.model._X[i] <= self.model._Y[u] + self.model._X[u])
+						facet_defining_constraint = self.model.addConstr(self.model._X[v] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
 
 		'''
@@ -262,18 +262,19 @@ class base_model(object):
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
 		'''
-
+		'''
 		if self.prop_9:
 			time1 = time.time()
 			counter = 0
 
+			y_val_subgraph =
 			for u in self.y_vals:
-				print("Starting vertex ", u, " out of ", len(self.y_vals))
+				print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
 				u_path_length_dict = nx.single_source_dijkstra_path_length(self.G, u, 2)
 				u_neigbors = set(self.G.neighbors(u))
-				print('POINT A')
+				print(len(u_path_length_dict))
 				for v in u_path_length_dict:
-					print("POINT B")
+
 					v_neighbors = set(self.G.neighbors(v)) - {u}
 
 					if u_neigbors - {v} < v_neighbors:
@@ -283,6 +284,7 @@ class base_model(object):
 			time2 = time.time()
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
+		'''
 		'''
 		if self.prop_9:
 			time1 = time.time()
@@ -650,8 +652,31 @@ class reduced_model(base_model):
 		self.num_k_core_nodes = len(k_core_G.nodes())
 
 
-
 		self.R = list(self.G.nodes() - k_core_G.nodes())
+
+		if self.prop_9:
+			time1 = time.time()
+			counter = 0
+
+			non_k_core_subgraph = self.G.subgraph(self.R)
+			for u in self.y_vals:
+				print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
+				u_path_length_dict = nx.single_source_dijkstra_path_length(non_k_core_subgraph, u, 2)
+				u_neigbors = set(non_k_core_subgraph.neighbors(u))
+				print(len(u_path_length_dict))
+				for v in u_path_length_dict:
+
+					v_neighbors = set(non_k_core_subgraph.neighbors(v)) - {u}
+
+					if u_neigbors - {v} < v_neighbors:
+
+						self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
+						counter+=1
+			time2 = time.time()
+			self.num_prop_9_inequalties_added = counter
+			self.prop_9_comp_time = time2 - time1
+
+
 		constraint_index = list(self.x_vals - k_core_G.nodes())
 
 		for node in k_core_G.nodes():
