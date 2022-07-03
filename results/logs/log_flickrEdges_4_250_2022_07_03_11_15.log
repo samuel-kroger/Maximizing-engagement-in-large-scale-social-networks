@@ -1,0 +1,23 @@
+
+Gurobi 9.5.1 (linux64) logging started Sun Jul  3 11:16:50 2022
+
+Set parameter LogFile to value "../results/logs/log_flickrEdges_4_250_2022_07_03_11_15.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 9 rows, 211876 columns and 586 nonzeros
+Model fingerprint: 0x9e727968
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 8 rows and 211873 columns
+Presolve time: 0.04s
+Presolved: 1 rows, 3 columns, 3 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0538800e+05   1.000000e+00   0.000000e+00      0s
+       2    1.0538800e+05   0.000000e+00   0.000000e+00      0s
+
+Solved in 2 iterations and 0.07 seconds (0.04 work units)
+Optimal objective  1.053880000e+05

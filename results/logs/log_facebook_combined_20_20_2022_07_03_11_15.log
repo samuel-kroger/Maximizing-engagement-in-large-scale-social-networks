@@ -1,0 +1,50 @@
+
+Gurobi 9.5.1 (linux64) logging started Sun Jul  3 12:42:05 2022
+
+Set parameter LogFile to value "../results/logs/log_facebook_combined_20_20_2022_07_03_11_15.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 4637 rows, 8078 columns and 40916 nonzeros
+Model fingerprint: 0x18895d24
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 1088 rows and 6094 columns
+Presolve time: 0.03s
+Presolved: 3549 rows, 1984 columns, 24103 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 7.116e+04
+ Factor NZ  : 1.992e+05 (roughly 4 MB of memory)
+ Factor Ops : 2.347e+07 (less than 1 second per iteration)
+ Threads    : 6
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.45491675e+03  2.33679020e+03  4.10e+03 2.50e-01  2.00e+00     0s
+   1   2.54376618e+03  2.55116094e+03  1.81e+03 2.02e-01  8.35e-01     0s
+   2   2.51886587e+03  2.86448869e+03  9.99e+02 5.55e-15  4.60e-01     0s
+   3   2.31858999e+03  2.52329029e+03  2.03e+02 3.66e-15  1.01e-01     0s
+   4   2.28829045e+03  2.36446995e+03  7.46e+01 3.77e-15  3.58e-02     0s
+   5   2.27724313e+03  2.32719159e+03  2.66e+01 5.83e-15  1.55e-02     0s
+   6   2.27421202e+03  2.29471491e+03  1.13e+01 2.79e-15  6.29e-03     0s
+   7   2.27267045e+03  2.28348021e+03  3.11e+00 3.25e-15  2.35e-03     0s
+   8   2.27341865e+03  2.27988612e+03  1.71e+00 2.82e-15  1.33e-03     0s
+   9   2.27376094e+03  2.27796055e+03  1.17e+00 1.45e-15  8.71e-04     0s
+  10   2.27397598e+03  2.27710477e+03  9.99e-01 3.70e-15  6.81e-04     0s
+
+Barrier performed 10 iterations in 0.08 seconds (0.05 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+Solved in 1105 iterations and 0.08 seconds (0.07 work units)
+Optimal objective  2.275169905e+03
