@@ -563,7 +563,7 @@ class reduced_model(base_model):
 					for u in self.G.neighbors(v):
 						if u in k_core_G.nodes():
 							continue
-						self.num_additonal_constraints +=1
+						counter +=1
 						facet_defining_constraint = self.model.addConstr(self.model._X[v] <= self.model._Y[u] + self.model._X[u])
 						#facet_defining_constraint.lazy = 3
 			time2 = time.time()
