@@ -1,0 +1,45 @@
+
+Gurobi 9.5.1 (linux64) logging started Sat Jul  2 17:27:01 2022
+
+Set parameter LogFile to value "../results/logs/log_socfb-Northeastern19_33_250_2022_07_02_17_26.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 2493 rows, 27764 columns and 107718 nonzeros
+Model fingerprint: 0xa077819d
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 43 rows and 22245 columns
+Presolve time: 0.05s
+Presolved: 2450 rows, 5519 columns, 29039 nonzeros
+
+Ordering time: 0.08s
+
+Barrier statistics:
+ AA' NZ     : 3.277e+04
+ Factor NZ  : 2.948e+05 (roughly 6 MB of memory)
+ Factor Ops : 9.312e+07 (less than 1 second per iteration)
+ Threads    : 6
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.00628610e+04  7.33699393e+03  6.23e+04 1.25e-01  3.70e+00     0s
+   1   1.03431522e+04  8.08978013e+03  2.22e+04 9.84e-02  1.30e+00     0s
+   2   8.39005056e+03  8.72986166e+03  2.24e+03 1.13e-14  1.73e-01     0s
+   3   8.23733390e+03  8.36274814e+03  4.27e+02 1.11e-15  3.32e-02     0s
+   4   8.20526926e+03  8.28953501e+03  1.52e+02 7.77e-16  1.44e-02     0s
+   5   8.19320355e+03  8.24032143e+03  6.28e+01 4.44e-16  6.73e-03     0s
+
+Barrier performed 5 iterations in 0.17 seconds (0.07 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 4029 iterations and 0.17 seconds (0.17 work units)
+Optimal objective  8.187010044e+03
