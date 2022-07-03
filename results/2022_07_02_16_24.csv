@@ -1,2 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, num_prop_9_inequalties_added, prop_9_comp_time, prop_10, warm_start, additonal_facet_defining, y_val_fix, relax, fractional_callback, total_time
-Brightkite_edges, reduced_model, 58228, 214078, 2, 250, NA, 33.0, 25887, 34706, 35267.0, 35267.0, NA, NA, 0, 0, 0, True, 1587, 1.89, False, False, False, False, False, False, 7.32
