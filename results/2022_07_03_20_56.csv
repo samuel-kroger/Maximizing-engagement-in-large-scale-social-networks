@@ -1,6 +1,0 @@
-instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, prop_10, warm_start, prop_8, num_prop_8_inequalties_added, prop_8_comp_time, y_val_fix, relax, fractional_callback, total_time
-Brightkite_edges, reduced_model, 58228, 214078, 20, 20, NA, 4055.0, 60920, 947, 1180.0, 1465.0, NA, NA, 0, 0, 0, False, False, False, True, 4630, 0.05, False, False, False, 3601.59
-flickrEdges, reduced_model, 105938, 2316948, 20, 20, NA, 54.0, 95668, 15808, 15833.0, 15835.0, NA, NA, 0, 0, 0, False, False, False, True, 8529, 0.11, False, False, False, 3631.24
-Gowalla_edges, reduced_model, 196591, 950327, 20, 20, NA, 1327.0, 200539, 8161, 8445.0, 8779.0, NA, NA, 0, 0, 0, False, False, False, True, 16694, 0.18, False, False, False, 3611.74
-com-dblp.ungraph, reduced_model, 317080, 1049866, 20, 20, NA, 1.0, 329837, 3066, 3121.0, 3310.0, NA, NA, 0, 0, 0, False, False, False, True, 26347, 0.28, False, False, False, 3609.89
-com-youtube.ungraph, reduced_model, 1134890, 2987624, 20, 20, NA, 15.0, 1138333, 18890, 19090.0, 19343.0, NA, NA, 0, 0, 0, False, False, False, True, 25026, 0.4, False, False, False, 3645.1
