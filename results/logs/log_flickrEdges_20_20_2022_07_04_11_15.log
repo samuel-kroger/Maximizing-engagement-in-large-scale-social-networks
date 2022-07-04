@@ -1,0 +1,46 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jul  4 13:09:25 2022
+
+Set parameter LogFile to value "../results/logs/log_flickrEdges_20_20_2022_07_04_11_15.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 19606 rows, 211876 columns and 744837 nonzeros
+Model fingerprint: 0x54c200fd
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 88 rows and 142985 columns
+Presolve time: 0.56s
+Presolved: 19518 rows, 68891 columns, 380075 nonzeros
+
+Ordering time: 1.51s
+
+Barrier statistics:
+ Dense cols : 20
+ AA' NZ     : 6.554e+05
+ Factor NZ  : 1.448e+07 (roughly 150 MB of memory)
+ Factor Ops : 4.717e+10 (roughly 1 second per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.93585390e+04  2.38249210e+04  1.25e+05 2.50e-01  1.24e+00     3s
+   1   1.95728718e+04  2.47903288e+04  6.09e+04 2.44e-01  6.10e-01     4s
+   2   2.00342896e+04  2.48241013e+04  4.20e+04 5.73e-02  4.04e-01     6s
+   3   1.83622440e+04  2.16780983e+04  7.89e+03 5.49e-03  8.66e-02     9s
+   4   1.78675524e+04  1.92196995e+04  3.23e+03 1.46e-03  3.61e-02    12s
+   5   1.76429595e+04  1.80288097e+04  1.97e+03 4.83e-04  2.00e-02    15s
+
+Barrier performed 5 iterations in 14.85 seconds (5.31 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+Solved in 6515 iterations and 14.87 seconds (12.33 work units)
+Optimal objective  1.623778209e+04

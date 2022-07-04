@@ -1,0 +1,53 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jul  4 13:11:30 2022
+
+Set parameter LogFile to value "../results/logs/log_com-dblp.ungraph_20_20_2022_07_04_11_15.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 57994 rows, 634160 columns and 1528962 nonzeros
+Model fingerprint: 0x18699409
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 160 rows and 528117 columns
+Presolve time: 1.44s
+Presolved: 57834 rows, 106043 columns, 762815 nonzeros
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 7s
+Elapsed ordering time = 10s
+Elapsed ordering time = 10s
+Elapsed ordering time = 13s
+Elapsed ordering time = 15s
+Ordering time: 15.56s
+
+Barrier statistics:
+ AA' NZ     : 1.953e+06
+ Factor NZ  : 8.616e+07 (roughly 800 MB of memory)
+ Factor Ops : 6.858e+11 (roughly 16 seconds per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.32554904e+04  3.24773306e+04  1.45e+05 3.55e-01  1.72e+00    34s
+   1   1.25817485e+04  3.83338368e+04  5.22e+04 2.64e-01  7.10e-01    47s
+   2   1.02846216e+04  2.78662067e+04  6.64e+03 4.52e-02  1.39e-01    77s
+   3   1.00976435e+04  1.60161968e+04  3.28e+03 1.56e-02  6.13e-02   124s
+   4   9.75124452e+03  1.22148599e+04  1.54e+03 7.85e-03  3.12e-02   172s
+   5   9.40691095e+03  1.01351904e+04  8.50e+02 3.79e-03  1.70e-02   225s
+   6   9.10486462e+03  9.28168555e+03  5.05e+02 2.40e-03  1.04e-02   284s
+   7   8.87328402e+03  8.80125901e+03  3.40e+02 1.74e-03  7.28e-03   348s
+
+Barrier performed 7 iterations in 410.78 seconds (88.57 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+Solved in 20906 iterations and 410.83 seconds (597.73 work units)
+Optimal objective  6.970538230e+03

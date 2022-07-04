@@ -1,0 +1,46 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jul  4 13:18:55 2022
+
+Set parameter LogFile to value "../results/logs/log_com-youtube.ungraph_20_20_2022_07_04_11_15.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 69693 rows, 2269780 columns and 2837331 nonzeros
+Model fingerprint: 0x65ba33cf
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 1549 rows and 2130126 columns
+Presolve time: 3.02s
+Presolved: 68144 rows, 139654 columns, 699138 nonzeros
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 7s
+Elapsed ordering time = 9s
+Elapsed ordering time = 10s
+Elapsed ordering time = 12s
+Ordering time: 14.30s
+
+Barrier statistics:
+ AA' NZ     : 1.150e+06
+ Factor NZ  : 1.044e+08 (roughly 1.0 GB of memory)
+ Factor Ops : 8.752e+11 (roughly 17 seconds per iteration)
+ Threads    : 4
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.62655200e+04  5.64873677e+04  2.22e+05 3.31e-01  1.78e+00    55s
+   1   3.23999443e+04  6.72866024e+04  5.62e+04 1.24e-01  5.31e-01    88s
+
+Barrier performed 1 iterations in 99.94 seconds (38.13 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+Solved in 26911 iterations and 99.99 seconds (105.80 work units)
+Optimal objective  3.157982471e+04
