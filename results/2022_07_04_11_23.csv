@@ -1,0 +1,10 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, num_k_core_nodes, lower_bound, upper_bound, remove_y_edges_reduction, remove_y_edges_time, y_saturated_reduction, y_saturated_iterations, y_saturated_run_time, prop_9, prop_10, warm_start, prop_8, num_prop_8_inequalties_added, prop_8_comp_time, y_val_fix, relax, fractional_callback, total_time
+web-Google, reduced_model, 875713, 4322051, 4, 250, NA, 0.0, 429949, 492655, 508224.64, 508224.64, NA, NA, 0, 0, 0, False, False, False, True, 45995, 1.3, False, True, False, 67.99
+web-hudong.e, reduced_model, 1974655, 14428382, 5, 250, NA, 0.0, 959493, 1055322, 1064290.07, 1064290.07, NA, NA, 0, 0, 0, False, False, False, True, 42459, 2.43, False, True, False, 766.23
+web-baidu-baike.e, reduced_model, 2140198, 17014946, 3, 250, NA, 0.0, 895053, 1277646, 1281799.13, 1281799.13, NA, NA, 0, 0, 0, False, False, False, True, 34924, 2.59, False, True, False, 1006.03
+facebook_combined, reduced_model, 4039, 88234, 20, 20, NA, 0.0, 2672, 1854, 2228.08, 2228.08, NA, NA, 0, 0, 0, False, False, False, True, 745, 0.01, False, True, False, 6.16
+Brightkite_edges, reduced_model, 58228, 214078, 20, 20, NA, 0.0, 60920, 947, 3368.78, 3368.78, NA, NA, 0, 0, 0, False, False, False, True, 4630, 0.05, False, True, False, 4.47
+flickrEdges, reduced_model, 105938, 2316948, 20, 20, NA, 0.0, 95668, 15808, 16237.78, 16237.78, NA, NA, 0, 0, 0, False, False, False, True, 8529, 0.12, False, True, False, 39.52
+Gowalla_edges, reduced_model, 196591, 950327, 20, 20, NA, 0.0, 200539, 8161, 15663.16, 15663.16, NA, NA, 0, 0, 0, False, False, False, True, 16694, 0.19, False, True, False, 38.36
+com-dblp.ungraph, reduced_model, 317080, 1049866, 20, 20, NA, 0.0, 329837, 3066, 6970.54, 6970.54, NA, NA, 0, 0, 0, False, False, False, True, 26347, 0.29, False, True, False, 571.43
+com-youtube.ungraph, reduced_model, 1134890, 2987624, 20, 20, NA, 0.0, 1138333, 18890, 31579.82, 31579.82, NA, NA, 0, 0, 0, False, False, False, True, 25026, 2.14, False, True, False, 116.94
