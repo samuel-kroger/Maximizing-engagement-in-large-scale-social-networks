@@ -1,0 +1,55 @@
+
+Gurobi 9.5.1 (linux64) logging started Mon Jul  4 04:24:39 2022
+
+Set parameter LogFile to value "../results/logs/log_com-youtube.ungraph_20_20_2022_07_04_02_08.log"
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 12181165 rows, 2269780 columns and 39171747 nonzeros
+Model fingerprint: 0xbf443a78
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+01]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 1327708 rows and 1870593 columns (presolve time = 5s) ...
+Presolve removed 1332606 rows and 1891518 columns (presolve time = 11s) ...
+Presolve removed 1332606 rows and 1891518 columns (presolve time = 16s) ...
+Presolve removed 1332693 rows and 1891605 columns (presolve time = 28s) ...
+Presolve removed 1332693 rows and 1891605 columns (presolve time = 30s) ...
+Presolve removed 1332693 rows and 1891662 columns (presolve time = 36s) ...
+Presolve removed 1332693 rows and 1891662 columns (presolve time = 40s) ...
+Presolve removed 1332693 rows and 1891662 columns
+Presolve time: 45.18s
+Presolved: 10848472 rows, 378118 columns, 24106407 nonzeros
+
+Ordering time: 10.80s
+Elapsed ordering time = 11s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 22s
+Elapsed ordering time = 25s
+Elapsed ordering time = 31s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Ordering time: 58.18s
+
+Barrier statistics:
+ Dense cols : 3208
+ AA' NZ     : 8.278e+06
+ Factor NZ  : 2.909e+09 (roughly 24.0 GB of memory)
+ Factor Ops : 9.276e+13 (roughly 300 seconds per iteration)
+ Threads    : 6
+
+Barrier performed 0 iterations in 123.55 seconds (41.40 work units)
+Optimization exhausted available memory
+
+
+Stopped in 0 iterations and 20806.20 seconds (507.27 work units)
+Out of memory
