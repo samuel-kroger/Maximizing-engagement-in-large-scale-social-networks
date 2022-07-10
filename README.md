@@ -1,4 +1,4 @@
-# Integer programming formulations for maximizing resilience in large-scale social networks
+# Maximizing resilience in large-scale social networks
 
 Codes, data, and results for "Integer programming formulations for maximizing resilience in large-scale social networks" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
 
