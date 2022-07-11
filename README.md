@@ -15,17 +15,18 @@ In the "src" directory, you will find the codes employed in the paper.
 The heuristic RCM comes from the [Residual Core Maximization: An efficient algorithm for maximizing the size of the k-core](https://epubs.siam.org/doi/abs/10.1137/1.9781611976236.37).
 The heuristic OLAK comes from the [OLAK: an efficient algorithm to prevent unraveling in social networks](https://dl.acm.org/doi/abs/10.14778/3055330.3055332?casa_token=0pjIWubvxCcAAAAA:CEnA7bA_ocYH6--CIpfGsJ3zuICIrXdS9NxWcyAumXnl0Ppb-KH4cPUF4ABq-y2MxTWE2xnfBf1Af4s).
 Codes for the implementations of OLAK and RCM come from [this repo](https://github.com/rlaishra/RCM/).
-The PORTA directory contains the [PORTA software](http://porta.zib.de/) used in the paper.
-To run our models, run comp_experiment.py which will run based off of the data.json file.
+
 
 ## How to run the code?
+
+```
+C:\src\comp_expermient.py
+```
 
 In the "data" directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
 
 git_images contains the images in the README
 
-The results directory has csv data and log files of the runs.
+The results directory has csv files of the runs.
 
-```
-C:\src\comp_expermient.py
-```
+
