@@ -7,7 +7,7 @@ Below we computed the $4$-core of the karate graph. Blue vertices represent the 
 
 ![Figure 1](git_images/karate_k4b0.png?raw=true "The 4-core of the karate graph")
 
-Motivated by maximizing resilience in social networks, we propose an integer programming model for solving the maximum anchored $k$-core problem. In this variant of the maximum $k$-core problem, we spend a budget $b$ to expand the size of the $k$-core. Anchored (or purchased) vertices can be part of the anchored $k$-core even if their degree is less than $k$. In the following network of the karate club, blue vertices form a set of $4$-core and yellow vertices represent the anchored set when the total budget $b$ is 4. It can be noted that all yellow vertices (anchored vertices) have a degree less than 4.
+Motivated by maximizing resilience in social networks, we propose an integer programming model for solving the maximum anchored $k$-core problem. In this variant of the maximum $k$-core problem, we spend a budget $b$ to expand the size of the $k$-core. Anchored (or purchased) vertices can be part of the anchored $k$-core even if their degree is less than $k$. In the following network of the karate club, blue vertices form a set of $4$-core and yellow vertices represent an anchored vertex set when the total budget $b$ is 4. It can be noted that all yellow vertices (anchored vertices) have a degree less than 4.
 
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
 
