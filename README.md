@@ -11,7 +11,7 @@ Motivated by maximizing resilience in social networks, we propose an integer pro
 
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
 
-In the code directory you will find all of the code used in the paper.
+In the "src" directory, you will find the codes employed in the paper.
 The heuristic RCM comes from the [paper](https://www.osti.gov/servlets/purl/1766701)
 The heuristic OLAK comes from the [paper](http://www.vldb.org/pvldb/vol10/p649-zhang.pdf)
 The code for the implementations of OLAK and RCM come from this [github repo](https://github.com/rlaishra/RCM/).
@@ -20,7 +20,7 @@ To run our models, run comp_experiment.py which will run based off of the data.j
 
 ## How to run the code?
 
-In the data directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
+In the "data" directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
 
 git_images contains the images in the README
 
