@@ -16,17 +16,13 @@ The heuristic RCM comes from the [Residual Core Maximization: An efficient algor
 The heuristic OLAK comes from the [OLAK: an efficient algorithm to prevent unraveling in social networks](https://dl.acm.org/doi/abs/10.14778/3055330.3055332?casa_token=0pjIWubvxCcAAAAA:CEnA7bA_ocYH6--CIpfGsJ3zuICIrXdS9NxWcyAumXnl0Ppb-KH4cPUF4ABq-y2MxTWE2xnfBf1Af4s).
 Codes for the implementations of OLAK and RCM come from [this repo](https://github.com/rlaishra/RCM/).
 
+In the "data" directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
+
+The results directory has csv files of the runs.
+
 
 ## How to run the code?
 
 ```
 C:\src\comp_expermient.py
 ```
-
-In the "data" directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
-
-git_images contains the images in the README
-
-The results directory has csv files of the runs.
-
-
