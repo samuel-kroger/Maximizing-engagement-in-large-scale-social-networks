@@ -12,7 +12,7 @@ Motivated by maximizing resilience in social networks, we propose an integer pro
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
 
 In the "src" directory, you will find the codes employed in the paper.
-The heuristic RCM comes from the [Residual Core Maximization: An Efficient Algorithm for Maximizing the Size of the $k$-core](https://epubs.siam.org/doi/abs/10.1137/1.9781611976236.37)
+The heuristic RCM comes from the [Residual Core Maximization: An Efficient Algorithm for Maximizing the Size of the k-core](https://epubs.siam.org/doi/abs/10.1137/1.9781611976236.37)
 The heuristic OLAK comes from the [paper](http://www.vldb.org/pvldb/vol10/p649-zhang.pdf)
 The code for the implementations of OLAK and RCM come from this [github repo](https://github.com/rlaishra/RCM/).
 The PORTA directory contains the [PORTA](http://porta.zib.de/) software used in the paper.
