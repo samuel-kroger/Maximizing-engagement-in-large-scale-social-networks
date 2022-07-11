@@ -1,0 +1,38 @@
+
+Gurobi 9.5.0 (win64) logging started Mon Jul 11 13:24:22 2022
+
+Set parameter LogFile to value "../results/logs/log_facebook_combined_17_250_2022_07_11_13_24.log"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (win64)
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+Optimize a model with 4735 rows, 8078 columns and 38543 nonzeros
+Model fingerprint: 0xbd461027
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 996 rows and 6299 columns
+Presolve removed 6280 rows and 7276 columns
+Presolve time: 0.06s
+Presolved: 1798 rows, 5537 columns, 26807 nonzeros
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ Dense cols : 1
+ AA' NZ     : 7.301e+04
+ Factor NZ  : 1.026e+05 (roughly 4 MB of memory)
+ Factor Ops : 9.651e+06 (less than 1 second per iteration)
+ Threads    : 4
+
+Barrier performed 0 iterations in 0.09 seconds (0.03 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 911 iterations and 0.09 seconds (0.04 work units)
+Optimal objective  2.549430147e+03
