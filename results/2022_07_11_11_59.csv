@@ -1,0 +1,3 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, warm_start, num_k_core_nodes, lower_bound, upper_bound, prop_8, prop_9, num_prop_9_inequalties_added, prop_9_comp_time, prop_10, prop_11_reduction, prop_11_iterations, prop_11_run_time, relax, fractional_callback, total_time
+soc-dolphins, reduced_model, 62, 159, 2, 2, NA, 0.0, 9, False, 53, 53.0, 53.0, False, True, 0, 0.0, False, 0, 0, 0, True, <module 'fractional_callback' from 'C:\\Users\\sakroger\\Desktop\\k-core\\git_code\\src\\fractional_callback.py'>, 0.01
+soc-dolphins, reduced_model, 62, 159, 2, 2, NA, 0.0, 9, False, 53, 53.0, 53.0, False, True, 0, 0.0, False, 0, 0, 0, True, <module 'fractional_callback' from 'C:\\Users\\sakroger\\Desktop\\k-core\\git_code\\src\\fractional_callback.py'>, 0.01

@@ -1,10 +1,10 @@
 import networkx as nx
 import gurobipy as gp
 import pretty_plot
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import random
 import fractional_callback
-import seperation
+#import seperation
 import os
 import math
 import rcm
@@ -18,12 +18,15 @@ import time
 def read_graph(fname):
 	if fname.endswith('mtx'):
 		edges = []
+
 		with open(fname, 'r') as f:
 			reader = csv.reader(f, delimiter=' ')
 			edges = [row for row in reader if len(row) == 2]
 			f.close()
+
 		graph = nx.Graph()
 		graph.add_edges_from(edges, nodetype=int)
+
 	else:
 		graph = nx.read_edgelist(fname, nodetype=int, data=(("Type", str),))
 
@@ -40,81 +43,76 @@ def output_sort(element_of_output):
 	if element_of_output == "model_type":
 		return 2
 	if element_of_output == "n":
-		return 2.5
-	if element_of_output == "m":
-		return 2.7
-	if element_of_output == "k":
 		return 3
-	if element_of_output == "b":
+	if element_of_output == "m":
 		return 4
-	if element_of_output == "r":
+	if element_of_output == "k":
 		return 5
-	if element_of_output == "branch_and_bound_nodes":
-		return 5.1
-	if element_of_output == "LP":
-		return 5.2
-	if element_of_output == "BBnodes":
-		return 5.3
-	if element_of_output == "var_num":
-		return 5.5
-	if element_of_output == "num_k_core_nodes":
+	if element_of_output == "b":
 		return 6
-	if element_of_output == "lower_bound":
-		return 6.3
-	if element_of_output == "upper_bound":
-		return 6.6
-	if element_of_output == "remove_y_edges_reduction":
+	if element_of_output == "r":
 		return 7
-	if element_of_output == "remove_y_edges_time":
+	if element_of_output == "branch_and_bound_nodes":
 		return 8
-	if element_of_output == "y_saturated_reduction":
+	if element_of_output == "LP":
 		return 9
-	if element_of_output == "y_saturated_iterations":
+	if element_of_output == "BBnodes":
 		return 10
-	if element_of_output == "y_saturated_run_time":
+	if element_of_output == "var_num":
 		return 11
-	if element_of_output == "prop_9":
-		return 11.1
-	if element_of_output == "num_prop_9_inequalties_added":
-		return 11.2
-	if element_of_output == "prop_9_comp_time":
-		return 11.5
-	if element_of_output == "num_prop_10_fixings":
-		return 11.7
-	if element_of_output == "prop_10":
-		return 11.75
-	if element_of_output == "prop_10_comp_time":
-		return 11.8
-	if element_of_output == "time_for_warm_start":
+	if element_of_output == "num_k_core_nodes":
 		return 12
-	if element_of_output == "warm_start":
+	if element_of_output == "lower_bound":
 		return 13
-	if element_of_output == "prop_8":
+	if element_of_output == "upper_bound":
 		return 14
+	if element_of_output == "warm_start":
+		return 11
+	if element_of_output == "prop_8":
+		return 18
 	if element_of_output == "num_prop_8_inequalties_added":
-		return 14.1
+		return 19
 	if element_of_output == "prop_8_comp_time":
-		return 14.2
+		return 20
+	if element_of_output == "prop_9":
+		return 21
+	if element_of_output == "num_prop_9_inequalties_added":
+		return 22
+	if element_of_output == "prop_9_comp_time":
+		return 23
+	if element_of_output == "num_prop_10_fixings":
+		return 24
+	if element_of_output == "prop_10":
+		return 25
+	if element_of_output == "prop_10_comp_time":
+		return 26
+	if element_of_output == "prop_11_reduction":
+		return 27
+	if element_of_output == "prop_11_iterations":
+		return 28
+	if element_of_output == "prop_11_run_time":
+		return 29
+	if element_of_output == "time_for_warm_start":
+		return 30
+	if element_of_output == "warm_start":
+		return 31
 	if element_of_output == "num_additonal_constraints":
-		return 15.5
-	if element_of_output == "y_val_fix":
-		return 15
+		return 32
 	if element_of_output == "relax":
-		return 15.5
+		return 33
 	if element_of_output == "fractional_callback":
-		return 16
+		return 34
 
 def anchored_k_core (G, k, purchased_nodes):
-				anchored_core_nodes = []
-				anchored_k_core_decomp = olak.anchoredKCore(G, purchased_nodes)
-				for key in anchored_k_core_decomp:
-					if anchored_k_core_decomp[key] >= k:
-						anchored_core_nodes.append(key)
-				return (anchored_core_nodes)
+	anchored_core_nodes = []
+	anchored_k_core_decomp = olak.anchoredKCore(G, purchased_nodes)
+	for key in anchored_k_core_decomp:
+		if anchored_k_core_decomp[key] >= k:
+			anchored_core_nodes.append(key)
+	return (anchored_core_nodes)
 
 class base_model(object):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop_9, prop_10):
-
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
 		self.model = gp.Model()
 		self.model_type = model_type
 		self.instance_name = instance_name
@@ -126,36 +124,26 @@ class base_model(object):
 		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + "_"+ filename[:-4] + '.log'
 
 		self.prop_8 = prop_8
-		self.y_val_fix = y_val_fix
 		self.fractional_callback = fractional_callback
-		#REVISIT
-		#self.model.params.method = 3
 		self.relax = relax
 		self.prop_9 = prop_9
 		self.prop_10 = prop_10
 
+		self.prop_11_reduction = 0
+		self.prop_11_run_time = 0
+		self.prop_11_iterations = 0
+		#HHHHHHHHHHHHHHHHHHHH
+		self.warm_start = warm_start
+
 		#every member of class
 		self.num_k_core_nodes = 0
-		#self.weights = {}
-
-		#y_saturated
-		self.y_saturated_reduction = 0
-		self.y_saturated_run_time = 0
-		self.y_saturated_iterations = 0
-		self.warm_start = False
-
-		self.remove_y_edges_reduction = 'NA'
-		self.remove_y_edges_time = 'NA'
 
 		#Set up constants
 		self.filename = filename
 		self.k = k
 		self.b = b
 		self.r = r
-
 		self.BBnodes = "NA"
-		#warm_start
-		#self.time_for_warm_start = 60
 
 		#Set up G
 		self.G = G
@@ -172,14 +160,9 @@ class base_model(object):
 			else:
 				self.y_vals.append(node)
 
-
-
-		if y_saturated:
+		if prop_9:
 			if b < k:
 				self.remove_all_y_saturated_nodes()
-
-
-
 
 		#set up model
 		self.model._G = G
@@ -216,9 +199,7 @@ class base_model(object):
 			self.num_prop_10_fixings = counter
 			self.prop_10_comp_time = time2 - time1
 
-		# objective function
 		self.model.setObjective(gp.quicksum(self.model._X), sense=gp.GRB.MAXIMIZE)
-
 
 		if self.model_type != "reduced_model":
 			self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in self.G.nodes())
@@ -226,72 +207,20 @@ class base_model(object):
 		if self.model_type != "reduced_model":
 			self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in G.nodes())
 
-
-		# budget constraints
 		if self.model_type != "reduced_model":
 			self.model.addConstr(gp.quicksum(self.model._Y) <= self.b)
 
-
-
-
-
-	def warm_start_test (self):
-
-		r = rcm.RCM(self.G, self.k, self.b)
-		a, f = r.findAnchors(False)
-
-		r.findAnchors(False)
-		a_list = list(a)
-
-		anc_k_core = anchored_k_core(self.G, self.k, a_list)
-
-		print(len(anc_k_core))
-		#print(anc_k_core)
-		#print(olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b))
-
-		zero = olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b)
-		one = anchored_k_core(self.G, self.k, zero)
-		two = anchored_k_core(self.G, self.k, [])
-		#print(zero)
-		#print(one + two)
-		print(len(one) + len(two))
-
-
-		#obj = olak.Olak()
-		#print(obj.olak(self.G, self.k))
-
-
-		#olak.olakAnchors(self.G, olak.Olak..anchoredKCore(self.G), self.k, self.b)
-
 	def remove_all_y_saturated_nodes(self):
+
 		loop = True
 		while loop:
-			old_tracker = self.y_saturated_reduction
+			old_tracker = self.prop_11_reduction
 			self.y_saturated_iter()
-			if old_tracker == self.y_saturated_reduction:
+			if old_tracker == self.prop_11_reduction:
 				loop = False
 
-	def remove_y_edges(self):
-		time1 = time.time()
-		num_edges_removed = 0
-		x_vals = self.x_vals
-		y_vals = self.y_vals
-
-
-		pair_tracker = []
-		sub_graph = self.G.subgraph(y_vals)
-		for u, v in sub_graph.edges():
-			pair_tracker.append((u,v))
-
-		for edge in pair_tracker:
-			self.G.remove_edge(edge[0], edge[1])
-			num_edges_removed += 1
-		time2 = time.time()
-
-		self.remove_y_edges_reduction = num_edges_removed
-		self.remove_y_edges_time = time2 - time1
-
 	def y_saturated_iter(self):
+
 		time1 = time.time()
 		num_y_saturated_nodes = 0
 		temp_graph = self.G.subgraph(self.x_vals)
@@ -299,91 +228,13 @@ class base_model(object):
 			if self.k - temp_graph.degree(v) > self.b:
 				self.y_vals.append(v)
 				self.x_vals.remove(v)
-				#self.model._X[v].ub = 0
 
 				num_y_saturated_nodes += 1
 		time2 = time.time()
-		#for i in range(100):
-		#	print(num_y_saturated_nodes)
-		self.y_saturated_reduction += num_y_saturated_nodes
-		self.y_saturated_run_time += time2 - time1
-		self.y_saturated_iterations += 1
 
-	def relaxation(self):
-		self.model.update()
-		self.model = self.model.relax()
-
-	def strength_constraint(self, induced_k_core, anchors):
-
-		self.model.addConstrs(self.model._X[i] + gp.quicksum(self.model._Y[j] for j in anchors) <= self.b for i in self.x_vals if (i != anchors and i not in induced_k_core))
-
-	def warm_start(self):
-		initial_anchors = []
-		fixings = []
-		best_anchors = []
-		best_fixing_value = 0
-
-		timer = 0
-		G = self.G
-		k = self.k
-		b = self.b
-		y_vals = self.y_vals
-		time_for_warm_start = self.time_for_warm_start
-		#warm_start = heuristic.warm_start(self.G, self.k, self.b, self.time_for_warm_start)
-		viable_nodes = list(G)
-		iterations = 0
-
-
-		first_iter = True
-		inital_time = time.time()
-
-		while timer < time_for_warm_start and len(viable_nodes) >= k:
-
-			anchors = random.sample(viable_nodes, b)
-
-			resulting_k_core = heuristic.anchored_k_core(G, k, anchors)
-
-			self.strength_constraint(resulting_k_core, anchors)
-
-
-			if first_iter:
-				best_anchors = anchors
-				best_fixing_value = len(resulting_k_core)
-			else:
-				if len(resulting_k_core) > best_fixing_value:
-					if b == 1:
-						self.model._Y[best_anchors[0]].ub = 0
-					else:
-						self.model.addConstr(gp.quicksum(self.model._Y[i] for i in best_anchors) <= b -1)
-					best_anchors = anchors
-					best_fixing_value = len(resulting_k_core)
-				else:
-					if b == 1:
-						self.model._Y[anchors[0]].ub = 0
-					else:
-						self.model.addConstr(gp.quicksum(self.model._Y[i] for i in anchors) <= b -1)
-
-			timer = time.time() - inital_time
-
-		warm_start_x = heuristic.anchored_k_core(G, k, best_anchors)
-		for anchor in best_anchors:
-			if anchor in warm_start_x:
-				warm_start_x.remove(anchor)
-
-		for v in best_anchors:
-			self.model._Y[v].start = 1
-
-		for v in warm_start_x:
-			self.model._X[v].start = 1
-
-	def new_warm_start(self):
-		anchors, x_nodes = heuristic.new_heur_idea(self.G, self.k, self.b)
-
-		for v in anchors:
-			self.model._Y[v].start = 1
-
-		for v in x_nodes:
-			self.model._X[v].start = 1
+		self.prop_11_reduction += num_y_saturated_nodes
+		self.prop_11_run_time += time2 - time1
+		self.prop_11_iterations += 1
 
 	def RCM_warm_start(self):
 
@@ -427,6 +278,7 @@ class base_model(object):
 		b = self.b
 		m = self.model
 
+		#HHHHHHHHHHHHHHHHHHHHHHHHHH
 		if self.fractional_callback:
 			m.Params.lazyConstraints = 1
 
@@ -444,23 +296,20 @@ class base_model(object):
 		self.lower_bound = m.objVal
 
 	def print_model(self):
+
 		G = self.G
 		k = self.k
 		b = self.b
 		m = self.model
 
-
 		display = True
 		if display:
 			if m.status == gp.GRB.OPTIMAL or m.status == gp.GRB.TIME_LIMIT:
 
-
 				cluster = [i for i in G.nodes if m._X[i].x > 0.5 or m._Y[i].x > 0.5]
 				SUB = G.subgraph(cluster)
 
-				#for node in SUB.nodes():
-				#	print("Degree is: ", SUB.degree[node])
-
+				#HHHHHHHHHHHHHHHHHHH
 				root = -1
 
 				for i in G.nodes:
@@ -468,7 +317,7 @@ class base_model(object):
 						if m._S[i].x > 0.5:
 							print("Root is ", i)
 							root = i
-
+				#HHHHHHHHHHHHHHHHHHHH
 
 				selected_nodes = []
 				for i in G.nodes:
@@ -482,26 +331,11 @@ class base_model(object):
 						purchased_nodes.append(i)
 						print("purchased node: ", i)
 
-
-
-
-				#print("Is it connected? ", nx.is_connected(SUB))
-				#print("Diameter? ", nx.diameter(SUB))
-
-				#print("Dijkstra list of shortest paths: ")
-				#path_lengths = nx.single_source_dijkstra_path_length(SUB, root)
-
-				#for node in SUB.nodes():
-					#print(f"node {node}: {path_lengths[node]}")
-
-
 				plot = 1
 				if plot == 1:
 					pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, True, k, b, self.r)
 				if plot == 2:
 					pretty_plot.pretty_plot(G, selected_nodes, purchased_nodes, root, False, k, b, self.r)
-
-			#m.write("Lobster.lp")
 
 	def save_to_file(self, total_time):
 
@@ -526,7 +360,8 @@ class base_model(object):
 			doc.close()
 
 	def return_output(self):
-		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename', 'y_saturated']
+
+		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename']
 		output = [attribute for attribute in dir(self) if not attribute.startswith("__") and not callable(getattr(self, attribute)) and attribute not in exceptions]
 		output.sort(key = output_sort)
 
@@ -534,28 +369,20 @@ class base_model(object):
 
 
 class reduced_model(base_model):
-
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 
 		for y_val in self.y_vals:
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
-			#neighbor_with_x = [node for node in G.neighbors(y_val) if node in self.x_vals]
-			#if len(neighbor_with_x) == 0:
-			#	self.model._Y[y_val].ub = 0
-			#	self.var_num -=1
 
 		k_core_G = nx.k_core(self.G, self.k)
-
-
 		self.num_k_core_nodes = len(k_core_G.nodes())
-
-
 		self.R = list(self.G.nodes() - k_core_G.nodes())
 		non_k_core_subgraph = self.G.subgraph(self.R)
 
 		if self.prop_8:
+
 			time1 = time.time()
 			counter = 0
 			for v in self.x_vals:
@@ -570,15 +397,17 @@ class reduced_model(base_model):
 
 			self.num_prop_8_inequalties_added = counter
 			self.prop_8_comp_time = time2 - time1
+
 		if self.prop_9:
+
 			time1 = time.time()
 			counter = 0
 
 			for u in self.y_vals:
-				#print("Starting vertex ", u, " out of ", len(self.y_vals), "\n")
+
 				u_path_length_dict = nx.single_source_dijkstra_path_length(non_k_core_subgraph, u, 2)
 				u_neigbors = set(non_k_core_subgraph.neighbors(u))
-				#print(len(u_path_length_dict))
+
 				for v in u_path_length_dict:
 
 					v_neighbors = set(non_k_core_subgraph.neighbors(v)) - {u}
@@ -587,10 +416,10 @@ class reduced_model(base_model):
 
 						self.model.addConstr(self.model._X[v] + self.model._Y[v] >= self.model._Y[u])
 						counter+=1
+
 			time2 = time.time()
 			self.num_prop_9_inequalties_added = counter
 			self.prop_9_comp_time = time2 - time1
-
 
 		constraint_index = list(self.x_vals - k_core_G.nodes())
 
@@ -600,24 +429,16 @@ class reduced_model(base_model):
 			self.model._Y[node].ub = 0
 			self.var_num -= 2
 
-
 		deg_constraints = self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in constraint_index)
-		#self.model.addConstrs(gp.quicksum(self.model._X[j] + self.model._Y[j] for j in G.neighbors(i)) >= self.k * self.model._X[i] for i in constraint_index)
 
 		self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in constraint_index)
-		#self.model.addConstrs(self.model._X[i] + self.model._Y[i] <= 1 for i in self.x_vals if i in self.G.nodes())
 
 		self.model.addConstr(gp.quicksum(self.model._Y[i] for i in self.R) <= self.b )
 
-		#TEMP
-		#if self.lazyconstraints:
-		#	for v in self.x_vals:
-		#		deg_constraints[v].lazy = 3
-
 
 class radius_bounded_model(base_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		base_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 		self.model._S = self.model.addVars(self.G.nodes, vtype=gp.GRB.BINARY, name="s")
 		#radius_bounded_model.dominated_fixing_idea_power_graph_sam(self)
 		self.model.addConstr(gp.quicksum(self.model._S) == 1)
@@ -876,8 +697,8 @@ class radius_bounded_model(base_model):
 
 
 class vermyev_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 
 		DG = nx.DiGraph(self.G) # bidirected version of G
 		L = range(1, self.r + 1)
@@ -912,8 +733,8 @@ class vermyev_model(radius_bounded_model):
 
 
 class cut_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 
 
 		#allow lazy constraints
@@ -960,8 +781,8 @@ class cut_model(radius_bounded_model):
 		self.lower_bound = self.model.objVal
 
 class extended_cut_model(cut_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 
 		self.model._Z = self.model.addVars(self.G.nodes(), self.G.nodes, vtype = gp.GRB.BINARY, name = 'z')
 
@@ -986,8 +807,8 @@ class extended_cut_model(cut_model):
 		self.lower_bound = m.objVal
 
 class flow_model(radius_bounded_model):
-	def __init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10):
-		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, y_saturated, prop_8, y_val_fix, fractional_callback, relax, prop9, prop10)
+	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
+		radius_bounded_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
 		m = self.model
 		DG = nx.DiGraph(G) # bidirected version of G
 
