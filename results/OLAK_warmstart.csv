@@ -1,0 +1,23 @@
+instance, k, b, olak, olak time, total_time,
+facebook_combined.txt,17,250,164,117.9,2061,2225
+CA-HepPh.txt,4,250,284,188.76,6591,6875
+socfb-Syracuse56.mtx,46,250,164,975.03,6985,7149
+socfb-Northeastern19.mtx,33,250,167,681.55,7008,7175
+CA-CondMat.txt,4,250,338,188.76,13464,13802
+Brightkite_edges.txt,2,250,434,478,34706,35140
+flickrEdges.txt,5,250,5,5591.92,105386,105391
+soc-catster.edges,21,250,256,9656.34,78945,79201
+Gowalla_edges.txt,3,250,665,1984.72,106417,107082
+ca-citeseer.mtx,3,250,511,2135.08,152966,153477
+com-dblp.ungraph.txt,3,250,498,2865.69,204031,204529
+soc-dogster.edges,12,250,316,16824.92,214490,214806
+soc-twitter-higgs.edges,17,250,150,26830.27,231419,231569
+web-Google.txt,4,250,574,11167.51,492655,493229
+web-hudong.edges,5,250,492,36594.14,1055322,1055814
+web-baidu-baike.edges,3,250,585,48052.84,1277646,1278231
+facebook_combined.txt,20,20,40,9.76,1854,1894
+Brightkite_edges.txt,20,20,51,20.46,947,998
+flickrEdges.txt,20,20,14,405.87,15808,15822
+Gowalla_edges.txt,20,20,42,103.62,8161,8203
+com-dblp.ungraph.txt,20,20,19,116.67,3066,3085
+com-youtube.ungraph.txt,20,20,49,320.71,18890,18939
