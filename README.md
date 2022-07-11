@@ -7,9 +7,7 @@ Below we computed the $4$-core of the karate graph. Blue vertices represent the 
 
 ![Figure 1](git_images/karate_k4b0.png?raw=true "The 4-core of the karate graph")
 
-In our paper and this github repo we explore solving an extension of $k$-core called anchored $k$-core.
-In this variant we spend a budget $b$ to expand the size of the $k$-core.
-Anchored nodes can be part of the anchored $k$-core even if the degree of the node is less than $k$.
+Motivated by maximizing resilience in social networks, we propose an integer programming model for solving the maximum anchored $k$-core problem. In this variant of the maximum $k$-core problem, we spend a budget $b$ to expand the size of the $k$-core. Anchored (or purchased) vertices can be part of the anchored $k$-core even if their degree is less than $k$.
 
 ![Figure 2](git_images/karate_k4b5.png?raw=true "The Anchored 4-core with budget 5 of the karate graph")
 
