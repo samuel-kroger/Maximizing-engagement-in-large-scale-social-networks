@@ -780,6 +780,7 @@ class cut_model(radius_bounded_model):
 		self.upper_bound = self.model.objBound
 		self.lower_bound = self.model.objVal
 
+
 class extended_cut_model(cut_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
 		cut_model.__init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11)
@@ -805,6 +806,7 @@ class extended_cut_model(cut_model):
 		#if not self.relax:
 		self.upper_bound = m.objBound
 		self.lower_bound = m.objVal
+
 
 class flow_model(radius_bounded_model):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
