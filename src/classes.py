@@ -132,9 +132,10 @@ class base_model(object):
 		self.model.params.LogToConsole = 1
 		self.model.params.LogFile = '../results/logs/log_' + instance_name +'_' + str(k) + '_' +  str(b) + "_"+ filename[:-4] + '.log'
 
-		self.prop_8 = prop_8
+		
 		self.fractional_callback = fractional_callback
 		self.relax = relax
+		self.prop_8 = prop_8
 		self.prop_9 = prop_9
 		self.prop_10 = prop_10
 
@@ -369,6 +370,18 @@ class base_model(object):
 			doc.write(string)
 			doc.close()
 
+	def save_to_file_table_2(self, total_time):
+		if not os.path.exists("../results/table_2.csv"):
+			with open("../results/table_2.csv", "w") as doc:
+				line = 'Instance, model_type, k, b, #vars, B&B, time, LB, UB, gap(%) \n'
+				doc.write(line)
+				doc.close()
+
+		with open("../results/table_2.csv", "a") as doc:
+			line = self.instance_name + ',' + self.model_type + ',' + str(self.k) + ',' + str(self.b) + ',' + str(self.var_num) + ',' + str(self.BBnodes) + ',' + total_time +  ',' + str(self.lower_bound) + ',' + str(self.upper_bound) + ',' + str((self.upper_bound - self.lower_bound)/self.lower_bound) + '\n'
+			doc.write(line)
+			doc.close()
+
 	def return_output(self):
 
 		exceptions = ['G', 'R', 'model', 'x_vals', 'y_vals', 'time_for_warm_start', 'filename']
@@ -386,8 +399,8 @@ class reduced_model(base_model):
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
 
-		#k_core_G = nx.k_core(self.G, self.k)
-		k_core_G = sam_k_core(self.G, self.k)
+		k_core_G = nx.k_core(self.G, self.k)
+		#k_core_G = sam_k_core(self.G, self.k)
 		self.num_k_core_nodes = len(k_core_G.nodes())
 		self.R = list(self.G.nodes() - k_core_G.nodes())
 		non_k_core_subgraph = self.G.subgraph(self.R)
@@ -772,7 +785,6 @@ class cut_model(radius_bounded_model):
 				if value > r:
 					self.model.addConstr(self.model._X[i] + self.model._Y[i] + self.model._S[key] <= 1)
 					self.model.addConstr(self.model._X[key] + self.model._Y[key] + self.model._S[i] <= 1)
-
 
 	def optimize(self):
 		G = self.G

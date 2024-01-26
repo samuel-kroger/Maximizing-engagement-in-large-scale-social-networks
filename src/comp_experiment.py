@@ -13,7 +13,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['single']:
+for request in data['table_2']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -35,3 +35,4 @@ for request in data['single']:
 	end_time = time.time()
 
 	instance.save_to_file(str(round(end_time - start_time, 2)))
+	instance.save_to_file_table_2(str(round(end_time - start_time, 2)))
