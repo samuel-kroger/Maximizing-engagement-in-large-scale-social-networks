@@ -1,0 +1,2 @@
+instance_name, model_type, n, m, k, b, r, BBnodes, var_num, warm_start, num_k_core_nodes, lower_bound, upper_bound, prop_8, prop_9, prop_10, prop_11_reduction, prop_11_iterations, prop_11_run_time, relax, fractional_callback, total_time
+facebook_combined, reduced_model, 4039, 88234, 17, 250, NA, 1.0, 2479, False, 2061, 2533.0, 2533.0, False, False, False, 0, 0, 0, False, <module 'fractional_callback' from '/home/sam/work/Maximizing-resilience-in-large-scale-social-networks/src/fractional_callback.py'>, 14.99

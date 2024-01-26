@@ -33,8 +33,6 @@ def read_graph(fname):
 	graph.remove_edges_from(nx.selfloop_edges(graph))
 	graph.remove_nodes_from(list(nx.isolates(graph)))
 
-	print(nx.info(graph))
-
 	return graph
 
 def output_sort(element_of_output):
@@ -110,6 +108,17 @@ def anchored_k_core (G, k, purchased_nodes):
 		if anchored_k_core_decomp[key] >= k:
 			anchored_core_nodes.append(key)
 	return (anchored_core_nodes)
+
+def sam_k_core(graph, k):
+	G = graph.copy()
+	rerun_k_core = True
+	while rerun_k_core:
+		remove = [v for v in G.nodes if G.degree(v) < k] 
+		if remove == []:
+			rerun_k_core = False
+		else:
+			G.remove_nodes_from(remove)
+	return G
 
 class base_model(object):
 	def __init__(self, filename, instance_name, G, model_type, k, b, r, relax, warm_start, prop_8, prop_9, prop_10, prop_11):
@@ -256,7 +265,8 @@ class base_model(object):
 	def OLAK_warm_start(self):
 
 		self.warm_start = True
-		k_core = list(nx.k_core(self.G, self.k))
+		#k_core = list(nx.k_core(self.G, self.k))
+		k_core = list(sam_k_core(self.G, self.k))
 
 		olak_time_start = time.time()
 		olak_output = list(olak.olakAnchors(self.G, olak.anchoredKCore(self.G), self.k, self.b))
@@ -376,7 +386,8 @@ class reduced_model(base_model):
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
 
-		k_core_G = nx.k_core(self.G, self.k)
+		#k_core_G = nx.k_core(self.G, self.k)
+		k_core_G = sam_k_core(self.G, self.k)
 		self.num_k_core_nodes = len(k_core_G.nodes())
 		self.R = list(self.G.nodes() - k_core_G.nodes())
 		non_k_core_subgraph = self.G.subgraph(self.R)
@@ -447,8 +458,8 @@ class radius_bounded_model(base_model):
 
 	def warm_start_one(self):
 
-		SUB = nx.k_core(self.G, self.k)
-
+		#SUB = nx.k_core(self.G, self.k)
+		SUB = sam_k_core(self.G, self.k)
 		list_of_connected_nodes = []
 		for connected_nodes in nx.connected_components(SUB):
 			list_of_connected_nodes.append(connected_nodes)

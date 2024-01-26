@@ -2,19 +2,19 @@
 	"single":
 	[
 		{
-			"filename":"soc-dolphins.mtx",
-			"k":2,
-			"b":2,
+			"filename":"facebook_combined.txt",
+			"k":17,
+			"b":250,
 			"r":"NA",
 			"model_type":"reduced_model",
-			"prop_11":true,
+			"prop_11":false,
 			"remove_y_edges":false,
 			"warm_start":false,
 			"prop_8":false,
 			"y_val_fix":false,
 			"fractional_callback":false,
-			"relax":true,
-			"prop_9":true,
+			"relax":false,
+			"prop_9":false,
 			"prop_10":false
 		}
 	],
