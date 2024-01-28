@@ -1,0 +1,76 @@
+
+Gurobi 10.0.0 (linux64) logging started Sat Jan 27 17:53:16 2024
+
+Set parameter LogFile to value "../results/logs/log_soc-catster.e_21_250_2024_01_27_09_25.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 4007 rows, 299368 columns and 167530 nonzeros
+Model fingerprint: 0xfa2c49fd
+Variable types: 0 continuous, 299368 integer (299368 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 78945.000000
+Presolve added 3 rows and 0 columns
+Presolve removed 0 rows and 226623 columns
+Presolve time: 0.12s
+Presolved: 4010 rows, 72745 columns, 85688 nonzeros
+Variable types: 0 continuous, 72745 integer (72742 binary)
+Found heuristic solution: objective 79259.000000
+
+Root relaxation: objective 7.966885e+04, 2163 iterations, 0.04 seconds (0.08 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 79668.8536    0  446 79259.0000 79668.8536  0.52%     -    0s
+H    0     0                    79439.000000 79668.8536  0.29%     -    0s
+     0     0 79583.9215    0  217 79439.0000 79583.9215  0.18%     -   37s
+H    0     0                    79542.000000 79583.9215  0.05%     -   37s
+H    0     0                    79557.000000 79583.9215  0.03%     -   37s
+     0     0 79580.5312    0  210 79557.0000 79580.5312  0.03%     -   73s
+     0     0 79568.8243    0  109 79557.0000 79568.8243  0.01%     -  109s
+     0     0 79568.2791    0  118 79557.0000 79568.2791  0.01%     -  147s
+     0     0 79568.2334    0  121 79557.0000 79568.2334  0.01%     -  184s
+     0     0 79565.6868    0   89 79557.0000 79565.6868  0.01%     -  219s
+     0     0 79565.4873    0   91 79557.0000 79565.4873  0.01%     -  257s
+     0     0 79565.4756    0   91 79557.0000 79565.4756  0.01%     -  293s
+     0     0 79564.2449    0   85 79557.0000 79564.2449  0.01%     -  330s
+H    0     0                    79558.000000 79564.2449  0.01%     -  331s
+     0     0 79564.0768    0   80 79558.0000 79564.0768  0.01%     -  366s
+     0     0 79564.0626    0   89 79558.0000 79564.0626  0.01%     -  404s
+     0     0 79562.9221    0   66 79558.0000 79562.9221  0.01%     -  440s
+     0     0 79562.8589    0   66 79558.0000 79562.8589  0.01%     -  478s
+     0     0 79562.8583    0   66 79558.0000 79562.8583  0.01%     -  513s
+     0     0 79562.7068    0   67 79558.0000 79562.7068  0.01%     -  551s
+     0     0 79562.6997    0   69 79558.0000 79562.6997  0.01%     -  587s
+     0     0 79562.6316    0   66 79558.0000 79562.6316  0.01%     -  623s
+     0     0 79562.5712    0   52 79558.0000 79562.5712  0.01%     -  661s
+H    0     0                    79561.000000 79562.5712  0.00%     -  698s
+     0     0 79561.3212    0   52 79561.0000 79561.3212  0.00%     -  698s
+
+Cutting planes:
+  Cover: 278
+  Clique: 29
+  MIR: 261
+  StrongCG: 48
+  GUB cover: 276
+  Zero half: 39
+  RLT: 54
+  Lazy constraints: 15
+
+Explored 1 nodes (4664 simplex iterations) in 698.96 seconds (2.12 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 7: 79561 79558 79557 ... 78945
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 7.956100000000e+04, best bound 7.956100000000e+04, gap 0.0000%
+
+User-callback calls 995, time in user-callback 696.51 sec
