@@ -399,8 +399,8 @@ class reduced_model(base_model):
 			self.model._X[y_val].ub = 0
 			self.var_num -= 1
 
-		k_core_G = nx.k_core(self.G, self.k)
-		#k_core_G = sam_k_core(self.G, self.k)
+		#k_core_G = nx.k_core(self.G, self.k)
+		k_core_G = sam_k_core(self.G, self.k)
 		self.num_k_core_nodes = len(k_core_G.nodes())
 		self.R = list(self.G.nodes() - k_core_G.nodes())
 		non_k_core_subgraph = self.G.subgraph(self.R)

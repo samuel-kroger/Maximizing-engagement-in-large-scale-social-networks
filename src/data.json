@@ -612,84 +612,6 @@
 			
 		{
 			"filename":"facebook_combined.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"Brightkite_edges.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"flickrEdges.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"Gowalla_edges.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"com-dblp.ungraph.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"com-youtube.ungraph.txt",
-			"k":20,
-			"b":20,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
-			"filename":"facebook_combined.txt",
 			"k":17,
 			"b":250,
 			"r":"NA",
@@ -990,19 +912,6 @@
 			"prop_11":false
 		},
 		{
-			"filename":"soc-twitter-higgs.edges",
-			"k":17,
-			"b":250,
-			"r":"NA",
-			"model_type":"base_model",
-			"relax":false,
-			"warm_start":false,
-			"prop_8":false,
-			"prop_9":false,
-			"prop_10":false,
-			"prop_11":false
-		},
-		{
 			"filename":"web-Google.txt",
 			"k":4,
 			"b":250,
@@ -1040,7 +949,8 @@
 			"prop_9":false,
 			"prop_10":false,
 			"prop_11":false
-		}		
+		}
+					
 	],
 	"prop_8_10":
 	[
