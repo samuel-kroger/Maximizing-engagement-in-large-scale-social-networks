@@ -2,8 +2,8 @@
 	"single":
 	[
 		{
-			"filename":"facebook_combined.txt",
-			"k":17,
+			"filename":"soc-catster.edges",
+			"k":21,
 			"b":250,
 			"r":"NA",
 			"model_type":"base_model",
@@ -13,7 +13,6 @@
 			"prop_9":false,
 			"prop_10":false,
 			"prop_11":false
-
 		}
 	],
 	"table_2":
