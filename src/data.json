@@ -6,7 +6,7 @@
 			"k":21,
 			"b":250,
 			"r":"NA",
-			"model_type":"base_model",
+			"model_type":"reduced_model",
 			"relax":false,
 			"warm_start":false,
 			"prop_8":false,
