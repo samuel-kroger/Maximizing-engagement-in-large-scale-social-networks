@@ -13,7 +13,7 @@ filename = filename.strip()
 f = open('data.json')
 data = json.load(f)
 
-for request in data['single']:
+for request in data['table_2_current']:
 	print("starting: ",
 		'\n filename: ', request['filename'],
 		'\n model_type: ', request['model_type'],
@@ -30,10 +30,9 @@ for request in data['single']:
 	if request['warm_start'] == "OLAK":
 		instance.OLAK_warm_start()
 
-	print(instance.num_k_core_nodes)
-	#instance.optimize()
+	instance.optimize()
 	#instance.print_model()
 	end_time = time.time()
-	print(end_time - start_time)
-	#instance.save_to_file(str(round(end_time - start_time, 2)))
-	#instance.save_to_file_table_2(str(round(end_time - start_time, 2)))
+	#print(end_time - start_time)
+	instance.save_to_file(str(round(end_time - start_time, 2)))
+	instance.save_to_file_table_2(str(round(end_time - start_time, 2)))
