@@ -1,0 +1,80 @@
+
+Gurobi 10.0.0 (linux64) logging started Sun Jan 28 12:53:12 2024
+
+Set parameter LogFile to value "../results/logs/log_Brightkite_edges_2_250_2024_01_28_10_47.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 4731 rows, 116456 columns and 41097 nonzeros
+Model fingerprint: 0x3ec8a139
+Variable types: 0 continuous, 116456 integer (116456 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 34706.000000
+Presolve removed 0 rows and 90569 columns
+Presolve time: 0.04s
+Presolved: 4731 rows, 25887 columns, 34698 nonzeros
+Variable types: 0 continuous, 25887 integer (25887 binary)
+Found heuristic solution: objective 34959.000000
+
+Root relaxation: objective 3.529150e+04, 2504 iterations, 0.02 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 35291.5000    0   49 34959.0000 35291.5000  0.95%     -    0s
+H    0     0                    35256.000000 35291.5000  0.10%     -    0s
+     0     0 35281.0000    0   70 35256.0000 35281.0000  0.07%     -    1s
+H    0     0                    35264.000000 35281.0000  0.05%     -    1s
+     0     0 35281.0000    0   69 35264.0000 35281.0000  0.05%     -    3s
+     0     0 35281.0000    0   70 35264.0000 35281.0000  0.05%     -    5s
+H    0     0                    35267.000000 35281.0000  0.04%     -    5s
+     0     0 35281.0000    0   68 35267.0000 35281.0000  0.04%     -    7s
+     0     0 35281.0000    0   68 35267.0000 35281.0000  0.04%     -    8s
+     0     0 35281.0000    0   68 35267.0000 35281.0000  0.04%     -   10s
+     0     2 35281.0000    0   68 35267.0000 35281.0000  0.04%     -   14s
+     1     4 35280.0000    1   68 35267.0000 35281.0000  0.04%   490   15s
+     7    16 35278.0000    3   56 35267.0000 35281.0000  0.04%   163   26s
+    15    24 35278.0000    4   56 35267.0000 35281.0000  0.04%   276   40s
+    23    32 35278.0000    5   56 35267.0000 35281.0000  0.04%   211   54s
+    28    32 35279.7500    5   67 35267.0000 35280.0000  0.04%   203   62s
+    31    40 35277.7500    6   59 35267.0000 35280.0000  0.04%   198   68s
+    35    40 35279.0000    4   56 35267.0000 35280.0000  0.04%   186   75s
+    39    48 35277.0000    6   52 35267.0000 35280.0000  0.04%   174   82s
+    47    62 35277.5000    7   57 35267.0000 35280.0000  0.04%   162   96s
+    53    62 35277.7500    6   59 35267.0000 35280.0000  0.04%   150  106s
+    61    94 35277.2500    8   55 35267.0000 35279.0000  0.03%   131  120s
+    84    94 35277.7500   10   51 35267.0000 35279.0000  0.03%  96.2  160s
+    93   141 35276.5000    9   53 35267.0000 35279.0000  0.03%  87.3  176s
+   117   141 35277.2500    8   55 35267.0000 35279.0000  0.03%  70.5  218s
+   140   491 35275.2500   16   39 35267.0000 35279.0000  0.03%  60.3  258s
+   152   491 35271.0000   25   16 35267.0000 35279.0000  0.03%  55.9  279s
+   166   491 35277.5000    8   53 35267.0000 35279.0000  0.03%  53.9  300s
+   178   491 35273.0000   20   24 35267.0000 35279.0000  0.03%  50.5  321s
+   296   491 35268.5000   28   13 35267.0000 35279.0000  0.03%  34.2  500s
+   570   444     cutoff   27      35267.0000 35279.0000  0.03%  20.8  956s
+
+Cutting planes:
+  Gomory: 31
+  Cover: 319
+  MIR: 111
+  GUB cover: 160
+  Zero half: 28
+  Mod-K: 2
+  Lazy constraints: 549
+
+Explored 1061 nodes (36607 simplex iterations) in 957.56 seconds (5.54 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 35267 35264 35256 ... 34706
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.526700000000e+04, best bound 3.526700000000e+04, gap 0.0000%
+
+User-callback calls 2605, time in user-callback 953.89 sec

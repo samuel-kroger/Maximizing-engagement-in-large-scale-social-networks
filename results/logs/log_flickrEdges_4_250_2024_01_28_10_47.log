@@ -1,0 +1,41 @@
+
+Gurobi 10.0.0 (linux64) logging started Sun Jan 28 13:09:17 2024
+
+Set parameter LogFile to value "../results/logs/log_flickrEdges_4_250_2024_01_28_10_47.log"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 5 rows, 211876 columns and 574 nonzeros
+Model fingerprint: 0xad2aa8d1
+Variable types: 0 continuous, 211876 integer (211876 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 105386.00000
+Presolve removed 0 rows and 211322 columns
+Presolve time: 0.02s
+Presolved: 5 rows, 554 columns, 561 nonzeros
+Variable types: 0 continuous, 554 integer (554 binary)
+Found heuristic solution: objective 105387.00000
+
+Root relaxation: objective 1.053880e+05, 3 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    105388.00000 105388.000  0.00%     -    0s
+
+Explored 1 nodes (3 simplex iterations) in 0.05 seconds (0.04 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 105388 105387 105386 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.053880000000e+05, best bound 1.053880000000e+05, gap 0.0000%
+
+User-callback calls 120, time in user-callback 0.00 sec
