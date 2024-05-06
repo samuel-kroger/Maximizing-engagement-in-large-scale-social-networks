@@ -1,6 +1,6 @@
 # Maximizing engagment in large-scale social networks
 
-Codes, data, and results for "[Maximizing resilience in large-scale social networks](http://www.optimization-online.org/DB_HTML/2022/07/8993.html)" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
+Codes, data, and results for "[Maximizing engagement in large-scale social networks](http://www.optimization-online.org/DB_HTML/2022/07/8993.html)" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
 
 The $k$-core of a graph is the maximal subgraph in which every vertex has a degree of at least $k$.
 Below we computed the $4$-core of the karate graph. Blue vertices represent the members of the $4$-core. Interestingly, both administrator (John A) and instructor (Mr. Hi) belong to the $4$-core!
