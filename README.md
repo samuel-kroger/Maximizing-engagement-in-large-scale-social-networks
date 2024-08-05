@@ -1,6 +1,6 @@
-# Maximizing engagment in large-scale social networks
+# Maximizing engagement in large-scale social networks
 
-Codes, data, and results for "[Maximizing engagement in large-scale social networks](http://www.optimization-online.org/DB_HTML/2022/07/8993.html)" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
+Codes, data, and results for "[Maximizing engagement in large-scale social networks](https://pubsonline.informs.org/doi/abs/10.1287/ijoo.2022.0024)" by Samuel Kroger, Hamidreza Validi, and Illya V. Hicks.
 
 The $k$-core of a graph is the maximal subgraph in which every vertex has a degree of at least $k$.
 Below we computed the $4$-core of the karate graph. Blue vertices represent the members of the $4$-core. Interestingly, both administrator (John A) and instructor (Mr. Hi) belong to the $4$-core!
@@ -16,9 +16,9 @@ The heuristic RCM comes from the [Residual Core Maximization: An efficient algor
 The heuristic OLAK comes from the [OLAK: an efficient algorithm to prevent unraveling in social networks](https://dl.acm.org/doi/abs/10.14778/3055330.3055332?casa_token=0pjIWubvxCcAAAAA:CEnA7bA_ocYH6--CIpfGsJ3zuICIrXdS9NxWcyAumXnl0Ppb-KH4cPUF4ABq-y2MxTWE2xnfBf1Af4s).
 Codes for the implementations of OLAK and RCM come from [this repo](https://github.com/rlaishra/RCM/).
 
-In the "data" directory, you can find all the data used in the paper. Data is also publically avialble at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
+In the "data" directory, you can find all the data used in the paper. Data is also publically available at [SNAP](https://snap.stanford.edu/data/) and [Network Repository](https://networkrepository.com/index.php).
 
-The results directory has csv files of the runs.
+The results directory has CSV files for the runs.
 
 
 ## How to run the code?
